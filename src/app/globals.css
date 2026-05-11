@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FEFDFB;
+  --foreground: #1A1917;
 }
 
 html {
@@ -14,7 +14,7 @@ html {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-body), system-ui, sans-serif;
 }
 
 h1, h2, h3 {
@@ -57,4 +57,26 @@ h1, h2, h3 {
   html {
     scroll-behavior: auto;
   }
+}
+
+/* Portfolio filter animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in { animation: none; }
+}
+
+/* Hide scrollbar for testimonials carousel */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Tinted neutrals — warm off-whites instead of pure gray-50 */
+:root {
+  --surface: #FAFAF8;
+  --surface-alt: #F5F5F2;
 }

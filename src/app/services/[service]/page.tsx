@@ -5,7 +5,7 @@ import { Phone, ChevronRight, CheckCircle, ArrowRight, MapPin } from "lucide-rea
 import { services, getServiceBySlug } from "@/lib/services";
 import { areas } from "@/lib/areas";
 
-const BASE_URL = "https://visionable-website.vercel.app";
+const BASE_URL = "https://visionablelandscaping.com";
 
 export function generateStaticParams() {
   return services.map((s) => ({ service: s.slug }));
@@ -94,7 +94,7 @@ export default function ServicePage({ params }: { params: { service: string } })
 
       <div className="pt-20">
         {/* Breadcrumbs */}
-        <div className="bg-gray-50 border-b border-gray-200">
+        <div className="bg-[#FAFAF8] border-b border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
             <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-gray-500">
               <Link href="/" className="hover:text-primary transition-colors">Home</Link>
@@ -121,7 +121,7 @@ export default function ServicePage({ params }: { params: { service: string } })
                   href="/#contact"
                   className="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-flex items-center gap-2"
                 >
-                  Get a Free Quote
+                  Share Your Vision
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a
@@ -250,7 +250,7 @@ export default function ServicePage({ params }: { params: { service: string } })
         <section className="bg-primary py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Get Started with {service.title}?
+              Ready to Make Your {service.title} Vision Real?
             </h2>
             <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
               Join 200+ Bay Area homeowners who turned their vision into reality.

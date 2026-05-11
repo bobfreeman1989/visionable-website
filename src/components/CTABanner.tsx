@@ -22,7 +22,7 @@ export default function CTABanner({
 }: CTABannerProps) {
   return (
     <section
-      className="relative py-20 bg-gradient-to-r from-primary to-green-700 overflow-hidden"
+      className="relative py-14 bg-gradient-to-r from-primary to-green-700 overflow-hidden"
     >
       {bgImage && (
         <>
@@ -30,7 +30,7 @@ export default function CTABanner({
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${bgImage})` }}
           />
-          <div className="absolute inset-0 bg-green-900/80" />
+          <div className="absolute inset-0 bg-green-900/60" />
         </>
       )}
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

@@ -1,11 +1,12 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Mail, ChevronRight, CheckCircle, ArrowRight } from "lucide-react";
 import { areas, getAreaBySlug } from "@/lib/areas";
 import { services } from "@/lib/services";
 
-const BASE_URL = "https://visionable-website.vercel.app";
+const BASE_URL = "https://visionablelandscaping.com";
 
 export function generateStaticParams() {
   return areas.map((area) => ({ city: area.slug }));
@@ -90,7 +91,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
 
       <div className="pt-20">
         {/* Breadcrumbs */}
-        <div className="bg-gray-50 border-b border-gray-200">
+        <div className="bg-[#FAFAF8] border-b border-gray-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
             <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-gray-500">
               <Link href="/" className="hover:text-primary transition-colors">Home</Link>
@@ -121,7 +122,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
                   href="/#contact"
                   className="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-flex items-center gap-2"
                 >
-                  Get a Free Quote
+                  Share Your Vision
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <a
@@ -219,6 +220,50 @@ export default function CityPage({ params }: { params: { city: string } }) {
                   </ul>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+
+        {/* Recent Projects Gallery */}
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-end justify-between mb-8">
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-2">
+                  Our Work in the {city.region}
+                </h2>
+                <p className="text-gray-500">
+                  Real projects from {city.name} and surrounding Bay Area communities.
+                </p>
+              </div>
+              <Link
+                href="/#portfolio"
+                className="hidden sm:inline-flex items-center gap-1.5 text-primary font-semibold hover:underline"
+              >
+                View All 160+ Projects <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+              {[1, 3, 5, 8, 10, 14, 18, 22].map((n) => (
+                <div key={n} className="relative aspect-[4/3] rounded-lg overflow-hidden group">
+                  <Image
+                    src={`/portfolio/yelp/yelp-${String(n).padStart(3, "0")}${n <= 30 ? "-" : ""}.jpg`}
+                    alt={`Landscaping project in ${city.region}`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 text-center sm:hidden">
+              <Link
+                href="/#portfolio"
+                className="inline-flex items-center gap-1.5 text-primary font-semibold hover:underline"
+              >
+                View All 160+ Projects <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </div>
         </section>

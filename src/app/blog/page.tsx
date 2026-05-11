@@ -11,7 +11,7 @@ export const metadata = {
     title: "Landscaping Blog — Tips & Trends | Visionable Landscaping",
     description: "Expert landscaping tips and design inspiration from Silicon Valley's top-rated team.",
   },
-  alternates: { canonical: "https://visionable-website.vercel.app/blog" },
+  alternates: { canonical: "https://visionablelandscaping.com/blog" },
 };
 
 export default function BlogIndex() {

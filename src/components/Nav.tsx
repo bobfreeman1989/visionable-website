@@ -30,8 +30,7 @@ const serviceLinks = [
 const links = [
   { label: "Home", href: "/" },
   { label: "Portfolio", href: "/#portfolio" },
-  { label: "Process", href: "/#process" },
-  { label: "FAQ", href: "/#faq" },
+  { label: "About", href: "/about" },
   { label: "Contact", href: "/#contact" },
   { label: "Blog", href: "/blog" },
 ];
@@ -42,7 +41,7 @@ export default function Nav() {
   const [areasOpen, setAreasOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-sm">
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:text-sm focus:font-semibold"
@@ -64,17 +63,17 @@ export default function Nav() {
 
             {/* Services Dropdown */}
             <div className="relative group" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)}>
-              <button className="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-primary transition-colors">
+              <button aria-haspopup="true" className="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-primary transition-colors">
                 Services <ChevronDown className="w-3.5 h-3.5" />
               </button>
               {servicesOpen && (
                 <div className="absolute top-full left-0 pt-2 w-56">
-                  <div className="bg-white border border-gray-200 rounded-xl shadow-lg py-2">
+                  <div className="bg-[#FEFEFE] border border-gray-200 rounded-xl shadow-lg py-2">
                     {serviceLinks.map((s) => (
                       <Link
                         key={s.slug}
                         href={`/services/${s.slug}`}
-                        className="block px-4 py-2 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors"
+                        className="block px-4 py-2 text-sm text-gray-600 hover:text-primary hover:bg-[#FAFAF8] transition-colors"
                       >
                         {s.name}
                       </Link>
@@ -86,12 +85,12 @@ export default function Nav() {
 
             {/* Areas Dropdown */}
             <div className="relative group" onMouseEnter={() => setAreasOpen(true)} onMouseLeave={() => setAreasOpen(false)}>
-              <button className="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-primary transition-colors">
+              <button aria-haspopup="true" className="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-primary transition-colors">
                 Areas <ChevronDown className="w-3.5 h-3.5" />
               </button>
               {areasOpen && (
                 <div className="absolute top-full left-0 pt-2 w-48">
-                  <div className="bg-white border border-gray-200 rounded-xl shadow-lg py-2">
+                  <div className="bg-[#FEFEFE] border border-gray-200 rounded-xl shadow-lg py-2">
                     {areaLinks.map((a) => (
                       <Link
                         key={a.slug}

@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { Inter, DM_Serif_Display } from "next/font/google";
+import { Source_Sans_3, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const sourceSans = Source_Sans_3({ subsets: ["latin"], variable: "--font-body" });
 const dmSerif = DM_Serif_Display({ weight: "400", subsets: ["latin"], variable: "--font-heading" });
 
-const BASE_URL = "https://visionable-website.vercel.app";
+const BASE_URL = "https://visionablelandscaping.com";
 
 // LocalBusiness + FAQPage structured data
 const localBusinessSchema = {
@@ -63,18 +65,26 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "How much does a landscaping project typically cost?",
+      name: "How much does an outdoor living project cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "It depends on scope — smaller projects like turf installation start around $5K, while complete backyard transformations range from $20K-$60K+. We give you a detailed, transparent estimate after our free on-site consultation. No hidden fees, ever.",
+        text: "Depends on the vision — a patio and turf setup starts around $5K, while a complete outdoor living space with cooking area, lighting, and seating runs $20K-$60K+. We give you a detailed, transparent estimate after seeing your space. No hidden fees.",
       },
     },
     {
       "@type": "Question",
-      name: "How long will my project take?",
+      name: "How long until I can actually use my new yard?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Most projects finish in 2-6 weeks depending on complexity. Artificial turf can be done in days; a full backyard redesign with hardscaping typically takes 3-4 weeks.",
+        text: "Most projects finish in 2-6 weeks. Turf installs can be done in days; a full outdoor transformation typically takes 3-4 weeks. We lock in a timeline upfront and send daily updates.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What if I don't have a clear vision yet?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Most clients don't — they just know they want to use their backyard more. That's exactly what the design consultation is for. We help you figure out what you want through 3D renderings you can explore and adjust.",
       },
     },
     {
@@ -82,7 +92,7 @@ const faqSchema = {
       name: "Is the consultation really free?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "100% free, no strings attached. We come to your property, discuss your goals, take measurements, and follow up with a detailed proposal and 3D renderings.",
+        text: "100% free. We visit your property, talk about how you want to live outdoors, take measurements, and follow up with a proposal and 3D renderings. You only pay if you decide to build.",
       },
     },
     {
@@ -106,7 +116,7 @@ const faqSchema = {
       name: "Do you offer warranties?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Absolutely. We warranty both materials and workmanship. Specific terms vary by project and are clearly documented in your contract.",
+        text: "Yes. Materials and workmanship, clearly documented in your contract. We stand behind every vision we build.",
       },
     },
     {
@@ -122,13 +132,13 @@ const faqSchema = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
-  title: "Bay Area Landscape Design & Build | Visionable",
+  title: "Bay Area Outdoor Living Design & Build | Visionable",
   description:
-    "Bay Area's top-rated landscape design-build team. 5.0★ rated, 200+ yards transformed. See what your yard could look like — free 3D design consultation.",
+    "Transform your backyard into an outdoor living space your family actually uses. Hardscaping, pavers, artificial turf, outdoor lighting & more. 5.0★ rated, 200+ projects. Free 3D design consultation — Visionable Landscaping.",
   openGraph: {
-    title: "Bay Area Landscape Design & Build | Visionable",
+    title: "Bay Area Outdoor Living Design & Build | Visionable",
     description:
-      "Bay Area's top-rated landscape design-build team. 5.0★ rated, 200+ yards transformed. Free 3D design consultation.",
+      "Transform your backyard into an outdoor living space. Hardscaping, pavers, artificial turf, lighting & landscape design. 5.0★ rated. Free 3D consultation.",
     url: BASE_URL,
     siteName: "Visionable Landscaping",
     locale: "en_US",
@@ -136,9 +146,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Visionable Landscaping | Bay Area Design-Build",
+    title: "Visionable Landscaping | Bay Area Outdoor Living",
     description:
-      "Bay Area's top-rated landscape team. 5.0★ rated, 200+ projects. Free design consultation.",
+      "Bay Area outdoor living design & build. 5.0★ rated, 200+ visions built. Free 3D design consultation.",
   },
   alternates: {
     canonical: "/",
@@ -153,6 +163,24 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <script
+          dangerouslySetInnerHTML={{ __html: `
+            window.addEventListener('load', function() {
+              var s = document.createElement('script');
+              s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Q3XCGS8C4X';
+              s.async = true;
+              document.head.appendChild(s);
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-Q3XCGS8C4X');
+            });
+          `}}
+        />
+        <link rel="preload" href="/hero-mobile.webp" as="image" type="image/webp" media="(max-width: 768px)" fetchPriority="high" />
+        <link rel="preload" href="/hero.webp" as="image" type="image/webp" media="(min-width: 769px)" fetchPriority="high" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
@@ -188,9 +216,11 @@ export default function RootLayout({
           }) }}
         />
       </head>
-      <body className={`${inter.variable} ${dmSerif.variable} antialiased`}>
+      <body className={`${sourceSans.variable} ${dmSerif.variable} antialiased`}>
         <a href="#main-content" className="skip-to-content">Skip to content</a>
         {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

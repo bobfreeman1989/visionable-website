@@ -1,13 +1,25 @@
 import { NextRequest, NextResponse } from "next/server";
+import {
+  buildContactEmailHtml,
+  type ContactRequest,
+} from "@/lib/contact";
 
 export const runtime = "edge";
 
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
-    const { firstName, lastName, email, phone, address, service, budget, details } = body;
+    const body = (await req.json()) as ContactRequest;
+    const payload: ContactRequest = {
+      name: body.name?.trim() ?? "",
+      email: body.email?.trim() ?? "",
+      phone: body.phone?.trim() ?? "",
+      address: body.address?.trim() ?? "",
+      service: body.service?.trim() ?? "",
+      budget: body.budget?.trim() ?? "",
+      details: body.details?.trim() ?? "",
+    };
 
-    if (!firstName || !email || !service) {
+    if (!payload.name || !payload.email || !payload.phone || !payload.service) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
@@ -17,18 +29,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Server misconfigured" }, { status: 500 });
     }
 
-    const html = `
-      <h2>New Consultation Request</h2>
-      <table style="border-collapse:collapse;width:100%">
-        <tr><td style="padding:8px;font-weight:bold">Name</td><td style="padding:8px">${firstName} ${lastName || ""}</td></tr>
-        <tr><td style="padding:8px;font-weight:bold">Email</td><td style="padding:8px"><a href="mailto:${email}">${email}</a></td></tr>
-        <tr><td style="padding:8px;font-weight:bold">Phone</td><td style="padding:8px">${phone || "Not provided"}</td></tr>
-        <tr><td style="padding:8px;font-weight:bold">Property Address</td><td style="padding:8px">${address || "Not provided"}</td></tr>
-        <tr><td style="padding:8px;font-weight:bold">Service</td><td style="padding:8px">${service}</td></tr>
-        <tr><td style="padding:8px;font-weight:bold">Budget</td><td style="padding:8px">${budget || "Not specified"}</td></tr>
-        <tr><td style="padding:8px;font-weight:bold">Details</td><td style="padding:8px">${details || "None"}</td></tr>
-      </table>
-    `;
+    const html = buildContactEmailHtml(payload);
 
     const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
@@ -39,9 +40,9 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({
         from: "Visionable Website <onboarding@resend.dev>",
         to: ["info@visionablelandscaping.com"],
-        subject: `New Consultation: ${firstName} ${lastName || ""} — ${service}`,
+        subject: `New Consultation: ${payload.name} — ${payload.service}`,
         html,
-        reply_to: email,
+        reply_to: payload.email,
       }),
     });
 

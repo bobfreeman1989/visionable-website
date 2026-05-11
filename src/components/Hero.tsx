@@ -1,99 +1,55 @@
-"use client";
 import Image from "next/image";
-import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
-import { Shield, Trophy, CheckCircle, Palette } from "lucide-react";
-
-const badges = [
-  { Icon: Shield, text: "Licensed & Insured" },
-  { Icon: Trophy, text: "15+ Years of Excellence" },
-  { Icon: CheckCircle, text: "100% Satisfaction Guarantee" },
-  { Icon: Palette, text: "Free Design Consultation" },
-];
-
-function AnimOnMount({
-  children,
-  className,
-  animation,
-  delay = 0,
-}: {
-  children: React.ReactNode;
-  className?: string;
-  animation?: Record<string, unknown>;
-  delay?: number;
-}) {
-  const [mounted, setMounted] = useState(false);
-  const prefersReduced = useReducedMotion();
-  useEffect(() => setMounted(true), []);
-
-  if (!mounted || prefersReduced) return <div className={className}>{children}</div>;
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, ...animation }}
-      animate={{ opacity: 1, y: 0, x: 0, scale: 1 }}
-      transition={{ duration: 0.6, ease: "easeOut", delay }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-}
+import FadeUp from "@/components/motion/FadeUp";
+import { heroBadges } from "@/content/hero";
 
 export default function Hero() {
-  const ref = useRef<HTMLElement>(null);
-  const { scrollY } = useScroll();
-  const prefersReduced = useReducedMotion();
-  const bgY = useTransform(scrollY, [0, 500], [0, prefersReduced ? 0 : 150]);
-
   return (
-    <section ref={ref} className="relative pt-20 min-h-[85vh] flex items-center overflow-hidden">
-      {/* Background with parallax */}
-      <motion.div className="absolute inset-0" style={{ y: bgY }}>
+    <section className="relative pt-20 min-h-[70vh] lg:min-h-screen flex items-center overflow-hidden">
+      <div className="absolute inset-0">
         <Image
-          src="/hero.jpg"
+          src="/hero.webp"
           alt="Bay Area backyard landscape design by Visionable Landscaping"
           fill
           priority
+          className="hidden md:block object-cover"
           sizes="100vw"
-          className="object-cover scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-green-950/90 via-green-900/80 to-green-950/60" />
-      </motion.div>
+        <Image
+          src="/hero-mobile.webp"
+          alt="Bay Area backyard landscape design by Visionable Landscaping"
+          fill
+          priority
+          className="md:hidden object-cover"
+          sizes="100vw"
+        />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-r from-green-950/90 via-green-900/80 to-green-950/60" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full">
-        {/* Rating */}
-        <AnimOnMount animation={{ y: 10 }} delay={0.2} className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
+        <FadeUp delay={0.1} className="inline-flex items-center gap-2 bg-green-900/60 rounded-full px-4 py-2 mb-6">
           <div className="flex gap-0.5">
-            {[...Array(5)].map((_, i) => (
-              <span key={i} className="text-accent text-sm">★</span>
+            {[...Array(5)].map((_, index) => (
+              <span key={index} className="text-accent text-sm">★</span>
             ))}
           </div>
-          <span className="text-white/90 text-sm font-medium">
-            5.0 on Google & Yelp
-          </span>
-        </AnimOnMount>
+          <span className="text-white/90 text-sm font-medium">5.0 on Google & Yelp</span>
+        </FadeUp>
 
-        <AnimOnMount animation={{ y: 20 }} delay={0.4}>
+        <FadeUp delay={0.2}>
           <h1 className="text-[clamp(2.5rem,5vw,4.5rem)] font-bold text-white leading-[1.1] mb-6">
-            Bay Area&apos;s #1 Landscape Design &amp; Build Team.
+            We Make It <span className="text-accent">Visionable</span>
             <br />
-            <span className="text-accent">We Make It Visionable.</span>
+            <span className="block mt-3 text-white/70 text-[clamp(1.1rem,2vw,1.5rem)] font-normal tracking-wide">
+              Your Backyard. Your Vision. Built for Real Life.
+            </span>
           </h1>
-        </AnimOnMount>
+        </FadeUp>
 
-        <AnimOnMount delay={0.6}>
-          <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-xl mb-10">
-            Every great yard starts with a vision. We design it, build it, and guarantee it. 200+ backyards transformed across Fremont, San Jose, Sunnyvale &amp; beyond.
-          </p>
-        </AnimOnMount>
-
-        {/* CTAs */}
-        <AnimOnMount animation={{ y: 10 }} delay={0.8}>
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
+        <FadeUp delay={0.3}>
+          <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <a
               href="#contact"
-              className="bg-accent hover:bg-accent-dark hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all inline-flex items-center justify-center gap-2 shadow-lg"
+              className="bg-accent hover:bg-accent-dark text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all inline-flex items-center justify-center gap-2 shadow-lg hover:shadow-accent/30 hover:shadow-xl"
             >
               Share Your Vision
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -102,24 +58,23 @@ export default function Hero() {
             </a>
             <a
               href="#portfolio"
-              className="border-2 border-white/30 text-white hover:bg-white/10 hover:-translate-y-0.5 active:translate-y-0 px-8 py-4 rounded-lg text-lg font-semibold transition-all text-center"
+              className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-lg text-lg font-semibold transition-all text-center"
             >
               See 200+ Visions Built
             </a>
           </div>
-        </AnimOnMount>
+        </FadeUp>
 
-        {/* Trust badges - horizontal */}
-        <AnimOnMount delay={1.0}>
-          <div className="flex flex-wrap gap-6">
-            {badges.map((b) => (
-              <div key={b.text} className="flex items-center gap-2 text-white/70">
-                <b.Icon className="w-4 h-4 text-accent" strokeWidth={1.5} />
-                <span className="text-sm">{b.text}</span>
+        <FadeUp delay={0.5}>
+          <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-x-6 gap-y-3">
+            {heroBadges.map((badge) => (
+              <div key={badge.text} className="flex items-center gap-2 text-white/70">
+                <badge.Icon className="w-4 h-4 text-accent" strokeWidth={1.5} />
+                <span className="text-sm">{badge.text}</span>
               </div>
             ))}
           </div>
-        </AnimOnMount>
+        </FadeUp>
       </div>
     </section>
   );

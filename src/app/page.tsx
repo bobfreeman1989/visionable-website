@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import CTABanner from "@/components/CTABanner";
 import Process from "@/components/Process";
-import Stats from "@/components/Stats";
 import Portfolio from "@/components/Portfolio";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
@@ -21,19 +20,13 @@ export default function Home() {
         <Portfolio />
         <CTABanner
           title="200+ Bay Area Families Had a Vision. We Built It."
-          subtitle="Free on-site consultation. No pressure. Just a plan you'll love."
+          subtitle="Free design consultation. No pressure. Just a conversation about what your yard could become."
           primaryText="Share Your Vision"
           secondaryText="See Our Process"
           secondaryHref="#process"
-          bgImage="/cta-bg.jpg"
+          bgImage="/photos/cta-bg.webp"
         />
-        <Stats />
         <Process />
-        <CTABanner
-          title="Your Dream Yard Is One Conversation Away."
-          subtitle="Got a vision? Let's make it Visionable. Free consultation, zero pressure."
-          primaryText="Share Your Vision"
-        />
         <Testimonials />
         <FAQ />
         <BlogPreview />

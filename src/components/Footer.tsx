@@ -17,6 +17,7 @@ const companyLinks = [
   { label: "Testimonials", href: "/#testimonials" },
   { label: "FAQ", href: "/#faq" },
   { label: "Blog", href: "/blog" },
+  { label: "About", href: "/about" },
   { label: "Contact", href: "/#contact" },
 ];
 
@@ -42,7 +43,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img src="/logo.png" alt="Visionable Landscaping" className="h-9 w-auto brightness-0 invert" />
+              <img src="/logo-white.png" alt="Visionable Landscaping" className="h-9 w-auto" loading="lazy" />
             </div>
             <p className="text-sm leading-relaxed mb-4">
               Shaping visions into extraordinary landscapes along the I-680 corridor.

@@ -12,7 +12,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const post = getBlogPost(params.slug);
   if (!post) return {};
-  const url = `https://visionable-website.vercel.app/blog/${params.slug}`;
+  const url = `https://visionablelandscaping.com/blog/${params.slug}`;
   return {
     title: `${post.title} | Visionable Blog`,
     description: post.excerpt,
