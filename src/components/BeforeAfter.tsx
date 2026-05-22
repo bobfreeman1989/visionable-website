@@ -18,23 +18,23 @@ const pairs: Pair[] = [
     id: "01",
     label: "Outdoor Living Build",
     location: "Fremont, CA · pergola · composite deck · sectional",
-    beforeSrc: "/photos/before-after/case-1-before-1920.jpg",
-    afterSrc: "/photos/before-after/case-1-after-1920.jpg",
+    beforeSrc: "/photos/before-after/case-1-before-1280.webp",
+    afterSrc: "/photos/before-after/case-1-after-1280.webp",
     afterPosition: "object-[50%_35%]",
   },
   {
     id: "02",
     label: "Backyard Hardscape",
     location: "East Bay · pavers · grading · planting",
-    beforeSrc: "/photos/before-after/case-2-before-1920.jpg",
-    afterSrc: "/photos/before-after/case-2-after-1920.jpg",
+    beforeSrc: "/photos/before-after/case-2-before-1280.webp",
+    afterSrc: "/photos/before-after/case-2-after-1280.webp",
   },
   {
     id: "03",
     label: "Custom Sport Court",
     location: "East Bay · modular court · hoop · edging",
-    beforeSrc: "/photos/before-after/case-3-before-1920.jpg",
-    afterSrc: "/photos/before-after/case-3-after-1920.jpg",
+    beforeSrc: "/photos/before-after/case-3-before-1280.webp",
+    afterSrc: "/photos/before-after/case-3-after-1280.webp",
     afterPosition: "object-[50%_42%]",
   },
 ];
@@ -42,6 +42,15 @@ const pairs: Pair[] = [
 export default function BeforeAfter() {
   const [activeIdx, setActiveIdx] = useState(0);
   const pair = pairs[activeIdx];
+
+  useEffect(() => {
+    pairs.forEach((p) => {
+      [p.beforeSrc, p.afterSrc].forEach((src) => {
+        const img = new window.Image();
+        img.src = src;
+      });
+    });
+  }, []);
 
   return (
     <section id="before-after" className="scroll-mt-24 bg-white py-14 sm:py-16">
@@ -163,6 +172,7 @@ function Comparison({ pair }: { pair: Pair }) {
           className={`object-cover ${pair.afterPosition ?? "object-center"}`}
           sizes="(max-width: 1024px) 100vw, 1024px"
           priority={pair.id === "01"}
+          unoptimized
           draggable={false}
         />
 
@@ -178,6 +188,7 @@ function Comparison({ pair }: { pair: Pair }) {
             className="object-cover object-center"
             sizes="(max-width: 1024px) 100vw, 1024px"
             priority={pair.id === "01"}
+            unoptimized
             draggable={false}
           />
         </div>
