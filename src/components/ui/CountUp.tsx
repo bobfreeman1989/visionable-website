@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { useInView } from "framer-motion";
 
 interface CountUpProps {
   target: number;
@@ -10,31 +9,35 @@ interface CountUpProps {
 }
 
 export default function CountUp({ target, suffix, decimals = 0, className = "text-3xl md:text-4xl font-extrabold text-primary" }: CountUpProps) {
-  const [value, setValue] = useState(target);
+  const [value, setValue] = useState(0);
   const ref = useRef<HTMLParagraphElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
   const animated = useRef(false);
-  const mounted = useRef(false);
 
   useEffect(() => {
-    mounted.current = true;
-    setValue(0);
-  }, []);
+    const el = ref.current;
+    if (!el || animated.current) return;
 
-  useEffect(() => {
-    if (isInView && !animated.current && mounted.current) {
-      animated.current = true;
-      const duration = 2000;
-      const start = performance.now();
-      const step = (now: number) => {
-        const progress = Math.min((now - start) / duration, 1);
-        const eased = 1 - Math.pow(1 - progress, 3);
-        setValue(eased * target);
-        if (progress < 1) requestAnimationFrame(step);
-      };
-      requestAnimationFrame(step);
-    }
-  }, [isInView, target]);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting || animated.current) return;
+        animated.current = true;
+        const duration = 1600;
+        const start = performance.now();
+        const step = (now: number) => {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          setValue(eased * target);
+          if (progress < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+        observer.disconnect();
+      },
+      { rootMargin: "-50px" }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [target]);
 
   return (
     <p ref={ref} className={className}>

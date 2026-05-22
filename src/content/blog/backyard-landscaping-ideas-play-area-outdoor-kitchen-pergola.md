@@ -3,7 +3,7 @@ title: "Backyard Landscaping Ideas for Families: Play Area, Outdoor Kitchen, Per
 date: "2026-05-17"
 excerpt: "Explore family-friendly backyard landscaping ideas with artificial turf, a play area, pour-in-place concrete outdoor kitchen, Techo-Bloc pavers, side-yard lighting, and a pergola."
 category: "Project Showcase"
-coverImage: "/photos/blog/backyard-landscaping-ideas-play-area-outdoor-kitchen-pergola/hero.jpg"
+coverImage: "/photos/blog/backyard-landscaping-ideas-play-area-outdoor-kitchen-pergola/hero.webp"
 author: "Visionable Team"
 featured: false
 ---
@@ -136,12 +136,12 @@ Planning a family-friendly backyard remodel in the Bay Area, Fremont, San Jose, 
 
 ## Project Photo Gallery
 
-![Main family backyard view](/photos/blog/backyard-landscaping-ideas-play-area-outdoor-kitchen-pergola/gallery-01.jpg)
+![Main family backyard view](/photos/blog/backyard-landscaping-ideas-play-area-outdoor-kitchen-pergola/gallery-01.webp)
 
-![Artificial turf play area](/photos/blog/backyard-landscaping-ideas-play-area-outdoor-kitchen-pergola/gallery-02.jpg)
+![Artificial turf play area](/photos/blog/backyard-landscaping-ideas-play-area-outdoor-kitchen-pergola/gallery-02.webp)
 
-![Outdoor kitchen detail](/photos/blog/backyard-landscaping-ideas-play-area-outdoor-kitchen-pergola/gallery-03.jpg)
+![Outdoor kitchen detail](/photos/blog/backyard-landscaping-ideas-play-area-outdoor-kitchen-pergola/gallery-03.webp)
 
-![Paver pattern / side yard](/photos/blog/backyard-landscaping-ideas-play-area-outdoor-kitchen-pergola/gallery-04.jpg)
+![Paver pattern / side yard](/photos/blog/backyard-landscaping-ideas-play-area-outdoor-kitchen-pergola/gallery-04.webp)
 
-![Pergola shade area](/photos/blog/backyard-landscaping-ideas-play-area-outdoor-kitchen-pergola/gallery-05.jpg)
+![Pergola shade area](/photos/blog/backyard-landscaping-ideas-play-area-outdoor-kitchen-pergola/gallery-05.webp)

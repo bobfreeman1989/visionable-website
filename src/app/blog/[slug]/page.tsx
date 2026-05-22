@@ -27,6 +27,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
+      ...(post.coverImage ? { images: [post.coverImage] } : { images: ["/og-image.jpg"] }),
     },
     alternates: { canonical: url },
   };
@@ -53,9 +54,47 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
   const related = allPosts
     .filter((p) => p.slug !== post.slug && (p.category === post.category))
     .slice(0, 3);
+  const url = `https://visionablelandscaping.com/blog/${post.slug}`;
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    image: post.coverImage ? `https://visionablelandscaping.com${post.coverImage}` : "https://visionablelandscaping.com/og-image.jpg",
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Organization",
+      name: "Visionable Landscaping",
+      url: "https://visionablelandscaping.com",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Visionable Landscaping",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://visionablelandscaping.com/logo.png",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+  };
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://visionablelandscaping.com" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://visionablelandscaping.com/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: url },
+    ],
+  };
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Nav />
       <main className="pt-20 pb-20">
         {/* Cover Image */}

@@ -3,7 +3,7 @@ title: "Simple, Practical Front and Backyard Remodel Ideas for Bay Area Homes"
 date: "2026-05-19"
 excerpt: "See how a simple front and backyard remodel can improve flow, outdoor lighting, paver details, and low-maintenance everyday use for Bay Area homeowners."
 category: "Project Showcase"
-coverImage: "/photos/blog/front-and-back-yard-paver-landscape-design-bay-area/hero.jpg"
+coverImage: "/photos/blog/front-and-back-yard-paver-landscape-design-bay-area/hero.webp"
 author: "Visionable Team"
 featured: false
 ---
@@ -114,12 +114,12 @@ Ready to create a cleaner, more practical front or backyard? **Request a Free Es
 
 ## Project Photo Gallery
 
-![Front yard view](/photos/blog/front-and-back-yard-paver-landscape-design-bay-area/gallery-01.jpg)
+![Front yard view](/photos/blog/front-and-back-yard-paver-landscape-design-bay-area/gallery-01.webp)
 
-![Fence detail](/photos/blog/front-and-back-yard-paver-landscape-design-bay-area/gallery-02.jpg)
+![Fence detail](/photos/blog/front-and-back-yard-paver-landscape-design-bay-area/gallery-02.webp)
 
-![Paver detail](/photos/blog/front-and-back-yard-paver-landscape-design-bay-area/gallery-03.jpg)
+![Paver detail](/photos/blog/front-and-back-yard-paver-landscape-design-bay-area/gallery-03.webp)
 
-![Paver detail](/photos/blog/front-and-back-yard-paver-landscape-design-bay-area/gallery-04.jpg)
+![Paver detail](/photos/blog/front-and-back-yard-paver-landscape-design-bay-area/gallery-04.webp)
 
-![Side yard](/photos/blog/front-and-back-yard-paver-landscape-design-bay-area/gallery-05.jpg)
+![Side yard](/photos/blog/front-and-back-yard-paver-landscape-design-bay-area/gallery-05.webp)

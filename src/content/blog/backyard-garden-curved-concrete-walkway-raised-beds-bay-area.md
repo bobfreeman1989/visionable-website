@@ -3,7 +3,7 @@ title: "Backyard Garden Design with Curved Concrete Walkways and Raised Beds"
 date: "2026-05-20"
 excerpt: "A Bay Area backyard can be a garden, vegetable space, and family-friendly retreat. Learn design takeaways from a curved walkway and raised bed project."
 category: "Project Showcase"
-coverImage: "/photos/blog/backyard-garden-curved-concrete-walkway-raised-beds-bay-area/hero.jpg"
+coverImage: "/photos/blog/backyard-garden-curved-concrete-walkway-raised-beds-bay-area/hero.webp"
 author: "Visionable Team"
 featured: false
 ---
@@ -119,12 +119,12 @@ Want a backyard that works as a garden, vegetable space, and family retreat? **R
 
 ## Project Photo Gallery
 
-![Main garden view](/photos/blog/backyard-garden-curved-concrete-walkway-raised-beds-bay-area/gallery-01.jpg)
+![Main garden view](/photos/blog/backyard-garden-curved-concrete-walkway-raised-beds-bay-area/gallery-01.webp)
 
-![Curved walkway](/photos/blog/backyard-garden-curved-concrete-walkway-raised-beds-bay-area/gallery-02.jpg)
+![Curved walkway](/photos/blog/backyard-garden-curved-concrete-walkway-raised-beds-bay-area/gallery-02.webp)
 
-![Paver detail](/photos/blog/backyard-garden-curved-concrete-walkway-raised-beds-bay-area/gallery-03.jpg)
+![Paver detail](/photos/blog/backyard-garden-curved-concrete-walkway-raised-beds-bay-area/gallery-03.webp)
 
-![Concrete detail](/photos/blog/backyard-garden-curved-concrete-walkway-raised-beds-bay-area/gallery-04.jpg)
+![Concrete detail](/photos/blog/backyard-garden-curved-concrete-walkway-raised-beds-bay-area/gallery-04.webp)
 
-![Side yard](/photos/blog/backyard-garden-curved-concrete-walkway-raised-beds-bay-area/gallery-05.jpg)
+![Side yard](/photos/blog/backyard-garden-curved-concrete-walkway-raised-beds-bay-area/gallery-05.webp)

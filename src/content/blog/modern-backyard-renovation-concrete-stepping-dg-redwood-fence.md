@@ -3,7 +3,7 @@ title: "Modern Backyard Renovation Ideas: Concrete Stepping Pads, DG Joints, and
 date: "2026-05-18"
 excerpt: "A Bay Area backyard renovation can feel clean, open, and low-maintenance with large concrete stepping pads, DG joints, privacy screening, and California-style planting."
 category: "Project Showcase"
-coverImage: "/photos/blog/modern-backyard-renovation-concrete-stepping-dg-redwood-fence/hero.jpg"
+coverImage: "/photos/blog/modern-backyard-renovation-concrete-stepping-dg-redwood-fence/hero.webp"
 author: "Visionable Team"
 featured: false
 ---
@@ -115,12 +115,12 @@ Planning a modern backyard renovation in the Bay Area, Fremont, San Jose, or nea
 
 ## Project Photo Gallery
 
-![Main renovation view](/photos/blog/modern-backyard-renovation-concrete-stepping-dg-redwood-fence/gallery-01.jpg)
+![Main renovation view](/photos/blog/modern-backyard-renovation-concrete-stepping-dg-redwood-fence/gallery-01.webp)
 
-![Concrete stepping pads](/photos/blog/modern-backyard-renovation-concrete-stepping-dg-redwood-fence/gallery-02.jpg)
+![Concrete stepping pads](/photos/blog/modern-backyard-renovation-concrete-stepping-dg-redwood-fence/gallery-02.webp)
 
-![DG joint detail](/photos/blog/modern-backyard-renovation-concrete-stepping-dg-redwood-fence/gallery-03.jpg)
+![DG joint detail](/photos/blog/modern-backyard-renovation-concrete-stepping-dg-redwood-fence/gallery-03.webp)
 
-![Redwood fence screen](/photos/blog/modern-backyard-renovation-concrete-stepping-dg-redwood-fence/gallery-04.jpg)
+![Redwood fence screen](/photos/blog/modern-backyard-renovation-concrete-stepping-dg-redwood-fence/gallery-04.webp)
 
-![Planting detail](/photos/blog/modern-backyard-renovation-concrete-stepping-dg-redwood-fence/gallery-05.jpg)
+![Planting detail](/photos/blog/modern-backyard-renovation-concrete-stepping-dg-redwood-fence/gallery-05.webp)

@@ -72,6 +72,9 @@ export function getBlogPost(slug: string): BlogPost | null {
     );
   });
 
+  // Add lazy-loading attributes to markdown images.
+  contentHtml = contentHtml.replace(/<img /g, '<img loading="lazy" decoding="async" ');
+
   return {
     slug,
     title: data.title || slug,

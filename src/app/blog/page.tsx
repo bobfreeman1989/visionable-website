@@ -10,6 +10,22 @@ export const metadata = {
   openGraph: {
     title: "Landscaping Blog — Tips & Trends | Visionable Landscaping",
     description: "Expert landscaping tips and design inspiration from Silicon Valley's top-rated team.",
+    url: "https://visionablelandscaping.com/blog",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Visionable Landscaping blog and Bay Area backyard project insights",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Landscaping Blog — Tips & Trends | Visionable Landscaping",
+    description: "Expert landscaping tips and design inspiration from Silicon Valley's top-rated team.",
+    images: ["/og-image.jpg"],
   },
   alternates: { canonical: "https://visionablelandscaping.com/blog" },
 };

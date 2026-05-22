@@ -3,7 +3,7 @@ title: "Modern Minimalist Backyard Design: Pavers, Decking, Lighting, and a Moto
 date: "2026-05-16"
 excerpt: "See how a modern minimalist backyard can combine premium pavers, decking, outdoor lighting, drainage, and a motorized pergola for everyday Bay Area comfort."
 category: "Project Showcase"
-coverImage: "/photos/blog/modern-minimalist-backyard-design-pavers-deck-pergola/hero.jpg"
+coverImage: "/photos/blog/modern-minimalist-backyard-design-pavers-deck-pergola/hero.webp"
 author: "Visionable Team"
 featured: false
 ---
@@ -134,12 +134,12 @@ Planning a modern backyard remodel in the Bay Area, Fremont, San Jose, or nearby
 
 ## Project Photo Gallery
 
-![Main backyard view](/photos/blog/modern-minimalist-backyard-design-pavers-deck-pergola/gallery-01.jpg)
+![Main backyard view](/photos/blog/modern-minimalist-backyard-design-pavers-deck-pergola/gallery-01.webp)
 
-![Paver detail](/photos/blog/modern-minimalist-backyard-design-pavers-deck-pergola/gallery-02.jpg)
+![Paver detail](/photos/blog/modern-minimalist-backyard-design-pavers-deck-pergola/gallery-02.webp)
 
-![Deck transition](/photos/blog/modern-minimalist-backyard-design-pavers-deck-pergola/gallery-03.jpg)
+![Deck transition](/photos/blog/modern-minimalist-backyard-design-pavers-deck-pergola/gallery-03.webp)
 
-![Pergola shade](/photos/blog/modern-minimalist-backyard-design-pavers-deck-pergola/gallery-04.jpg)
+![Pergola shade](/photos/blog/modern-minimalist-backyard-design-pavers-deck-pergola/gallery-04.webp)
 
-![Evening lighting](/photos/blog/modern-minimalist-backyard-design-pavers-deck-pergola/gallery-05.jpg)
+![Evening lighting](/photos/blog/modern-minimalist-backyard-design-pavers-deck-pergola/gallery-05.webp)

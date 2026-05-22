@@ -59,6 +59,15 @@ h1, h2, h3 {
   }
 }
 
+/* Lightweight entrance animation without a JS animation runtime */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fadeUp 0.55s ease-out both;
+}
+
 /* Portfolio filter animation */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(8px); }
@@ -69,6 +78,7 @@ h1, h2, h3 {
 }
 @media (prefers-reduced-motion: reduce) {
   .animate-fade-in { animation: none; }
+  .fade-up { animation: none; }
 }
 
 /* Hide scrollbar for testimonials carousel */

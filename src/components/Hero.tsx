@@ -1,4 +1,3 @@
-import Image from "next/image";
 import FadeUp from "@/components/motion/FadeUp";
 import { heroBadges } from "@/content/hero";
 
@@ -6,22 +5,18 @@ export default function Hero() {
   return (
     <section className="relative pt-20 min-h-[70vh] lg:min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0">
-        <Image
-          src="/hero.webp"
-          alt="Bay Area backyard landscape design by Visionable Landscaping"
-          fill
-          priority
-          className="hidden md:block object-cover"
-          sizes="100vw"
-        />
-        <Image
-          src="/hero-mobile.webp"
-          alt="Bay Area backyard landscape design by Visionable Landscaping"
-          fill
-          priority
-          className="md:hidden object-cover"
-          sizes="100vw"
-        />
+        <picture>
+          <source srcSet="/hero.webp" media="(min-width: 768px)" type="image/webp" />
+          <img
+            src="/hero-mobile.webp"
+            alt="Bay Area backyard landscape design by Visionable Landscaping"
+            className="h-full w-full object-cover"
+            width={890}
+            height={668}
+            fetchPriority="high"
+            decoding="async"
+          />
+        </picture>
       </div>
       <div className="absolute inset-0 bg-gradient-to-r from-green-950/90 via-green-900/80 to-green-950/60" />
 

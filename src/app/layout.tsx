@@ -56,7 +56,9 @@ const localBusinessSchema = {
     closes: "17:00",
   },
   image: `${BASE_URL}/og-image.jpg`,
-  sameAs: [],
+  sameAs: [
+    "https://www.yelp.com/biz/visionable-landscaping-fremont",
+  ],
 };
 
 const faqSchema = {
@@ -141,6 +143,14 @@ export const metadata: Metadata = {
       "Transform your backyard into an outdoor living space. Hardscaping, pavers, artificial turf, lighting & landscape design. 5.0★ rated. Free 3D consultation.",
     url: BASE_URL,
     siteName: "Visionable Landscaping",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Visionable Landscaping Bay Area backyard design and build",
+      },
+    ],
     locale: "en_US",
     type: "website",
   },
@@ -149,6 +159,7 @@ export const metadata: Metadata = {
     title: "Visionable Landscaping | Bay Area Outdoor Living",
     description:
       "Bay Area outdoor living design & build. 5.0★ rated, 200+ visions built. Free 3D design consultation.",
+    images: ["/og-image.jpg"],
   },
   alternates: {
     canonical: "/",

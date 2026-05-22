@@ -3,7 +3,7 @@ title: "Backyard Basketball Court Design for Active Bay Area Families"
 date: "2026-05-21"
 excerpt: "A backyard basketball court can turn unused space into a family hub. Learn design ideas for sport courts, safety netting, pavers, turf, and raised beds."
 category: "Project Showcase"
-coverImage: "/photos/blog/backyard-basketball-court-design-bay-area-families/hero.jpg"
+coverImage: "/photos/blog/backyard-basketball-court-design-bay-area-families/hero.webp"
 author: "Visionable Team"
 featured: true
 ---
@@ -118,12 +118,12 @@ Thinking about turning your backyard into a home court, garden, and family gathe
 
 ## Project Photo Gallery
 
-![Main court view](/photos/blog/backyard-basketball-court-design-bay-area-families/gallery-01.jpg)
+![Main court view](/photos/blog/backyard-basketball-court-design-bay-area-families/gallery-01.webp)
 
-![Raised bed](/photos/blog/backyard-basketball-court-design-bay-area-families/gallery-02.jpg)
+![Raised bed](/photos/blog/backyard-basketball-court-design-bay-area-families/gallery-02.webp)
 
-![Sport flooring](/photos/blog/backyard-basketball-court-design-bay-area-families/gallery-03.jpg)
+![Sport flooring](/photos/blog/backyard-basketball-court-design-bay-area-families/gallery-03.webp)
 
-![Retaining / edge detail](/photos/blog/backyard-basketball-court-design-bay-area-families/gallery-04.jpg)
+![Retaining / edge detail](/photos/blog/backyard-basketball-court-design-bay-area-families/gallery-04.webp)
 
-![Garden / rest zone](/photos/blog/backyard-basketball-court-design-bay-area-families/gallery-05.jpg)
+![Garden / rest zone](/photos/blog/backyard-basketball-court-design-bay-area-families/gallery-05.webp)
