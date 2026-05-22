@@ -35,6 +35,20 @@ export const testimonialReviews: TestimonialReview[] = [
     text: "They helped design my front yard, installed artificial grass, and added mulch. The entire job was completed in just one day, and the turnaround was incredibly quick. It has been a year now and the results are great.",
     image: "/photos/testimonials/t03.webp",
   },
+  {
+    name: "Backyard Client",
+    location: "Fremont, CA",
+    project: "Backyard Remodel",
+    text: "Super happy with how my backyard turned out! Bob and his team were professional, efficient, and really paid attention to the details. They listened to what I wanted and gave great advice.",
+    image: "/photos/portfolio/p01.webp",
+  },
+  {
+    name: "Rock Yard Client",
+    location: "Bay Area, CA",
+    project: "Functional Yard Conversion",
+    text: "Bob and team did a great job converting our full-of-rock yard to a beautiful and very functional space. He is experienced, prompt in replying, and very responsive.",
+    image: "/photos/portfolio/p06.webp",
+  },
 ];
 
 export const testimonialStats: TestimonialStat[] = [
