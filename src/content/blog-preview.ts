@@ -6,18 +6,18 @@ export type BlogPreviewPost = {
 
 export const blogPreviewPosts: BlogPreviewPost[] = [
   {
-    title: "Artificial Turf: Pros, Cons & What to Expect",
-    slug: "artificial-turf-pros-cons",
-    tag: "Turf",
+    title: "Backyard Basketball Court Design for Active Bay Area Families",
+    slug: "backyard-basketball-court-design-bay-area-families",
+    tag: "Project Showcase",
   },
   {
-    title: "How to Choose the Right Pavers for Your Patio",
-    slug: "how-to-choose-pavers",
-    tag: "Hardscaping",
+    title: "Backyard Garden Design with Curved Concrete Walkways and Raised Beds",
+    slug: "backyard-garden-curved-concrete-walkway-raised-beds-bay-area",
+    tag: "Project Showcase",
   },
   {
-    title: "Outdoor Lighting Ideas That Boost Curb Appeal",
-    slug: "outdoor-lighting-ideas",
-    tag: "Lighting",
+    title: "Simple, Practical Front and Backyard Remodel Ideas for Bay Area Homes",
+    slug: "front-and-back-yard-paver-landscape-design-bay-area",
+    tag: "Project Showcase",
   },
 ];

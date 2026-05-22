@@ -36,6 +36,7 @@ const categoryColors: Record<string, string> = {
   "Design Tips": "bg-blue-100 text-blue-700",
   "Maintenance": "bg-emerald-100 text-emerald-700",
   "Trends": "bg-purple-100 text-purple-700",
+  "Project Showcase": "bg-primary/10 text-primary",
   "General": "bg-gray-100 text-gray-600",
 };
 

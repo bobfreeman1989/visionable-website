@@ -4,6 +4,7 @@ import Services from "@/components/Services";
 import CTABanner from "@/components/CTABanner";
 import Process from "@/components/Process";
 import Portfolio from "@/components/Portfolio";
+import BeforeAfter from "@/components/BeforeAfter";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import BlogPreview from "@/components/BlogPreview";
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <Services />
         <Portfolio />
+        <BeforeAfter />
         <CTABanner
           title="200+ Bay Area Families Had a Vision. We Built It."
           subtitle="Free design consultation. No pressure. Just a conversation about what your yard could become."
