@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-30T12:00:00-07:00",
+  "title": "Design System: Visionable Landscaping",
+  "extensions": {
+    "colorMeta": {
+      "cultivated-forest-green": {
+        "role": "primary",
+        "displayName": "Cultivated Forest Green",
+        "canonical": "#1B6B2A",
+        "tonalRamp": ["#0B2D12", "#103F19", "#145520", "#1B6B2A", "#238636", "#4DA164", "#8FC9A2", "#DCEFE2"]
+      },
+      "golden-marigold": {
+        "role": "secondary",
+        "displayName": "Golden Marigold",
+        "canonical": "#E8960C",
+        "tonalRamp": ["#5C3B03", "#7E5004", "#A56804", "#C77D07", "#E8960C", "#F0B24A", "#F6CE8A", "#FBE9C9"]
+      },
+      "foreground": {
+        "role": "neutral",
+        "displayName": "Warm Ink",
+        "canonical": "#1A1917",
+        "tonalRamp": ["#1A1917", "#36322E", "#56514A", "#7C766C", "#A6A096", "#CFC9C0", "#EDEAE3", "#FEFDFB"]
+      },
+      "background": { "role": "neutral", "displayName": "Warm Off-White Background", "canonical": "#FEFDFB" },
+      "surface": { "role": "neutral", "displayName": "Surface", "canonical": "#FAFAF8" },
+      "surface-alt": { "role": "neutral", "displayName": "Surface Alt", "canonical": "#F5F5F2" },
+      "border": { "role": "neutral", "displayName": "Hairline Border", "canonical": "#E5E7EB" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only. DM Serif Display at 400; never bolded." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles." },
+      "title": { "displayName": "Title", "purpose": "Card titles and form headings." },
+      "body": { "displayName": "Body", "purpose": "Paragraph copy in Source Sans 3, measure capped 65 to 75ch." },
+      "label": { "displayName": "Label", "purpose": "Uppercase eyebrows and tags, 0.05em tracking." }
+    },
+    "shadows": [
+      { "name": "resting-float", "value": "0 1px 2px rgba(0,0,0,0.05)", "purpose": "Fixed nav bar only." },
+      { "name": "menu-action", "value": "0 4px 6px -1px rgba(0,0,0,0.1)", "purpose": "Dropdown menus, active filter pill, form submit." },
+      { "name": "lift", "value": "0 10px 15px -3px rgba(0,0,0,0.1)", "purpose": "Cards and CTAs on hover; mobile menu." },
+      { "name": "marigold-glow", "value": "0 20px 25px -5px rgba(232,150,12,0.3)", "purpose": "Hero conversion button on hover only; the one colored shadow." }
+    ],
+    "motion": [
+      { "name": "duration-standard", "value": "300ms", "purpose": "Default duration for color, transform, and shadow transitions." },
+      { "name": "ease-out", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Exponential ease-out for entrances and hovers. No bounce, no elastic." },
+      { "name": "entrance-fade-up", "value": "fadeUp 0.55s ease-out both (opacity 0 to 1, translateY 16px to 0)", "purpose": "Staggered section entrance via the FadeUp component." },
+      { "name": "hover-lift", "value": "translateY(-4px) cards, translateY(-2px) CTAs", "purpose": "Surfaces rise on hover, return to flat on release." },
+      { "name": "reduced-motion", "value": "all animation and transition collapse to 0.01ms", "purpose": "Honored globally under prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Accent Button",
+      "kind": "button",
+      "refersTo": "button-accent",
+      "description": "The scarce conversion CTA (hero, form submit). Marigold fill, arrow icon, lifts on hover.",
+      "html": "<button class='ds-btn-accent'>Share Your Vision<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' width='20' height='20'><path stroke-linecap='round' stroke-linejoin='round' d='M17 8l4 4m0 0l-4 4m4-4H3'/></svg></button>",
+      "css": ".ds-btn-accent{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#E8960C;color:#1A1917;font-family:'Source Sans 3',system-ui,sans-serif;font-size:1.125rem;font-weight:600;padding:16px 32px;border:none;border-radius:8px;box-shadow:0 10px 15px -3px rgba(0,0,0,0.1);cursor:pointer;transition:background .3s,box-shadow .3s,transform .3s}.ds-btn-accent:hover{box-shadow:0 20px 25px -5px rgba(232,150,12,0.3);transform:translateY(-2px)}.ds-btn-accent:focus-visible{outline:2px solid #1B6B2A;outline-offset:2px}"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Compact green brand button (nav Book Consultation).",
+      "html": "<button class='ds-btn-primary'>Book Consultation</button>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;background:#1B6B2A;color:#FFFFFF;font-family:'Source Sans 3',system-ui,sans-serif;font-size:.875rem;font-weight:600;padding:10px 20px;border:none;border-radius:8px;cursor:pointer;transition:background .2s}.ds-btn-primary:hover{background:#145520}.ds-btn-primary:focus-visible{outline:2px solid #1B6B2A;outline-offset:2px}"
+    },
+    {
+      "name": "Ghost Button on Dark",
+      "kind": "button",
+      "refersTo": "button-ghost-on-dark",
+      "description": "Secondary action over photography or green. Transparent with a white hairline border.",
+      "html": "<div style='background:#14532D;padding:24px;border-radius:12px;display:inline-block'><a class='ds-btn-ghost' href='#'>See 200+ Visions Built</a></div>",
+      "css": ".ds-btn-ghost{display:inline-flex;align-items:center;justify-content:center;color:#FFFFFF;font-family:'Source Sans 3',system-ui,sans-serif;font-size:1.125rem;font-weight:600;padding:16px 32px;border:2px solid rgba(255,255,255,0.3);border-radius:8px;text-decoration:none;transition:background .3s}.ds-btn-ghost:hover{background:rgba(255,255,255,0.1)}.ds-btn-ghost:focus-visible{outline:2px solid #FFFFFF;outline-offset:2px}"
+    },
+    {
+      "name": "Inverse Button on Green",
+      "kind": "button",
+      "refersTo": "button-inverse",
+      "description": "Primary action inside a green CTA banner. Warm-white fill, green text, lifts on hover.",
+      "html": "<div style='background:linear-gradient(90deg,#1B6B2A,#15803D);padding:24px;border-radius:12px;display:inline-block'><a class='ds-btn-inverse' href='#'>Share Your Vision<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' width='16' height='16'><path stroke-linecap='round' stroke-linejoin='round' d='M17 8l4 4m0 0l-4 4m4-4H3'/></svg></a></div>",
+      "css": ".ds-btn-inverse{display:inline-flex;align-items:center;gap:8px;background:#FEFDFB;color:#1B6B2A;font-family:'Source Sans 3',system-ui,sans-serif;font-size:1rem;font-weight:600;padding:14px 32px;border-radius:8px;text-decoration:none;transition:transform .3s,box-shadow .3s,background .3s}.ds-btn-inverse:hover{background:#F3F4F6;transform:translateY(-2px);box-shadow:0 10px 15px -3px rgba(0,0,0,0.1)}"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Labeled field with a green focus ring. Always-visible focus state.",
+      "html": "<div style='display:flex;flex-direction:column;gap:4px;max-width:320px'><label class='ds-label' for='ds-name'>Full Name *</label><input class='ds-input' id='ds-name' type='text' placeholder='Your name'/></div>",
+      "css": ".ds-label{font-family:'Source Sans 3',system-ui,sans-serif;font-size:.875rem;font-weight:500;color:#4B5563}.ds-input{width:100%;box-sizing:border-box;background:#FFFFFF;color:#1A1917;font-family:'Source Sans 3',system-ui,sans-serif;font-size:.875rem;padding:12px 16px;border:1px solid #E5E7EB;border-radius:8px;outline:none;transition:box-shadow .2s,border-color .2s}.ds-input::placeholder{color:#9CA3AF}.ds-input:focus{border-color:transparent;box-shadow:0 0 0 2px #1B6B2A}"
+    },
+    {
+      "name": "Service Card",
+      "kind": "card",
+      "refersTo": "card-service",
+      "description": "Flat white card with hairline border, icon tile, and a top-edge accent that animates in on hover.",
+      "html": "<a class='ds-card' href='#'><span class='ds-card-edge'></span><span class='ds-card-icon'><svg viewBox='0 0 24 24' fill='none' stroke='#1B6B2A' stroke-width='1.5' width='28' height='28'><path stroke-linecap='round' stroke-linejoin='round' d='M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z'/><path stroke-linecap='round' stroke-linejoin='round' d='M2 21c0-3 1.85-5.36 5.08-6'/></svg></span><span class='ds-card-body'><span class='ds-card-head'><span class='ds-card-title'>Outdoor Living Design</span><span class='ds-tag'>Where Every Vision Starts</span></span><span class='ds-card-desc'>Walk through your future backyard in 3D before we break ground. We design around how you live.</span></span></a>",
+      "css": ".ds-card{position:relative;display:flex;align-items:flex-start;gap:20px;background:#FFFFFF;border:1px solid #E5E7EB;border-radius:16px;padding:32px;text-decoration:none;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s}.ds-card:hover{transform:translateY(-4px);box-shadow:0 10px 15px -3px rgba(0,0,0,0.1);border-color:rgba(27,107,42,0.3)}.ds-card-edge{position:absolute;top:0;left:0;right:0;height:2px;background:#1B6B2A;transform:scaleX(0);transform-origin:left;transition:transform .3s}.ds-card:hover .ds-card-edge{transform:scaleX(1)}.ds-card-icon{flex-shrink:0;width:56px;height:56px;border-radius:12px;background:#E8F0EA;display:flex;align-items:center;justify-content:center}.ds-card-body{display:flex;flex-direction:column;gap:8px}.ds-card-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.ds-card-title{font-family:'DM Serif Display',Georgia,serif;font-size:1.25rem;color:#111827}.ds-tag{font-family:'Source Sans 3',system-ui,sans-serif;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#1B6B2A;background:#EDF3EE;padding:2px 10px;border-radius:9999px}.ds-card-desc{font-family:'Source Sans 3',system-ui,sans-serif;font-size:1rem;line-height:1.6;color:#6B7280}"
+    },
+    {
+      "name": "Filter Pill",
+      "kind": "chip",
+      "refersTo": "chip-filter",
+      "description": "Portfolio category filter. Active is solid green; idle is white with a hairline border.",
+      "html": "<div style='display:flex;gap:8px;flex-wrap:wrap'><button class='ds-pill ds-pill-active'>All Projects</button><button class='ds-pill'>Patios</button><button class='ds-pill'>Turf</button></div>",
+      "css": ".ds-pill{font-family:'Source Sans 3',system-ui,sans-serif;font-size:.875rem;font-weight:500;padding:10px 20px;border-radius:9999px;background:#FFFFFF;color:#4B5563;border:1px solid #E5E7EB;cursor:pointer;transition:border-color .3s,color .3s,background .3s,box-shadow .3s}.ds-pill:hover{border-color:#1B6B2A;color:#1B6B2A}.ds-pill-active{background:#1B6B2A;color:#FFFFFF;border-color:#1B6B2A;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1)}.ds-pill:focus-visible{outline:2px solid #1B6B2A;outline-offset:2px}"
+    },
+    {
+      "name": "Navigation Bar",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Fixed white bar with serif wordmark, sans links, and the green Book Consultation CTA.",
+      "html": "<nav class='ds-nav'><span class='ds-nav-brand'>Visionable</span><div class='ds-nav-links'><a class='ds-nav-link' href='#'>Portfolio</a><a class='ds-nav-link' href='#'>About</a><a class='ds-nav-link' href='#'>Blog</a><a class='ds-nav-cta' href='#'>Book Consultation</a></div></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;justify-content:space-between;gap:24px;background:#FFFFFF;border-bottom:1px solid #F3F4F6;box-shadow:0 1px 2px rgba(0,0,0,0.05);padding:14px 24px;border-radius:8px}.ds-nav-brand{font-family:'DM Serif Display',Georgia,serif;font-size:1.25rem;color:#1B6B2A}.ds-nav-links{display:flex;align-items:center;gap:20px}.ds-nav-link{font-family:'Source Sans 3',system-ui,sans-serif;font-size:.875rem;font-weight:500;color:#4B5563;text-decoration:none;transition:color .2s}.ds-nav-link:hover{color:#1B6B2A}.ds-nav-cta{font-family:'Source Sans 3',system-ui,sans-serif;font-size:.875rem;font-weight:600;color:#FFFFFF;background:#1B6B2A;padding:10px 20px;border-radius:8px;text-decoration:none;transition:background .2s}.ds-nav-cta:hover{background:#145520}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Garden Atelier",
+    "overview": "This is the visual language of a refined maker's studio, not a contractor's flyer. Headlines are set in a high-contrast display serif and given room to breathe; body copy is a clean humanist sans; surfaces are warm off-white rather than clinical white. The work of persuasion is done by full-bleed project photography and generous space, not by loud chrome. The feeling a premium homeowner should get is \"these people have taste and will get the details right,\" which is exactly the strategic line in PRODUCT.md: refined and confident, quiet luxury, craftsmanship without shouting.\n\nColor is disciplined. Cultivated Forest Green carries the brand and the everyday chrome (links, nav, secondary actions). Golden Marigold is the scarce conversion color, used for the one action that matters on a given view and almost nothing else. Depth is restrained: cards sit flat with a hairline border at rest and lift on hover, so motion reads as a quiet response to intent rather than decoration.\n\nThe system explicitly rejects the generic home-services look named in PRODUCT.md: clip-art icons, stock crew photography, loud \"FREE QUOTE\" banners, badge soup, and crowded template layouts. Restraint is the premium signal. When in doubt, remove an element and add space.",
+    "keyCharacteristics": [
+      "Display serif (DM Serif Display) over humanist sans (Source Sans 3); hierarchy by size, not weight.",
+      "Warm neutral world: backgrounds tint warm, never pure clinical white at the page level.",
+      "Two-color discipline: forest green for brand chrome, marigold for the single most important action.",
+      "Flat surfaces with hairline borders that lift on hover; no resting drop-shadows except nav and menus.",
+      "Photography-led, space-rich, calm. Proof over promises, show the vision before selling the service."
+    ],
+    "rules": [
+      { "name": "The Marigold Rarity Rule", "section": "colors", "body": "Golden Marigold (#E8960C) means \"act now.\" It belongs to one action per view and the rating stars, nothing else. If marigold covers more than roughly 10% of a screen, the screen is wrong. Forest green carries everything else." },
+      { "name": "The Warm Neutral Rule", "section": "colors", "body": "Neutrals tint warm. The page ground is #FEFDFB and large panels are #FAFAF8 or #F5F5F2, never a clinical pure white field. Pure #FFFFFF is allowed only for crisp content cards sitting on a warm ground." },
+      { "name": "The Serif Weight Rule", "section": "typography", "body": "DM Serif Display ships a single weight (400). Applying font-bold or font-semibold to a serif heading triggers synthetic faux-bold, which smears a display serif and reads cheap. Set serif headings at 400 and create hierarchy with size, never with weight." },
+      { "name": "The Label Caps Rule", "section": "typography", "body": "All-caps is for labels and tags only (Source Sans 3 600, 0.05em tracking). Never set headings or body copy in all caps." },
+      { "name": "The Flat-by-Default Rule", "section": "elevation", "body": "A surface is flat with a 1px warm border until the user interacts with it. On hover or focus it earns a Lift shadow and a translate-y of 4px (cards) or 2px (CTAs), returning to flat on release. Never ship a resting drop-shadow on a card." }
+    ],
+    "dos": [
+      "Do lead with real, full-bleed project photography and let the dark green gradient scrim carry hero text contrast.",
+      "Do reserve Golden Marigold (#E8960C) for the single primary action per view; use Cultivated Forest Green (#1B6B2A) for brand chrome, links, and secondary actions.",
+      "Do keep surfaces flat with a hairline border (#E5E7EB) at rest and lift them (translate-y, shadow-lg) only on hover or focus.",
+      "Do give elements room: 32px card padding, generous section spacing, one clear path to the free consultation per section.",
+      "Do pair DM Serif Display headings with Source Sans 3 body, and separate two headings by size, not weight.",
+      "Do prefer warm surfaces (#FEFDFB page, #FAFAF8 panels) over pure white for large areas, and keep focus rings visible (focus:ring-2 focus:ring-primary).",
+      "Do write descriptive alt text on every project image; the imagery carries the brand."
+    ],
+    "donts": [
+      "Don't use clip-art service icons or stock \"happy crew\" photography. Use real project photos and thin line icons (strokeWidth 1.5).",
+      "Don't add loud \"FREE QUOTE\" banners, countdown urgency, or hard-sell pricing blocks.",
+      "Don't pile up badge soup: rows of trust seals, review-platform logos, and certification clutter. One quiet 5.0 rating line is enough.",
+      "Don't build crowded, busy layouts that read as a default template or a bargain operator. Restraint is the premium signal.",
+      "Don't apply font-bold or font-semibold to DM Serif Display headings; it triggers faux-bold. Use size for hierarchy.",
+      "Don't use a colored border-left or border-right thicker than 1px as a stripe accent; the only edge accent is the top hairline that animates in on hover.",
+      "Don't use gradient text (background-clip: text); emphasize the word \"Visionable\" with solid Golden Marigold, as the hero already does.",
+      "Don't reach for glassmorphism, a modal as the first thought, the big-number hero-metric template, or identical icon-heading-text card grids repeated down the page.",
+      "Don't let Golden Marigold spread across a screen; its scarcity is what makes it mean \"act.\""
+    ]
+  }
+}

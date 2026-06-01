@@ -20,13 +20,13 @@ export const featuredServices: ServiceItem[] = [
   {
     Icon: PenTool,
     title: "Outdoor Living Design",
-    desc: "Walk through your future backyard in 3D before we break ground. We design around how you live — where you'll cook, where the kids will play, where you'll unwind after work.",
+    desc: "Walk through your future backyard in 3D before we break ground. We design around how you live, where you'll cook, where the kids will play, where you'll unwind after work.",
     tag: "Where Every Vision Starts",
   },
   {
     Icon: Layers,
     title: "Patios & Outdoor Rooms",
-    desc: "The foundation of every great outdoor space. Premium stone and pavers that turn bare dirt into your favorite room — no walls required.",
+    desc: "The foundation of every great outdoor space. Premium stone and pavers that turn bare dirt into your favorite room, no walls required.",
     link: "/blog/how-to-choose-pavers",
     tag: "Most Requested",
   },

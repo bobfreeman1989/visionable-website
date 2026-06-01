@@ -37,7 +37,7 @@ const areaLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-400">
+    <footer className="bg-stone-900 text-stone-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
           {/* Brand */}
@@ -105,16 +105,17 @@ export default function Footer() {
               href="/#contact"
               className="mt-4 inline-block bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors"
             >
-              Free Consultation
+              Book Consultation
             </a>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
+        <div className="border-t border-stone-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
           <p>&copy; {new Date().getFullYear()} Visionable Landscaping. All rights reserved. | CSLB #1101860 Licensed &amp; Insured</p>
           <div className="flex gap-6">
             <a href="/#contact" className="hover:text-white transition-colors">Contact Us</a>
             <a href="/#faq" className="hover:text-white transition-colors">FAQ</a>
+            <a href="https://www.yelp.com/biz/visionable-landscaping-fremont" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Yelp Reviews</a>
           </div>
         </div>
       </div>

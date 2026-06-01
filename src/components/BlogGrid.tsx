@@ -15,11 +15,11 @@ interface Post {
 }
 
 const categoryColors: Record<string, string> = {
-  "Design Tips": "bg-blue-100 text-blue-700",
-  "Maintenance": "bg-emerald-100 text-emerald-700",
-  "Trends": "bg-purple-100 text-purple-700",
+  "Design Tips": "bg-primary/10 text-primary",
+  "Maintenance": "bg-primary/10 text-primary",
+  "Trends": "bg-primary/10 text-primary",
   "Project Showcase": "bg-primary/10 text-primary",
-  "General": "bg-gray-100 text-gray-600",
+  "General": "bg-stone-100 text-stone-600",
 };
 
 function formatDate(dateStr: string) {
@@ -59,7 +59,7 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
               <span className={`inline-block text-xs font-semibold px-3 py-1 rounded-full mb-3 ${categoryColors[featured.category] || categoryColors.General}`}>
                 {featured.category}
               </span>
-              <h2 className="text-xl md:text-4xl font-bold text-white mb-2 group-hover:text-accent transition-colors line-clamp-2">
+              <h2 className="text-xl md:text-4xl text-white mb-2 group-hover:text-accent transition-colors line-clamp-2">
                 {featured.title}
               </h2>
               <p className="text-white/80 text-sm md:text-base max-w-2xl mb-3 hidden sm:block">{featured.excerpt}</p>
@@ -85,7 +85,7 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
             className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
               active === cat
                 ? "bg-primary text-white"
-                : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                : "bg-stone-100 text-stone-600 hover:bg-stone-200"
             }`}
           >
             {cat}
@@ -99,7 +99,7 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
           <Link
             key={post.slug}
             href={`/blog/${post.slug}`}
-            className="group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all"
+            className="group bg-white rounded-2xl overflow-hidden border border-stone-200 hover:shadow-lg transition-all"
           >
             <div className="aspect-[16/10] relative overflow-hidden">
               {post.coverImage ? (
@@ -119,19 +119,19 @@ export default function BlogGrid({ posts }: { posts: Post[] }) {
                 <span className={`text-xs font-semibold px-2.5 py-0.5 rounded-full ${categoryColors[post.category] || categoryColors.General}`}>
                   {post.category}
                 </span>
-                <span className="text-xs text-gray-500">{formatDate(post.date)}</span>
+                <span className="text-xs text-stone-500">{formatDate(post.date)}</span>
               </div>
-              <h3 className="text-lg font-bold text-gray-900 group-hover:text-primary transition-colors mb-2 line-clamp-2">
+              <h3 className="text-lg text-stone-900 group-hover:text-primary transition-colors mb-2 line-clamp-2">
                 {post.title}
               </h3>
-              <p className="text-sm text-gray-500 line-clamp-2">{post.excerpt}</p>
+              <p className="text-sm text-stone-500 line-clamp-2">{post.excerpt}</p>
             </div>
           </Link>
         ))}
       </div>
 
       {gridPosts.length === 0 && (
-        <p className="text-center text-gray-500 py-12">No posts in this category yet.</p>
+        <p className="text-center text-stone-500 py-12">No posts in this category yet.</p>
       )}
     </>
   );

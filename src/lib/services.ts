@@ -20,7 +20,7 @@ export const services: ServiceData[] = [
     heroText: "Transform your outdoor space with premium interlocking pavers. Custom-designed patios, driveways, and walkways built to last by Visionable Landscaping.",
     content: [
       "Paver installation is one of our core specialties at Visionable Landscaping. We use premium interlocking pavers from trusted manufacturers to create patios, driveways, walkways, and pool decks that are both beautiful and built to last. Unlike poured concrete, pavers offer superior durability, easier maintenance, and virtually unlimited design possibilities.",
-      "Our paver installation process begins with proper site preparation — excavation, grading, and compacted base material — which is the foundation of a long-lasting paver surface. We then install edge restraints, bedding sand, and each paver with precision. The result is a level, well-drained surface that resists cracking, shifting, and settling for decades.",
+      "Our paver installation process begins with proper site preparation, excavation, grading, and compacted base material, which is the foundation of a long-lasting paver surface. We then install edge restraints, bedding sand, and each paver with precision. The result is a level, well-drained surface that resists cracking, shifting, and settling for decades.",
       "From classic brick patterns to contemporary large-format slabs, we offer a wide range of paver styles, colors, and textures. Our design team creates custom layouts using 3D rendering software so you can visualize your new patio or driveway before installation begins. Every paver project includes a comprehensive warranty on both materials and workmanship.",
     ],
     benefits: [
@@ -71,7 +71,7 @@ export const services: ServiceData[] = [
     metaDescription: "Custom landscape design in the Bay Area. 3D renderings, drought-tolerant plans & complete design-build services. 5.0-star rated. Free consultation. (510) 755-5616.",
     heroText: "See your dream yard before we build it. Custom 3D landscape designs tailored to your property, lifestyle, and budget.",
     content: [
-      "Great landscaping starts with great design. At Visionable Landscaping, every project begins with a thorough design phase where we listen to your goals, assess your property, and create a custom plan that maximizes both beauty and functionality. Our design process uses professional 3D rendering software so you can see exactly what your finished yard will look like — before any work begins.",
+      "Great landscaping starts with great design. At Visionable Landscaping, every project begins with a thorough design phase where we listen to your goals, assess your property, and create a custom plan that maximizes both beauty and functionality. Our design process uses professional 3D rendering software so you can see exactly what your finished yard will look like, before any work begins.",
       "Our landscape designs consider every factor: sun exposure, drainage patterns, soil conditions, existing structures, HOA requirements, and your personal aesthetic preferences. We specialize in drought-tolerant designs that thrive in the Bay Area climate, combining native and adapted plants with hardscaping elements like pavers, retaining walls, and lighting to create cohesive, low-maintenance outdoor spaces.",
       "As a design-build company, we handle everything from initial concept through final construction. This integrated approach eliminates the gap between designer vision and builder execution, resulting in projects that match the plan precisely. Our design consultation is always free, and you receive detailed 3D renderings with your proposal.",
     ],
@@ -95,10 +95,10 @@ export const services: ServiceData[] = [
     shortDesc: "Retaining walls, fire pits, outdoor kitchens, and stone features.",
     metaTitle: "Hardscaping Services Bay Area | Visionable Landscaping",
     metaDescription: "Professional hardscaping in the Bay Area. Fire pits, outdoor kitchens, stone features & decorative walls. 5.0-star rated. Free consultation. (510) 755-5616.",
-    heroText: "Add structure, function, and beauty to your yard with custom hardscaping. Fire pits, outdoor kitchens, stone walls, and more — built to last.",
+    heroText: "Add structure, function, and beauty to your yard with custom hardscaping. Fire pits, outdoor kitchens, stone walls, and more, built to last.",
     content: [
       "Hardscaping forms the structural backbone of any great landscape. Visionable Landscaping designs and builds custom hardscape features including fire pits, outdoor kitchens, seat walls, stone veneer, water features, and decorative borders. These elements add both functionality and visual interest to your outdoor space while increasing your property's value.",
-      "Our hardscaping projects use premium materials — natural stone, manufactured stone veneer, concrete block, and porcelain — selected for durability and aesthetics. Every hardscape element is engineered with proper footings, drainage, and structural support to withstand the Bay Area's conditions for decades. Whether you want a cozy fire pit for cool evenings or a full outdoor kitchen for entertaining, we build it right the first time.",
+      "Our hardscaping projects use premium materials, natural stone, manufactured stone veneer, concrete block, and porcelain, selected for durability and aesthetics. Every hardscape element is engineered with proper footings, drainage, and structural support to withstand the Bay Area's conditions for decades. Whether you want a cozy fire pit for cool evenings or a full outdoor kitchen for entertaining, we build it right the first time.",
       "We integrate hardscaping seamlessly with softscape elements like turf, plantings, and lighting to create a unified outdoor living environment. Our design team works with you to select materials, finishes, and layouts that complement your home's architecture and your personal style. See our portfolio for examples of our hardscaping work across the I-680 corridor.",
     ],
     benefits: [
@@ -110,7 +110,7 @@ export const services: ServiceData[] = [
       "Custom designs to match your home's architecture",
     ],
     faqs: [
-      { q: "What is hardscaping?", a: "Hardscaping refers to the non-plant elements of landscaping — pavers, walls, fire pits, outdoor kitchens, stone features, and any built structure in your yard." },
+      { q: "What is hardscaping?", a: "Hardscaping refers to the non-plant elements of landscaping, pavers, walls, fire pits, outdoor kitchens, stone features, and any built structure in your yard." },
       { q: "How much does hardscaping cost?", a: "Hardscaping costs vary widely based on scope. A fire pit may start around $3K-$5K, while a full outdoor kitchen ranges from $15K-$40K+. We provide detailed estimates after consultation." },
       { q: "Do hardscape features need permits?", a: "Some features like outdoor kitchens with gas lines or large retaining walls may require permits. We handle all permitting as part of our service." },
     ],
@@ -123,7 +123,7 @@ export const services: ServiceData[] = [
     metaDescription: "Professional outdoor lighting in the Bay Area. LED landscape lighting for pathways, accents & security. Energy-efficient. Free consultation. (510) 755-5616.",
     heroText: "Extend your outdoor living into the evening with professional landscape lighting. Accent, pathway, and security lighting designed and installed by Visionable.",
     content: [
-      "Outdoor lighting transforms your landscape from a daytime-only space into an evening destination. Visionable Landscaping designs and installs professional LED landscape lighting systems that highlight architectural features, illuminate pathways, create ambiance around entertaining areas, and enhance security — all while keeping energy costs low.",
+      "Outdoor lighting transforms your landscape from a daytime-only space into an evening destination. Visionable Landscaping designs and installs professional LED landscape lighting systems that highlight architectural features, illuminate pathways, create ambiance around entertaining areas, and enhance security, all while keeping energy costs low.",
       "Our lighting designs are carefully planned to create layers of light: uplighting for trees and architectural features, downlighting for natural moonlight effects, pathway lights for safety, and accent lighting for focal points like water features and garden beds. We use commercial-grade LED fixtures that are energy-efficient, long-lasting, and designed to withstand outdoor conditions.",
       "Every lighting installation includes a low-voltage transformer, weather-rated wiring, and professional-grade fixtures with a manufacturer warranty. We program timers and smart controls so your lighting operates automatically. Our design consultation helps you see lighting placement options before installation, ensuring the finished result matches your vision.",
     ],
@@ -164,7 +164,7 @@ export const services: ServiceData[] = [
     faqs: [
       { q: "Do retaining walls need permits?", a: "In most Bay Area cities, walls over 4 feet tall require a building permit and engineering. We handle all permitting and engineering as part of our service." },
       { q: "What materials do you use for retaining walls?", a: "We use segmental concrete block, natural stone, poured concrete, and timber depending on the application. We will recommend the best option during your free consultation." },
-      { q: "How long do retaining walls last?", a: "A properly built retaining wall with good drainage lasts 50+ years. Drainage is the key — and we engineer every wall with proper backfill and drainage systems." },
+      { q: "How long do retaining walls last?", a: "A properly built retaining wall with good drainage lasts 50+ years. Drainage is the key, and we engineer every wall with proper backfill and drainage systems." },
     ],
   },
   {
@@ -173,11 +173,11 @@ export const services: ServiceData[] = [
     shortDesc: "Full yard transformations from design to build, handled entirely in-house.",
     metaTitle: "Complete Backyard Remodel Bay Area | Visionable Landscaping",
     metaDescription: "Full backyard remodels in the Bay Area. Design-build transformations with pavers, turf, lighting & more. 5.0-star rated. Free consultation. (510) 755-5616.",
-    heroText: "Transform your entire backyard from concept to completion. One team, one vision, one stunning result — handled entirely in-house by Visionable Landscaping.",
+    heroText: "Transform your entire backyard from concept to completion. One team, one vision, one stunning result, handled entirely in-house by Visionable Landscaping.",
     content: [
-      "A complete backyard remodel is the ultimate outdoor transformation, and Visionable Landscaping is the Bay Area's trusted partner for these ambitious projects. We handle everything in-house — design, demolition, grading, hardscaping, planting, irrigation, lighting, and finishing — so there is no miscommunication between trades and every element works together seamlessly.",
+      "A complete backyard remodel is the ultimate outdoor transformation, and Visionable Landscaping is the Bay Area's trusted partner for these ambitious projects. We handle everything in-house, design, demolition, grading, hardscaping, planting, irrigation, lighting, and finishing, so there is no miscommunication between trades and every element works together seamlessly.",
       "Our complete remodels typically include a combination of paver patios, artificial turf, retaining walls, outdoor lighting, plantings, and custom features like fire pits, outdoor kitchens, or water features. Every project starts with a detailed 3D design that lets you see and refine your vision before construction begins. We lock in pricing upfront so there are no surprises.",
-      "From initial consultation to final walkthrough, a complete backyard remodel with Visionable typically takes 3-6 weeks depending on scope. You receive daily progress updates, and our project manager is always available to answer questions. The result is a backyard that feels like a resort — designed for your lifestyle and built to last for decades.",
+      "From initial consultation to final walkthrough, a complete backyard remodel with Visionable typically takes 3-6 weeks depending on scope. You receive daily progress updates, and our project manager is always available to answer questions. The result is a backyard that feels like a resort, designed for your lifestyle and built to last for decades.",
     ],
     benefits: [
       "Single team handles everything from design to build",

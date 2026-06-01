@@ -21,12 +21,9 @@ export const contactInfo: ContactInfoItem[] = [
 ];
 
 export const whyChooseItems = [
-  "Licensed & Insured (CSLB)",
-  "15+ Years in the Bay Area",
-  "5.0 Stars on Google & Yelp",
-  "200+ Projects Completed",
-  "100% Satisfaction Guarantee",
-  "Free Consultation & 3D Design",
+  "See your yard in 3D before we build",
+  "One in-house crew, start to finish",
+  "Licensed & insured · CSLB #1101860",
 ] as const;
 
 export const serviceAreas: Record<string, string[]> = {

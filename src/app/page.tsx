@@ -22,7 +22,7 @@ export default function Home() {
         <BeforeAfter />
         <CTABanner
           title="200+ Bay Area Families Had a Vision. We Built It."
-          subtitle="Free design consultation. No pressure. Just a conversation about what your yard could become."
+          subtitle="No pressure, just a conversation about what your yard could become."
           primaryText="Share Your Vision"
           secondaryText="See Our Process"
           secondaryHref="#process"

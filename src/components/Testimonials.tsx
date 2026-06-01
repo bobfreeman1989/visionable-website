@@ -2,12 +2,8 @@
 import { useRef } from "react";
 import FadeUp from "@/components/motion/FadeUp";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import {
-  testimonialReviews,
-  testimonialStats,
-} from "@/content/testimonials";
+import { testimonialReviews } from "@/content/testimonials";
 import { TestimonialCard } from "@/components/testimonials/TestimonialCard";
-import { TestimonialStats } from "@/components/testimonials/TestimonialStats";
 
 export default function Testimonials() {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -22,29 +18,29 @@ export default function Testimonials() {
   }
 
   return (
-    <section id="testimonials" className="py-14 bg-[#FAFAF8]">
+    <section id="testimonials" className="py-14 bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeUp className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between mb-10">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Real Visions. Real Backyards.</h2>
-            <p className="text-gray-500 max-w-xl">
+            <h2 className="text-3xl md:text-4xl text-stone-900 mb-4">Real Visions. Real Backyards.</h2>
+            <p className="text-stone-500 max-w-xl">
               Bay Area families who stopped imagining and started living outdoors.
             </p>
-            <p className="mt-3 text-xs uppercase tracking-[0.2em] text-gray-400">
+            <p className="mt-3 text-xs uppercase tracking-[0.2em] text-stone-400">
               {testimonialReviews.length} verified review excerpts · scroll for more
             </p>
           </div>
           <div className="flex gap-2">
             <button
               onClick={() => scroll(-1)}
-              className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
+              className="w-10 h-10 rounded-full border border-stone-200 flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
               aria-label="Previous review"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={() => scroll(1)}
-              className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
+              className="w-10 h-10 rounded-full border border-stone-200 flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
               aria-label="Next review"
             >
               <ChevronRight className="w-5 h-5" />
@@ -67,10 +63,6 @@ export default function Testimonials() {
             </div>
           ))}
         </div>
-
-        <FadeUp>
-          <TestimonialStats stats={testimonialStats} />
-        </FadeUp>
       </div>
     </section>
   );

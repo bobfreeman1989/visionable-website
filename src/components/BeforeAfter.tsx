@@ -60,11 +60,11 @@ export default function BeforeAfter() {
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
               Before &amp; After
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            <h2 className="text-3xl md:text-4xl text-stone-900">
               See the yard change before your eyes.
             </h2>
           </div>
-          <p className="text-gray-500 max-w-2xl lg:ml-auto lg:text-right">
+          <p className="text-stone-500 max-w-2xl lg:ml-auto lg:text-right">
             Drag the slider to compare the starting point with the finished build. Switch between three recent projects below.
           </p>
         </FadeUp>
@@ -85,14 +85,14 @@ export default function BeforeAfter() {
                 className={`rounded-xl border px-4 py-3 text-left transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary ${
                   i === activeIdx
                     ? "border-primary bg-white ring-1 ring-primary"
-                    : "border-gray-200 bg-white text-gray-600 hover:border-primary/60"
+                    : "border-stone-200 bg-white text-stone-600 hover:border-primary/60"
                 }`}
               >
                 <span className="block text-xs font-semibold uppercase tracking-[0.18em] text-primary">
                   Case {p.id}
                 </span>
-                <span className="mt-1 block font-semibold text-gray-900">{p.label}</span>
-                <span className="mt-1 block text-sm text-gray-500">{p.location}</span>
+                <span className="mt-1 block font-semibold text-stone-900">{p.label}</span>
+                <span className="mt-1 block text-sm text-stone-500">{p.location}</span>
               </button>
             ))}
           </div>
@@ -160,7 +160,7 @@ function Comparison({ pair }: { pair: Pair }) {
       <div
         ref={containerRef}
         onPointerDown={onPointerDown}
-        className="relative aspect-[16/10] sm:aspect-[16/9] rounded-2xl overflow-hidden border border-gray-200 shadow-sm select-none touch-pan-y cursor-ew-resize bg-gray-100"
+        className="relative aspect-[16/10] sm:aspect-[16/9] rounded-2xl overflow-hidden border border-stone-200 shadow-sm select-none touch-pan-y cursor-ew-resize bg-stone-100"
         role="group"
         aria-roledescription="Before and after comparison"
         aria-label={`Before and after: ${pair.label}`}
@@ -213,7 +213,7 @@ function Comparison({ pair }: { pair: Pair }) {
           aria-valuenow={Math.round(position)}
           aria-valuetext={`${Math.round(position)} percent revealed`}
           onKeyDown={onKeyDown}
-          className="absolute top-1/2 w-10 h-10 -mt-5 -ml-5 rounded-full bg-white shadow-md border border-gray-200 flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-primary cursor-ew-resize"
+          className="absolute top-1/2 w-10 h-10 -mt-5 -ml-5 rounded-full bg-white shadow-md border border-stone-200 flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-primary cursor-ew-resize"
           style={{ left: `${position}%` }}
         >
           <svg className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -222,11 +222,11 @@ function Comparison({ pair }: { pair: Pair }) {
         </button>
       </div>
 
-      <p className="text-center text-sm text-gray-500 mt-4">
-        <span className="font-medium text-gray-700">{pair.label}</span>
-        <span className="mx-2 text-gray-300">·</span>
+      <p className="text-center text-sm text-stone-500 mt-4">
+        <span className="font-medium text-stone-700">{pair.label}</span>
+        <span className="mx-2 text-stone-300">·</span>
         {pair.location}
-        <span className="mx-2 text-gray-300">·</span>
+        <span className="mx-2 text-stone-300">·</span>
         Drag the handle, or use arrow keys.
       </p>
     </div>

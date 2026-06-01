@@ -94,32 +94,32 @@ export default function ServicePage({ params }: { params: { service: string } })
 
       <div className="pt-20">
         {/* Breadcrumbs */}
-        <div className="bg-[#FAFAF8] border-b border-gray-200">
+        <div className="bg-surface border-b border-stone-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-            <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-gray-500">
+            <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-stone-500">
               <Link href="/" className="hover:text-primary transition-colors">Home</Link>
               <ChevronRight className="w-3.5 h-3.5" />
-              <span className="text-gray-400">Services</span>
+              <span className="text-stone-400">Services</span>
               <ChevronRight className="w-3.5 h-3.5" />
-              <span className="text-gray-900 font-medium">{service.title}</span>
+              <span className="text-stone-900 font-medium">{service.title}</span>
             </nav>
           </div>
         </div>
 
         {/* Hero */}
-        <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16 md:py-24">
+        <section className="bg-gradient-to-br from-primary to-green-900 text-white py-16 md:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl mb-6">
                 {service.title}
               </h1>
-              <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+              <p className="text-green-100 text-lg mb-8 leading-relaxed">
                 {service.heroText}
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/#contact"
-                  className="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-flex items-center gap-2"
+                  className="bg-accent text-foreground px-6 py-3 rounded-lg font-semibold transition-all inline-flex items-center gap-2 shadow-lg hover:shadow-accent/30 hover:shadow-xl hover:-translate-y-0.5"
                 >
                   Share Your Vision
                   <ArrowRight className="w-4 h-4" />
@@ -142,19 +142,19 @@ export default function ServicePage({ params }: { params: { service: string } })
             <div className="grid lg:grid-cols-3 gap-12">
               <div className="lg:col-span-2 space-y-6">
                 {service.content.map((paragraph, i) => (
-                  <p key={i} className="text-gray-600 leading-relaxed text-lg">
+                  <p key={i} className="text-stone-600 leading-relaxed text-lg">
                     {paragraph}
                   </p>
                 ))}
 
                 {/* Benefits */}
                 <div className="mt-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                  <h2 className="text-2xl text-stone-900 mb-4">
                     Why Choose Visionable for {service.title}
                   </h2>
                   <ul className="grid sm:grid-cols-2 gap-3">
                     {service.benefits.map((benefit) => (
-                      <li key={benefit} className="flex items-start gap-2 text-gray-600">
+                      <li key={benefit} className="flex items-start gap-2 text-stone-600">
                         <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                         <span>{benefit}</span>
                       </li>
@@ -164,14 +164,14 @@ export default function ServicePage({ params }: { params: { service: string } })
 
                 {/* FAQs */}
                 <div className="mt-12">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  <h2 className="text-2xl text-stone-900 mb-6">
                     Frequently Asked Questions
                   </h2>
                   <div className="space-y-4">
                     {service.faqs.map((faq, i) => (
-                      <div key={i} className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-                        <h3 className="font-bold text-gray-900 mb-2">{faq.q}</h3>
-                        <p className="text-gray-600">{faq.a}</p>
+                      <div key={i} className="bg-stone-50 rounded-xl p-6 border border-stone-200">
+                        <h3 className="text-stone-900 mb-2">{faq.q}</h3>
+                        <p className="text-stone-600">{faq.a}</p>
                       </div>
                     ))}
                   </div>
@@ -181,7 +181,7 @@ export default function ServicePage({ params }: { params: { service: string } })
               {/* Sidebar */}
               <div className="space-y-6">
                 <div className="bg-primary text-white rounded-xl p-6">
-                  <h3 className="font-bold text-lg mb-4">Free {service.title} Consultation</h3>
+                  <h3 className="text-lg mb-4">Free {service.title} Consultation</h3>
                   <div className="space-y-3 text-sm">
                     <a href="tel:510-755-5616" className="flex items-center gap-2 hover:underline">
                       <Phone className="w-4 h-4" /> (510) 755-5616
@@ -192,14 +192,14 @@ export default function ServicePage({ params }: { params: { service: string } })
                   </div>
                   <Link
                     href="/#contact"
-                    className="mt-5 block text-center bg-white text-primary font-semibold py-3 rounded-lg hover:bg-gray-100 transition-colors"
+                    className="mt-5 block text-center bg-white text-primary font-semibold py-3 rounded-lg hover:bg-stone-100 transition-colors"
                   >
                     Book Consultation
                   </Link>
                 </div>
 
-                <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-                  <h4 className="font-bold text-gray-900 mb-3">All Services</h4>
+                <div className="bg-stone-50 rounded-xl p-6 border border-stone-200">
+                  <h4 className="font-bold text-stone-900 mb-3">All Services</h4>
                   <ul className="space-y-2 text-sm">
                     {services.map((s) => (
                       <li key={s.slug}>
@@ -207,7 +207,7 @@ export default function ServicePage({ params }: { params: { service: string } })
                           href={`/services/${s.slug}`}
                           className={`inline-flex items-center gap-1 transition-colors ${
                             s.slug === service.slug
-                              ? "text-gray-900 font-semibold"
+                              ? "text-stone-900 font-semibold"
                               : "text-primary hover:underline"
                           }`}
                         >
@@ -223,8 +223,8 @@ export default function ServicePage({ params }: { params: { service: string } })
                   </ul>
                 </div>
 
-                <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-                  <h4 className="font-bold text-gray-900 mb-3">Areas We Serve</h4>
+                <div className="bg-stone-50 rounded-xl p-6 border border-stone-200">
+                  <h4 className="font-bold text-stone-900 mb-3">Areas We Serve</h4>
                   <ul className="space-y-2 text-sm">
                     {areas.slice(0, 6).map((area) => (
                       <li key={area.slug}>
@@ -237,7 +237,7 @@ export default function ServicePage({ params }: { params: { service: string } })
                       </li>
                     ))}
                     <li className="pt-1">
-                      <span className="text-gray-500 text-xs">+ {areas.length - 6} more cities</span>
+                      <span className="text-stone-500 text-xs">+ {areas.length - 6} more cities</span>
                     </li>
                   </ul>
                 </div>
@@ -249,7 +249,7 @@ export default function ServicePage({ params }: { params: { service: string } })
         {/* CTA */}
         <section className="bg-primary py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl mb-4">
               Ready to Make Your {service.title} Vision Real?
             </h2>
             <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
@@ -259,7 +259,7 @@ export default function ServicePage({ params }: { params: { service: string } })
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 href="/#contact"
-                className="bg-white text-primary hover:bg-gray-100 px-8 py-3.5 rounded-lg font-semibold transition-colors"
+                className="bg-white text-primary hover:bg-stone-100 px-8 py-3.5 rounded-lg font-semibold transition-colors"
               >
                 Share Your Vision
               </Link>
