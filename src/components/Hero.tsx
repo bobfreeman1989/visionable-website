@@ -31,7 +31,7 @@ export default function Hero() {
         </FadeUp>
 
         <FadeUp delay={0.2}>
-          <h1 className="text-[clamp(2.5rem,5vw,4.5rem)] font-bold text-white leading-[1.1] mb-6">
+          <h1 className="text-[clamp(2.5rem,5vw,4.5rem)] text-white leading-[1.1] mb-6">
             We Make It <span className="text-accent">Visionable</span>
             <br />
             <span className="block mt-3 text-white/70 text-[clamp(1.1rem,2vw,1.5rem)] font-normal tracking-wide">
@@ -44,7 +44,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <a
               href="#contact"
-              className="bg-accent hover:bg-accent-dark text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all inline-flex items-center justify-center gap-2 shadow-lg hover:shadow-accent/30 hover:shadow-xl"
+              className="bg-accent text-foreground px-8 py-4 rounded-lg text-lg font-semibold transition-all inline-flex items-center justify-center gap-2 shadow-lg hover:shadow-accent/30 hover:shadow-xl hover:-translate-y-0.5"
             >
               Share Your Vision
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

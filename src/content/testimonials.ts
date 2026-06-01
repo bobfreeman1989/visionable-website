@@ -6,13 +6,6 @@ export type TestimonialReview = {
   image: string;
 };
 
-export type TestimonialStat = {
-  target: number;
-  suffix: string;
-  label: string;
-  decimals: number;
-};
-
 export const testimonialReviews: TestimonialReview[] = [
   {
     name: "Chang C.",
@@ -49,11 +42,4 @@ export const testimonialReviews: TestimonialReview[] = [
     text: "Bob and team did a great job converting our full-of-rock yard to a beautiful and very functional space. He is experienced, prompt in replying, and very responsive.",
     image: "/photos/portfolio/p06.webp",
   },
-];
-
-export const testimonialStats: TestimonialStat[] = [
-  { target: 5.0, suffix: "/5", label: "Average Rating", decimals: 1 },
-  { target: 200, suffix: "+", label: "Happy Clients", decimals: 0 },
-  { target: 160, suffix: "+", label: "Photos on Yelp", decimals: 0 },
-  { target: 15, suffix: "+", label: "Years in Bay Area", decimals: 0 },
 ];

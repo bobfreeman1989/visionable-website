@@ -70,7 +70,7 @@ const faqSchema = {
       name: "How much does an outdoor living project cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Depends on the vision — a patio and turf setup starts around $5K, while a complete outdoor living space with cooking area, lighting, and seating runs $20K-$60K+. We give you a detailed, transparent estimate after seeing your space. No hidden fees.",
+        text: "Depends on the vision, a patio and turf setup starts around $5K, while a complete outdoor living space with cooking area, lighting, and seating runs $20K-$60K+. We give you a detailed, transparent estimate after seeing your space. No hidden fees.",
       },
     },
     {
@@ -86,7 +86,7 @@ const faqSchema = {
       name: "What if I don't have a clear vision yet?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Most clients don't — they just know they want to use their backyard more. That's exactly what the design consultation is for. We help you figure out what you want through 3D renderings you can explore and adjust.",
+        text: "Most clients don't, they just know they want to use their backyard more. That's exactly what the design consultation is for. We help you figure out what you want through 3D renderings you can explore and adjust.",
       },
     },
     {
@@ -126,7 +126,7 @@ const faqSchema = {
       name: "Can I see examples of your work?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes! Check our portfolio or visit our Yelp page with 160+ project photos. We're happy to share examples during your free consultation.",
+        text: "Yes! Check our portfolio or visit our Yelp page with 200+ project photos. We're happy to share examples during your free consultation.",
       },
     },
   ],
@@ -136,7 +136,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: "Bay Area Outdoor Living Design & Build | Visionable",
   description:
-    "Transform your backyard into an outdoor living space your family actually uses. Hardscaping, pavers, artificial turf, outdoor lighting & more. 5.0★ rated, 200+ projects. Free 3D design consultation — Visionable Landscaping.",
+    "Transform your backyard into an outdoor living space your family actually uses. Hardscaping, pavers, artificial turf, outdoor lighting & more. 5.0★ rated, 200+ projects. Free 3D design consultation, Visionable Landscaping.",
   openGraph: {
     title: "Bay Area Outdoor Living Design & Build | Visionable",
     description:
@@ -209,8 +209,8 @@ export default function RootLayout({
             description: "Our 4-step process from consultation to final walkthrough.",
             step: [
               { "@type": "HowToStep", name: "Discovery Call", text: "We visit your property, listen to your vision, and give you a clear, honest estimate." },
-              { "@type": "HowToStep", name: "Design & Plan", text: "Detailed plans with 3D renderings — see exactly what your yard will look like." },
-              { "@type": "HowToStep", name: "Build It Right", text: "Our crew brings the design to life — on time, on budget, with daily updates." },
+              { "@type": "HowToStep", name: "Design & Plan", text: "Detailed plans with 3D renderings, see exactly what your yard will look like." },
+              { "@type": "HowToStep", name: "Build It Right", text: "Our crew brings the design to life, on time, on budget, with daily updates." },
               { "@type": "HowToStep", name: "Walk & Wow", text: "Final walkthrough, care guide, warranty info, and our commitment to stand behind it." },
             ],
           }) }}

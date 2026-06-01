@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
       body: JSON.stringify({
         from: "Visionable Website <onboarding@resend.dev>",
         to: ["info@visionablelandscaping.com"],
-        subject: `New Consultation: ${payload.name} — ${payload.service}`,
+        subject: `New Consultation: ${payload.name}, ${payload.service}`,
         html,
         reply_to: payload.email,
       }),

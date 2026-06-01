@@ -34,11 +34,11 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 }
 
 const categoryColors: Record<string, string> = {
-  "Design Tips": "bg-blue-100 text-blue-700",
-  "Maintenance": "bg-emerald-100 text-emerald-700",
-  "Trends": "bg-purple-100 text-purple-700",
+  "Design Tips": "bg-primary/10 text-primary",
+  "Maintenance": "bg-primary/10 text-primary",
+  "Trends": "bg-primary/10 text-primary",
   "Project Showcase": "bg-primary/10 text-primary",
-  "General": "bg-gray-100 text-gray-600",
+  "General": "bg-stone-100 text-stone-600",
 };
 
 function formatDate(dateStr: string) {
@@ -116,55 +116,55 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           <div className="grid lg:grid-cols-4 gap-10 -mt-16 relative z-10">
             {/* Main Content */}
             <article className="lg:col-span-3">
-              <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-10">
+              <div className="bg-white rounded-2xl shadow-sm border border-stone-100 p-6 md:p-10">
                 {/* Meta */}
                 <div className="flex flex-wrap items-center gap-3 mb-6">
                   <span className={`text-xs font-semibold px-3 py-1 rounded-full ${categoryColors[post.category] || categoryColors.General}`}>
                     {post.category}
                   </span>
-                  <span className="text-sm text-gray-400">{formatDate(post.date)}</span>
+                  <span className="text-sm text-stone-400">{formatDate(post.date)}</span>
                 </div>
 
-                <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                <h1 className="text-3xl md:text-4xl text-stone-900 mb-6 leading-tight">
                   {post.title}
                 </h1>
 
                 {/* Author */}
-                <div className="flex items-center gap-3 mb-8 pb-8 border-b border-gray-100">
+                <div className="flex items-center gap-3 mb-8 pb-8 border-b border-stone-100">
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">
                     V
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-gray-900">{post.author}</p>
-                    <p className="text-xs text-gray-400">Visionable Landscaping</p>
+                    <p className="text-sm font-semibold text-stone-900">{post.author}</p>
+                    <p className="text-xs text-stone-400">Visionable Landscaping</p>
                   </div>
                 </div>
 
                 {/* Content */}
                 <div
                   className="prose prose-lg prose-green max-w-none
-                    prose-headings:font-bold prose-headings:text-gray-900
+                    prose-headings:font-normal prose-headings:text-stone-900
                     prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
                     prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
-                    prose-p:text-gray-600 prose-p:leading-relaxed
+                    prose-p:text-stone-600 prose-p:leading-relaxed
                     prose-a:text-primary prose-a:no-underline hover:prose-a:underline
-                    prose-blockquote:border-l-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:not-italic prose-blockquote:text-gray-600
-                    prose-li:text-gray-600
-                    prose-strong:text-gray-800
+                    prose-blockquote:border-l-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:not-italic prose-blockquote:text-stone-600
+                    prose-li:text-stone-600
+                    prose-strong:text-stone-800
                     prose-img:rounded-xl prose-img:shadow-md
-                    prose-hr:border-gray-200"
+                    prose-hr:border-stone-200"
                   dangerouslySetInnerHTML={{ __html: post.contentHtml }}
                 />
 
                 {/* CTA */}
                 <div className="mt-12 bg-primary/5 rounded-2xl p-8 text-center border border-primary/10">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Ready to Transform Your Yard?</h3>
-                  <p className="text-gray-500 mb-4">Schedule a free consultation and let&apos;s bring your vision to life.</p>
+                  <h3 className="text-xl text-stone-900 mb-2">Ready to Transform Your Yard?</h3>
+                  <p className="text-stone-500 mb-4">Schedule a free consultation and let&apos;s bring your vision to life.</p>
                   <a
                     href="/#contact"
-                    className="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                    className="inline-flex items-center gap-2 bg-accent text-foreground px-6 py-3 rounded-lg font-semibold transition-all hover:-translate-y-0.5 hover:shadow-lg"
                   >
-                    Book Free Consultation
+                    Book Consultation
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
@@ -178,8 +178,8 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               <div className="sticky top-24 space-y-6">
                 {/* Table of Contents */}
                 {post.headings.length > 0 && (
-                  <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
-                    <h4 className="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wider">
+                  <div className="bg-white rounded-2xl p-6 border border-stone-100 shadow-sm">
+                    <h4 className="font-bold text-stone-900 mb-4 text-sm uppercase tracking-wider">
                       Table of Contents
                     </h4>
                     <nav className="space-y-2">
@@ -187,7 +187,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                         <a
                           key={h.id}
                           href={`#${h.id}`}
-                          className={`block text-sm text-gray-500 hover:text-primary transition-colors ${
+                          className={`block text-sm text-stone-500 hover:text-primary transition-colors ${
                             h.level === 3 ? "pl-4" : ""
                           }`}
                         >
@@ -200,8 +200,8 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
 
                 {/* Related Posts */}
                 {related.length > 0 && (
-                  <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
-                    <h4 className="font-bold text-gray-900 mb-4 text-sm uppercase tracking-wider">
+                  <div className="bg-white rounded-2xl p-6 border border-stone-100 shadow-sm">
+                    <h4 className="font-bold text-stone-900 mb-4 text-sm uppercase tracking-wider">
                       Related Posts
                     </h4>
                     <div className="space-y-4">
@@ -222,10 +222,10 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                               />
                             </div>
                           )}
-                          <h5 className="text-sm font-semibold text-gray-900 group-hover:text-primary transition-colors line-clamp-2">
+                          <h5 className="text-sm font-semibold text-stone-900 group-hover:text-primary transition-colors line-clamp-2">
                             {r.title}
                           </h5>
-                          <p className="text-xs text-gray-400 mt-1">{formatDate(r.date)}</p>
+                          <p className="text-xs text-stone-400 mt-1">{formatDate(r.date)}</p>
                         </Link>
                       ))}
                     </div>

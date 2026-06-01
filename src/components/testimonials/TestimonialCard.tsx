@@ -9,7 +9,7 @@ interface TestimonialCardProps {
 
 export function TestimonialCard({ review, priority = false }: TestimonialCardProps) {
   return (
-    <article className="bg-[#FAFAF8] rounded-2xl overflow-hidden border border-gray-100 h-full">
+    <article className="bg-surface rounded-2xl overflow-hidden border border-stone-100 h-full">
       <div className="relative aspect-[16/9]">
         <Image
           src={review.image}
@@ -19,7 +19,7 @@ export function TestimonialCard({ review, priority = false }: TestimonialCardPro
           sizes="(max-width: 640px) 85vw, (max-width: 1024px) 50vw, 33vw"
           priority={priority}
         />
-        <div className="absolute top-4 left-4 bg-white rounded-full shadow-sm px-3 py-1 text-xs font-medium text-gray-700">
+        <div className="absolute top-4 left-4 bg-white rounded-full shadow-sm px-3 py-1 text-xs font-medium text-stone-700">
           {review.project}
         </div>
       </div>
@@ -31,17 +31,17 @@ export function TestimonialCard({ review, priority = false }: TestimonialCardPro
               <span key={index} className="text-accent text-sm">★</span>
             ))}
           </div>
-          <span className="text-xs text-gray-500">Verified Review</span>
+          <span className="text-xs text-stone-500">Verified Review</span>
         </div>
         <Quote className="w-6 h-6 text-primary/20 mb-2" />
-        <p className="text-gray-600 text-sm leading-relaxed mb-4">{review.text}</p>
+        <p className="text-stone-600 text-sm leading-relaxed mb-4">{review.text}</p>
         <div className="flex items-center gap-3">
           <div className="w-9 h-9 rounded-full bg-primary/15 flex items-center justify-center text-primary font-bold text-sm">
             {review.name[0]}
           </div>
           <div>
-            <p className="font-semibold text-gray-900 text-sm">{review.name}</p>
-            <p className="text-xs text-gray-500">{review.location}</p>
+            <p className="font-semibold text-stone-900 text-sm">{review.name}</p>
+            <p className="text-xs text-stone-500">{review.location}</p>
           </div>
         </div>
       </div>

@@ -91,36 +91,36 @@ export default function CityPage({ params }: { params: { city: string } }) {
 
       <div className="pt-20">
         {/* Breadcrumbs */}
-        <div className="bg-[#FAFAF8] border-b border-gray-200">
+        <div className="bg-surface border-b border-stone-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-            <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-gray-500">
+            <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-stone-500">
               <Link href="/" className="hover:text-primary transition-colors">Home</Link>
               <ChevronRight className="w-3.5 h-3.5" />
-              <span className="text-gray-400">Areas We Serve</span>
+              <span className="text-stone-400">Areas We Serve</span>
               <ChevronRight className="w-3.5 h-3.5" />
-              <span className="text-gray-900 font-medium">{city.name}</span>
+              <span className="text-stone-900 font-medium">{city.name}</span>
             </nav>
           </div>
         </div>
 
         {/* Hero */}
-        <section className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-16 md:py-24">
+        <section className="bg-gradient-to-br from-primary to-green-900 text-white py-16 md:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <div className="flex items-center gap-2 text-primary-light text-sm font-medium mb-4">
+              <div className="flex items-center gap-2 text-accent text-sm font-medium mb-4">
                 <MapPin className="w-4 h-4" />
                 {city.name}, {city.county} County
               </div>
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl mb-6">
                 Professional Landscaping in {city.name}, CA
               </h1>
-              <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+              <p className="text-green-100 text-lg mb-8 leading-relaxed">
                 {city.heroText}
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link
                   href="/#contact"
-                  className="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-flex items-center gap-2"
+                  className="bg-accent text-foreground px-6 py-3 rounded-lg font-semibold transition-all inline-flex items-center gap-2 shadow-lg hover:shadow-accent/30 hover:shadow-xl hover:-translate-y-0.5"
                 >
                   Share Your Vision
                   <ArrowRight className="w-4 h-4" />
@@ -143,15 +143,15 @@ export default function CityPage({ params }: { params: { city: string } }) {
             <div className="grid lg:grid-cols-3 gap-12">
               <div className="lg:col-span-2 space-y-6">
                 {city.content.map((paragraph, i) => (
-                  <p key={i} className="text-gray-600 leading-relaxed text-lg">
+                  <p key={i} className="text-stone-600 leading-relaxed text-lg">
                     {paragraph}
                   </p>
                 ))}
 
-                <div className="bg-gray-50 rounded-xl p-6 border border-gray-200 mt-8">
-                  <h3 className="font-bold text-gray-900 mb-2">See Our Work in the {city.region}</h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    Browse 160+ project photos from real {city.region} homes on our portfolio and Yelp page.
+                <div className="bg-stone-50 rounded-xl p-6 border border-stone-200 mt-8">
+                  <h3 className="text-stone-900 mb-2">See Our Work in the {city.region}</h3>
+                  <p className="text-stone-600 text-sm mb-4">
+                    Browse 200+ project photos from real {city.region} homes on our portfolio and Yelp page.
                   </p>
                   <Link
                     href="/#portfolio"
@@ -165,7 +165,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
               {/* Sidebar */}
               <div className="space-y-6">
                 <div className="bg-primary text-white rounded-xl p-6">
-                  <h3 className="font-bold text-lg mb-4">Free Consultation in {city.name}</h3>
+                  <h3 className="text-lg mb-4">Free Consultation in {city.name}</h3>
                   <div className="space-y-3 text-sm">
                     <a href="tel:510-755-5616" className="flex items-center gap-2 hover:underline">
                       <Phone className="w-4 h-4" /> (510) 755-5616
@@ -179,18 +179,18 @@ export default function CityPage({ params }: { params: { city: string } }) {
                   </div>
                   <Link
                     href="/#contact"
-                    className="mt-5 block text-center bg-white text-primary font-semibold py-3 rounded-lg hover:bg-gray-100 transition-colors"
+                    className="mt-5 block text-center bg-white text-primary font-semibold py-3 rounded-lg hover:bg-stone-100 transition-colors"
                   >
                     Book Consultation
                   </Link>
                 </div>
 
-                <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-                  <h4 className="font-bold text-gray-900 mb-3">Why Visionable?</h4>
-                  <ul className="space-y-2.5 text-sm text-gray-600">
+                <div className="bg-stone-50 rounded-xl p-6 border border-stone-200">
+                  <h4 className="font-bold text-stone-900 mb-3">Why Visionable?</h4>
+                  <ul className="space-y-2.5 text-sm text-stone-600">
                     {[
                       "CSLB Licensed (#1101860)",
-                      "5.0 Stars — Google & Yelp",
+                      "5.0 Stars, Google & Yelp",
                       "200+ Projects Completed",
                       "Free 3D Design Renderings",
                       "In-House Crew, No Subs",
@@ -204,8 +204,8 @@ export default function CityPage({ params }: { params: { city: string } }) {
                   </ul>
                 </div>
 
-                <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-                  <h4 className="font-bold text-gray-900 mb-3">Nearby Service Areas</h4>
+                <div className="bg-stone-50 rounded-xl p-6 border border-stone-200">
+                  <h4 className="font-bold text-stone-900 mb-3">Nearby Service Areas</h4>
                   <ul className="space-y-2 text-sm">
                     {nearbyAreas.map((nearby) => nearby && (
                       <li key={nearby.slug}>
@@ -230,10 +230,10 @@ export default function CityPage({ params }: { params: { city: string } }) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-end justify-between mb-8">
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-2">
+                <h2 className="text-3xl text-stone-900 mb-2">
                   Our Work in the {city.region}
                 </h2>
-                <p className="text-gray-500">
+                <p className="text-stone-500">
                   Real projects from {city.name} and surrounding Bay Area communities.
                 </p>
               </div>
@@ -241,15 +241,15 @@ export default function CityPage({ params }: { params: { city: string } }) {
                 href="/#portfolio"
                 className="hidden sm:inline-flex items-center gap-1.5 text-primary font-semibold hover:underline"
               >
-                View All 160+ Projects <ArrowRight className="w-4 h-4" />
+                View All 200+ Projects <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-              {[1, 3, 5, 8, 10, 14, 18, 22].map((n) => (
+              {[1, 3, 5, 8, 10, 14, 18, 22].map((n, idx) => (
                 <div key={n} className="relative aspect-[4/3] rounded-lg overflow-hidden group">
                   <Image
                     src={`/portfolio/yelp/yelp-${String(n).padStart(3, "0")}${n <= 30 ? "-" : ""}.jpg`}
-                    alt={`Landscaping project in ${city.region}`}
+                    alt={`Visionable Landscaping project in ${city.name}, ${city.region}, California, photo ${idx + 1}`}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                     sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
@@ -262,19 +262,19 @@ export default function CityPage({ params }: { params: { city: string } }) {
                 href="/#portfolio"
                 className="inline-flex items-center gap-1.5 text-primary font-semibold hover:underline"
               >
-                View All 160+ Projects <ArrowRight className="w-4 h-4" />
+                View All 200+ Projects <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
         </section>
 
         {/* Services */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-stone-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-3">
+            <h2 className="text-3xl text-stone-900 mb-3">
               Landscaping Services in {city.name}
             </h2>
-            <p className="text-gray-500 mb-10 max-w-2xl">
+            <p className="text-stone-500 mb-10 max-w-2xl">
               We offer a full range of design-build landscaping services to {city.name} homeowners.
               Every project is handled in-house from start to finish.
             </p>
@@ -283,12 +283,12 @@ export default function CityPage({ params }: { params: { city: string } }) {
                 <Link
                   key={s.slug}
                   href={`/services/${s.slug}`}
-                  className="bg-white border border-gray-200 rounded-xl p-5 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group"
+                  className="bg-white border border-stone-200 rounded-xl p-5 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group"
                 >
-                  <h3 className="font-bold text-gray-900 mb-1.5 group-hover:text-primary transition-colors">
+                  <h3 className="text-stone-900 mb-1.5 group-hover:text-primary transition-colors">
                     {s.title}
                   </h3>
-                  <p className="text-sm text-gray-500 mb-3">{s.shortDesc}</p>
+                  <p className="text-sm text-stone-500 mb-3">{s.shortDesc}</p>
                   <span className="text-sm text-primary font-medium inline-flex items-center gap-1">
                     Learn More <ArrowRight className="w-3.5 h-3.5" />
                   </span>
@@ -301,7 +301,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
         {/* CTA */}
         <section className="bg-primary py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl mb-4">
               Ready to Transform Your {city.name} Yard?
             </h2>
             <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
@@ -311,7 +311,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 href="/#contact"
-                className="bg-white text-primary hover:bg-gray-100 px-8 py-3.5 rounded-lg font-semibold transition-colors"
+                className="bg-white text-primary hover:bg-stone-100 px-8 py-3.5 rounded-lg font-semibold transition-colors"
               >
                 Share Your Vision
               </Link>

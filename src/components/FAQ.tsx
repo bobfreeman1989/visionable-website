@@ -5,7 +5,7 @@ import FadeUp from "@/components/motion/FadeUp";
 const faqs = [
   {
     q: "How much does an outdoor living project cost?",
-    a: "Depends on the vision — a patio and turf setup starts around $5K, while a complete outdoor living space with cooking area, lighting, and seating runs $20K-$60K+. We give you a detailed, transparent estimate after seeing your space. No hidden fees.",
+    a: "Depends on the vision, a patio and turf setup starts around $5K, while a complete outdoor living space with cooking area, lighting, and seating runs $20K-$60K+. We give you a detailed, transparent estimate after seeing your space. No hidden fees.",
   },
   {
     q: "How long until I can actually use my new yard?",
@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: "What if I don't have a clear vision yet?",
-    a: "Most clients don't — they just know they want to use their backyard more. That's exactly what the design consultation is for. We help you figure out what you want through 3D renderings you can explore and adjust. The vision gets clearer together.",
+    a: "Most clients don't, they just know they want to use their backyard more. That's exactly what the design consultation is for. We help you figure out what you want through 3D renderings you can explore and adjust. The vision gets clearer together.",
   },
   {
     q: "Is the consultation really free?",
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "What areas do you serve?",
-    a: "The I-680 corridor — Fremont, Newark, Milpitas, Union City, Hayward, San Ramon, Dublin, Pleasanton, Danville, Walnut Creek, Concord, and surrounding communities.",
+    a: "The I-680 corridor, Fremont, Newark, Milpitas, Union City, Hayward, San Ramon, Dublin, Pleasanton, Danville, Walnut Creek, Concord, and surrounding communities.",
   },
   {
     q: "Do you offer warranties?",
@@ -40,27 +40,27 @@ export default function FAQ() {
     <section id="faq" className="py-14 bg-white">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeUp className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl text-stone-900 mb-4">
             Questions? We&apos;ve Got Answers.
           </h2>
-          <p className="text-gray-500">
+          <p className="text-stone-500">
             Everything you need to know before getting started.
           </p>
         </FadeUp>
         <div className="space-y-3">
           {faqs.map((f, i) => (
             <FadeUp key={i} delay={i * 0.08}>
-              <div className="border border-gray-200 rounded-xl overflow-hidden bg-white">
+              <div className="border border-stone-200 rounded-xl overflow-hidden bg-white">
                 <button
-                  className="w-full text-left px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                  className="w-full text-left px-6 py-5 flex items-center justify-between hover:bg-stone-50 transition-colors"
                   onClick={() => setOpenIdx(openIdx === i ? null : i)}
                   aria-expanded={openIdx === i}
                   aria-controls={`faq-panel-${i}`}
                   id={`faq-btn-${i}`}
                 >
-                  <span className="font-semibold text-gray-900 pr-4">{f.q}</span>
+                  <span className="font-semibold text-stone-900 pr-4">{f.q}</span>
                   <span
-                    className={`text-gray-500 shrink-0 transition-transform duration-300 ${openIdx === i ? "rotate-180" : ""}`}
+                    className={`text-stone-500 shrink-0 transition-transform duration-300 ${openIdx === i ? "rotate-180" : ""}`}
                     aria-hidden="true"
                   >
                     <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -77,7 +77,7 @@ export default function FAQ() {
                       className={`grid transition-all duration-300 ease-out ${openIdx === i ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
                     >
                       <div className="overflow-hidden">
-                        <div className="px-6 pb-5 text-gray-600 leading-relaxed">{f.a}</div>
+                        <div className="px-6 pb-5 text-stone-600 leading-relaxed">{f.a}</div>
                       </div>
                     </div>
                     {openIdx !== i && <div className="sr-only">{f.a}</div>}

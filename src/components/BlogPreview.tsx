@@ -5,14 +5,14 @@ import { BlogPreviewCard } from "@/components/blog/BlogPreviewCard";
 
 export default function BlogPreview() {
   return (
-    <section className="py-16 bg-[#FAFAF8]">
+    <section className="py-16 bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeUp className="flex items-end justify-between mb-10">
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+            <h2 className="text-2xl md:text-3xl text-stone-900">
               Landscape Design Tips & Inspiration
             </h2>
-            <p className="text-gray-500 mt-2">Expert advice from our team.</p>
+            <p className="text-stone-500 mt-2">Expert advice from our team.</p>
           </div>
           <Link href="/blog" className="text-primary font-semibold text-sm hover:underline hidden sm:block">
             View All Articles →

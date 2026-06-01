@@ -1,7 +1,7 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-import { Shield, Award, Clock, Users, Leaf, Hammer, Rocket, Flag, MapPin, Trophy, Star } from "lucide-react";
+import { Flag, Rocket, MapPin, Trophy, Star } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,13 +10,25 @@ export const metadata: Metadata = {
     "Meet the team behind 200+ Bay Area landscape projects. Licensed, insured, and committed to turning your outdoor vision into reality. Serving Fremont, San Jose & beyond.",
 };
 
-const values = [
-  { Icon: Shield, title: "Licensed & Insured", desc: "Fully licensed by the CSLB and insured for your peace of mind. Every project is backed by our commitment to professionalism." },
-  { Icon: Award, title: "Quality Craftsmanship", desc: "We don't cut corners. Premium materials, meticulous installation, and finishing touches that make the difference." },
-  { Icon: Clock, title: "On Time, On Budget", desc: "Clear timelines, transparent pricing, and proactive communication from start to finish. No surprises." },
-  { Icon: Users, title: "Customer First", desc: "Your vision drives every decision. We listen, collaborate, and deliver spaces you'll love for years to come." },
-  { Icon: Leaf, title: "Sustainable Design", desc: "Drought-tolerant plants, efficient irrigation, and eco-friendly materials — beautiful landscapes that respect the environment." },
-  { Icon: Hammer, title: "Full-Service Team", desc: "Design, hardscaping, softscaping, lighting, irrigation — one team handles it all. No subcontractor runaround." },
+const pillars = [
+  {
+    title: "One team, from first sketch to final stone",
+    desc: "Design, hardscaping, planting, lighting, and irrigation are handled by our own crew, never a rotating cast of subcontractors. We choose premium materials and sweat the finishing details most builders skip, because those are the details you live with every day.",
+    image: "/photos/before-after/case-1-after-1280.webp",
+    alt: "A finished Bay Area backyard transformed by the Visionable Landscaping crew",
+  },
+  {
+    title: "Built to live easy, season after season",
+    desc: "Climate-appropriate planting, efficient irrigation, and low-maintenance surfaces keep your yard looking its best through a long Bay Area summer. Beautiful landscapes that respect where they sit and hand your weekends back instead of filling them with upkeep.",
+    image: "/photos/before-after/case-2-after-1280.webp",
+    alt: "A completed low-maintenance landscape designed for the Bay Area climate",
+  },
+  {
+    title: "Honest from estimate to the day you move outside",
+    desc: "Clear timelines, locked-in pricing, and proactive updates from the first walk-through to the last. We are fully licensed by the CSLB and insured, and your vision drives every decision, so the finished space feels unmistakably yours.",
+    image: "/photos/before-after/case-3-after-1280.webp",
+    alt: "A finished outdoor living space built around the homeowner's vision",
+  },
 ];
 
 const milestones = [
@@ -27,12 +39,6 @@ const milestones = [
   { year: "2024", label: "5.0 stars across Google & Yelp", Icon: Star },
 ];
 
-const stats = [
-  { value: "15+", label: "Years in Business" },
-  { value: "200+", label: "Projects Completed" },
-  { value: "5.0", label: "Star Rating" },
-  { value: "100%", label: "Satisfaction Rate" },
-];
 
 export default function AboutPage() {
   return (
@@ -46,22 +52,17 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <p className="text-accent font-semibold mb-3 tracking-wide uppercase text-sm">About Visionable Landscaping</p>
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 font-heading leading-tight">
+                <h1 className="text-4xl md:text-5xl text-white mb-6 font-heading leading-tight">
                   Turning Visions Into<br />Outdoor Reality
                 </h1>
                 <p className="text-green-100 text-lg leading-relaxed mb-8">
                   Founded in Fremont over 15 years ago, Visionable Landscaping has grown from a
                   small local crew into one of the Bay Area&apos;s most trusted landscape design and
-                  build teams. Our name says it all — we take what you envision and make it real.
+                  build teams. Our name says it all, we take what you envision and make it real.
                 </p>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-                  {stats.map((s) => (
-                    <div key={s.label}>
-                      <p className="text-3xl font-bold text-accent">{s.value}</p>
-                      <p className="text-green-200 text-sm">{s.label}</p>
-                    </div>
-                  ))}
-                </div>
+                <p className="text-green-200 text-sm">
+                  CSLB licensed &amp; insured · 15+ years · 200+ Bay Area projects · 5.0 on Google &amp; Yelp
+                </p>
               </div>
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-2xl">
@@ -79,12 +80,12 @@ export default function AboutPage() {
         </section>
 
         {/* Our Story */}
-        <section className="py-20 bg-white">
+        <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 font-heading text-center">Our Story</h2>
-            <div className="prose prose-lg max-w-none text-gray-600 space-y-6">
+            <h2 className="text-3xl md:text-4xl text-stone-900 mb-8 font-heading text-center">Our Story</h2>
+            <div className="prose prose-lg max-w-none text-stone-600 space-y-6">
               <p>Visionable Landscaping started with a simple idea: every homeowner deserves an outdoor space that matches their vision, built by people who genuinely care about the craft.</p>
-              <p>Over the past 15+ years, we&apos;ve completed more than 200 projects across the San Francisco Bay Area — from intimate courtyard gardens in Fremont to expansive backyard transformations in San Jose, Pleasanton, and beyond. Each project taught us something new, and every satisfied client reinforced our commitment to quality.</p>
+              <p>Over the past 15+ years, we&apos;ve completed more than 200 projects across the San Francisco Bay Area, from intimate courtyard gardens in Fremont to expansive backyard transformations in San Jose, Pleasanton, and beyond. Each project taught us something new, and every satisfied client reinforced our commitment to quality.</p>
               <p>We&apos;re not a franchise. We&apos;re not a faceless corporation. We&apos;re a local team that lives and works in the communities we serve. When you call Visionable, you&apos;re talking to the people who will actually design and build your space.</p>
               <p>Our approach is straightforward: listen to your vision, design something extraordinary, build it with precision, and stand behind our work. No shortcuts. No subcontractors. Just honest craftsmanship from people who love what they do.</p>
             </div>
@@ -92,18 +93,28 @@ export default function AboutPage() {
         </section>
 
         {/* Values */}
-        <section className="py-20 bg-[#FAFAF8]">
+        <section className="py-16 bg-surface">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-14">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-heading">What We Stand For</h2>
-              <p className="text-gray-500 max-w-2xl mx-auto">These aren&apos;t just words on a page — they&apos;re the principles that guide every project we take on.</p>
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <h2 className="text-3xl md:text-4xl text-stone-900 mb-4 font-heading">What We Stand For</h2>
+              <p className="text-stone-500 text-lg">These aren&apos;t words on a page. They&apos;re the principles behind every project we take on.</p>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {values.map((v) => (
-                <div key={v.title} className="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-md transition-shadow">
-                  <v.Icon className="w-8 h-8 text-primary mb-4" strokeWidth={1.5} />
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{v.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{v.desc}</p>
+            <div className="space-y-16 lg:space-y-24">
+              {pillars.map((p, i) => (
+                <div key={p.title} className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+                  <div className={`relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg ${i % 2 === 1 ? "lg:order-2" : ""}`}>
+                    <Image
+                      src={p.image}
+                      alt={p.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(min-width: 1024px) 540px, 100vw"
+                    />
+                  </div>
+                  <div className={i % 2 === 1 ? "lg:order-1" : ""}>
+                    <h3 className="font-heading text-2xl md:text-3xl text-stone-900 mb-4 leading-snug">{p.title}</h3>
+                    <p className="text-stone-600 text-lg leading-relaxed">{p.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -111,11 +122,11 @@ export default function AboutPage() {
         </section>
 
         {/* Timeline */}
-        <section className="py-20 bg-white">
+        <section className="py-16 bg-white">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 font-heading text-center">Our Journey</h2>
+            <h2 className="text-3xl md:text-4xl text-stone-900 mb-12 font-heading text-center">Our Journey</h2>
             <div className="relative">
-              <div className="absolute left-6 top-0 bottom-0 w-px bg-gray-200" />
+              <div className="absolute left-6 top-0 bottom-0 w-px bg-stone-200" />
               <div className="space-y-10">
                 {milestones.map((m) => (
                   <div key={m.year} className="relative flex items-start gap-6 pl-2">
@@ -124,7 +135,7 @@ export default function AboutPage() {
                     </div>
                     <div className="pt-1.5">
                       <p className="text-sm font-semibold text-accent">{m.year}</p>
-                      <p className="text-gray-700 font-medium">{m.label}</p>
+                      <p className="text-stone-700 font-medium">{m.label}</p>
                     </div>
                   </div>
                 ))}
@@ -134,11 +145,11 @@ export default function AboutPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-20 bg-primary">
+        <section className="py-16 bg-primary">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-heading">Ready to Share Your Vision?</h2>
+            <h2 className="text-3xl md:text-4xl text-white mb-4 font-heading">Ready to Share Your Vision?</h2>
             <p className="text-green-100 mb-8 text-lg">Free consultation. No pressure. Just a conversation about what&apos;s possible.</p>
-            <a href="/#contact" className="inline-block bg-accent hover:bg-amber-600 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors shadow-lg">
+            <a href="/#contact" className="inline-block bg-accent text-foreground font-semibold px-8 py-4 rounded-lg text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">
               Share Your Vision
             </a>
           </div>

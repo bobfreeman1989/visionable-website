@@ -7,10 +7,10 @@ export default function ContactCTA() {
     <section id="contact" className="py-14 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeUp className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl text-stone-900 mb-4">
             What&apos;s Your Vision?
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto">
+          <p className="text-stone-500 max-w-2xl mx-auto">
             Tell us what you&apos;re imagining. We&apos;ll show you what&apos;s possible.
           </p>
         </FadeUp>

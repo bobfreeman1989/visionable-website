@@ -4,11 +4,11 @@ import BlogGrid from "@/components/BlogGrid";
 import { getBlogPosts } from "@/lib/blog";
 
 export const metadata = {
-  title: "Landscaping Blog — Tips & Trends | Visionable Landscaping",
+  title: "Landscaping Blog, Tips & Trends | Visionable Landscaping",
   description:
     "Expert landscaping tips, design trends, and project insights for Bay Area homeowners. Practical advice from Silicon Valley's top-rated design-build team.",
   openGraph: {
-    title: "Landscaping Blog — Tips & Trends | Visionable Landscaping",
+    title: "Landscaping Blog, Tips & Trends | Visionable Landscaping",
     description: "Expert landscaping tips and design inspiration from Silicon Valley's top-rated team.",
     url: "https://visionablelandscaping.com/blog",
     type: "website",
@@ -23,7 +23,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Landscaping Blog — Tips & Trends | Visionable Landscaping",
+    title: "Landscaping Blog, Tips & Trends | Visionable Landscaping",
     description: "Expert landscaping tips and design inspiration from Silicon Valley's top-rated team.",
     images: ["/og-image.jpg"],
   },
@@ -40,10 +40,10 @@ export default function BlogIndex() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl md:text-5xl text-stone-900 mb-4">
               Latest Landscape Insights
             </h1>
-            <p className="text-gray-500 text-lg max-w-2xl mx-auto">
+            <p className="text-stone-500 text-lg max-w-2xl mx-auto">
               Expert tips, design inspiration, and project showcases from the Visionable team.
             </p>
           </div>
