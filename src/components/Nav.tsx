@@ -72,6 +72,12 @@ export default function Nav() {
               {servicesOpen && (
                 <div className="absolute top-full left-0 pt-2 w-56">
                   <div className="bg-background border border-stone-200 rounded-xl shadow-lg py-2">
+                    <Link
+                      href="/services"
+                      className="block px-4 py-2 text-sm font-semibold text-stone-700 hover:text-primary hover:bg-surface transition-colors border-b border-stone-100"
+                    >
+                      All Services
+                    </Link>
                     {serviceLinks.map((s) => (
                       <Link
                         key={s.slug}
@@ -94,6 +100,12 @@ export default function Nav() {
               {areasOpen && (
                 <div className="absolute top-full left-0 pt-2 w-48">
                   <div className="bg-background border border-stone-200 rounded-xl shadow-lg py-2">
+                    <Link
+                      href="/areas"
+                      className="block px-4 py-2 text-sm font-semibold text-stone-700 hover:text-primary hover:bg-stone-50 transition-colors border-b border-stone-100"
+                    >
+                      All Areas
+                    </Link>
                     {areaLinks.map((a) => (
                       <Link
                         key={a.slug}
@@ -173,6 +185,13 @@ export default function Nav() {
           ))}
           <div className="py-2">
             <p className="text-xs font-semibold text-stone-400 uppercase tracking-wider mb-1">Services</p>
+            <Link
+              href="/services"
+              className="block text-sm font-semibold text-stone-700 hover:text-primary py-1.5 pl-2"
+              onClick={() => setOpen(false)}
+            >
+              All Services
+            </Link>
             {serviceLinks.map((s) => (
               <Link
                 key={s.slug}
@@ -186,6 +205,13 @@ export default function Nav() {
           </div>
           <div className="py-2">
             <p className="text-xs font-semibold text-stone-400 uppercase tracking-wider mb-1">Areas We Serve</p>
+            <Link
+              href="/areas"
+              className="block text-sm font-semibold text-stone-700 hover:text-primary py-1.5 pl-2"
+              onClick={() => setOpen(false)}
+            >
+              All Areas
+            </Link>
             {areaLinks.map((a) => (
               <Link
                 key={a.slug}

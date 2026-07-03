@@ -72,7 +72,9 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Services</h4>
+            <h4 className="text-white font-semibold mb-4">
+              <Link href="/services" className="hover:text-white/80 transition-colors">Services</Link>
+            </h4>
             <ul className="space-y-2.5 text-sm">
               {serviceLinks.map((s) => (
                 <li key={s.slug}>
@@ -96,7 +98,9 @@ export default function Footer() {
 
           {/* Service Areas */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Areas We Serve</h4>
+            <h4 className="text-white font-semibold mb-4">
+              <Link href="/areas" className="hover:text-white/80 transition-colors">Areas We Serve</Link>
+            </h4>
             <ul className="space-y-2 text-sm">
               {areaLinks.map((a) => (
                 <li key={a.slug}>
