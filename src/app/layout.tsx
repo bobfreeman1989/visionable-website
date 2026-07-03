@@ -3,6 +3,7 @@ import { Source_Sans_3, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { areas } from "@/lib/areas";
 import { services } from "@/lib/services";
 
 const sourceSans = Source_Sans_3({ subsets: ["latin"], variable: "--font-body" });
@@ -44,13 +45,9 @@ const localBusinessSchema = {
     latitude: 37.5485,
     longitude: -121.9886,
   },
-  areaServed: [
-    "Fremont", "Newark", "Milpitas", "Union City", "Hayward",
-    "San Ramon", "Dublin", "Pleasanton", "Danville", "Walnut Creek", "Concord",
-    
-  ].map((city) => ({
+  areaServed: areas.map((city) => ({
     "@type": "City",
-    name: `${city}, CA`,
+    name: `${city.name}, CA`,
   })),
   hasOfferCatalog: {
     "@type": "OfferCatalog",

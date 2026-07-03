@@ -32,7 +32,11 @@ export function generateMetadata({ params }: { params: { city: string } }): Meta
 
 export default function CityPage({ params }: { params: { city: string } }) {
   const city = getAreaBySlug(params.city);
-  if (!city) notFound();
+  if (!city) {
+    notFound();
+    return null;
+  }
+  const cityName = city.name;
 
   const nearbyAreas = city.nearbyAreas
     .map((slug) => getAreaBySlug(slug))
@@ -42,7 +46,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Visionable Landscaping",
-    description: `Professional landscaping services in ${city.name}, CA. Hardscaping, artificial turf, landscape design, outdoor lighting, and complete backyard remodels.`,
+    description: `Professional landscaping services in ${city.name}, CA. Hardscaping, paver installation, artificial turf, pergolas, fence and gate installation, irrigation and drainage, outdoor lighting, and complete backyard remodels.`,
     url: `${BASE_URL}/areas/${city.slug}`,
     telephone: "+1-510-755-5616",
     email: "info@visionablelandscaping.com",
@@ -66,6 +70,27 @@ export default function CityPage({ params }: { params: { city: string } }) {
       worstRating: "1",
     },
     priceRange: "$$-$$$$",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: `Landscaping services in ${cityName}, CA`,
+      itemListElement: services.map((service) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: `${service.title} in ${cityName}, CA`,
+          description: service.shortDesc,
+          areaServed: {
+            "@type": "City",
+            name: `${cityName}, CA`,
+          },
+          provider: {
+            "@type": "LocalBusiness",
+            name: "Visionable Landscaping",
+          },
+          url: `${BASE_URL}/services/${service.slug}`,
+        },
+      })),
+    },
   };
 
   const breadcrumbSchema = {
@@ -286,7 +311,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
                   className="bg-white border border-stone-200 rounded-xl p-5 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group"
                 >
                   <h3 className="text-stone-900 mb-1.5 group-hover:text-primary transition-colors">
-                    {s.title}
+                    {s.title} in {city.name}
                   </h3>
                   <p className="text-sm text-stone-500 mb-3">{s.shortDesc}</p>
                   <span className="text-sm text-primary font-medium inline-flex items-center gap-1">
