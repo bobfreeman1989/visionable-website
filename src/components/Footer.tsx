@@ -4,6 +4,9 @@ import { Phone, Mail, MapPin } from "lucide-react";
 const serviceLinks = [
   { name: "Paver Installation", slug: "paver-installation" },
   { name: "Artificial Turf", slug: "artificial-turf" },
+  { name: "Pergola Installation", slug: "pergola-installation" },
+  { name: "Fence & Gate Installation", slug: "fence-and-gate" },
+  { name: "Irrigation & Drainage", slug: "irrigation-drainage" },
   { name: "Landscape Design", slug: "landscape-design" },
   { name: "Hardscaping", slug: "hardscaping" },
   { name: "Outdoor Lighting", slug: "outdoor-lighting" },

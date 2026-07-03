@@ -36,9 +36,10 @@ export const contactServiceOptions = [
   "Complete Backyard Redesign",
   "Hardscaping / Pavers",
   "Artificial Turf",
+  "Pergola / Shade Structures",
   "Fencing & Gates",
   "Outdoor Lighting",
-  "Irrigation",
+  "Irrigation / Drainage",
   "Landscape Design Only",
   "Not sure yet",
 ] as const;

@@ -3,6 +3,7 @@ import { Source_Sans_3, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { services } from "@/lib/services";
 
 const sourceSans = Source_Sans_3({ subsets: ["latin"], variable: "--font-body" });
 const dmSerif = DM_Serif_Display({ weight: "400", subsets: ["latin"], variable: "--font-heading" });
@@ -14,9 +15,19 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": `${BASE_URL}/#business`,
+  additionalType: "https://schema.org/HomeAndConstructionBusiness",
   name: "Visionable Landscaping",
   description:
-    "Premium landscape design-build services in the Bay Area. Hardscaping, artificial turf, outdoor lighting, and complete yard transformations.",
+    "Premium landscape design-build services in the Bay Area. Hardscaping, artificial turf, outdoor lighting, pergolas, fencing, irrigation, drainage, and complete yard transformations.",
+  keywords: [
+    "landscaping Fremont CA",
+    "paver installation Fremont CA",
+    "artificial turf installation Fremont CA",
+    "pergola installation Bay Area",
+    "fence and gate installation Bay Area",
+    "irrigation and drainage Bay Area",
+    "outdoor living design build Bay Area",
+  ],
   url: BASE_URL,
   telephone: "+1-510-755-5616",
   email: "info@visionablelandscaping.com",
@@ -41,6 +52,19 @@ const localBusinessSchema = {
     "@type": "City",
     name: `${city}, CA`,
   })),
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Visionable Landscaping Services",
+    itemListElement: services.map((service) => ({
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: service.title,
+        description: service.shortDesc,
+        url: `${BASE_URL}/services/${service.slug}`,
+      },
+    })),
+  },
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "5.0",
@@ -58,6 +82,8 @@ const localBusinessSchema = {
   image: `${BASE_URL}/og-image.jpg`,
   sameAs: [
     "https://www.yelp.com/biz/visionable-landscaping-fremont",
+    "https://www.facebook.com/p/Visionable-Landscaping-100089900322769",
+    "https://www.techo-bloc.com/landscape-contractor/usa/california/fremont/visionable-landscaping",
   ],
 };
 
