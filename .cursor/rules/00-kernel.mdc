@@ -1,0 +1,27 @@
+---
+description: Cross-tool kernel pointer — where authority lives for Bob's multi-agent setup (Codex/Claude/Cursor/Hermes)
+alwaysApply: true
+---
+
+# Kernel authority pointer
+
+Bob runs one role-separated agent team across Codex, Claude Code, Cursor, and Hermes. The
+cross-tool constitution and the config-authority map are canonical and live outside this repo:
+
+- Shared constitution (Bob profile, team roles, actionization rule): `~/.hermes/shared/L0.md`
+- Config authority map + precedence + layer model: `~/.agents/CONFIG-MAP.md`
+- Roster and handoff rules: `~/.hermes/team-agents.md`
+- Memory map (where each tool's memory lives + write discipline): `~/.agents/memory/README.md`
+
+## Precedence (from CONFIG-MAP)
+
+1. Bob's explicit message in the current task
+2. This repo's `AGENTS.md` + domain contracts (none defined yet for this repo)
+3. Hermes `L0.md` + `team-agents.md` + active profile
+4. Tool global (`~/.claude/CLAUDE.md`, `~/.codex/AGENTS.md`)
+5. Skills
+6. Archive / legacy — evidence only
+
+This repo has no project `AGENTS.md` yet, so the kernel files above are the primary authority
+after Bob's direct instruction. Default language Chinese; direct, results-first; external actions
+(deploy, publish, posts) ask first.
