@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import FadeUp from "@/components/motion/FadeUp";
+import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
@@ -31,26 +31,29 @@ const faqs = [
     q: "Do you offer warranties?",
     a: "Yes. Materials and workmanship, clearly documented in your contract. We stand behind every vision we build.",
   },
+  {
+    q: "Can I see examples of your work?",
+    a: "Yes! Check our portfolio or visit our Yelp page with 200+ project photos. We're happy to share examples during your free consultation.",
+  },
 ];
 
 export default function FAQ() {
   const [openIdx, setOpenIdx] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-14 bg-white">
+    <section id="faq" className="py-14 bg-background">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <FadeUp className="text-center mb-8">
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl text-stone-900 mb-4">
             Questions? We&apos;ve Got Answers.
           </h2>
           <p className="text-stone-500">
             Everything you need to know before getting started.
           </p>
-        </FadeUp>
+        </div>
         <div className="space-y-3">
           {faqs.map((f, i) => (
-            <FadeUp key={i} delay={i * 0.08}>
-              <div className="border border-stone-200 rounded-xl overflow-hidden bg-white">
+              <div key={i} className="border border-stone-200 rounded-xl overflow-hidden bg-white">
                 <button
                   className="w-full text-left px-6 py-5 flex items-center justify-between hover:bg-stone-50 transition-colors"
                   onClick={() => setOpenIdx(openIdx === i ? null : i)}
@@ -63,9 +66,7 @@ export default function FAQ() {
                     className={`text-stone-500 shrink-0 transition-transform duration-300 ${openIdx === i ? "rotate-180" : ""}`}
                     aria-hidden="true"
                   >
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                    </svg>
+                    <ChevronDown className="w-5 h-5" strokeWidth={1.5} />
                   </span>
                 </button>
                 <div
@@ -74,7 +75,7 @@ export default function FAQ() {
                   aria-labelledby={`faq-btn-${i}`}
                 >
                                       <div
-                      className={`grid transition-all duration-300 ease-out ${openIdx === i ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
+                      className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${openIdx === i ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
                     >
                       <div className="overflow-hidden">
                         <div className="px-6 pb-5 text-stone-600 leading-relaxed">{f.a}</div>
@@ -84,7 +85,6 @@ export default function FAQ() {
   
                 </div>
               </div>
-            </FadeUp>
           ))}
         </div>
       </div>

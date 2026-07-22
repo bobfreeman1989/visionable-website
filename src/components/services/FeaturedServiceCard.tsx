@@ -7,7 +7,7 @@ interface FeaturedServiceCardProps {
 
 export function FeaturedServiceCard({ service }: FeaturedServiceCardProps) {
   const content = (
-    <div className="bg-white border border-stone-200 rounded-2xl p-8 hover:-translate-y-1 hover:shadow-lg hover:border-primary/30 transition-all duration-300 h-full relative overflow-hidden group">
+    <div className="bg-white border border-stone-200 rounded-2xl p-8 hover:-translate-y-1 hover:shadow-lg hover:border-primary/30 transition-[transform,box-shadow,border-color] duration-300 h-full relative overflow-hidden group">
       <div className="absolute top-0 left-0 right-0 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
       <div className="flex items-start gap-5">
         <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">

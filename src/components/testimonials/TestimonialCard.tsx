@@ -9,7 +9,7 @@ interface TestimonialCardProps {
 
 export function TestimonialCard({ review, priority = false }: TestimonialCardProps) {
   return (
-    <article className="bg-surface rounded-2xl overflow-hidden border border-stone-100 h-full">
+    <article className="bg-white rounded-2xl overflow-hidden border border-stone-100 h-full">
       <div className="relative aspect-[16/9]">
         <Image
           src={review.image}

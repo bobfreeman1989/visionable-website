@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import FadeUp from "@/components/motion/FadeUp";
 import { heroBadges } from "@/content/hero";
 
@@ -44,16 +45,14 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <a
               href="#contact"
-              className="bg-accent text-foreground px-8 py-4 rounded-lg text-lg font-semibold transition-all inline-flex items-center justify-center gap-2 shadow-lg hover:shadow-accent/30 hover:shadow-xl hover:-translate-y-0.5"
+              className="bg-accent text-foreground px-8 py-4 rounded-lg text-lg font-semibold transition-[transform,box-shadow] inline-flex items-center justify-center gap-2 shadow-lg hover:shadow-accent/30 hover:shadow-xl hover:-translate-y-0.5"
             >
               Share Your Vision
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+              <ArrowRight className="w-5 h-5" strokeWidth={1.5} />
             </a>
             <a
               href="#portfolio"
-              className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-lg text-lg font-semibold transition-all text-center"
+              className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-lg text-lg font-semibold transition-colors text-center"
             >
               See 200+ Visions Built
             </a>
@@ -64,7 +63,7 @@ export default function Hero() {
           <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-x-6 gap-y-3">
             {heroBadges.map((badge) => (
               <div key={badge.text} className="flex items-center gap-2 text-white/70">
-                <badge.Icon className="w-4 h-4 text-accent" strokeWidth={1.5} />
+                <badge.Icon className="w-4 h-4" strokeWidth={1.5} />
                 <span className="text-sm">{badge.text}</span>
               </div>
             ))}

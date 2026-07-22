@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Menu, Phone, X } from "lucide-react";
 
 const areaLinks = [
   { name: "Fremont", slug: "fremont" },
@@ -45,15 +45,8 @@ export default function Nav() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-stone-100 shadow-sm">
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:text-sm focus:font-semibold"
-      >
-        Skip to content
-      </a>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-18 py-3">
+        <div className="flex items-center justify-between py-3">
           <a href="/" className="flex items-center gap-2">
             <img src="/logo.png" alt="Visionable Landscaping" className="h-10 w-auto" />
           </a>
@@ -65,9 +58,22 @@ export default function Nav() {
             </a>
 
             {/* Services Dropdown */}
-            <div className="relative group" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)}>
-              <button aria-haspopup="true" className="flex items-center gap-1 text-sm font-medium text-stone-600 hover:text-primary transition-colors">
-                Services <ChevronDown className="w-3.5 h-3.5" />
+            <div
+              className="relative group"
+              onMouseEnter={() => setServicesOpen(true)}
+              onMouseLeave={() => setServicesOpen(false)}
+              onBlur={(e) => {
+                if (!e.currentTarget.contains(e.relatedTarget as Node)) setServicesOpen(false);
+              }}
+              onKeyDown={(e) => e.key === "Escape" && setServicesOpen(false)}
+            >
+              <button
+                aria-haspopup="true"
+                aria-expanded={servicesOpen}
+                onClick={() => setServicesOpen((v) => !v)}
+                className="flex items-center gap-1 text-sm font-medium text-stone-600 hover:text-primary transition-colors"
+              >
+                Services <ChevronDown className="w-3.5 h-3.5" strokeWidth={1.5} />
               </button>
               {servicesOpen && (
                 <div className="absolute top-full left-0 pt-2 w-56">
@@ -93,9 +99,22 @@ export default function Nav() {
             </div>
 
             {/* Areas Dropdown */}
-            <div className="relative group" onMouseEnter={() => setAreasOpen(true)} onMouseLeave={() => setAreasOpen(false)}>
-              <button aria-haspopup="true" className="flex items-center gap-1 text-sm font-medium text-stone-600 hover:text-primary transition-colors">
-                Areas <ChevronDown className="w-3.5 h-3.5" />
+            <div
+              className="relative group"
+              onMouseEnter={() => setAreasOpen(true)}
+              onMouseLeave={() => setAreasOpen(false)}
+              onBlur={(e) => {
+                if (!e.currentTarget.contains(e.relatedTarget as Node)) setAreasOpen(false);
+              }}
+              onKeyDown={(e) => e.key === "Escape" && setAreasOpen(false)}
+            >
+              <button
+                aria-haspopup="true"
+                aria-expanded={areasOpen}
+                onClick={() => setAreasOpen((v) => !v)}
+                className="flex items-center gap-1 text-sm font-medium text-stone-600 hover:text-primary transition-colors"
+              >
+                Areas <ChevronDown className="w-3.5 h-3.5" strokeWidth={1.5} />
               </button>
               {areasOpen && (
                 <div className="absolute top-full left-0 pt-2 w-48">
@@ -137,9 +156,7 @@ export default function Nav() {
               href="tel:510-755-5616"
               className="flex items-center gap-2 text-sm font-medium text-stone-700 hover:text-primary transition-colors"
             >
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
+              <Phone className="w-4 h-4" strokeWidth={1.5} />
               (510) 755-5616
             </a>
             <a
@@ -153,18 +170,14 @@ export default function Nav() {
           {/* Mobile */}
           <div className="flex lg:hidden items-center gap-2">
             <a href="tel:510-755-5616" className="p-2 text-primary" aria-label="Call us">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
+              <Phone className="w-6 h-6" strokeWidth={1.5} />
             </a>
             <button className="p-2" onClick={() => setOpen(!open)} aria-label="Toggle menu" aria-expanded={open}>
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                {open ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
+              {open ? (
+                <X className="w-6 h-6" strokeWidth={1.5} />
+              ) : (
+                <Menu className="w-6 h-6" strokeWidth={1.5} />
+              )}
             </button>
           </div>
         </div>

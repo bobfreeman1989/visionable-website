@@ -1,6 +1,6 @@
 "use client";
 import { FormEvent, useState } from "react";
-import { AlertCircle, Loader2 } from "lucide-react";
+import { AlertCircle, ArrowRight, Loader2 } from "lucide-react";
 import {
   contactBudgetOptions,
   contactServiceOptions,
@@ -12,6 +12,8 @@ type Status = "idle" | "sending" | "success" | "error";
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
+  const [serviceChosen, setServiceChosen] = useState(false);
+  const [budgetChosen, setBudgetChosen] = useState(false);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -42,6 +44,8 @@ export function ContactForm() {
 
       setStatus("success");
       form.reset();
+      setServiceChosen(false);
+      setBudgetChosen(false);
     } catch {
       setStatus("error");
     }
@@ -81,7 +85,7 @@ export function ContactForm() {
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
               <label htmlFor="contact-service" className="block text-sm font-medium text-stone-700 mb-1">What do you need? <span className="text-stone-400 font-normal">(optional)</span></label>
-              <select id="contact-service" name="contact-service" defaultValue="" className="w-full border border-stone-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white text-stone-500">
+              <select id="contact-service" name="contact-service" defaultValue="" onChange={(e) => setServiceChosen(e.currentTarget.value !== "")} className={`w-full border border-stone-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white ${serviceChosen ? "text-stone-900" : "text-stone-500"}`}>
                 <option value="">Select a service</option>
                 {contactServiceOptions.map((option) => (
                   <option key={option} value={option}>{option}</option>
@@ -90,7 +94,7 @@ export function ContactForm() {
             </div>
             <div>
               <label htmlFor="contact-budget" className="block text-sm font-medium text-stone-700 mb-1">Budget Range</label>
-              <select id="contact-budget" name="contact-budget" defaultValue="" className="w-full border border-stone-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white text-stone-500">
+              <select id="contact-budget" name="contact-budget" defaultValue="" onChange={(e) => setBudgetChosen(e.currentTarget.value !== "")} className={`w-full border border-stone-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white ${budgetChosen ? "text-stone-900" : "text-stone-500"}`}>
                 <option value="">Optional</option>
                 {contactBudgetOptions.map((option) => (
                   <option key={option} value={option}>{option}</option>
@@ -105,37 +109,35 @@ export function ContactForm() {
               name="contact-message"
               rows={4}
               maxLength={1200}
-              placeholder="What's your vision? What problems are you trying to solve?"
+              placeholder="What&rsquo;s your vision? What problems are you trying to solve?"
               className="w-full border border-stone-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none bg-white"
             />
           </div>
 
-          {status === "error" && (
-            <div role="alert" aria-live="polite" className="flex items-center gap-2 text-red-600 bg-red-50 px-4 py-3 rounded-lg text-sm">
-              <AlertCircle className="w-4 h-4 flex-shrink-0" />
-              Something went wrong. Please try again or call us directly.
-            </div>
-          )}
-
           <button
             type="submit"
             disabled={status === "sending"}
-            className="w-full bg-accent disabled:opacity-70 text-foreground py-4 rounded-lg font-semibold text-lg transition-all inline-flex items-center justify-center gap-2 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+            className="w-full bg-accent disabled:opacity-70 disabled:cursor-not-allowed text-foreground py-4 rounded-lg font-semibold text-lg transition-[transform,box-shadow] inline-flex items-center justify-center gap-2 shadow-md hover:shadow-lg hover:-translate-y-0.5"
           >
             {status === "sending" ? (
               <>
                 <Loader2 className="w-5 h-5 animate-spin" />
-                Sending...
+                Sending&hellip;
               </>
             ) : (
               <>
                 Share Your Vision
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+                <ArrowRight className="w-5 h-5" strokeWidth={1.5} />
               </>
             )}
           </button>
+
+          {status === "error" && (
+            <div role="alert" aria-live="polite" className="flex items-center gap-2 text-red-600 bg-red-50 px-4 py-3 rounded-lg text-sm">
+              <AlertCircle className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
+              Something went wrong. Please try again or call us directly.
+            </div>
+          )}
           <p className="text-xs text-stone-500 text-center">
             No spam. No pressure. We&apos;ll respond within 24 hours.
           </p>

@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import FadeUp from "@/components/motion/FadeUp";
+import { ChevronsLeftRight } from "lucide-react";
 
 type Pair = {
   id: string;
@@ -53,9 +53,9 @@ export default function BeforeAfter() {
   }, []);
 
   return (
-    <section id="before-after" className="scroll-mt-24 bg-white py-14 sm:py-16">
+    <section id="before-after" className="scroll-mt-24 bg-background py-14 sm:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <FadeUp className="mb-8 grid gap-4 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+        <div className="mb-8 grid gap-4 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
               Before &amp; After
@@ -67,13 +67,11 @@ export default function BeforeAfter() {
           <p className="text-stone-500 max-w-2xl lg:ml-auto lg:text-right">
             Drag the slider to compare the starting point with the finished build. Switch between three recent projects below.
           </p>
-        </FadeUp>
+        </div>
 
-        <FadeUp>
-          <Comparison key={pair.id} pair={pair} />
-        </FadeUp>
+        <Comparison key={pair.id} pair={pair} />
 
-        <FadeUp className="mt-6">
+        <div className="mt-6">
           <div className="grid gap-3 sm:grid-cols-3" role="tablist" aria-label="Choose a before and after project">
             {pairs.map((p, i) => (
               <button
@@ -96,7 +94,7 @@ export default function BeforeAfter() {
               </button>
             ))}
           </div>
-        </FadeUp>
+        </div>
       </div>
     </section>
   );
@@ -216,9 +214,7 @@ function Comparison({ pair }: { pair: Pair }) {
           className="absolute top-1/2 w-10 h-10 -mt-5 -ml-5 rounded-full bg-white shadow-md border border-stone-200 flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-primary cursor-ew-resize"
           style={{ left: `${position}%` }}
         >
-          <svg className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8 7l-5 5 5 5M16 7l5 5-5 5" />
-          </svg>
+          <ChevronsLeftRight className="w-4 h-4 text-primary" strokeWidth={2} />
         </button>
       </div>
 

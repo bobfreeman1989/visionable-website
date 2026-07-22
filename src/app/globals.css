@@ -1,3 +1,8 @@
+/* Design system: DESIGN.md · The Garden Atelier
+ * display: DM Serif Display · body: Source Sans 3
+ * brand: forest green #1B6B2A · conversion accent: golden marigold #E8960C (one action per view)
+ * grounds: warm off-whites (#FEFDFB / #FAFAF8 / #F5F5F2) — never pure white at section level
+ */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,6 +14,11 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-x: clip;
 }
 
 body {
@@ -26,7 +36,7 @@ h1, h2, h3 {
   position: absolute;
   left: -9999px;
   top: 0;
-  z-index: 9999;
+  z-index: 100;
   padding: 0.75rem 1.5rem;
   background: var(--foreground);
   color: var(--background);
