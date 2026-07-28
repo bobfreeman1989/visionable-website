@@ -197,7 +197,7 @@ export default function Nav() {
             </a>
           ))}
           <div className="py-2">
-            <p className="text-xs font-semibold text-stone-400 uppercase tracking-wider mb-1">Services</p>
+            <p className="text-xs font-semibold text-stone-600 uppercase tracking-wider mb-1">Services</p>
             <Link
               href="/services"
               className="block text-sm font-semibold text-stone-700 hover:text-primary py-1.5 pl-2"
@@ -217,7 +217,7 @@ export default function Nav() {
             ))}
           </div>
           <div className="py-2">
-            <p className="text-xs font-semibold text-stone-400 uppercase tracking-wider mb-1">Areas We Serve</p>
+            <p className="text-xs font-semibold text-stone-600 uppercase tracking-wider mb-1">Areas We Serve</p>
             <Link
               href="/areas"
               className="block text-sm font-semibold text-stone-700 hover:text-primary py-1.5 pl-2"

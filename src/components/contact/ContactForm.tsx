@@ -70,7 +70,7 @@ export function ContactForm() {
               <input id="contact-name" name="contact-name" type="text" required maxLength={80} placeholder="Your name" className="w-full border border-stone-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white" />
             </div>
             <div>
-              <label htmlFor="contact-phone" className="block text-sm font-medium text-stone-700 mb-1">Phone <span className="text-stone-400 font-normal">(optional)</span></label>
+              <label htmlFor="contact-phone" className="block text-sm font-medium text-stone-700 mb-1">Phone <span className="text-stone-600 font-normal">(optional)</span></label>
               <input id="contact-phone" name="contact-phone" type="tel" maxLength={32} placeholder="(510) 555-1234" className="w-full border border-stone-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white" />
             </div>
           </div>
@@ -79,12 +79,12 @@ export function ContactForm() {
             <input id="contact-email" name="contact-email" type="email" required maxLength={120} placeholder="you@email.com" className="w-full border border-stone-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white" />
           </div>
           <div>
-            <label htmlFor="contact-address" className="block text-sm font-medium text-stone-700 mb-1">Property Address <span className="text-stone-400 font-normal">(optional)</span></label>
+            <label htmlFor="contact-address" className="block text-sm font-medium text-stone-700 mb-1">Property Address <span className="text-stone-600 font-normal">(optional)</span></label>
             <input id="contact-address" name="contact-address" type="text" maxLength={160} placeholder="Street, City, State" className="w-full border border-stone-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white" />
           </div>
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
-              <label htmlFor="contact-service" className="block text-sm font-medium text-stone-700 mb-1">What do you need? <span className="text-stone-400 font-normal">(optional)</span></label>
+              <label htmlFor="contact-service" className="block text-sm font-medium text-stone-700 mb-1">What do you need? <span className="text-stone-600 font-normal">(optional)</span></label>
               <select id="contact-service" name="contact-service" defaultValue="" onChange={(e) => setServiceChosen(e.currentTarget.value !== "")} className={`w-full border border-stone-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white ${serviceChosen ? "text-stone-900" : "text-stone-500"}`}>
                 <option value="">Select a service</option>
                 {contactServiceOptions.map((option) => (

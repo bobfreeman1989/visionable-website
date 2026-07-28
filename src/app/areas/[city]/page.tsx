@@ -62,13 +62,6 @@ export default function CityPage({ params }: { params: { city: string } }) {
       "@type": "City",
       name: `${city.name}, CA`,
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: "24",
-      bestRating: "5",
-      worstRating: "1",
-    },
     priceRange: "$$-$$$$",
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -121,7 +114,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
             <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-stone-500">
               <Link href="/" className="hover:text-primary transition-colors">Home</Link>
               <ChevronRight className="w-3.5 h-3.5" />
-              <span className="text-stone-400">Areas We Serve</span>
+              <span className="text-stone-600">Areas We Serve</span>
               <ChevronRight className="w-3.5 h-3.5" />
               <span className="text-stone-900 font-medium">{city.name}</span>
             </nav>

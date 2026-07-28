@@ -28,7 +28,7 @@ export function TestimonialCard({ review, priority = false }: TestimonialCardPro
         <div className="flex items-center gap-3 mb-4">
           <div className="flex gap-0.5">
             {[...Array(5)].map((_, index) => (
-              <span key={index} className="text-accent text-sm">★</span>
+              <span key={index} className="text-accent-dark text-sm">★</span>
             ))}
           </div>
           <span className="text-xs text-stone-500">Verified Review</span>

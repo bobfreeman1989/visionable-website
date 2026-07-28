@@ -10,10 +10,15 @@ import FAQ from "@/components/FAQ";
 import BlogPreview from "@/components/BlogPreview";
 import ContactCTA from "@/components/ContactCTA";
 import Footer from "@/components/Footer";
+import { faqPageSchema } from "@/content/faq";
 
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
+      />
       <Nav />
       <main id="main-content">
         <Hero />
