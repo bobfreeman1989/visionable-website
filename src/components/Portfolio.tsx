@@ -2,30 +2,19 @@
 import { useState, useMemo } from "react";
 import Image from "next/image";
 import { MapPin } from "lucide-react";
+import { portfolioProjects } from "@/content/gallery";
 
 const categories = ["All", "Hardscaping", "Landscaping", "Outdoor Living"];
-
-const projects = [
-  { id: "1",  title: "Paver Patio & Turf",      category: "Hardscaping",    location: "Fremont",      image: "/photos/portfolio/p01.webp" },
-  { id: "2",  title: "Custom Hardscape",         category: "Hardscaping",    location: "Union City",   image: "/photos/portfolio/p02.webp" },
-  { id: "3",  title: "Backyard Remodel",         category: "Landscaping",    location: "Milpitas",     image: "/photos/portfolio/p03.webp" },
-  { id: "4",  title: "Outdoor Living Space",     category: "Outdoor Living", location: "San Ramon",    image: "/photos/portfolio/p04.webp" },
-  { id: "5",  title: "Front Yard Design",        category: "Landscaping",    location: "Newark",       image: "/photos/portfolio/p05.webp" },
-  { id: "6",  title: "Retaining Wall & Patio",   category: "Hardscaping",    location: "Hayward",      image: "/photos/portfolio/p06.webp" },
-  { id: "7",  title: "Pergola & Outdoor Room",   category: "Outdoor Living", location: "Dublin",       image: "/photos/portfolio/p07.webp" },
-  { id: "8",  title: "Complete Backyard",         category: "Outdoor Living", location: "Pleasanton",   image: "/photos/portfolio/p08.webp" },
-  { id: "9",  title: "Stone Walkway",            category: "Hardscaping",    location: "Danville",     image: "/photos/portfolio/p09.webp" },
-  { id: "10", title: "Landscape Lighting",       category: "Outdoor Living", location: "San Jose",     image: "/photos/portfolio/p10.webp" },
-  { id: "11", title: "Artificial Turf Install",  category: "Landscaping",    location: "Sunnyvale",    image: "/photos/portfolio/p11.webp" },
-  { id: "12", title: "Fountain & Hardscape",     category: "Hardscaping",    location: "Walnut Creek", image: "/photos/portfolio/p12.webp" },
-];
 
 export default function Portfolio() {
   const [active, setActive] = useState("All");
   const [animKey, setAnimKey] = useState(0);
 
   const filtered = useMemo(
-    () => active === "All" ? projects : projects.filter((p) => p.category === active),
+    () =>
+      active === "All"
+        ? portfolioProjects
+        : portfolioProjects.filter((p) => p.category === active),
     [active]
   );
 
@@ -71,8 +60,8 @@ export default function Portfolio() {
             >
               <div className="relative aspect-[4/3]">
                 <Image
-                  src={p.image}
-                  alt={`${p.title} in ${p.location}, California, by Visionable Landscaping`}
+                  src={p.src}
+                  alt={`${p.alt}, ${p.location}, California, by Visionable Landscaping`}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

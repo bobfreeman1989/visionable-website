@@ -7,6 +7,7 @@ colors:
   forest-green-light: "#238636"
   golden-marigold: "#E8960C"
   marigold-dark: "#A56804"
+  marigold-light: "#FCD34D"
   background: "#FEFDFB"
   surface: "#FAFAF8"
   surface-alt: "#F5F5F2"
@@ -212,6 +213,18 @@ Depth is quiet and earned. Surfaces are flat at rest, separated by warm hairline
 - **Style:** Fixed top bar, white, 1px bottom border (#F3F4F6), Resting Float shadow. Logo left, links center-right, phone plus green "Book Consultation" CTA far right.
 - **Links:** 0.875rem 500, Ink Body, hover to Forest Green (transition-colors). Dropdowns are white panels (12px radius, Menu shadow, hairline border) revealed on hover with a 2px pad bridge.
 - **Mobile:** Hamburger toggles a full white sheet with grouped, eyebrow-labeled sections and the green CTA pinned at the bottom.
+
+### Sub-page hero
+- Every sub-page opens on a project photograph, never a flat colour band. `PageHero` carries an eyebrow, display-serif h1, lede, the two standing CTAs, and an optional four-item fact strip.
+- **Scrim is two layers, not one.** A flat `green-950/55` base plus a left-weighted `from-green-950/90 via-green-950/75 to-transparent` gradient. The base is what makes it safe: a gradient alone leaves white text at about 1:1 where a bright sky or pale paving sits directly behind a headline. Measured worst-case (brightest pixel behind each text box) the current pairing runs 8:1 to 14:1.
+- The fact strip states only what the page already proves elsewhere — timelines, costs and warranties come from the service's own published answers, never an estimate.
+
+### Sub-page section vocabulary
+- `AlternatingFeatures` — image/text rows that flip sides, for explaining something next to evidence of it.
+- `PhotoGallery` — project grid whose first tile runs double-wide, so a gallery opens on one strong image rather than a uniform grid of tiles.
+- `RelatedCards` — cross-links that carry a photograph, so a related service reads as work rather than a menu item.
+- `Accordion` — shared FAQ interaction; collapsed answers stay in the HTML for crawlers but take `visibility: hidden` so a screen reader follows the open state.
+- Imagery is selected from `src/content/gallery.ts` by tag, ranked by how many of a service's tags a photo carries. Every catalogue entry was checked against the actual photograph before being tagged.
 
 ### Hero (signature)
 - Full-bleed project photograph behind a left-to-right dark green gradient scrim (from green-950/90 through green-900/80 to green-950/60) that guarantees text contrast. Display serif headline in white with the brand word in Golden Marigold, a small rating pill above, the Accent button plus a Ghost-on-dark button below, and a row of thin-line trust badges.
