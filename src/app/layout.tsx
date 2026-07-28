@@ -62,13 +62,9 @@ const localBusinessSchema = {
       },
     })),
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5.0",
-    reviewCount: "24",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  // No aggregateRating/Review markup here: Google disallows self-serving review
+  // snippets for a LocalBusiness describing itself. Ratings stay as page copy,
+  // sourced from the Google and Yelp profiles linked in sameAs.
   priceRange: "$$-$$$$",
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
@@ -81,77 +77,6 @@ const localBusinessSchema = {
     "https://www.yelp.com/biz/visionable-landscaping-fremont",
     "https://www.facebook.com/p/Visionable-Landscaping-100089900322769",
     "https://www.techo-bloc.com/landscape-contractor/usa/california/fremont/visionable-landscaping",
-  ],
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "How much does an outdoor living project cost?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Depends on the vision, a patio and turf setup starts around $5K, while a complete outdoor living space with cooking area, lighting, and seating runs $20K-$60K+. We give you a detailed, transparent estimate after seeing your space. No hidden fees.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long until I can actually use my new yard?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most projects finish in 2-6 weeks. Turf installs can be done in days; a full outdoor transformation typically takes 3-4 weeks. We lock in a timeline upfront and send daily updates.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What if I don't have a clear vision yet?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most clients don't, they just know they want to use their backyard more. That's exactly what the design consultation is for. We help you figure out what you want through 3D renderings you can explore and adjust.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is the consultation really free?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "100% free. We visit your property, talk about how you want to live outdoors, take measurements, and follow up with a proposal and 3D renderings. You only pay if you decide to build.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Are you licensed and insured?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We're fully licensed with the California Contractors State License Board and carry comprehensive liability and workers' comp insurance.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What areas do you serve?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We serve the I-680 corridor and surrounding communities including Fremont, Newark, Milpitas, Union City, Hayward, San Ramon, Dublin, Pleasanton, Danville, Walnut Creek, and Concord.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you offer warranties?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Materials and workmanship, clearly documented in your contract. We stand behind every vision we build.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can I see examples of your work?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes! Check our portfolio or visit our Yelp page with 200+ project photos. We're happy to share examples during your free consultation.",
-      },
-    },
   ],
 };
 
@@ -219,36 +144,8 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "HowTo",
-            name: "How Visionable Landscaping Transforms Your Yard",
-            description: "Our 4-step process from consultation to final walkthrough.",
-            step: [
-              { "@type": "HowToStep", name: "Discovery Call", text: "We visit your property, listen to your vision, and give you a clear, honest estimate." },
-              { "@type": "HowToStep", name: "Design & Plan", text: "Detailed plans with 3D renderings, see exactly what your yard will look like." },
-              { "@type": "HowToStep", name: "Build It Right", text: "Our crew brings the design to life, on time, on budget, with daily updates." },
-              { "@type": "HowToStep", name: "Walk & Wow", text: "Final walkthrough, care guide, warranty info, and our commitment to stand behind it." },
-            ],
-          }) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Review",
-            itemReviewed: { "@type": "LocalBusiness", name: "Visionable Landscaping" },
-            author: { "@type": "Person", name: "Chang C." },
-            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-            reviewBody: "We are very satisfied with Visionable Landscaping. From artificial grass to pavers, everything was done very well!",
-          }) }}
-        />
+        {/* Page-specific markup (FAQPage, Service, BreadcrumbList) lives on the
+            page that renders the matching content, not in the root layout. */}
       </head>
       <body className={`${sourceSans.variable} ${dmSerif.variable} antialiased`}>
         <a href="#main-content" className="skip-to-content">Skip to content</a>

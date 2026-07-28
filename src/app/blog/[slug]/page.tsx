@@ -122,7 +122,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                   <span className={`text-xs font-semibold px-3 py-1 rounded-full ${categoryColors[post.category] || categoryColors.General}`}>
                     {post.category}
                   </span>
-                  <span className="text-sm text-stone-400">{formatDate(post.date)}</span>
+                  <span className="text-sm text-stone-600">{formatDate(post.date)}</span>
                 </div>
 
                 <h1 className="text-3xl md:text-4xl text-stone-900 mb-6 leading-tight">
@@ -136,7 +136,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-stone-900">{post.author}</p>
-                    <p className="text-xs text-stone-400">Visionable Landscaping</p>
+                    <p className="text-xs text-stone-600">Visionable Landscaping</p>
                   </div>
                 </div>
 
@@ -159,7 +159,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                 {/* CTA */}
                 <div className="mt-12 bg-primary/5 rounded-2xl p-8 text-center border border-primary/10">
                   <h3 className="text-xl text-stone-900 mb-2">Ready to Transform Your Yard?</h3>
-                  <p className="text-stone-500 mb-4">Schedule a free consultation and let&apos;s bring your vision to life.</p>
+                  <p className="text-stone-600 mb-4">Schedule a free consultation and let&apos;s bring your vision to life.</p>
                   <a
                     href="/#contact"
                     className="inline-flex items-center gap-2 bg-accent text-foreground px-6 py-3 rounded-lg font-semibold transition-all hover:-translate-y-0.5 hover:shadow-lg"
@@ -225,7 +225,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                           <h5 className="text-sm font-semibold text-stone-900 group-hover:text-primary transition-colors line-clamp-2">
                             {r.title}
                           </h5>
-                          <p className="text-xs text-stone-400 mt-1">{formatDate(r.date)}</p>
+                          <p className="text-xs text-stone-600 mt-1">{formatDate(r.date)}</p>
                         </Link>
                       ))}
                     </div>

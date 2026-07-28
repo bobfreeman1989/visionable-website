@@ -25,7 +25,7 @@ export default function Testimonials() {
             <p className="text-stone-500 max-w-xl">
               Bay Area families who stopped imagining and started living outdoors.
             </p>
-            <p className="mt-3 text-xs uppercase tracking-[0.2em] text-stone-400">
+            <p className="mt-3 text-xs uppercase tracking-[0.2em] text-stone-600">
               {testimonialReviews.length} verified review excerpts · scroll for more
             </p>
           </div>

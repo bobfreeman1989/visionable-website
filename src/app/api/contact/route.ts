@@ -19,7 +19,8 @@ export async function POST(req: NextRequest) {
       details: body.details?.trim() ?? "",
     };
 
-    if (!payload.name || !payload.email || !payload.phone || !payload.service) {
+    // Mirror the form: name and email are the only starred fields.
+    if (!payload.name || !payload.email) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
@@ -38,9 +39,13 @@ export async function POST(req: NextRequest) {
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        from: "Visionable Website <onboarding@resend.dev>",
-        to: ["info@visionablelandscaping.com"],
-        subject: `New Consultation: ${payload.name}, ${payload.service}`,
+        // onboarding@resend.dev only delivers to the Resend account owner. Set
+        // CONTACT_FROM_EMAIL to an address on a domain verified in Resend.
+        from: process.env.CONTACT_FROM_EMAIL ?? "Visionable Website <onboarding@resend.dev>",
+        to: [process.env.CONTACT_TO_EMAIL ?? "info@visionablelandscaping.com"],
+        subject: payload.service
+          ? `New Consultation: ${payload.name}, ${payload.service}`
+          : `New Consultation: ${payload.name}`,
         html,
         reply_to: payload.email,
       }),

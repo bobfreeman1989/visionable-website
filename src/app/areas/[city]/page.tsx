@@ -62,13 +62,6 @@ export default function CityPage({ params }: { params: { city: string } }) {
       "@type": "City",
       name: `${city.name}, CA`,
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: "24",
-      bestRating: "5",
-      worstRating: "1",
-    },
     priceRange: "$$-$$$$",
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -121,7 +114,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
             <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-stone-500">
               <Link href="/" className="hover:text-primary transition-colors">Home</Link>
               <ChevronRight className="w-3.5 h-3.5" />
-              <span className="text-stone-400">Areas We Serve</span>
+              <span className="text-stone-600">Areas We Serve</span>
               <ChevronRight className="w-3.5 h-3.5" />
               <span className="text-stone-900 font-medium">{city.name}</span>
             </nav>
@@ -132,7 +125,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
         <section className="bg-gradient-to-br from-primary to-green-900 text-white py-16 md:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <div className="flex items-center gap-2 text-accent text-sm font-medium mb-4">
+              <div className="flex items-center gap-2 text-accent-light text-sm font-medium mb-4">
                 <MapPin className="w-4 h-4" />
                 {city.name}, {city.county} County
               </div>

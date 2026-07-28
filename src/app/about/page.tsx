@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "About Visionable Landscaping | Bay Area's Trusted Landscape Team",
   description:
     "Meet the team behind 200+ Bay Area landscape projects. Licensed, insured, and committed to turning your outdoor vision into reality. Serving Fremont, San Jose & beyond.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 const pillars = [
@@ -51,7 +54,7 @@ export default function AboutPage() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <p className="text-accent font-semibold mb-3 tracking-wide uppercase text-sm">About Visionable Landscaping</p>
+                <p className="text-accent-light font-semibold mb-3 tracking-wide uppercase text-sm">About Visionable Landscaping</p>
                 <h1 className="text-4xl md:text-5xl text-white mb-6 font-heading leading-tight">
                   Turning Visions Into<br />Outdoor Reality
                 </h1>
@@ -134,7 +137,7 @@ export default function AboutPage() {
                       <m.Icon className="w-4 h-4" />
                     </div>
                     <div className="pt-1.5">
-                      <p className="text-sm font-semibold text-accent">{m.year}</p>
+                      <p className="text-sm font-semibold text-accent-dark">{m.year}</p>
                       <p className="text-stone-700 font-medium">{m.label}</p>
                     </div>
                   </div>

@@ -1,9 +1,11 @@
+// Only name and email are required — every other field is marked optional in the
+// form UI, so the API must accept a submission that omits them.
 export type ContactRequest = {
   name: string;
   email: string;
-  phone: string;
+  phone?: string;
   address?: string;
-  service: string;
+  service?: string;
   budget?: string;
   details?: string;
 };

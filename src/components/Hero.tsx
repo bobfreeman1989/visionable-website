@@ -25,7 +25,7 @@ export default function Hero() {
         <FadeUp delay={0.1} className="inline-flex items-center gap-2 bg-green-900/60 rounded-full px-4 py-2 mb-6">
           <div className="flex gap-0.5">
             {[...Array(5)].map((_, index) => (
-              <span key={index} className="text-accent text-sm">★</span>
+              <span key={index} className="text-accent-light text-sm">★</span>
             ))}
           </div>
           <span className="text-white/90 text-sm font-medium">5.0 on Google & Yelp</span>

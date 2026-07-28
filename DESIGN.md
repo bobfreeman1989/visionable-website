@@ -132,7 +132,8 @@ A warm, horticultural palette: a deep cultivated green and a golden accent set a
 
 ### Secondary
 - **Golden Marigold** (#E8960C): The conversion accent. Reserved for the single most important action on a view (the hero CTA, the form submit) and for the rating stars. Its scarcity is the entire point.
-- **Marigold Dark** (#A56804): Hover and pressed state for marigold actions.
+- **Marigold Dark** (#A56804): Hover and pressed state for marigold actions, and the marigold used for *text on a light ground* (4.6:1 on white). Plain #E8960C is 2.4:1 on white and fails AA.
+- **Marigold Light** (#FCD34D): The marigold used for *small text on a forest-green ground* (5.0:1 on #1B6B2A), such as section eyebrows and the hero rating stars. Plain #E8960C is about 3.1:1 on that green and fails AA below display sizes.
 
 ### Neutral
 - **Warm Off-White Background** (#FEFDFB): The page canvas. Warmer than white, it is the default ground everything sits on.
@@ -144,6 +145,8 @@ A warm, horticultural palette: a deep cultivated green and a golden accent set a
 
 ### Named Rules
 **The Marigold Rarity Rule.** Golden Marigold (#E8960C) means "act now." It belongs to one action per view and the rating stars, nothing else. If marigold covers more than roughly 10% of a screen, the screen is wrong. Forest green carries everything else. Marigold buttons carry warm-ink text (#1A1917), not white: white on marigold is about 2.4:1 and fails WCAG AA.
+
+**The Marigold Ground Rule.** #E8960C is a *fill* color, not a text color. As a fill behind warm ink it is fine anywhere. As text it only clears AA over a dark scrim, which is why the hero word "Visionable" can keep it at display size (3.8:1 against a 3:1 large-text bar). For marigold text anywhere else, pick by ground: #A56804 on light, #FCD34D on forest green. Never plain #E8960C.
 
 **The Warm Neutral Rule.** Neutrals tint warm, on the Tailwind stone ramp. The page ground is #FEFDFB and large panels are #FAFAF8 or #F5F5F2, never a clinical pure white field. Pure #FFFFFF is allowed only for crisp content cards sitting on a warm ground.
 

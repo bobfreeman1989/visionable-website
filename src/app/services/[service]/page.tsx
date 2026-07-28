@@ -52,13 +52,6 @@ export default function ServicePage({ params }: { params: { service: string } })
         postalCode: "94539",
         addressCountry: "US",
       },
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "5.0",
-        reviewCount: "24",
-        bestRating: "5",
-        worstRating: "1",
-      },
     },
     areaServed: areas.map((a) => ({
       "@type": "City",
@@ -99,7 +92,7 @@ export default function ServicePage({ params }: { params: { service: string } })
             <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-stone-500">
               <Link href="/" className="hover:text-primary transition-colors">Home</Link>
               <ChevronRight className="w-3.5 h-3.5" />
-              <span className="text-stone-400">Services</span>
+              <span className="text-stone-600">Services</span>
               <ChevronRight className="w-3.5 h-3.5" />
               <span className="text-stone-900 font-medium">{service.title}</span>
             </nav>
