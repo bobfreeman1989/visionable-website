@@ -45,7 +45,7 @@ export default function AreasIndexPage() {
       <main id="main-content" className="pt-20">
         <section className="bg-gradient-to-br from-primary to-green-900 text-white py-16 md:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p className="text-accent text-sm font-semibold uppercase tracking-wider mb-4">
+            <p className="text-accent-light text-sm font-semibold uppercase tracking-wider mb-4">
               Local Landscaping Service Areas
             </p>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl mb-6 max-w-4xl">

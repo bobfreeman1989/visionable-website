@@ -54,7 +54,7 @@ export default function AboutPage() {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <p className="text-accent font-semibold mb-3 tracking-wide uppercase text-sm">About Visionable Landscaping</p>
+                <p className="text-accent-light font-semibold mb-3 tracking-wide uppercase text-sm">About Visionable Landscaping</p>
                 <h1 className="text-4xl md:text-5xl text-white mb-6 font-heading leading-tight">
                   Turning Visions Into<br />Outdoor Reality
                 </h1>
