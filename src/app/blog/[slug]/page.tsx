@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import CTABanner from "@/components/CTABanner";
 import { getBlogPost, getBlogPosts } from "@/lib/blog";
 
 export function generateStaticParams() {
@@ -96,10 +97,11 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Nav />
-      <main className="pt-20 pb-20">
-        {/* Cover Image */}
-        {post.coverImage && (
-          <div className="relative w-full h-[300px] md:h-[400px] lg:h-[480px]">
+      <main id="main-content" className="pt-16">
+        {/* Cover: the headline sits on the photograph rather than below it, so a
+            post opens on its subject the way the rest of the site does. */}
+        <header className="relative w-full min-h-[380px] md:min-h-[460px] lg:min-h-[540px] flex items-end overflow-hidden">
+          {post.coverImage ? (
             <Image
               src={post.coverImage}
               alt={post.title}
@@ -108,28 +110,48 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               sizes="100vw"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
+          ) : (
+            <div className="absolute inset-0 bg-gradient-to-br from-primary to-green-900" />
+          )}
+          {/* Same two-part scrim as PageHero: a flat base for bright skies, then
+              a bottom-weighted gradient. The dense band runs to 45% because the
+              headline block — breadcrumb, meta line and h1 — is taller than a
+              single line and the meta sits well above the bottom edge. */}
+          <div className="absolute inset-0 bg-green-950/55" />
+          <div className="absolute inset-0 bg-gradient-to-t from-green-950/95 from-10% via-green-950/88 via-45% to-transparent" />
+
+          <div className="relative max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-16 md:pb-24 pt-24">
+            <nav
+              aria-label="Breadcrumb"
+              className="flex items-center gap-1.5 text-sm text-white/70 mb-5"
+            >
+              <Link href="/" className="hover:text-white transition-colors">
+                Home
+              </Link>
+              <span aria-hidden="true">/</span>
+              <Link href="/blog" className="hover:text-white transition-colors">
+                Blog
+              </Link>
+            </nav>
+            <div className="flex flex-wrap items-center gap-3 mb-4">
+              <span className="text-xs font-semibold px-3 py-1 rounded-full bg-white/15 text-white">
+                {post.category}
+              </span>
+              <span className="text-sm text-white/80">{formatDate(post.date)}</span>
+              <span className="text-sm text-white/80">· {post.author}</span>
+            </div>
+            <h1 className="font-heading text-3xl md:text-5xl text-white max-w-4xl leading-[1.1]">
+              {post.title}
+            </h1>
           </div>
-        )}
+        </header>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-4 gap-10 -mt-16 relative z-10">
             {/* Main Content */}
             <article className="lg:col-span-3">
               <div className="bg-white rounded-2xl shadow-sm border border-stone-100 p-6 md:p-10">
-                {/* Meta */}
-                <div className="flex flex-wrap items-center gap-3 mb-6">
-                  <span className={`text-xs font-semibold px-3 py-1 rounded-full ${categoryColors[post.category] || categoryColors.General}`}>
-                    {post.category}
-                  </span>
-                  <span className="text-sm text-stone-600">{formatDate(post.date)}</span>
-                </div>
-
-                <h1 className="text-3xl md:text-4xl text-stone-900 mb-6 leading-tight">
-                  {post.title}
-                </h1>
-
-                {/* Author */}
+                {/* Author — category, date and headline now live on the cover */}
                 <div className="flex items-center gap-3 mb-8 pb-8 border-b border-stone-100">
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">
                     V
@@ -242,6 +264,17 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               </div>
             </aside>
           </div>
+        </div>
+
+        <div className="mt-16">
+          <CTABanner
+            title="Ready to build the yard you keep reading about?"
+            subtitle="Free consultation and 3D renderings before anything is built."
+            primaryText="Share Your Vision"
+            secondaryText="See Our Work"
+            secondaryHref="/#portfolio"
+            bgImage="/photos/cta-bg.webp"
+          />
         </div>
       </main>
       <Footer />

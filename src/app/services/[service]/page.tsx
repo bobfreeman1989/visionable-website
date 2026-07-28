@@ -1,9 +1,18 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { Phone, ChevronRight, CheckCircle, ArrowRight, MapPin } from "lucide-react";
+import { ChevronRight, ArrowRight } from "lucide-react";
 import { services, getServiceBySlug } from "@/lib/services";
 import { areas } from "@/lib/areas";
+import { photosForService, heroForService } from "@/content/gallery";
+import { serviceFacts } from "@/content/service-facts";
+import PageHero from "@/components/sections/PageHero";
+import PhotoGallery from "@/components/sections/PhotoGallery";
+import AlternatingFeatures from "@/components/sections/AlternatingFeatures";
+import RelatedCards from "@/components/sections/RelatedCards";
+import Accordion from "@/components/sections/Accordion";
+import BeforeAfter from "@/components/BeforeAfter";
+import CTABanner from "@/components/CTABanner";
 
 const BASE_URL = "https://visionablelandscaping.com";
 
@@ -22,6 +31,7 @@ export function generateMetadata({ params }: { params: { service: string } }): M
       title: service.metaTitle,
       description: service.metaDescription,
       url: `${BASE_URL}/services/${service.slug}`,
+      images: [{ url: heroForService(service.slug).src }],
     },
     alternates: {
       canonical: `/services/${service.slug}`,
@@ -33,12 +43,37 @@ export default function ServicePage({ params }: { params: { service: string } })
   const service = getServiceBySlug(params.service);
   if (!service) notFound();
 
+  const facts = serviceFacts[service.slug];
+  const related = services.filter((s) => s.slug !== service.slug).slice(0, 3);
+
+  // One ranked pull, partitioned so the hero, the feature rows and the gallery
+  // never show the same photograph twice on a page.
+  const ranked = photosForService(service.slug, 9);
+  const hero = ranked[0];
+  const featurePhotos = ranked.slice(1, 4);
+  const gallery = ranked.slice(4, 9);
+
+  // Pair each body paragraph with a photo so the explanation sits beside
+  // evidence of it rather than running as a column of prose.
+  const features = service.content.slice(0, 3).map((paragraph, i) => ({
+    title:
+      [
+        `What ${service.title.toLowerCase()} looks like with Visionable`,
+        "How we build it",
+        "Choosing the right materials",
+      ][i] ?? service.title,
+    body: paragraph,
+    bullets: i === 0 ? service.benefits.slice(0, 3) : i === 1 ? service.benefits.slice(3, 6) : undefined,
+    image: featurePhotos[i % featurePhotos.length] ?? hero,
+  }));
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
     name: service.title,
     description: service.metaDescription,
     url: `${BASE_URL}/services/${service.slug}`,
+    image: `${BASE_URL}${hero.src}`,
     provider: {
       "@type": "LocalBusiness",
       name: "Visionable Landscaping",
@@ -53,10 +88,7 @@ export default function ServicePage({ params }: { params: { service: string } })
         addressCountry: "US",
       },
     },
-    areaServed: areas.map((a) => ({
-      "@type": "City",
-      name: `${a.name}, CA`,
-    })),
+    areaServed: areas.map((a) => ({ "@type": "City", name: `${a.name}, CA` })),
   };
 
   const breadcrumbSchema = {
@@ -65,7 +97,12 @@ export default function ServicePage({ params }: { params: { service: string } })
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
       { "@type": "ListItem", position: 2, name: "Services", item: `${BASE_URL}/services` },
-      { "@type": "ListItem", position: 3, name: service.title, item: `${BASE_URL}/services/${service.slug}` },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: service.title,
+        item: `${BASE_URL}/services/${service.slug}`,
+      },
     ],
   };
 
@@ -82,190 +119,108 @@ export default function ServicePage({ params }: { params: { service: string } })
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="pt-20">
-        {/* Breadcrumbs */}
-        <div className="bg-surface border-b border-stone-200">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-            <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-stone-500">
-              <Link href="/" className="hover:text-primary transition-colors">Home</Link>
-              <ChevronRight className="w-3.5 h-3.5" />
-              <span className="text-stone-600">Services</span>
-              <ChevronRight className="w-3.5 h-3.5" />
-              <span className="text-stone-900 font-medium">{service.title}</span>
-            </nav>
-          </div>
-        </div>
-
-        {/* Hero */}
-        <section className="bg-gradient-to-br from-primary to-green-900 text-white py-16 md:py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl mb-6">
-                {service.title}
-              </h1>
-              <p className="text-green-100 text-lg mb-8 leading-relaxed">
-                {service.heroText}
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  href="/#contact"
-                  className="bg-accent text-foreground px-6 py-3 rounded-lg font-semibold transition-all inline-flex items-center gap-2 shadow-lg hover:shadow-accent/30 hover:shadow-xl hover:-translate-y-0.5"
-                >
-                  Share Your Vision
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-                <a
-                  href="tel:510-755-5616"
-                  className="border border-white/30 hover:border-white text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-flex items-center gap-2"
-                >
-                  <Phone className="w-4 h-4" />
-                  (510) 755-5616
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Content */}
-        <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-3 gap-12">
-              <div className="lg:col-span-2 space-y-6">
-                {service.content.map((paragraph, i) => (
-                  <p key={i} className="text-stone-600 leading-relaxed text-lg">
-                    {paragraph}
-                  </p>
-                ))}
-
-                {/* Benefits */}
-                <div className="mt-8">
-                  <h2 className="text-2xl text-stone-900 mb-4">
-                    Why Choose Visionable for {service.title}
-                  </h2>
-                  <ul className="grid sm:grid-cols-2 gap-3">
-                    {service.benefits.map((benefit) => (
-                      <li key={benefit} className="flex items-start gap-2 text-stone-600">
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span>{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* FAQs */}
-                <div className="mt-12">
-                  <h2 className="text-2xl text-stone-900 mb-6">
-                    Frequently Asked Questions
-                  </h2>
-                  <div className="space-y-4">
-                    {service.faqs.map((faq, i) => (
-                      <div key={i} className="bg-stone-50 rounded-xl p-6 border border-stone-200">
-                        <h3 className="text-stone-900 mb-2">{faq.q}</h3>
-                        <p className="text-stone-600">{faq.a}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Sidebar */}
-              <div className="space-y-6">
-                <div className="bg-primary text-white rounded-xl p-6">
-                  <h3 className="text-lg mb-4">Free {service.title} Consultation</h3>
-                  <div className="space-y-3 text-sm">
-                    <a href="tel:510-755-5616" className="flex items-center gap-2 hover:underline">
-                      <Phone className="w-4 h-4" /> (510) 755-5616
-                    </a>
-                    <div className="flex items-center gap-2">
-                      <MapPin className="w-4 h-4" /> Serving the I-680 Corridor
-                    </div>
-                  </div>
-                  <Link
-                    href="/#contact"
-                    className="mt-5 block text-center bg-white text-primary font-semibold py-3 rounded-lg hover:bg-stone-100 transition-colors"
-                  >
-                    Book Consultation
-                  </Link>
-                </div>
-
-                <div className="bg-stone-50 rounded-xl p-6 border border-stone-200">
-                  <h4 className="font-bold text-stone-900 mb-3">All Services</h4>
-                  <ul className="space-y-2 text-sm">
-                    {services.map((s) => (
-                      <li key={s.slug}>
-                        <Link
-                          href={`/services/${s.slug}`}
-                          className={`inline-flex items-center gap-1 transition-colors ${
-                            s.slug === service.slug
-                              ? "text-stone-900 font-semibold"
-                              : "text-primary hover:underline"
-                          }`}
-                        >
-                          {s.slug === service.slug ? (
-                            <CheckCircle className="w-3.5 h-3.5" />
-                          ) : (
-                            <ArrowRight className="w-3 h-3" />
-                          )}
-                          {s.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="bg-stone-50 rounded-xl p-6 border border-stone-200">
-                  <h4 className="font-bold text-stone-900 mb-3">Areas We Serve</h4>
-                  <ul className="space-y-2 text-sm">
-                    {areas.slice(0, 6).map((area) => (
-                      <li key={area.slug}>
-                        <Link
-                          href={`/areas/${area.slug}`}
-                          className="text-primary hover:underline inline-flex items-center gap-1"
-                        >
-                          {area.name} <ArrowRight className="w-3 h-3" />
-                        </Link>
-                      </li>
-                    ))}
-                    <li className="pt-1">
-                      <span className="text-stone-500 text-xs">+ {areas.length - 6} more cities</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="bg-primary py-16">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-            <h2 className="text-3xl md:text-4xl mb-4">
-              Ready to Make Your {service.title} Vision Real?
-            </h2>
-            <p className="text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-              Join 200+ Bay Area homeowners who turned their vision into reality.
-              Free consultation, transparent pricing, and results you will love.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link
-                href="/#contact"
-                className="bg-white text-primary hover:bg-stone-100 px-8 py-3.5 rounded-lg font-semibold transition-colors"
-              >
-                Share Your Vision
+      <div className="pt-16">
+        <PageHero
+          eyebrow="Bay Area design-build"
+          title={service.title}
+          lede={service.heroText}
+          image={{ src: hero.src, alt: hero.alt }}
+          facts={facts}
+          above={
+            <nav
+              aria-label="Breadcrumb"
+              className="flex items-center gap-1.5 text-sm text-white/70 mb-6"
+            >
+              <Link href="/" className="hover:text-white transition-colors">
+                Home
               </Link>
-              <a
-                href="tel:510-755-5616"
-                className="border-2 border-white text-white hover:bg-white/10 px-8 py-3.5 rounded-lg font-semibold transition-colors inline-flex items-center gap-2"
-              >
-                <Phone className="w-4 h-4" />
-                (510) 755-5616
-              </a>
+              <ChevronRight className="w-3.5 h-3.5" aria-hidden="true" />
+              <Link href="/services" className="hover:text-white transition-colors">
+                Services
+              </Link>
+              <ChevronRight className="w-3.5 h-3.5" aria-hidden="true" />
+              <span className="text-white font-medium">{service.title}</span>
+            </nav>
+          }
+        />
+
+        <AlternatingFeatures features={features} />
+
+        <PhotoGallery
+          photos={gallery}
+          title={`${service.title} we have built`}
+          intro={`Recent ${service.title.toLowerCase()} work across Fremont and the I-680 corridor.`}
+          action={
+            <Link
+              href="/#portfolio"
+              className="text-primary font-semibold inline-flex items-center gap-1.5 hover:underline shrink-0"
+            >
+              See the full portfolio <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
+            </Link>
+          }
+        />
+
+        <BeforeAfter />
+
+        <section className="py-14 md:py-16 bg-background">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl text-stone-900 mb-3">
+              {service.title} questions, answered
+            </h2>
+            <p className="text-stone-600 mb-8">
+              The things Bay Area homeowners ask us most before starting.
+            </p>
+            <Accordion items={service.faqs} idPrefix={`svc-${service.slug}`} />
+          </div>
+        </section>
+
+        <RelatedCards
+          title="Pairs well with"
+          intro="Most projects combine two or three of these. We build them as one job, on one timeline."
+          cards={related.map((s) => {
+            const photo = heroForService(s.slug);
+            return {
+              href: `/services/${s.slug}`,
+              title: s.title,
+              blurb: s.shortDesc,
+              image: { src: photo.src, alt: photo.alt },
+            };
+          })}
+        />
+
+        <section className="py-12 bg-background border-t border-stone-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-xl text-stone-900 mb-4">
+              {service.title} near you
+            </h2>
+            <div className="flex flex-wrap gap-2.5">
+              {areas.map((area) => (
+                <Link
+                  key={area.slug}
+                  href={`/areas/${area.slug}`}
+                  className="bg-white border border-stone-200 rounded-full px-4 py-2 text-sm text-stone-700 hover:text-primary hover:border-primary/40 transition-colors"
+                >
+                  {area.name}
+                </Link>
+              ))}
             </div>
           </div>
         </section>
+
+        <CTABanner
+          title={`Ready to make your ${service.title.toLowerCase()} vision real?`}
+          subtitle="Free consultation, 3D renderings before we break ground, and transparent pricing."
+          primaryText="Share Your Vision"
+          secondaryText="See Our Process"
+          secondaryHref="/#process"
+          bgImage="/photos/cta-bg.webp"
+        />
       </div>
     </>
   );

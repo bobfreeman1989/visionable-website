@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, MapPin } from "lucide-react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import CTABanner from "@/components/CTABanner";
+import PageHero from "@/components/sections/PageHero";
 import { areas } from "@/lib/areas";
+import { photosForArea } from "@/content/gallery";
 
 const BASE_URL = "https://visionablelandscaping.com";
 
@@ -35,6 +39,17 @@ const areasItemListSchema = {
 };
 
 export default function AreasIndexPage() {
+  const allSlugs = areas.map((a) => a.slug);
+  const heroPhoto = photosForArea("fremont", allSlugs, 1)[0];
+
+  // Sorted so neighbouring cities sit together and each card names its region,
+  // rather than split into per-region sections: three of the six regions hold a
+  // single city, which leaves a three-column grid mostly empty.
+  const regionOrder = Array.from(new Set(areas.map((a) => a.region)));
+  const sorted = [...areas].sort(
+    (a, b) => regionOrder.indexOf(a.region) - regionOrder.indexOf(b.region)
+  );
+
   return (
     <>
       <script
@@ -42,76 +57,86 @@ export default function AreasIndexPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(areasItemListSchema) }}
       />
       <Nav />
-      <main id="main-content" className="pt-20">
-        <section className="bg-gradient-to-br from-primary to-green-900 text-white py-16 md:py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p className="text-accent-light text-sm font-semibold uppercase tracking-wider mb-4">
-              Local Landscaping Service Areas
-            </p>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl mb-6 max-w-4xl">
-              Landscaping across Fremont, the East Bay, and the I-680 corridor
-            </h1>
-            <p className="text-green-100 text-lg leading-relaxed max-w-3xl mb-8">
-              Visionable Landscaping is based in Fremont and serves homeowners across nearby Bay Area communities with pavers, artificial turf, pergolas, fence and gate installation, irrigation and drainage, landscape design, outdoor lighting, retaining walls, and complete backyard remodels.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="tel:510-755-5616"
-                className="bg-accent text-foreground px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 shadow-lg hover:shadow-xl transition-all"
-              >
-                <Phone className="w-4 h-4" />
-                (510) 755-5616
-              </a>
-              <Link
-                href="/#contact"
-                className="border border-white/30 hover:border-white text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-colors"
-              >
-                Book a Free Consultation <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
-        </section>
+      <main id="main-content" className="pt-16">
+        <PageHero
+          eyebrow="Local landscaping service areas"
+          title="Landscaping across Fremont, the East Bay, and the I-680 corridor"
+          lede="Based in Fremont and close enough to every city we serve that site visits, deliveries, and callbacks happen quickly. Same crew, same standard, wherever your yard is."
+          image={{ src: heroPhoto.src, alt: heroPhoto.alt }}
+          facts={[
+            { label: "Cities served", value: `${areas.length} and nearby` },
+            { label: "Home base", value: "Fremont, CA" },
+            { label: "Projects built", value: "200+" },
+            { label: "Rated", value: "5.0 on Google & Yelp" },
+          ]}
+        />
 
-        <section className="py-16 bg-background">
+        <section className="py-14 md:py-16 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {areas.map((area) => (
-                <Link
-                  key={area.slug}
-                  href={`/areas/${area.slug}`}
-                  className="bg-white border border-stone-200 rounded-2xl p-6 hover:-translate-y-1 hover:shadow-lg hover:border-primary/30 transition-all group"
-                >
-                  <div className="flex items-center gap-2 text-primary text-sm font-medium mb-3">
-                    <MapPin className="w-4 h-4" />
-                    {area.county} County · {area.region}
-                  </div>
-                  <h2 className="text-2xl text-stone-900 mb-3 group-hover:text-primary transition-colors">
-                    Landscaping in {area.name}, CA
-                  </h2>
-                  <p className="text-stone-600 leading-relaxed mb-5">{area.metaDescription}</p>
-                  <span className="text-primary font-semibold inline-flex items-center gap-1">
-                    View {area.name} Services <ArrowRight className="w-4 h-4" />
+            <div className="mb-9 grid gap-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+              <h2 className="text-3xl md:text-4xl text-stone-900">Cities we serve</h2>
+              <div className="flex flex-wrap gap-2 lg:justify-end">
+                {regionOrder.map((region) => (
+                  <span
+                    key={region}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-stone-200 bg-white px-3.5 py-1.5 text-sm text-stone-700"
+                  >
+                    <MapPin className="w-3.5 h-3.5 text-primary" strokeWidth={1.5} />
+                    {region}
                   </span>
-                </Link>
-              ))}
+                ))}
+              </div>
+            </div>
+
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {sorted.map((area) => {
+                const photo = photosForArea(area.slug, allSlugs, 1)[0];
+                return (
+                  <Link
+                    key={area.slug}
+                    href={`/areas/${area.slug}`}
+                    className="group overflow-hidden rounded-2xl border border-stone-200 bg-white transition-[transform,box-shadow,border-color] hover:-translate-y-1 hover:shadow-lg hover:border-primary/30"
+                  >
+                    <div className="relative aspect-[16/10]">
+                      <Image
+                        src={photo.src}
+                        alt={photo.alt}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent" />
+                      <h3 className="absolute inset-x-0 bottom-0 p-4 text-xl text-white">
+                        {area.name}, CA
+                      </h3>
+                    </div>
+                    <div className="p-5">
+                      <p className="text-xs uppercase tracking-[0.12em] text-primary font-semibold mb-2">
+                        {area.county} County · {area.region}
+                      </p>
+                      <p className="text-sm text-stone-600 leading-relaxed mb-4 line-clamp-3">
+                        {area.heroText}
+                      </p>
+                      <span className="text-primary font-semibold text-sm inline-flex items-center gap-1.5">
+                        View {area.name} services
+                        <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
+                      </span>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>
 
-        <section className="bg-primary py-16 text-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl mb-4">Ready to talk about your yard?</h2>
-            <p className="text-white/80 text-lg mb-8">
-              Call Visionable Landscaping or request a free consultation for your Bay Area outdoor living project.
-            </p>
-            <Link
-              href="/#contact"
-              className="bg-white text-primary hover:bg-stone-100 px-8 py-3.5 rounded-lg font-semibold inline-flex items-center gap-2 transition-colors"
-            >
-              Share Your Vision <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </section>
+        <CTABanner
+          title="Ready to talk about your yard?"
+          subtitle="Free consultation anywhere along the I-680 corridor. No pressure, just a conversation."
+          primaryText="Share Your Vision"
+          secondaryText="Browse Services"
+          secondaryHref="/services"
+          bgImage="/photos/cta-bg.webp"
+        />
       </main>
       <Footer />
     </>
