@@ -1,6 +1,7 @@
 ---
 title: "Backyard Garden Design with Curved Concrete Walkways and Raised Beds"
 date: "2026-05-20"
+updated: "2026-08-01"
 excerpt: "A Bay Area backyard can be a garden, vegetable space, and family-friendly retreat. Learn design takeaways from a curved walkway and raised bed project."
 category: "Project Showcase"
 coverImage: "/photos/blog/backyard-garden-curved-concrete-walkway-raised-beds-bay-area/hero.webp"
@@ -12,7 +13,7 @@ A lively backyard can be more than one thing at the same time. It can be a flowe
 
 This Visionable Landscaping Xiaohongshu project showed a backyard designed around a large curved concrete walkway and several custom raised beds. The result was clean, organized, and practical while still feeling soft and inviting.
 
-For Bay Area homeowners, especially in Fremont, San Jose, and nearby Silicon Valley communities, this type of backyard design is a strong example of how hardscape and planting areas can work together. Instead of treating the walkway, garden, and open areas as separate pieces, the design uses curves to create movement and raised beds to make gardening easier to enjoy.
+For Bay Area homeowners, especially in [Fremont](/areas/fremont), San Jose, and nearby Silicon Valley communities, this type of backyard design is a strong example of how hardscape and planting areas can work together. Instead of treating the walkway, garden, and open areas as separate pieces, the design uses curves to create movement and raised beds to make gardening easier to enjoy.
 
 ## Project Snapshot
 
@@ -34,7 +35,7 @@ A curved walkway can help:
 - Add depth without adding too many materials
 - Create softer transitions between hardscape and planting areas
 
-For homeowners planning a backyard remodel, the lesson is simple: the shape of the walkway can define the whole mood of the yard. A path is not only for walking. It also organizes how the eye moves through the landscape.
+For homeowners planning a [backyard remodel](/services/complete-backyard-remodel), the lesson is simple: the shape of the walkway can define the whole mood of the yard. A path is not only for walking. It also organizes how the eye moves through the landscape.
 
 ## Raised Beds Make Gardening Cleaner and Easier
 
@@ -70,7 +71,7 @@ Before choosing materials, decide what the yard needs to do. Do you want vegetab
 
 ### 2. Use hardscape to create order
 
-Concrete paths, pavers, and borders can prevent a garden-heavy yard from feeling messy. A clean walkway gives the planting areas structure.
+Concrete paths, [pavers](/services/paver-installation), and borders can prevent a garden-heavy yard from feeling messy. A clean walkway gives the planting areas structure.
 
 ### 3. Keep garden beds accessible
 

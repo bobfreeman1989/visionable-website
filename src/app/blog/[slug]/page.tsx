@@ -4,7 +4,10 @@ import Image from "next/image";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import CTABanner from "@/components/CTABanner";
+import RelatedCards from "@/components/sections/RelatedCards";
 import { getBlogPost, getBlogPosts } from "@/lib/blog";
+import { getServiceBySlug } from "@/lib/services";
+import { heroForService } from "@/content/gallery";
 
 export function generateStaticParams() {
   return getBlogPosts().map((p) => ({ slug: p.slug }));
@@ -55,6 +58,16 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
   const related = allPosts
     .filter((p) => p.slug !== post.slug && (p.category === post.category))
     .slice(0, 3);
+
+  // The services this post actually talks about, read back off the links in its
+  // own body, so the card block below can never drift from the article.
+  const mentionedSlugs = Array.from(
+    new Set(Array.from(post.contentHtml.matchAll(/href="\/services\/([a-z-]+)"/g), (m) => m[1]))
+  );
+  const mentionedServices = mentionedSlugs
+    .map((slug) => getServiceBySlug(slug))
+    .filter((s): s is NonNullable<typeof s> => Boolean(s))
+    .slice(0, 3);
   const url = `https://visionablelandscaping.com/blog/${post.slug}`;
   const articleSchema = {
     "@context": "https://schema.org",
@@ -63,7 +76,9 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
     description: post.excerpt,
     image: post.coverImage ? `https://visionablelandscaping.com${post.coverImage}` : "https://visionablelandscaping.com/og-image.jpg",
     datePublished: post.date,
-    dateModified: post.date,
+    // Only claim a revision when the body actually changed; a dateModified that
+    // just mirrors publication tells Google nothing and hides real refreshes.
+    dateModified: post.updated || post.date,
     author: {
       "@type": "Organization",
       name: "Visionable Landscaping",
@@ -158,7 +173,15 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-stone-900">{post.author}</p>
-                    <p className="text-xs text-stone-600">Visionable Landscaping</p>
+                    <p className="text-xs text-stone-600">
+                      Visionable Landscaping
+                      {post.updated && post.updated > post.date && (
+                        <>
+                          {" · Updated "}
+                          <time dateTime={post.updated}>{formatDate(post.updated)}</time>
+                        </>
+                      )}
+                    </p>
                   </div>
                 </div>
 
@@ -265,6 +288,23 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             </aside>
           </div>
         </div>
+
+        {mentionedServices.length > 0 && (
+          <RelatedCards
+            title="The services behind this article"
+            intro="Everything in this piece is work we build in-house, across Fremont and the I-680 corridor."
+            className="bg-surface mt-16"
+            cards={mentionedServices.map((s) => {
+              const photo = heroForService(s.slug);
+              return {
+                href: `/services/${s.slug}`,
+                title: s.title,
+                blurb: s.shortDesc,
+                image: { src: photo.src, alt: photo.alt },
+              };
+            })}
+          />
+        )}
 
         <div className="mt-16">
           <CTABanner

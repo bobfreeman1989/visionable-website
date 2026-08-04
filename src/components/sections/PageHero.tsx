@@ -14,6 +14,9 @@ interface PageHeroProps {
   /** Rendered above the eyebrow, e.g. a breadcrumb trail. */
   above?: React.ReactNode;
   priority?: boolean;
+  /** Pages that carry their own contact section pass "#contact" so the hero
+   *  CTA converts in place instead of bouncing to the homepage. */
+  ctaHref?: string;
 }
 
 /**
@@ -30,6 +33,7 @@ export default function PageHero({
   facts,
   above,
   priority = true,
+  ctaHref = "/#contact",
 }: PageHeroProps) {
   return (
     <section className="relative overflow-hidden bg-primary">
@@ -63,7 +67,7 @@ export default function PageHero({
 
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/#contact"
+            href={ctaHref}
             className="bg-accent text-foreground px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 shadow-lg transition-[transform,box-shadow] hover:shadow-xl hover:-translate-y-0.5"
           >
             Share Your Vision <ArrowRight className="w-4 h-4" strokeWidth={1.5} />

@@ -1,13 +1,14 @@
 ---
 title: "7 Outdoor Lighting Ideas That Transform Your Yard After Dark"
 date: "2024-03-20"
+updated: "2026-08-01"
 excerpt: "Strategic landscape lighting doesn't just look beautiful — it extends your living space, improves safety, and boosts property value."
 category: "Design Tips"
-coverImage: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&h=600&fit=crop"
+coverImage: "/photos/services/lighting01.webp"
 author: "Visionable Team"
 ---
 
-Most homeowners think about their landscape in daylight. But the right lighting design can transform your yard into an entirely different experience after sunset.
+Most homeowners think about their landscape in daylight. But the right [outdoor lighting](/services/outdoor-lighting) design can transform your yard into an entirely different experience after sunset.
 
 ## 1. Path Lighting
 
@@ -17,7 +18,7 @@ Guide guests safely while creating a welcoming ambiance. Low-profile LED path li
 
 Position lights at the base of specimen trees to create dramatic shadows and highlight canopy structure. This single technique can make your yard feel like a resort.
 
-![Tree uplighting example](https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800&h=400&fit=crop)
+![Curved concrete patio with a lit low retaining wall and gravel border](/photos/services/lighting02.webp)
 
 ## 3. Moonlighting
 
@@ -25,7 +26,7 @@ Mount fixtures high in trees angled downward to simulate natural moonlight. This
 
 ## 4. Step & Wall Lights
 
-Recessed lights in steps, walls, and seat walls add safety and a modern, architectural feel to hardscape features.
+Recessed lights in steps, walls, and seat walls add safety and a modern, architectural feel to [hardscaping](/services/hardscaping) and [retaining walls](/services/retaining-walls).
 
 ## 5. String Lights
 
@@ -43,7 +44,7 @@ Modern landscape lighting systems connect to your phone. Set schedules, adjust b
 
 ## Cost Expectations
 
-A professional landscape lighting installation in the Bay Area typically runs:
+A professional landscape lighting installation across [Fremont](/areas/fremont) and the wider Bay Area typically runs:
 
 - **Basic package** (paths + entry): $2,000-5,000
 - **Mid-range** (paths + trees + patio): $5,000-12,000
@@ -53,4 +54,4 @@ All include LED fixtures, transformer, wiring, and professional design.
 
 ---
 
-Want to see what lighting could do for your yard? [Book a free evening consultation](#contact) — we'll walk your property at dusk and show you the possibilities.
+Want to see what lighting could do for your yard? [Book a free evening consultation](/#contact) — we'll walk your property at dusk and show you the possibilities.

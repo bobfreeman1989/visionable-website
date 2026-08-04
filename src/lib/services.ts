@@ -1,5 +1,8 @@
 export interface ServiceData {
   slug: string;
+  /** Date this entry's copy last changed substantively. Drives sitemap
+      `lastmod`, so bump it only for real content edits. */
+  updatedAt: string;
   title: string;
   shortDesc: string;
   metaTitle: string;
@@ -13,6 +16,7 @@ export interface ServiceData {
 export const services: ServiceData[] = [
   {
     slug: "paver-installation",
+    updatedAt: "2026-08-01",
     title: "Paver Installation",
     shortDesc: "Premium interlocking pavers for patios, driveways, and walkways.",
     metaTitle: "Paver Installation Bay Area | Visionable Landscaping",
@@ -39,6 +43,7 @@ export const services: ServiceData[] = [
   },
   {
     slug: "artificial-turf",
+    updatedAt: "2026-08-01",
     title: "Artificial Turf",
     shortDesc: "Low-maintenance, water-saving synthetic turf that looks and feels natural.",
     metaTitle: "Artificial Turf Installation Bay Area | Visionable Landscaping",
@@ -65,6 +70,7 @@ export const services: ServiceData[] = [
   },
   {
     slug: "landscape-design",
+    updatedAt: "2026-08-01",
     title: "Landscape Design",
     shortDesc: "Custom 3D landscape designs tailored to your property and lifestyle.",
     metaTitle: "Landscape Design Bay Area | Visionable Landscaping",
@@ -91,6 +97,7 @@ export const services: ServiceData[] = [
   },
   {
     slug: "hardscaping",
+    updatedAt: "2026-08-01",
     title: "Hardscaping",
     shortDesc: "Retaining walls, fire pits, outdoor kitchens, and stone features.",
     metaTitle: "Hardscaping Services Bay Area | Visionable Landscaping",
@@ -117,6 +124,7 @@ export const services: ServiceData[] = [
   },
   {
     slug: "pergola-installation",
+    updatedAt: "2026-08-01",
     title: "Pergola Installation",
     shortDesc: "Custom pergolas and shade structures for comfortable Bay Area outdoor living.",
     metaTitle: "Pergola Installation Bay Area | Visionable Landscaping",
@@ -143,6 +151,7 @@ export const services: ServiceData[] = [
   },
   {
     slug: "fence-and-gate",
+    updatedAt: "2026-08-01",
     title: "Fence & Gate Installation",
     shortDesc: "Privacy fences, side gates, repair work, and custom entry details built cleanly.",
     metaTitle: "Fence & Gate Installation Bay Area | Visionable Landscaping",
@@ -169,6 +178,7 @@ export const services: ServiceData[] = [
   },
   {
     slug: "irrigation-drainage",
+    updatedAt: "2026-08-01",
     title: "Irrigation & Drainage",
     shortDesc: "Smart water management for turf, planting beds, patios, and problem areas.",
     metaTitle: "Irrigation & Drainage Bay Area | Visionable Landscaping",
@@ -195,6 +205,7 @@ export const services: ServiceData[] = [
   },
   {
     slug: "outdoor-lighting",
+    updatedAt: "2026-08-01",
     title: "Outdoor Lighting",
     shortDesc: "Accent, pathway, and security lighting that transforms your yard at night.",
     metaTitle: "Outdoor Lighting Installation Bay Area | Visionable Landscaping",
@@ -221,6 +232,7 @@ export const services: ServiceData[] = [
   },
   {
     slug: "retaining-walls",
+    updatedAt: "2026-08-01",
     title: "Retaining Walls",
     shortDesc: "Structural and decorative walls for slopes, terraces, and garden beds.",
     metaTitle: "Retaining Wall Installation Bay Area | Visionable Landscaping",
@@ -247,6 +259,7 @@ export const services: ServiceData[] = [
   },
   {
     slug: "complete-backyard-remodel",
+    updatedAt: "2026-08-01",
     title: "Complete Backyard Remodel",
     shortDesc: "Full yard transformations from design to build, handled entirely in-house.",
     metaTitle: "Complete Backyard Remodel Bay Area | Visionable Landscaping",
@@ -275,4 +288,25 @@ export const services: ServiceData[] = [
 
 export function getServiceBySlug(slug: string): ServiceData | undefined {
   return services.find((s) => s.slug === slug);
+}
+
+/** Maps a service page onto the closest option in the contact form's dropdown
+ *  (see contactServiceOptions) so the form arrives pre-answered. Several
+ *  services share one option because the dropdown is deliberately shorter than
+ *  the catalogue. */
+const contactOptionBySlug: Record<string, string> = {
+  "paver-installation": "Hardscaping / Pavers",
+  "hardscaping": "Hardscaping / Pavers",
+  "retaining-walls": "Hardscaping / Pavers",
+  "artificial-turf": "Artificial Turf",
+  "landscape-design": "Landscape Design Only",
+  "pergola-installation": "Pergola / Shade Structures",
+  "fence-and-gate": "Fencing & Gates",
+  "irrigation-drainage": "Irrigation / Drainage",
+  "outdoor-lighting": "Outdoor Lighting",
+  "complete-backyard-remodel": "Complete Backyard Redesign",
+};
+
+export function contactOptionForService(slug: string): string {
+  return contactOptionBySlug[slug] ?? "";
 }

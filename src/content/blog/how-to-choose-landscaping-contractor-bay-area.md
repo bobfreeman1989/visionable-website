@@ -1,18 +1,19 @@
 ---
 title: "How to Choose a Landscaping Contractor in the Bay Area"
 date: "2026-05-15"
+updated: "2026-08-01"
 excerpt: "Hiring a landscaping contractor in Fremont, San Jose, or the Bay Area? Learn how to check license, insurance, estimates, reviews, contracts, and communication before you hire."
 category: "Design Tips"
-coverImage: ""
+coverImage: "/photos/portfolio/p14.webp"
 author: "Visionable Team"
 featured: false
 ---
 
-Hiring a landscaping contractor for a backyard remodel, paver patio, retaining wall, drainage repair, artificial turf installation, outdoor kitchen, or full outdoor living project can feel overwhelming. A beautiful finished yard starts long before construction begins: it starts with choosing the right contractor.
+Hiring a landscaping contractor for a [backyard remodel](/services/complete-backyard-remodel), paver patio, retaining wall, drainage repair, artificial turf installation, outdoor kitchen, or full outdoor living project can feel overwhelming. A beautiful finished yard starts long before construction begins: it starts with choosing the right contractor.
 
 A Xiaohongshu note from Visionable Landscaping summarized six practical checks for homeowners: verify the contractor’s license and specialty, compare clear estimates, review experience and reputation, confirm insurance and workers’ compensation, sign a detailed contract, and keep communication strong throughout the project.
 
-Below is an expanded Bay Area homeowner guide based on those points, with local context for Fremont, San Jose, and surrounding communities.
+Below is an expanded Bay Area homeowner guide based on those points, with local context for [Fremont](/areas/fremont), San Jose, and surrounding communities.
 
 ## 1. Verify the Contractor’s License and Specialty
 
@@ -26,7 +27,7 @@ Before hiring a landscaping contractor, verify:
 - Any publicly listed disciplinary history
 - Whether the contractor’s experience matches your project type
 
-This matters because landscaping work can involve more than planting. A Bay Area backyard remodel may include pavers, concrete, retaining walls, drainage, irrigation, lighting, stairs, pergolas, BBQ islands, outdoor kitchens, or artificial turf. The contractor should understand the kind of work your yard actually needs.
+This matters because landscaping work can involve more than planting. A Bay Area backyard remodel may include pavers, concrete, retaining walls, drainage, irrigation, lighting, stairs, pergolas, BBQ islands, outdoor kitchens, or [artificial turf](/services/artificial-turf). The contractor should understand the kind of work your yard actually needs.
 
 Visionable Landscaping lists its California license as **Lic #1101860**.
 
@@ -146,7 +147,7 @@ Before choosing the lowest bid, ask:
 
 Choosing the right landscaping contractor is one of the most important decisions in a backyard remodel. Start with license verification, clear estimates, reputation, insurance, a detailed contract, and communication. Then make sure the contractor understands local Bay Area conditions, including drainage, slopes, small lots, access, and long-term maintenance.
 
-If you are planning a backyard remodel, paver patio, retaining wall, drainage repair, artificial turf installation, pergola, or outdoor kitchen in Fremont, San Jose, or the surrounding Bay Area, Visionable Landscaping can help turn your idea into a clear, buildable plan.
+If you are planning a backyard remodel, [paver patio](/services/paver-installation), retaining wall, drainage repair, artificial turf installation, pergola, or outdoor kitchen in Fremont, San Jose, or the surrounding Bay Area, Visionable Landscaping can help turn your idea into a clear, buildable plan.
 
 **Request a Free Estimate** and tell us what you want your outdoor space to become.
 

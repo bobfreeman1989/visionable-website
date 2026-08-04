@@ -1,6 +1,7 @@
 ---
 title: "Modern Minimalist Backyard Design: Pavers, Decking, Lighting, and a Motorized Pergola"
 date: "2026-05-16"
+updated: "2026-08-01"
 excerpt: "See how a modern minimalist backyard can combine premium pavers, decking, outdoor lighting, drainage, and a motorized pergola for everyday Bay Area comfort."
 category: "Project Showcase"
 coverImage: "/photos/blog/modern-minimalist-backyard-design-pavers-deck-pergola/hero.webp"
@@ -10,13 +11,13 @@ featured: false
 
 A minimalist backyard should feel calm, polished, and easy to use — not empty or unfinished. The most successful modern outdoor spaces come from disciplined planning: clean hardscape lines, comfortable shade, durable surfaces, integrated lighting, and careful construction details below the surface.
 
-This project from Visionable Landscaping shows how a modern minimalist yard can become a highly comfortable outdoor living space for Bay Area homeowners. The visible source highlights a design-build approach, premium pavers, decking, outdoor lighting, a motorized pergola, and attention to drainage and sub base preparation.
+This project from Visionable Landscaping shows how a modern minimalist yard can become a highly comfortable outdoor living space for Bay Area homeowners. The visible source highlights a design-build approach, premium [pavers](/services/paver-installation), decking, outdoor lighting, a motorized pergola, and attention to drainage and sub base preparation.
 
 ## Project Lesson: Minimalist Design Depends on Execution
 
 Minimalist landscaping looks simple, but it is rarely simple to build. Because the design has fewer decorative distractions, every joint, edge, transition, and material choice becomes more noticeable.
 
-For homeowners in Fremont, San Jose, and the wider Bay Area, that means the contractor’s execution matters as much as the concept. A clean modern backyard needs:
+For homeowners in [Fremont](/areas/fremont), San Jose, and the wider Bay Area, that means the contractor’s execution matters as much as the concept. A clean modern backyard needs:
 
 - A clear design plan before construction starts
 - Paver lines and deck edges that are installed neatly
@@ -75,13 +76,13 @@ For modern backyard design, the pergola also adds architectural structure and ma
 
 ## Outdoor Lighting Finishes the Space
 
-Outdoor lighting is not only decorative. In a minimalist backyard, lighting helps define circulation, highlight material textures, and make the space usable after sunset.
+[Outdoor lighting](/services/outdoor-lighting) is not only decorative. In a minimalist backyard, lighting helps define circulation, highlight material textures, and make the space usable after sunset.
 
 The source note mentions outdoor lighting as part of the material package. For homeowners, good lighting planning should happen early, not after the hardscape is finished. Wire routing, fixture placement, and lighting zones are much easier to plan before final surfaces are installed.
 
 ## Drainage and Sub Base: The Details You Do Not See
 
-The original note highlights drainage and sub base work as “invisible” details that cannot be neglected. This is one of the most important lessons for any backyard remodel.
+The original note highlights drainage and sub base work as “invisible” details that cannot be neglected. This is one of the most important lessons for any [backyard remodel](/services/complete-backyard-remodel).
 
 A beautiful patio or deck will only perform well if the underlying preparation is handled correctly. Drainage, grading, compaction, and base materials can affect long-term stability and comfort.
 

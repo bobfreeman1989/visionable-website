@@ -1,9 +1,10 @@
 ---
-title: "5 Landscaping Trends Transforming Silicon Valley Backyards in 2024"
+title: "5 Landscaping Trends Transforming Silicon Valley Backyards"
 date: "2024-01-15"
+updated: "2026-08-01"
 excerpt: "From drought-resistant designs to outdoor living rooms, here are the top trends we're seeing in the Bay Area."
 category: "Trends"
-coverImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=600&fit=crop"
+coverImage: "/photos/portfolio/p15.webp"
 author: "Visionable Team"
 featured: true
 ---
@@ -12,7 +13,7 @@ Silicon Valley homeowners are rethinking their outdoor spaces. Here are the five
 
 ## 1. Drought-Resistant Design
 
-With California's water challenges, smart landscaping means choosing plants that thrive with minimal irrigation. Native plants, succulents, and artificial turf are leading the way.
+With California's water challenges, smart landscaping means choosing plants that thrive with minimal irrigation. Native plants, succulents, and [artificial turf](/services/artificial-turf) are leading the way.
 
 > "The best landscape is one that works with California's climate, not against it." — Visionable Design Team
 
@@ -20,7 +21,7 @@ With California's water challenges, smart landscaping means choosing plants that
 
 The line between indoor and outdoor is blurring. Full kitchens, fire features, and comfortable seating areas are turning backyards into year-round living spaces.
 
-![Outdoor living space](https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=400&fit=crop)
+![Covered outdoor kitchen with a built-in grill and a seated bar counter](/photos/portfolio/p11.webp)
 
 ## 3. Artificial Turf
 
@@ -32,12 +33,12 @@ High-quality artificial turf has come a long way. Today's options look and feel 
 
 ## 4. Smart Irrigation
 
-Wi-Fi connected irrigation systems that adjust based on weather data can cut water usage by 30-50% while keeping your landscape healthier.
+Wi-Fi connected [irrigation](/services/irrigation-drainage) systems that adjust based on weather data can cut water usage by 30-50% while keeping your landscape healthier.
 
 ## 5. Low-Maintenance Hardscaping
 
-Permeable pavers, natural stone, and composite decking are replacing high-maintenance wood and traditional concrete, offering beauty with minimal upkeep.
+Permeable [pavers](/services/paver-installation), natural stone, and composite decking are replacing high-maintenance wood and traditional concrete, offering beauty with minimal upkeep.
 
 ---
 
-Ready to bring these trends to your backyard? [Contact us](#contact) for a free consultation.
+Ready to bring these trends to your backyard? [Contact us](/#contact) for a free consultation.

@@ -15,7 +15,7 @@ export default function CTABanner({
   subtitle,
   primaryText,
   secondaryText,
-  primaryHref = "#contact",
+  primaryHref = "/#contact",
   secondaryHref = "#portfolio",
   bgImage,
 }: CTABannerProps) {

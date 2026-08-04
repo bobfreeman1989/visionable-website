@@ -1,6 +1,7 @@
 ---
 title: "Backyard Landscaping Ideas for Families: Play Area, Outdoor Kitchen, Pergola, and Pavers"
 date: "2026-05-17"
+updated: "2026-08-01"
 excerpt: "Explore family-friendly backyard landscaping ideas with artificial turf, a play area, pour-in-place concrete outdoor kitchen, Techo-Bloc pavers, side-yard lighting, and a pergola."
 category: "Project Showcase"
 coverImage: "/photos/blog/backyard-landscaping-ideas-play-area-outdoor-kitchen-pergola/hero.webp"
@@ -10,7 +11,7 @@ featured: false
 
 A great backyard should do more than look beautiful in photos. For many Bay Area families, the best outdoor space is one that supports everyday life: children playing safely, adults cooking and entertaining, shaded seating, low-maintenance walkways, and hardscape materials that feel polished instead of generic.
 
-This Visionable Landscaping project brings those goals together with a dedicated children’s play area, artificial turf, a pour-in-place concrete outdoor kitchen, premium Techo-Bloc pavers, a detailed side yard, and a custom pergola.
+This Visionable Landscaping project brings those goals together with a dedicated children’s play area, [artificial turf](/services/artificial-turf), a pour-in-place concrete outdoor kitchen, premium Techo-Bloc pavers, a detailed side yard, and a custom pergola.
 
 ## Project Lesson: Design the Backyard Around Real Use
 
@@ -20,7 +21,7 @@ The strongest backyard remodels start with lifestyle, not just materials. In the
 - An outdoor kitchen and BBQ area for gatherings
 - A shaded lounge area for relaxing
 
-Once those zones are clear, the material choices become more purposeful. Pavers, turf, lighting, concrete, pebbles, and the pergola all support the way the family uses the space.
+Once those zones are clear, the material choices become more purposeful. [Pavers](/services/paver-installation), turf, lighting, concrete, pebbles, and the pergola all support the way the family uses the space.
 
 ## Children’s Play Area With Artificial Turf
 
@@ -42,7 +43,7 @@ A built-in outdoor kitchen can help a backyard function more like an extension o
 - A stronger connection between cooking, dining, and lounging
 - A more permanent architectural look
 
-For Fremont, San Jose, and Bay Area homeowners, the key is to plan the outdoor kitchen with circulation, seating, shade, utilities, and maintenance in mind.
+For [Fremont](/areas/fremont), San Jose, and Bay Area homeowners, the key is to plan the outdoor kitchen with circulation, seating, shade, utilities, and maintenance in mind.
 
 ## Techo-Bloc Pavers in a Herringbone Pattern
 
@@ -95,7 +96,7 @@ The result is a backyard that balances beauty, comfort, durability, and everyday
 
 ## Homeowner Takeaways
 
-If you are planning a backyard remodel, start with these questions:
+If you are planning a [backyard remodel](/services/complete-backyard-remodel), start with these questions:
 
 - Who will use the yard most often?
 - Do you need separate zones for kids, cooking, dining, and lounging?

@@ -1,6 +1,7 @@
 ---
 title: "Modern Backyard Renovation Ideas: Concrete Stepping Pads, DG Joints, and a Redwood Privacy Fence"
 date: "2026-05-18"
+updated: "2026-08-01"
 excerpt: "A Bay Area backyard renovation can feel clean, open, and low-maintenance with large concrete stepping pads, DG joints, privacy screening, and California-style planting."
 category: "Project Showcase"
 coverImage: "/photos/blog/modern-backyard-renovation-concrete-stepping-dg-redwood-fence/hero.webp"
@@ -10,13 +11,13 @@ featured: false
 
 A successful backyard renovation is not just about replacing dirt with hardscape. The best outdoor spaces feel intentional: easy to walk through, visually calm, practical to maintain, and connected to the way the homeowner wants to live.
 
-This Visionable Landscaping project started as a bare, undeveloped yard area. The design direction was modern, open, and resort-like without creating a high-maintenance landscape. For Bay Area homeowners in Fremont, San Jose, and nearby communities, the project offers a useful lesson: a clean backyard can still feel warm, natural, and comfortable when the layout, materials, and planting are planned together.
+This Visionable Landscaping project started as a bare, undeveloped yard area. The design direction was modern, open, and resort-like without creating a high-maintenance landscape. For Bay Area homeowners in [Fremont](/areas/fremont), San Jose, and nearby communities, the project offers a useful lesson: a clean backyard can still feel warm, natural, and comfortable when the layout, materials, and planting are planned together.
 
 ## Project Lesson: Start With the Lifestyle, Not Just the Surface
 
 The visible source describes a yard that needed more than a cosmetic upgrade. The goal was a modern, transparent-feeling, low-maintenance outdoor space with a relaxed California mood.
 
-That is an important starting point for any backyard remodel. Before choosing pavers, concrete, gravel, fencing, or plants, homeowners should clarify the lifestyle they want the yard to support:
+That is an important starting point for any [backyard remodel](/services/complete-backyard-remodel). Before choosing pavers, concrete, gravel, fencing, or plants, homeowners should clarify the lifestyle they want the yard to support:
 
 - Do you want a quiet lounge space, a dining area, or a simple walking path?
 - Should the yard feel open and minimal or lush and enclosed?
@@ -40,7 +41,7 @@ The original note highlights the contrast between gray concrete and warm-toned D
 
 This contrast matters. Too much gray hardscape can feel cold, while too much loose material can feel informal. Used together, concrete stepping pads and DG joints can balance structure with a more relaxed California feel.
 
-DG can also support better water movement than a fully solid surface when designed and installed appropriately for the site. For Bay Area homeowners, drainage and grading should still be reviewed as part of the full plan, especially near the house, side yards, and low spots.
+DG can also support better water movement than a fully solid surface when designed and installed appropriately for the site. For Bay Area homeowners, [drainage](/services/irrigation-drainage) and grading should still be reviewed as part of the full plan, especially near the house, side yards, and low spots.
 
 ## A Horizontal Redwood Fence Can Screen Utility Areas Beautifully
 

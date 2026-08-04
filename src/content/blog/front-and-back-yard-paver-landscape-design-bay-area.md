@@ -1,6 +1,7 @@
 ---
 title: "Simple, Practical Front and Backyard Remodel Ideas for Bay Area Homes"
 date: "2026-05-19"
+updated: "2026-08-01"
 excerpt: "See how a simple front and backyard remodel can improve flow, outdoor lighting, paver details, and low-maintenance everyday use for Bay Area homeowners."
 category: "Project Showcase"
 coverImage: "/photos/blog/front-and-back-yard-paver-landscape-design-bay-area/hero.webp"
@@ -12,7 +13,7 @@ A great landscape remodel does not have to look complicated. In fact, some of th
 
 This Visionable Landscaping project, originally shared on Xiaohongshu, focused on upgrading both the front yard and backyard at the same time. The design direction was simple and practical, but the execution depended on many small details: how paver joints line up, where lighting is hidden, how edges are finished, and how each corner is allowed to breathe.
 
-For Bay Area homeowners in communities such as Fremont, San Jose, Milpitas, Cupertino, Sunnyvale, and nearby cities, this type of remodel offers a useful lesson: a modern yard is not just about choosing attractive materials. It is about building an outdoor space that makes daily life smoother, easier to maintain, and more enjoyable.
+For Bay Area homeowners in communities such as [Fremont](/areas/fremont), San Jose, Milpitas, Cupertino, Sunnyvale, and nearby cities, this type of remodel offers a useful lesson: a modern yard is not just about choosing attractive materials. It is about building an outdoor space that makes daily life smoother, easier to maintain, and more enjoyable.
 
 ## Project Snapshot
 
@@ -53,7 +54,7 @@ This does not mean every surface must match exactly. Instead, the property shoul
 
 ## Lesson 2: Pavers Are About More Than the Surface
 
-Pavers are popular across Bay Area homes because they can create clean patios, walkways, driveways, and gathering zones. But homeowners should look beyond the top surface.
+[Pavers](/services/paver-installation) are popular across Bay Area homes because they can create clean patios, walkways, driveways, and gathering zones. But homeowners should look beyond the top surface.
 
 A strong paver design considers:
 
@@ -69,7 +70,7 @@ The source note emphasized that the clean finished look came from slow, careful 
 
 Lighting can change how a yard feels at night, but it should not look like an afterthought. In a simple landscape, lights often work best when they are placed along paths, near steps, or in areas where they support movement and atmosphere.
 
-For a Bay Area front and backyard remodel, outdoor lighting can help with:
+For a Bay Area front and [backyard remodel](/services/complete-backyard-remodel), outdoor lighting can help with:
 
 - Safer evening entry
 - Better visibility along walkways
@@ -98,7 +99,7 @@ Not always. A simple design may use fewer visual elements, but it can require ve
 
 ### Are pavers a good choice for Bay Area yards?
 
-Pavers can be a strong option for patios, walkways, and front yard upgrades when installed with proper base preparation, edging, and drainage planning.
+Pavers can be a strong option for patios, walkways, and front yard upgrades when installed with proper base preparation, edging, and [drainage](/services/irrigation-drainage) planning.
 
 ### Should I remodel my front yard and backyard together?
 

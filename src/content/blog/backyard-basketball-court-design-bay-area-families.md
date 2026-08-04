@@ -1,6 +1,7 @@
 ---
 title: "Backyard Basketball Court Design for Active Bay Area Families"
 date: "2026-05-21"
+updated: "2026-08-01"
 excerpt: "A backyard basketball court can turn unused space into a family hub. Learn design ideas for sport courts, safety netting, pavers, turf, and raised beds."
 category: "Project Showcase"
 coverImage: "/photos/blog/backyard-basketball-court-design-bay-area-families/hero.webp"
@@ -10,9 +11,9 @@ featured: true
 
 For families who love basketball, the best court may not be across town. It can be right outside the back door.
 
-This Visionable Landscaping project, originally shared on Xiaohongshu, transformed a backyard area into a private basketball-focused outdoor space. The source note described a custom court for a basketball-loving family, with Warriors-inspired colors, modular sport flooring, safety netting, a sturdy retaining wall, softer ground surfaces, raised planting beds, light gray pavers, artificial turf, and pebble edging.
+This Visionable Landscaping project, originally shared on Xiaohongshu, transformed a backyard area into a private basketball-focused outdoor space. The source note described a custom court for a basketball-loving family, with Warriors-inspired colors, modular sport flooring, safety netting, a sturdy retaining wall, softer ground surfaces, raised planting beds, light gray pavers, [artificial turf](/services/artificial-turf), and pebble edging.
 
-The result is more than a place to shoot hoops. It is a backyard that supports kids playing, parents joining in, gardening, and friends gathering. For Bay Area and Silicon Valley homeowners, it is a useful example of how an active family yard can combine recreation, structure, and clean landscape design.
+The result is more than a place to shoot hoops. It is a backyard that supports kids playing, parents joining in, gardening, and friends gathering. For Bay Area and Silicon Valley homeowners, it is a useful example of how an active family yard can combine recreation, structure, and clean [landscape design](/services/landscape-design).
 
 ## Project Snapshot
 
@@ -70,14 +71,14 @@ Because every yard is different, homeowners should avoid assuming that any flat-
 
 One of the best details in this project is that the basketball court was not the only feature. The source note also described a planting area requested by the homeowner, using raised beds and easy-care, attractive plants.
 
-That combination matters. A family backyard should not feel like a single-purpose facility unless that is truly the goal. By adding raised beds, pavers, artificial turf, and pebble edging, the yard gains zones:
+That combination matters. A family backyard should not feel like a single-purpose facility unless that is truly the goal. By adding raised beds, [pavers](/services/paver-installation), artificial turf, and pebble edging, the yard gains zones:
 
 - **Sport zone:** Basketball court for kids and family play
 - **Garden zone:** Raised beds and planting for quieter use
 - **Circulation zone:** Light gray pavers create clean movement and visual order
 - **Soft landscape zone:** Artificial turf and pebble lines help separate surfaces and soften the overall look
 
-For homeowners in Fremont, San Jose, and surrounding Bay Area communities, this approach can be especially helpful when outdoor space must serve several family members with different interests.
+For homeowners in [Fremont](/areas/fremont), San Jose, and surrounding Bay Area communities, this approach can be especially helpful when outdoor space must serve several family members with different interests.
 
 ## Homeowner Takeaways
 

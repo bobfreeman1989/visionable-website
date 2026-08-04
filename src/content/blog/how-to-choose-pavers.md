@@ -1,19 +1,20 @@
 ---
 title: "How to Choose the Right Pavers for Your Bay Area Patio"
 date: "2024-02-10"
+updated: "2026-08-01"
 excerpt: "Concrete, natural stone, or porcelain? We break down the pros, cons, and costs of every paver option for Silicon Valley homeowners."
 category: "Design Tips"
-coverImage: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=600&fit=crop"
+coverImage: "/photos/services/patios02.webp"
 author: "Visionable Team"
 ---
 
-Choosing pavers is one of the most impactful decisions in any hardscape project. The right material sets the tone for your entire outdoor space — and the wrong one can mean costly replacements down the road.
+Choosing [pavers](/services/paver-installation) is one of the most impactful decisions in any hardscape project. The right material sets the tone for your entire outdoor space — and the wrong one can mean costly replacements down the road.
 
 ## The Big Three: Concrete, Natural Stone, Porcelain
 
 ### Concrete Pavers
 
-The workhorse of Bay Area hardscaping. Concrete pavers offer the best balance of durability, versatility, and value.
+The workhorse of Bay Area [hardscaping](/services/hardscaping). Concrete pavers offer the best balance of durability, versatility, and value.
 
 - **Cost**: $8-15 per sq ft installed
 - **Durability**: 25-30+ years
@@ -54,4 +55,4 @@ For most Bay Area homeowners, **concrete pavers** offer the best value. For a pr
 
 ---
 
-Not sure which paver is right for your project? [Schedule a free consultation](#contact) and we'll bring samples to your home.
+Not sure which paver is right for your project? [Schedule a free consultation](/#contact) and we'll bring samples to your home.

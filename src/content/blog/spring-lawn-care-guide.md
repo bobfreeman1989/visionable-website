@@ -1,9 +1,10 @@
 ---
 title: "Spring Lawn Care Guide for Bay Area Homeowners"
 date: "2024-03-05"
+updated: "2026-08-01"
 excerpt: "Everything you need to know about prepping your yard for spring in Northern California — from aeration to irrigation tune-ups."
 category: "Maintenance"
-coverImage: "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=1200&h=600&fit=crop"
+coverImage: "/photos/services/bench01.webp"
 author: "Visionable Team"
 ---
 
@@ -38,7 +39,7 @@ Spring is prime planting season for:
 
 ## Irrigation Tune-Up
 
-Your irrigation system needs a spring checkup:
+Your [irrigation](/services/irrigation-drainage) system needs a spring checkup:
 
 - Run each zone and check for broken heads or misaligned sprayers
 - Clean filters and flush drip lines
@@ -49,11 +50,11 @@ Your irrigation system needs a spring checkup:
 
 DIY lawn care works for basic maintenance, but call a professional if you notice:
 
-- **Large dead patches** that don't respond to watering
-- **Persistent drainage issues** after rain
+- **Large dead patches** that don't respond to watering — often a sign the lawn is due for [artificial turf](/services/artificial-turf)
+- **Persistent drainage issues** after rain, which usually need [proper drainage work](/services/irrigation-drainage)
 - **Irrigation system problems** beyond simple head replacement
 - **Major pest or disease** outbreaks
 
 ---
 
-Need help getting your yard spring-ready? [Get a free consultation](#contact) — we'll assess your landscape and create a care plan.
+Need help getting your yard spring-ready? [Get a free consultation](/#contact) — we'll assess your landscape and create a care plan.

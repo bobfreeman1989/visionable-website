@@ -2,15 +2,17 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { MapPin, ChevronRight, CheckCircle, ArrowRight, Phone, Mail } from "lucide-react";
-import { areas, getAreaBySlug } from "@/lib/areas";
+import { areas, getAreaBySlug, faqsForCity } from "@/lib/areas";
 import { services } from "@/lib/services";
 import { photosForArea, heroForService } from "@/content/gallery";
 import PageHero from "@/components/sections/PageHero";
 import PhotoGallery from "@/components/sections/PhotoGallery";
 import RelatedCards from "@/components/sections/RelatedCards";
+import Accordion from "@/components/sections/Accordion";
 import Testimonials from "@/components/Testimonials";
 import Process from "@/components/Process";
 import CTABanner from "@/components/CTABanner";
+import ContactCTA from "@/components/ContactCTA";
 
 const BASE_URL = "https://visionablelandscaping.com";
 
@@ -92,6 +94,18 @@ export default function CityPage({ params }: { params: { city: string } }) {
     },
   };
 
+  const cityFaqs = faqsForCity(city);
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: cityFaqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -114,6 +128,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <div className="pt-16">
         <PageHero
@@ -121,6 +136,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
           title={`Landscaping in ${city.name}, CA`}
           lede={city.heroText}
           image={{ src: heroPhoto.src, alt: heroPhoto.alt }}
+          ctaHref="#contact"
           facts={[
             { label: "Based in", value: "Fremont, minutes away" },
             { label: "Projects built", value: "200+ Bay Area yards" },
@@ -204,7 +220,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
                     </div>
                   </div>
                   <Link
-                    href="/#contact"
+                    href="#contact"
                     className="mt-5 block text-center bg-white text-primary font-semibold py-3 rounded-lg hover:bg-stone-100 transition-colors"
                   >
                     Book Consultation
@@ -251,7 +267,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
           intro="Every service handled in-house, from the first sketch to the final walkthrough."
           className="bg-background"
           columns={3}
-          cards={services.slice(0, 6).map((s) => {
+          cards={services.map((s) => {
             const photo = heroForService(s.slug);
             return {
               href: `/services/${s.slug}`,
@@ -264,15 +280,34 @@ export default function CityPage({ params }: { params: { city: string } }) {
 
         <Process />
 
+        <section className="py-14 md:py-16 bg-surface">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl text-stone-900 mb-3">
+              Working with us in {city.name}
+            </h2>
+            <p className="text-stone-600 mb-8">
+              What {city.name} homeowners ask before they book a consultation.
+            </p>
+            <Accordion items={cityFaqs} idPrefix={`city-${city.slug}`} />
+          </div>
+        </section>
+
         <Testimonials />
 
         <CTABanner
           title={`Ready to transform your ${city.name} yard?`}
           subtitle="Free consultation, 3D renderings before we break ground, and transparent pricing."
           primaryText="Share Your Vision"
+          primaryHref="#contact"
           secondaryText="See Our Work"
           secondaryHref="/#portfolio"
           bgImage="/photos/cta-bg.webp"
+        />
+
+        <ContactCTA
+          title={`Book your free ${city.name} consultation`}
+          subtitle="Tell us about the yard. We'll visit, measure, and follow up with 3D renderings before anything is built."
+          detailsPlaceholder={`What are you picturing for your ${city.name} yard? Rough size, what you want to use it for, anything you already know you want.`}
         />
       </div>
     </>

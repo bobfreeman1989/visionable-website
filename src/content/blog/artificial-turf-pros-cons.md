@@ -1,13 +1,14 @@
 ---
 title: "Artificial Turf in California: The Complete Pros & Cons Guide"
 date: "2024-04-02"
+updated: "2026-08-01"
 excerpt: "Is synthetic grass right for your Bay Area home? We cover everything from water savings to costs, installation, and long-term maintenance."
 category: "Trends"
-coverImage: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1200&h=600&fit=crop"
+coverImage: "/photos/services/turf02.webp"
 author: "Visionable Team"
 ---
 
-Artificial turf has become one of the most requested services at Visionable Landscaping. Here's an honest breakdown to help you decide.
+[Artificial turf](/services/artificial-turf) has become one of the most requested services at Visionable Landscaping. Here's an honest breakdown to help you decide.
 
 ## The Pros
 
@@ -24,7 +25,7 @@ Rain or drought, your lawn looks perfect 365 days a year. No brown patches, no s
 Modern artificial turf lasts 15-20 years with proper installation and minimal care.
 
 ### Pet Friendly
-High-quality turf with proper drainage handles pet use beautifully. It's easy to clean and doesn't develop bare spots from traffic.
+High-quality turf with proper [drainage](/services/irrigation-drainage) handles pet use beautifully. It's easy to clean and doesn't develop bare spots from traffic.
 
 ## The Cons
 
@@ -57,4 +58,4 @@ If you're spending $200+/month on lawn care and water, artificial turf pays for 
 
 ---
 
-Thinking about making the switch? [Get a free estimate](#contact) — we'll measure your space and show you samples.
+Thinking about making the switch? [Get a free estimate](/#contact) — we'll measure your space and show you samples.

@@ -10,6 +10,9 @@ export interface BlogPost {
   slug: string;
   title: string;
   date: string;
+  /** Set only when the body was substantively revised, so `dateModified` and the
+      byline stay truthful. Empty means the post is unchanged since publication. */
+  updated: string;
   excerpt: string;
   category: string;
   coverImage: string;
@@ -32,6 +35,7 @@ export function getBlogPosts(): BlogPostMeta[] {
       slug,
       title: data.title || slug,
       date: data.date || "",
+      updated: data.updated || "",
       excerpt: data.excerpt || "",
       category: data.category || "General",
       coverImage: data.coverImage || "",
@@ -79,6 +83,7 @@ export function getBlogPost(slug: string): BlogPost | null {
     slug,
     title: data.title || slug,
     date: data.date || "",
+    updated: data.updated || "",
     excerpt: data.excerpt || "",
     category: data.category || "General",
     coverImage: data.coverImage || "",

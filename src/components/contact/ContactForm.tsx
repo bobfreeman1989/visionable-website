@@ -10,9 +10,16 @@ import { ContactSuccessState } from "@/components/contact/ContactSuccessState";
 
 type Status = "idle" | "sending" | "success" | "error";
 
-export function ContactForm() {
+interface ContactFormProps {
+  /** Preselects the service dropdown so a visitor arriving from a service page
+   *  does not have to restate what they already clicked on. */
+  defaultService?: string;
+  detailsPlaceholder?: string;
+}
+
+export function ContactForm({ defaultService = "", detailsPlaceholder }: ContactFormProps = {}) {
   const [status, setStatus] = useState<Status>("idle");
-  const [serviceChosen, setServiceChosen] = useState(false);
+  const [serviceChosen, setServiceChosen] = useState(Boolean(defaultService));
   const [budgetChosen, setBudgetChosen] = useState(false);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -44,7 +51,7 @@ export function ContactForm() {
 
       setStatus("success");
       form.reset();
-      setServiceChosen(false);
+      setServiceChosen(Boolean(defaultService));
       setBudgetChosen(false);
     } catch {
       setStatus("error");
@@ -85,7 +92,7 @@ export function ContactForm() {
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
               <label htmlFor="contact-service" className="block text-sm font-medium text-stone-700 mb-1">What do you need? <span className="text-stone-600 font-normal">(optional)</span></label>
-              <select id="contact-service" name="contact-service" defaultValue="" onChange={(e) => setServiceChosen(e.currentTarget.value !== "")} className={`w-full border border-stone-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white ${serviceChosen ? "text-stone-900" : "text-stone-500"}`}>
+              <select id="contact-service" name="contact-service" defaultValue={defaultService} onChange={(e) => setServiceChosen(e.currentTarget.value !== "")} className={`w-full border border-stone-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white ${serviceChosen ? "text-stone-900" : "text-stone-500"}`}>
                 <option value="">Select a service</option>
                 {contactServiceOptions.map((option) => (
                   <option key={option} value={option}>{option}</option>
@@ -109,7 +116,7 @@ export function ContactForm() {
               name="contact-message"
               rows={4}
               maxLength={1200}
-              placeholder="What&rsquo;s your vision? What problems are you trying to solve?"
+              placeholder={detailsPlaceholder ?? "What’s your vision? What problems are you trying to solve?"}
               className="w-full border border-stone-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none bg-white"
             />
           </div>

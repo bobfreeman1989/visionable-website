@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ChevronRight, ArrowRight } from "lucide-react";
-import { services, getServiceBySlug } from "@/lib/services";
+import { services, getServiceBySlug, contactOptionForService } from "@/lib/services";
 import { areas } from "@/lib/areas";
 import { photosForService, heroForService } from "@/content/gallery";
 import { serviceFacts } from "@/content/service-facts";
@@ -13,6 +13,7 @@ import RelatedCards from "@/components/sections/RelatedCards";
 import Accordion from "@/components/sections/Accordion";
 import BeforeAfter from "@/components/BeforeAfter";
 import CTABanner from "@/components/CTABanner";
+import ContactCTA from "@/components/ContactCTA";
 
 const BASE_URL = "https://visionablelandscaping.com";
 
@@ -132,6 +133,7 @@ export default function ServicePage({ params }: { params: { service: string } })
           lede={service.heroText}
           image={{ src: hero.src, alt: hero.alt }}
           facts={facts}
+          ctaHref="#contact"
           above={
             <nav
               aria-label="Breadcrumb"
@@ -217,9 +219,17 @@ export default function ServicePage({ params }: { params: { service: string } })
           title={`Ready to make your ${service.title.toLowerCase()} vision real?`}
           subtitle="Free consultation, 3D renderings before we break ground, and transparent pricing."
           primaryText="Share Your Vision"
+          primaryHref="#contact"
           secondaryText="See Our Process"
           secondaryHref="/#process"
           bgImage="/photos/cta-bg.webp"
+        />
+
+        <ContactCTA
+          title={`Start your ${service.title.toLowerCase()} project`}
+          subtitle="Tell us about the space. We'll visit, measure, and follow up with 3D renderings before anything is built."
+          defaultService={contactOptionForService(service.slug)}
+          detailsPlaceholder={`What are you picturing for your ${service.title.toLowerCase()}? Rough size, current condition, anything you already know you want.`}
         />
       </div>
     </>

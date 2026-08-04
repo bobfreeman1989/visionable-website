@@ -1,5 +1,8 @@
 export interface CityData {
   slug: string;
+  /** Date this entry's copy last changed substantively. Drives sitemap
+      `lastmod`, so bump it only for real content edits. */
+  updatedAt: string;
   name: string;
   county: string;
   region: string;
@@ -13,6 +16,7 @@ export interface CityData {
 export const areas: CityData[] = [
   {
     slug: "fremont",
+    updatedAt: "2026-08-01",
     name: "Fremont",
     county: "Alameda",
     region: "Tri-City Area",
@@ -28,6 +32,7 @@ export const areas: CityData[] = [
   },
   {
     slug: "newark",
+    updatedAt: "2026-08-01",
     name: "Newark",
     county: "Alameda",
     region: "Tri-City Area",
@@ -43,6 +48,7 @@ export const areas: CityData[] = [
   },
   {
     slug: "milpitas",
+    updatedAt: "2026-08-01",
     name: "Milpitas",
     county: "Santa Clara",
     region: "South Bay",
@@ -58,6 +64,7 @@ export const areas: CityData[] = [
   },
   {
     slug: "union-city",
+    updatedAt: "2026-08-01",
     name: "Union City",
     county: "Alameda",
     region: "Tri-City Area",
@@ -73,6 +80,7 @@ export const areas: CityData[] = [
   },
   {
     slug: "hayward",
+    updatedAt: "2026-08-01",
     name: "Hayward",
     county: "Alameda",
     region: "East Bay",
@@ -88,6 +96,7 @@ export const areas: CityData[] = [
   },
   {
     slug: "san-ramon",
+    updatedAt: "2026-08-01",
     name: "San Ramon",
     county: "Contra Costa",
     region: "Tri-Valley",
@@ -103,6 +112,7 @@ export const areas: CityData[] = [
   },
   {
     slug: "dublin",
+    updatedAt: "2026-08-01",
     name: "Dublin",
     county: "Alameda",
     region: "Tri-Valley",
@@ -118,6 +128,7 @@ export const areas: CityData[] = [
   },
   {
     slug: "pleasanton",
+    updatedAt: "2026-08-01",
     name: "Pleasanton",
     county: "Alameda",
     region: "Tri-Valley",
@@ -133,6 +144,7 @@ export const areas: CityData[] = [
   },
   {
     slug: "danville",
+    updatedAt: "2026-08-01",
     name: "Danville",
     county: "Contra Costa",
     region: "San Ramon Valley",
@@ -148,6 +160,7 @@ export const areas: CityData[] = [
   },
   {
     slug: "walnut-creek",
+    updatedAt: "2026-08-01",
     name: "Walnut Creek",
     county: "Contra Costa",
     region: "Central Contra Costa",
@@ -163,6 +176,7 @@ export const areas: CityData[] = [
   },
   {
     slug: "concord",
+    updatedAt: "2026-08-01",
     name: "Concord",
     county: "Contra Costa",
     region: "Central Contra Costa",
@@ -180,4 +194,38 @@ export const areas: CityData[] = [
 
 export function getAreaBySlug(slug: string): CityData | undefined {
   return areas.find((a) => a.slug === slug);
+}
+
+/** City FAQs are generated from the city's own data rather than hand-written
+ *  eleven times over. Every answer restates a commitment already made
+ *  elsewhere on the site (licence number, free consultation, in-house crew,
+ *  warranty) so no page can drift into promising something the others do not. */
+export function faqsForCity(city: CityData): { q: string; a: string }[] {
+  const nearbyNames = city.nearbyAreas
+    .map((slug) => getAreaBySlug(slug)?.name)
+    .filter((name): name is string => Boolean(name));
+
+  const nearbyList =
+    nearbyNames.length > 1
+      ? `${nearbyNames.slice(0, -1).join(", ")} and ${nearbyNames[nearbyNames.length - 1]}`
+      : nearbyNames[0] ?? "the surrounding area";
+
+  return [
+    {
+      q: `Do you take on projects in ${city.name}?`,
+      a: `Yes. ${city.name} is part of our regular ${city.region} service area, and we are based in Fremont at 581 Emerson St, so crews reach ${city.county} County sites without a long haul. We also build in ${nearbyList}.`,
+    },
+    {
+      q: `What happens at the free ${city.name} consultation?`,
+      a: `We come to the property, measure it, and talk through how you want to use the space. You then get 3D renderings of the design before anything is built. The visit and the renderings cost nothing, and you only pay if you decide to build.`,
+    },
+    {
+      q: `Are you licensed and insured to work in ${city.name}?`,
+      a: `We are CSLB licensed (#1101860) and insured. Your project is built by our own in-house crew rather than subcontractors, and it comes with a warranty on both materials and workmanship.`,
+    },
+    {
+      q: `What kinds of yards do you build in ${city.name}?`,
+      a: `Anything from a single paver patio or artificial turf install to a complete backyard remodel combining hardscaping, a pergola, lighting and planting. We have completed 200+ Bay Area yards and hold a 5.0 rating on both Google and Yelp.`,
+    },
+  ];
 }
