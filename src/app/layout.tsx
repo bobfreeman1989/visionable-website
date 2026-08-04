@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Source_Sans_3, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { areas } from "@/lib/areas";
 import { services } from "@/lib/services";

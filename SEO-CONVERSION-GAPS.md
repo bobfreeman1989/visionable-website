@@ -1,10 +1,12 @@
 # SEO & Conversion Gaps — Status
 
 Audit 2026-08-01, fixes applied the same day against `main` @ 88ce5cb.
-Second pass 2026-08-04 (freshness signals + 404), same working tree.
-Everything under "Done" was verified in the production build output
-(`.next/server/app/**/*.html`), which is the HTML that ships — not in dev.
-Changes are in the working tree, **not committed**.
+Second pass 2026-08-04 (freshness signals + 404).
+
+Both passes shipped in `a15c731`, deployed to production 2026-08-04 via
+`visionable-clean` (`dpl_7dQxrS4SDn…`). Findings were verified first in the
+production build output (`.next/server/app/**/*.html`), then again against the
+live domain after deploy.
 
 ---
 
@@ -142,17 +144,20 @@ warnings. Browser console → no errors.
 
 ## Not done — needs Bob
 
-1. **Enable Web Analytics** on Vercel project **visionable-clean** (the project
-   actually serving the domain; `visionable-website` is a zombie with no deploys
-   since 2026-05-31). `<Analytics />` is already mounted in code — this is a
-   dashboard toggle. Until it is on, none of the above can be measured.
-2. **Confirm `CONTACT_FROM_EMAIL` / `CONTACT_TO_EMAIL`** exist in that project's
-   production env, and verify the Resend sending domain. The fallback sender is
-   the Resend sandbox address, which only delivers to the Resend account owner.
-   This is the single most expensive unverified assumption on the site.
-3. **End-to-end form test** — submitting the form sends a real email, so it needs
-   Bob's go-ahead.
-4. **Google Search Console** access, or monthly exports.
+1. ~~Enable Web Analytics~~ — **done 2026-08-04.** Verified from a real browser
+   hit on the live domain: `GET /_vercel/insights/script.js` 200 and
+   `POST /_vercel/insights/view` 200, so pageviews are being recorded.
+   Note: the `get_web_analytics` MCP tool returns 404 for *every* project on this
+   team, including ones that are demonstrably enabled. It is not a usable probe —
+   test the live `/_vercel/insights/*` endpoints instead.
+2. ~~Confirm `CONTACT_FROM_EMAIL` / `CONTACT_TO_EMAIL`~~ — Bob confirmed
+   2026-08-04 that contact is working. The API itself is healthy in production
+   (`POST /api/contact {}` → 400 "Missing required fields", `GET` → 405).
+3. **End-to-end form test** — still not done. The checks above prove the endpoint
+   validates correctly, *not* that mail reaches the inbox. Submitting a real form
+   sends a real email, so it needs Bob's go-ahead.
+4. **Google Search Console** access, or monthly exports. Nothing about keyword or
+   content strategy can be honest without it.
 5. **Archive the zombie Vercel project** `visionable-website` (destructive, needs
    explicit approval).
 
