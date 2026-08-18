@@ -214,7 +214,7 @@ export default function ServicesIndexPage() {
           subtitle="Start with a free consultation. We will help you choose the right scope before you build."
           primaryText="Share Your Vision"
           secondaryText="See Our Work"
-          secondaryHref="/#portfolio"
+          secondaryHref="/portfolio"
           bgImage="/photos/cta-bg.webp"
         />
       </main>

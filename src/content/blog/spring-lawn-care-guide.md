@@ -57,4 +57,4 @@ DIY lawn care works for basic maintenance, but call a professional if you notice
 
 ---
 
-Need help getting your yard spring-ready? [Get a free consultation](/#contact) — we'll assess your landscape and create a care plan.
+Need help getting your yard spring-ready? [Get a free consultation](/contact) — we'll assess your landscape and create a care plan.

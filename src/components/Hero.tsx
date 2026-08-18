@@ -35,8 +35,9 @@ export default function Hero() {
           <h1 className="text-[clamp(2.5rem,5vw,4.5rem)] text-white leading-[1.1] mb-6">
             We Make It <span className="text-accent">Visionable</span>
             <br />
+            {/* Keep the brand line while adding clear service and location context. */}
             <span className="block mt-3 text-white/70 text-[clamp(1.1rem,2vw,1.5rem)] font-normal tracking-wide">
-              Your Backyard. Your Vision. Built for Real Life.
+              Bay Area landscape design &amp; build — pavers, turf, pergolas, lighting.
             </span>
           </h1>
         </FadeUp>

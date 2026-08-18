@@ -41,4 +41,4 @@ Permeable [pavers](/services/paver-installation), natural stone, and composite d
 
 ---
 
-Ready to bring these trends to your backyard? [Contact us](/#contact) for a free consultation.
+Ready to bring these trends to your backyard? [Contact us](/contact) for a free consultation.

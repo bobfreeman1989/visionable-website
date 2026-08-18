@@ -34,6 +34,14 @@ export function generateMetadata({ params }: { params: { service: string } }): M
       url: `${BASE_URL}/services/${service.slug}`,
       images: [{ url: heroForService(service.slug).src }],
     },
+    // Without this the root layout's generic card text is what gets shared,
+    // so every service URL previews identically on X.
+    twitter: {
+      card: "summary_large_image",
+      title: service.metaTitle,
+      description: service.metaDescription,
+      images: [heroForService(service.slug).src],
+    },
     alternates: {
       canonical: `/services/${service.slug}`,
     },
@@ -160,7 +168,7 @@ export default function ServicePage({ params }: { params: { service: string } })
           intro={`Recent ${service.title.toLowerCase()} work across Fremont and the I-680 corridor.`}
           action={
             <Link
-              href="/#portfolio"
+              href="/portfolio"
               className="text-primary font-semibold inline-flex items-center gap-1.5 hover:underline shrink-0"
             >
               See the full portfolio <ArrowRight className="w-4 h-4" strokeWidth={1.5} />

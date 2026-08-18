@@ -16,12 +16,12 @@ const serviceLinks = [
 
 const companyLinks = [
   { label: "Our Process", href: "/#process" },
-  { label: "Portfolio", href: "/#portfolio" },
+  { label: "Portfolio", href: "/portfolio" },
   { label: "Testimonials", href: "/#testimonials" },
   { label: "FAQ", href: "/#faq" },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const areaLinks = [
@@ -67,7 +67,7 @@ export default function Footer() {
               <span>581 Emerson St, Fremont, CA 94539</span>
             </div>
             <a
-              href="/#contact"
+              href="/contact"
               className="mt-3 inline-block bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors"
             >
               Book Consultation

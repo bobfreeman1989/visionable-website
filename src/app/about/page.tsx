@@ -181,7 +181,7 @@ export default function AboutPage() {
           subtitle="Free consultation. No pressure. Just a conversation about what's possible."
           primaryText="Share Your Vision"
           secondaryText="See Our Work"
-          secondaryHref="/#portfolio"
+          secondaryHref="/portfolio"
           bgImage="/photos/cta-bg.webp"
         />
       </main>
