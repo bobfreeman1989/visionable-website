@@ -1,9 +1,9 @@
 # Visionable Landscaping — SEO 全站审计(修订版)
 
 **站点:** https://visionablelandscaping.com
-**审计日期:** 2026-08-13 · **修订:** 2026-08-17(交接后重新核对代码、构建与生产)
+**审计日期:** 2026-08-13 · **发布前复核:** 2026-08-18(重新核对代码、构建、Preview 与发布门禁)
 **代码基线:** `origin/main` @ `b9f0580` · **集成分支:** `seo/contact-portfolio-pages`
-**当前状态:** 已在分支实现并通过本地生产构建；尚未部署。2026-08-17 实测生产 `/contact`、`/portfolio` 仍为 404，生产 robots 与 sitemap 也尚未包含本次改动。
+**发布前快照(2026-08-18):** PR #10 的 Vercel Preview 已 Ready，本地生产构建与浏览器复核通过；生产域名仍以 2026-08-17 的发布前基线为准，当时 `/contact`、`/portfolio` 为 404，robots 与 sitemap 尚未包含本次改动。本段记录发布门禁，不代表此后的实时生产状态；生产状态必须现场重查。
 
 ---
 
@@ -28,7 +28,7 @@
 
 ---
 
-## 本次已改并验证的(已在功能分支，尚未部署)
+## 本次已改并验证的(PR #10 发布前快照)
 
 ### 新增页面
 
@@ -54,7 +54,7 @@
 
 ### 本地构建验证
 
-2026-08-17 运行 `npm run build` 通过 —— **46 个静态页**(原 44,新增 2),sitemap **40 条 URL**。逐项核对产物 HTML:
+2026-08-18 重新运行 `npm run build` 通过 —— **46 个静态页**(原 44,新增 2),sitemap **40 条 URL**。逐项核对产物 HTML:
 
 - `/contact` canonical、`ContactPage` + `FAQPage` schema、H1 均正确
 - `/portfolio` canonical、`ImageGallery` schema、28 个 ImageObject、8 个 H2（7 个内容区块 + 联系表单标题）均正确
@@ -63,7 +63,7 @@
 
 `npm run lint` 没有得到通过结果：仓库尚无 ESLint 配置，命令进入 Next.js 首次配置交互提示。本次不把它记为通过；生产构建本身完成了 TypeScript 有效性检查。
 
-四阶段状态必须分开：**已实现** ✅ · **已部署并可观察** ❌ · **搜索平台已处理** 未知 · **排名/流量结果** 未测量。
+截至 2026-08-18 发布前复核，四阶段状态必须分开：**已实现** ✅ · **Vercel Preview 已部署并可观察** ✅ · **生产部署** 待合并 · **搜索平台已处理** 未知 · **排名/流量结果** 未测量。
 
 ### 仍指向锚点的(刻意保留)
 
@@ -204,8 +204,8 @@ portfolio 里明确有这两地的项目(p10 San Jose、p11 Sunnyvale),但没有
 
 ## 数据来源
 
-- 2026-08-17 生产实测：首页 200；`/contact`、`/portfolio` 404；`robots.txt` 尚未 disallow `/api/`；`sitemap.xml` 尚未列出新路由
+- 2026-08-17 生产发布前基线：首页 200；`/contact`、`/portfolio` 404；`robots.txt` 尚未 disallow `/api/`；`sitemap.xml` 尚未列出新路由
 - 代码基线：`origin/main` @ `b9f0580`；功能分支 `seo/contact-portfolio-pages`
-- 本地验证：`npm run build` 生成 46 个路由；构建产物抽查 canonical、schema、H1、title 与站内链接
+- 2026-08-18 发布前验证：Vercel Preview 状态为 Ready；`npm run build` 生成 46 个路由；构建产物与浏览器复核覆盖 canonical、schema、H1、title、站内链接、图片、桌面与 390px 布局
 - 竞品信息：2026-08-13 公开页面抽样，由交接材料报告；2026-08-17 未重新验证，不作为本次发布判定依据
 - 缺失证据：Search Console、Analytics、服务器日志、关键词工具的带日期导出；因此索引、排名、流量和转化结果均未作结论
