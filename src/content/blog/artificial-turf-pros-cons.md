@@ -58,4 +58,4 @@ If you're spending $200+/month on lawn care and water, artificial turf pays for 
 
 ---
 
-Thinking about making the switch? [Get a free estimate](/#contact) — we'll measure your space and show you samples.
+Thinking about making the switch? [Get a free estimate](/contact) — we'll measure your space and show you samples.

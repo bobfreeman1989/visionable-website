@@ -16,11 +16,11 @@ export interface CityData {
 export const areas: CityData[] = [
   {
     slug: "fremont",
-    updatedAt: "2026-08-01",
+    updatedAt: "2026-08-17",
     name: "Fremont",
     county: "Alameda",
     region: "Tri-City Area",
-    metaTitle: "Landscaping Fremont CA | Visionable Landscaping",
+    metaTitle: "Fremont CA Landscaping | Pavers, Turf & Backyard Remodels",
     metaDescription: "Professional landscaping services in Fremont, CA. Paver installation, artificial turf, landscape design, hardscaping & more. 5.0-star rated. Free consultation. Call (510) 755-5616.",
     heroText: "Visionable Landscaping delivers premium design-build services to Fremont homeowners. From pavers and turf to complete backyard remodels, 5.0-star rated, licensed, and insured.",
     content: [
@@ -32,11 +32,11 @@ export const areas: CityData[] = [
   },
   {
     slug: "newark",
-    updatedAt: "2026-08-01",
+    updatedAt: "2026-08-17",
     name: "Newark",
     county: "Alameda",
     region: "Tri-City Area",
-    metaTitle: "Landscaping Newark CA | Visionable Landscaping",
+    metaTitle: "Newark CA Landscaping | Paver Patios & Artificial Turf",
     metaDescription: "Top-rated landscaping in Newark, CA. Pavers, artificial turf, landscape design & complete backyard remodels. 200+ projects. Free consultation. (510) 755-5616.",
     heroText: "Premium landscape design-build services for Newark homeowners. Pavers, turf, lighting, and full yard transformations, just minutes from our Fremont headquarters.",
     content: [
@@ -48,11 +48,11 @@ export const areas: CityData[] = [
   },
   {
     slug: "milpitas",
-    updatedAt: "2026-08-01",
+    updatedAt: "2026-08-17",
     name: "Milpitas",
     county: "Santa Clara",
     region: "South Bay",
-    metaTitle: "Landscaping Milpitas CA | Visionable Landscaping",
+    metaTitle: "Milpitas CA Landscaping | Artificial Turf & Paver Patios",
     metaDescription: "Expert landscaping in Milpitas, CA. Artificial turf, pavers, hardscaping & outdoor lighting. 5.0-star rated, CSLB licensed. Free consultation. (510) 755-5616.",
     heroText: "Professional landscaping for Milpitas homeowners at the crossroads of Silicon Valley and the East Bay. Design-build excellence from a locally trusted team.",
     content: [
@@ -64,11 +64,11 @@ export const areas: CityData[] = [
   },
   {
     slug: "union-city",
-    updatedAt: "2026-08-01",
+    updatedAt: "2026-08-17",
     name: "Union City",
     county: "Alameda",
     region: "Tri-City Area",
-    metaTitle: "Landscaping Union City CA | Visionable Landscaping",
+    metaTitle: "Union City CA Landscaping | Pavers, Turf & Retaining Walls",
     metaDescription: "Professional landscaping in Union City, CA. Paver patios, artificial turf, retaining walls & outdoor lighting. 5.0-star rated. Free consultation. (510) 755-5616.",
     heroText: "Transforming Union City yards with premium design-build landscaping. From hillside retaining walls to custom paver patios, quality craftsmanship from your Tri-City neighbors.",
     content: [
@@ -80,11 +80,11 @@ export const areas: CityData[] = [
   },
   {
     slug: "hayward",
-    updatedAt: "2026-08-01",
+    updatedAt: "2026-08-17",
     name: "Hayward",
     county: "Alameda",
     region: "East Bay",
-    metaTitle: "Landscaping Hayward CA | Visionable Landscaping",
+    metaTitle: "Hayward CA Landscaping | Hardscaping, Turf & Drainage",
     metaDescription: "Top-rated landscaping services in Hayward, CA. Hardscaping, artificial turf, retaining walls & outdoor living spaces. CSLB licensed. Free consultation. (510) 755-5616.",
     heroText: "Premium landscaping for Hayward homeowners, from flatland patios to hillside retaining walls. 5.0-star rated design-build services along the I-680 corridor.",
     content: [
@@ -96,11 +96,11 @@ export const areas: CityData[] = [
   },
   {
     slug: "san-ramon",
-    updatedAt: "2026-08-01",
+    updatedAt: "2026-08-17",
     name: "San Ramon",
     county: "Contra Costa",
     region: "Tri-Valley",
-    metaTitle: "Landscaping San Ramon CA | Visionable Landscaping",
+    metaTitle: "San Ramon CA Landscaping | Outdoor Kitchens & Backyards",
     metaDescription: "Premium landscape design-build in San Ramon, CA. Complete backyard remodels, outdoor kitchens, pavers & lighting. 5.0-star rated. Free consultation. (510) 755-5616.",
     heroText: "Resort-style outdoor living for San Ramon homeowners. Premium design-build landscaping from the top-rated team along the I-680 corridor.",
     content: [
@@ -112,11 +112,11 @@ export const areas: CityData[] = [
   },
   {
     slug: "dublin",
-    updatedAt: "2026-08-01",
+    updatedAt: "2026-08-17",
     name: "Dublin",
     county: "Alameda",
     region: "Tri-Valley",
-    metaTitle: "Landscaping Dublin CA | Visionable Landscaping",
+    metaTitle: "Dublin CA Landscaping | Backyard Design, Pavers & Turf",
     metaDescription: "Expert landscaping in Dublin, CA. Artificial turf, paver patios, landscape design & backyard remodels. 5.0-star rated. Free consultation. (510) 755-5616.",
     heroText: "Turn your builder-basic Dublin backyard into a personalized outdoor retreat. Premium design-build landscaping from Visionable.",
     content: [
@@ -128,11 +128,11 @@ export const areas: CityData[] = [
   },
   {
     slug: "pleasanton",
-    updatedAt: "2026-08-01",
+    updatedAt: "2026-08-17",
     name: "Pleasanton",
     county: "Alameda",
     region: "Tri-Valley",
-    metaTitle: "Landscaping Pleasanton CA | Visionable Landscaping",
+    metaTitle: "Pleasanton CA Landscaping | Outdoor Kitchens, Pavers & Turf",
     metaDescription: "Premium landscaping in Pleasanton, CA. Paver driveways, outdoor kitchens, turf & complete yard transformations. 5.0-star rated. Free consultation. (510) 755-5616.",
     heroText: "Elegant outdoor living for Pleasanton homeowners. From paver driveways to complete backyard transformations, design-build excellence you can trust.",
     content: [
@@ -144,11 +144,11 @@ export const areas: CityData[] = [
   },
   {
     slug: "danville",
-    updatedAt: "2026-08-01",
+    updatedAt: "2026-08-17",
     name: "Danville",
     county: "Contra Costa",
     region: "San Ramon Valley",
-    metaTitle: "Landscaping Danville CA | Visionable Landscaping",
+    metaTitle: "Danville CA Landscaping | Retaining Walls, Pavers & Turf",
     metaDescription: "Premium landscape design-build in Danville, CA. Retaining walls, paver patios, landscape lighting & more. 5.0-star rated. Free consultation. (510) 755-5616.",
     heroText: "Thoughtful landscape architecture for Danville's expansive properties. Premium design-build services that complement the town's natural beauty.",
     content: [
@@ -160,11 +160,11 @@ export const areas: CityData[] = [
   },
   {
     slug: "walnut-creek",
-    updatedAt: "2026-08-01",
+    updatedAt: "2026-08-17",
     name: "Walnut Creek",
     county: "Contra Costa",
     region: "Central Contra Costa",
-    metaTitle: "Landscaping Walnut Creek CA | Visionable Landscaping",
+    metaTitle: "Walnut Creek CA Landscaping | Hardscaping, Turf & Lighting",
     metaDescription: "Expert landscaping in Walnut Creek, CA. Paver patios, outdoor kitchens, landscape lighting & turf. 5.0-star rated. Free consultation. (510) 755-5616.",
     heroText: "Transform your Walnut Creek yard into an extraordinary outdoor living space. Premium design-build landscaping from a top-rated I-680 corridor team.",
     content: [
@@ -176,11 +176,11 @@ export const areas: CityData[] = [
   },
   {
     slug: "concord",
-    updatedAt: "2026-08-01",
+    updatedAt: "2026-08-17",
     name: "Concord",
     county: "Contra Costa",
     region: "Central Contra Costa",
-    metaTitle: "Landscaping Concord CA | Visionable Landscaping",
+    metaTitle: "Concord CA Landscaping | Pavers, Turf & Retaining Walls",
     metaDescription: "Professional landscaping in Concord, CA. Artificial turf, pavers, retaining walls & outdoor lighting. 5.0-star rated, CSLB licensed. Free consultation. (510) 755-5616.",
     heroText: "Premium design-build landscaping for Concord homeowners. Drought-tolerant designs, custom patios, and full backyard remodels, all backed by a 5.0-star rating.",
     content: [

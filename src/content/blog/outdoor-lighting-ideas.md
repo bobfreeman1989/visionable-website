@@ -54,4 +54,4 @@ All include LED fixtures, transformer, wiring, and professional design.
 
 ---
 
-Want to see what lighting could do for your yard? [Book a free evening consultation](/#contact) — we'll walk your property at dusk and show you the possibilities.
+Want to see what lighting could do for your yard? [Book a free evening consultation](/contact) — we'll walk your property at dusk and show you the possibilities.

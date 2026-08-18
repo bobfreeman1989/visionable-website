@@ -9,7 +9,7 @@ const BASE = "https://visionablelandscaping.com";
 // the contact form. Pages whose content lives in components rather than in a
 // data file inherit this date. Bump it when those components change what a page
 // says, not when they only change how it looks.
-const TEMPLATE_REVISION = "2026-08-01";
+const TEMPLATE_REVISION = "2026-08-17";
 
 /** Latest of a set of YYYY-MM-DD dates. ISO dates sort lexicographically. */
 function latest(dates: string[]): string {
@@ -27,6 +27,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: BASE, lastModified: TEMPLATE_REVISION, changeFrequency: "weekly", priority: 1 },
     { url: `${BASE}/about`, lastModified: TEMPLATE_REVISION, changeFrequency: "monthly" as const, priority: 0.7 },
+    {
+      url: `${BASE}/contact`,
+      lastModified: TEMPLATE_REVISION,
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+    {
+      url: `${BASE}/portfolio`,
+      lastModified: TEMPLATE_REVISION,
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
     {
       url: `${BASE}/services`,
       lastModified: latest([TEMPLATE_REVISION, ...services.map((s) => s.updatedAt)]),

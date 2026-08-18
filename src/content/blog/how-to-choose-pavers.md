@@ -55,4 +55,4 @@ For most Bay Area homeowners, **concrete pavers** offer the best value. For a pr
 
 ---
 
-Not sure which paver is right for your project? [Schedule a free consultation](/#contact) and we'll bring samples to your home.
+Not sure which paver is right for your project? [Schedule a free consultation](/contact) and we'll bring samples to your home.

@@ -35,6 +35,14 @@ export function generateMetadata({ params }: { params: { city: string } }): Meta
       url: `${BASE_URL}/areas/${city.slug}`,
       images: [{ url: photo.src }],
     },
+    // Without this the root layout's generic card text is what gets shared,
+    // so every city URL previews identically on X.
+    twitter: {
+      card: "summary_large_image",
+      title: city.metaTitle,
+      description: city.metaDescription,
+      images: [photo.src],
+    },
     alternates: {
       canonical: `/areas/${city.slug}`,
     },
@@ -254,7 +262,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
           intro={`Recent builds from ${city.name} and the surrounding ${city.region}.`}
           action={
             <Link
-              href="/#portfolio"
+              href="/portfolio"
               className="text-primary font-semibold inline-flex items-center gap-1.5 hover:underline shrink-0"
             >
               See the full portfolio <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
@@ -300,7 +308,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
           primaryText="Share Your Vision"
           primaryHref="#contact"
           secondaryText="See Our Work"
-          secondaryHref="/#portfolio"
+          secondaryHref="/portfolio"
           bgImage="/photos/cta-bg.webp"
         />
 

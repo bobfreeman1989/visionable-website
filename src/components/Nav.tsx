@@ -32,9 +32,11 @@ const serviceLinks = [
 
 const links = [
   { label: "Home", href: "/" },
-  { label: "Portfolio", href: "/#portfolio" },
+  // Real routes, not homepage anchors. The anchors sent every "portfolio" and
+  // "contact" link in the site back to / and left both pages unindexable.
+  { label: "Portfolio", href: "/portfolio" },
   { label: "About", href: "/about" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact" },
   { label: "Blog", href: "/blog" },
 ];
 
@@ -160,7 +162,7 @@ export default function Nav() {
               (510) 755-5616
             </a>
             <a
-              href="/#contact"
+              href="/contact"
               className="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors"
             >
               Book Consultation
@@ -241,7 +243,7 @@ export default function Nav() {
               (510) 755-5616
             </a>
             <a
-              href="/#contact"
+              href="/contact"
               className="block bg-primary text-white text-center px-5 py-2.5 rounded-lg text-sm font-semibold"
               onClick={() => setOpen(false)}
             >

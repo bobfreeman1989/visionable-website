@@ -34,7 +34,7 @@ export default function NotFound() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
-                href="/#contact"
+                href="/contact"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-white font-semibold hover:bg-primary/90 transition-colors"
               >
                 Get a free consultation

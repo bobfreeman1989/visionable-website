@@ -33,7 +33,7 @@ export default function PageHero({
   facts,
   above,
   priority = true,
-  ctaHref = "/#contact",
+  ctaHref = "/contact",
 }: PageHeroProps) {
   return (
     <section className="relative overflow-hidden bg-primary">

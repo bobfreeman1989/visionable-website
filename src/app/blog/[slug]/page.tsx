@@ -206,7 +206,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                   <h3 className="text-xl text-stone-900 mb-2">Ready to Transform Your Yard?</h3>
                   <p className="text-stone-600 mb-4">Schedule a free consultation and let&apos;s bring your vision to life.</p>
                   <a
-                    href="/#contact"
+                    href="/contact"
                     className="inline-flex items-center gap-2 bg-accent text-foreground px-6 py-3 rounded-lg font-semibold transition-all hover:-translate-y-0.5 hover:shadow-lg"
                   >
                     Book Consultation
@@ -312,7 +312,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             subtitle="Free consultation and 3D renderings before anything is built."
             primaryText="Share Your Vision"
             secondaryText="See Our Work"
-            secondaryHref="/#portfolio"
+            secondaryHref="/portfolio"
             bgImage="/photos/cta-bg.webp"
           />
         </div>
