@@ -19,11 +19,16 @@ const localBusinessSchema = {
   additionalType: "https://schema.org/HomeAndConstructionBusiness",
   name: "Visionable Landscaping",
   description:
-    "Premium landscape design-build services in the Bay Area. Hardscaping, artificial turf, outdoor lighting, pergolas, fencing, irrigation, drainage, and complete yard transformations.",
+    "Premium landscape design-build services across the South Bay and Peninsula. Hardscaping, artificial turf, outdoor lighting, pergolas, fencing, irrigation, drainage, and complete yard transformations.",
   keywords: [
-    "landscaping Fremont CA",
-    "paver installation Fremont CA",
-    "artificial turf installation Fremont CA",
+    "landscaping San Jose CA",
+    "landscaping Saratoga CA",
+    "landscaping Los Gatos CA",
+    "landscaping Cupertino CA",
+    "landscaping Palo Alto CA",
+    "landscaping Los Altos CA",
+    "paver installation South Bay",
+    "artificial turf installation South Bay",
     "pergola installation Bay Area",
     "fence and gate installation Bay Area",
     "irrigation and drainage Bay Area",
@@ -62,6 +67,20 @@ const localBusinessSchema = {
       },
     })),
   },
+  hasCredential: [
+    {
+      "@type": "EducationalOccupationalCredential",
+      name: "Techo-Pro Certified Contractor",
+      credentialCategory: "certification",
+      recognizedBy: { "@type": "Organization", name: "Techo-Bloc", url: "https://www.techo-bloc.com" },
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      name: "NDS Certified Professional Drainage Contractor",
+      credentialCategory: "certification",
+      recognizedBy: { "@type": "Organization", name: "NDS", url: "https://www.ndspro.com" },
+    },
+  ],
   // No aggregateRating/Review markup here: Google disallows self-serving review
   // snippets for a LocalBusiness describing itself. Ratings stay as page copy,
   // sourced from the Google and Yelp profiles linked in sameAs.
@@ -80,13 +99,23 @@ const localBusinessSchema = {
   ],
 };
 
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${BASE_URL}/#website`,
+  name: "Visionable Landscaping",
+  url: BASE_URL,
+  publisher: { "@id": `${BASE_URL}/#business` },
+  inLanguage: "en-US",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
-  title: "Bay Area Outdoor Living Design & Build | Visionable",
+  title: "South Bay Outdoor Living Design & Build | Visionable",
   description:
-    "Transform your backyard into an outdoor living space your family actually uses. Hardscaping, pavers, artificial turf, outdoor lighting & more. 5.0★ rated, 200+ projects. Free 3D design consultation, Visionable Landscaping.",
+    "Transform your backyard into an outdoor living space your family actually uses. Pavers, turf, lighting & more. 5.0★ rated, 200+ projects. Free 3D consultation.",
   openGraph: {
-    title: "Bay Area Outdoor Living Design & Build | Visionable",
+    title: "South Bay Outdoor Living Design & Build | Visionable",
     description:
       "Transform your backyard into an outdoor living space. Hardscaping, pavers, artificial turf, lighting & landscape design. 5.0★ rated. Free 3D consultation.",
     url: BASE_URL,
@@ -143,6 +172,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         {/* Page-specific markup (FAQPage, Service, BreadcrumbList) lives on the
             page that renders the matching content, not in the root layout. */}

@@ -9,7 +9,7 @@ const BASE = "https://visionablelandscaping.com";
 // the contact form. Pages whose content lives in components rather than in a
 // data file inherit this date. Bump it when those components change what a page
 // says, not when they only change how it looks.
-const TEMPLATE_REVISION = "2026-08-17";
+const TEMPLATE_REVISION = "2026-10-02";
 
 /** Latest of a set of YYYY-MM-DD dates. ISO dates sort lexicographically. */
 function latest(dates: string[]): string {

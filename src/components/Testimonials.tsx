@@ -26,7 +26,7 @@ export default function Testimonials() {
               Bay Area families who stopped imagining and started living outdoors.
             </p>
             <p className="mt-3 text-xs uppercase tracking-[0.2em] text-stone-600">
-              {testimonialReviews.length} verified review excerpts · scroll for more
+              5.0 on Google · {testimonialReviews.length} review excerpts · scroll for more
             </p>
           </div>
           <div className="flex gap-2">
@@ -49,16 +49,18 @@ export default function Testimonials() {
 
         <div
           ref={scrollRef}
-          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-4 px-4"
+          tabIndex={0}
+          role="region"
+          className="flex items-start gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-4 px-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-2xl"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           aria-label="Customer testimonials"
         >
-          {testimonialReviews.map((review, index) => (
+          {testimonialReviews.map((review) => (
             <div
               key={review.name}
               className="flex-shrink-0 w-[85vw] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-start"
             >
-              <TestimonialCard review={review} priority={index === 0} />
+              <TestimonialCard review={review} />
             </div>
           ))}
         </div>

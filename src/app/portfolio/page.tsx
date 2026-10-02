@@ -6,7 +6,6 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/sections/PageHero";
 import BeforeAfter from "@/components/BeforeAfter";
-import CTABanner from "@/components/CTABanner";
 import ContactCTA from "@/components/ContactCTA";
 import { portfolioProjects, photos, extraPhotos, heroForService } from "@/content/gallery";
 import { areas } from "@/lib/areas";
@@ -17,11 +16,11 @@ const BASE_URL = "https://visionablelandscaping.com";
 export const metadata: Metadata = {
   title: "Backyard & Landscaping Portfolio | Bay Area | Visionable",
   description:
-    "Real Bay Area landscaping projects by Visionable — paver patios, artificial turf, pergolas, outdoor kitchens, retaining walls and full backyard remodels in Fremont, Pleasanton, Dublin, San Ramon and across the I-680 corridor.",
+    "Real Bay Area landscaping projects by Visionable — paver patios, artificial turf, pergolas, outdoor kitchens, retaining walls and full backyard remodels in San Jose, Sunnyvale, Fremont and across the Bay Area.",
   openGraph: {
     title: "Backyard & Landscaping Portfolio | Bay Area | Visionable",
     description:
-      "Paver patios, turf, pergolas, outdoor kitchens and complete backyard remodels — real projects across Fremont and the I-680 corridor.",
+      "Paver patios, turf, pergolas, outdoor kitchens and complete backyard remodels — real projects across the Bay Area.",
     url: `${BASE_URL}/portfolio`,
     images: [{ url: portfolioProjects[0].src }],
   },
@@ -60,7 +59,7 @@ const imageGallerySchema = {
   url: `${BASE_URL}/portfolio`,
   name: "Visionable Landscaping project portfolio",
   description:
-    "Completed landscape design-build projects across Fremont and the Bay Area I-680 corridor.",
+    "Completed landscape design-build projects across the Bay Area.",
   about: { "@id": `${BASE_URL}/#business` },
   associatedMedia: galleryPhotos.map((p) => ({
     "@type": "ImageObject",
@@ -105,7 +104,6 @@ const CATEGORIES = [
 
 export default function PortfolioPage() {
   const heroPhoto = heroForService("complete-backyard-remodel");
-  const cityNames = Array.from(new Set(portfolioProjects.map((p) => p.location)));
 
   return (
     <>
@@ -120,7 +118,7 @@ export default function PortfolioPage() {
       <Nav />
       <main id="main-content" className="pt-16">
         <PageHero
-          eyebrow="Completed projects · Fremont & the I-680 corridor"
+          eyebrow="Completed projects across the Bay Area"
           title="200+ Bay Area yards, built and photographed"
           lede="Every photograph below is a yard we designed and built with our own crew — no stock imagery, no subcontracted work. Locations are the real ones."
           image={{ src: heroPhoto.src, alt: heroPhoto.alt }}
@@ -139,7 +137,7 @@ export default function PortfolioPage() {
           }
           facts={[
             { label: "Projects built", value: "200+" },
-            { label: "Cities", value: "Fremont to Walnut Creek" },
+            { label: "Cities", value: "South Bay & Peninsula" },
             { label: "Rated", value: "5.0 on Google & Yelp" },
             { label: "Crew", value: "In-house, no subs" },
           ]}
@@ -235,7 +233,7 @@ export default function PortfolioPage() {
 
             <h2 className="text-3xl md:text-4xl text-stone-900 mb-3">Browse by city</h2>
             <p className="text-stone-600 max-w-2xl mb-8">
-              Projects on this page were built in {cityNames.slice(0, 5).join(", ")} and beyond.
+              We build across San Jose, Saratoga, Los Gatos, Cupertino, Sunnyvale, Mountain View, Los Altos, Palo Alto, San Carlos and beyond.
               Pick a city for local work, permitting notes and nearby builds.
             </p>
             <div className="flex flex-wrap gap-2.5">
@@ -253,14 +251,6 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        <CTABanner
-          title="Your yard could be the next one on this page."
-          subtitle="Free consultation, 3D renderings before we break ground, and transparent pricing."
-          primaryText="Share Your Vision"
-          secondaryText="See Our Process"
-          secondaryHref="/#process"
-          bgImage="/photos/cta-bg.webp"
-        />
 
         <ContactCTA
           title="Start your project"

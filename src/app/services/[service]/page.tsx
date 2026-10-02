@@ -12,7 +12,6 @@ import AlternatingFeatures from "@/components/sections/AlternatingFeatures";
 import RelatedCards from "@/components/sections/RelatedCards";
 import Accordion from "@/components/sections/Accordion";
 import BeforeAfter from "@/components/BeforeAfter";
-import CTABanner from "@/components/CTABanner";
 import ContactCTA from "@/components/ContactCTA";
 
 const BASE_URL = "https://visionablelandscaping.com";
@@ -67,9 +66,11 @@ export default function ServicePage({ params }: { params: { service: string } })
   const features = service.content.slice(0, 3).map((paragraph, i) => ({
     title:
       [
-        `What ${service.title.toLowerCase()} looks like with Visionable`,
+        `${service.title} with Visionable`,
         "How we build it",
-        "Choosing the right materials",
+        // The third paragraph covers timelines, warranties and how the service
+        // fits a larger build; a "materials" heading over it did not match.
+        "What to expect",
       ][i] ?? service.title,
     body: paragraph,
     bullets: i === 0 ? service.benefits.slice(0, 3) : i === 1 ? service.benefits.slice(3, 6) : undefined,
@@ -164,8 +165,8 @@ export default function ServicePage({ params }: { params: { service: string } })
 
         <PhotoGallery
           photos={gallery}
-          title={`${service.title} we have built`}
-          intro={`Recent ${service.title.toLowerCase()} work across Fremont and the I-680 corridor.`}
+          title={`Recent ${service.title.toLowerCase()} projects`}
+          intro={`Builds from across the South Bay and Peninsula where ${service.title.toLowerCase()} is part of the work.`}
           action={
             <Link
               href="/portfolio"
@@ -223,15 +224,6 @@ export default function ServicePage({ params }: { params: { service: string } })
           </div>
         </section>
 
-        <CTABanner
-          title={`Ready to make your ${service.title.toLowerCase()} vision real?`}
-          subtitle="Free consultation, 3D renderings before we break ground, and transparent pricing."
-          primaryText="Share Your Vision"
-          primaryHref="#contact"
-          secondaryText="See Our Process"
-          secondaryHref="/#process"
-          bgImage="/photos/cta-bg.webp"
-        />
 
         <ContactCTA
           title={`Start your ${service.title.toLowerCase()} project`}

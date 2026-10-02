@@ -7,13 +7,12 @@ import AlternatingFeatures from "@/components/sections/AlternatingFeatures";
 import PhotoGallery from "@/components/sections/PhotoGallery";
 import CTABanner from "@/components/CTABanner";
 import Testimonials from "@/components/Testimonials";
-import Process from "@/components/Process";
 import { photos, extraPhotos } from "@/content/gallery";
 
 export const metadata: Metadata = {
   title: "About Visionable Landscaping | Bay Area's Trusted Landscape Team",
   description:
-    "Meet the team behind 200+ Bay Area landscape projects. Licensed, insured, and committed to turning your outdoor vision into reality. Serving Fremont, San Jose & beyond.",
+    "Meet the team behind 200+ Bay Area landscape projects. Licensed, insured, and committed to turning your outdoor vision into reality. Serving San Jose, Silicon Valley & the Peninsula.",
   alternates: {
     canonical: "/about",
   },
@@ -85,7 +84,7 @@ export default function AboutPage() {
               outdoor reality
             </>
           }
-          lede="Founded in Fremont and grown from a small local crew into one of the Bay Area's most trusted landscape design-build teams. Our name says it all: we take what you envision and make it real."
+          lede="Founded in Fremont and grown from a small local crew into a design-build team with 200+ yards built and a 5.0 rating on Google. We take what you envision and make it real."
           image={{
             src: "/photos/services/lighting01.webp",
             alt: "Backyard at dusk with a lit built-in seat wall beside an artificial turf lawn",
@@ -121,8 +120,12 @@ export default function AboutPage() {
                   every satisfied client reinforced our commitment to quality.
                 </p>
                 <p>
-                  We&apos;re not a franchise. We&apos;re not a faceless corporation. When you call
-                  Visionable, you&apos;re talking to the people who will actually design and build
+                  We are a Techo-Bloc certified Techo-Pro contractor and an NDS certified
+                  professional drainage contractor, so the pavers and the water management under
+                  them are built to the manufacturers&apos; own installation standards.
+                </p>
+                <p>
+                  When you call Visionable, you&apos;re talking to the people who will actually design and build
                   your space.
                 </p>
                 <p>
@@ -138,18 +141,17 @@ export default function AboutPage() {
         <AlternatingFeatures
           features={pillars}
           title="What we stand for"
-          intro="These aren't words on a page. They're the principles behind every project we take on."
+          intro="The principles behind every project we take on."
           className="bg-surface"
         />
 
         <PhotoGallery
           photos={gallery}
           title="Recent work"
-          intro="A cross-section of what the crew has built across the I-680 corridor."
+          intro="A cross-section of what the crew has built across the Bay Area."
           className="bg-background"
         />
 
-        <Process />
 
         {/* Timeline */}
         <section className="py-14 md:py-16 bg-background">

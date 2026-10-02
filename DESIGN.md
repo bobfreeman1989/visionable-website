@@ -1,6 +1,6 @@
 ---
 name: Visionable Landscaping
-description: Premium Bay Area outdoor living design and build, drawn with the calm of a garden atelier.
+description: Premium South Bay and Peninsula outdoor living design and build, drawn with the calm of a garden atelier.
 colors:
   cultivated-forest-green: "#1B6B2A"
   forest-green-dark: "#145520"
@@ -12,7 +12,6 @@ colors:
   surface: "#FAFAF8"
   surface-alt: "#F5F5F2"
   foreground: "#1A1917"
-  ink-strong: "#1C1917"
   ink-body: "#57534E"
   ink-muted: "#78716C"
   border: "#E7E5E4"
@@ -44,6 +43,11 @@ typography:
     fontSize: "0.75rem"
     fontWeight: 600
     letterSpacing: "0.05em"
+  eyebrow:
+    fontFamily: "Source Sans 3, system-ui, sans-serif"
+    fontSize: "0.75rem"
+    fontWeight: 600
+    letterSpacing: "0.12em-0.2em"
 rounded:
   button: "8px"
   tile: "12px"
@@ -113,7 +117,7 @@ This is the visual language of a refined maker's studio, not a contractor's flye
 
 Color is disciplined. Cultivated Forest Green carries the brand and the everyday chrome (links, nav, secondary actions). Golden Marigold is the scarce conversion color, used for the one action that matters on a given view and almost nothing else. Depth is restrained: cards sit flat with a hairline border at rest and lift on hover, so motion reads as a quiet response to intent rather than decoration. A near-invisible fractal noise texture (0.03 opacity) warms the larger light sections and reinforces the handmade, atelier feel.
 
-The system explicitly rejects the generic home-services look named in PRODUCT.md: clip-art icons, stock crew photography, loud "FREE QUOTE" banners, badge soup, and crowded template layouts. Restraint is the premium signal. When in doubt, remove an element and add space.
+The system explicitly rejects the generic home-services look named in PRODUCT.md: clip-art icons, stock (not real) crew photography, loud "FREE QUOTE" banners, badge soup, and crowded template layouts. Restraint is the premium signal. When in doubt, remove an element and add space.
 
 **Key Characteristics:**
 - Display serif (DM Serif Display) over humanist sans (Source Sans 3); hierarchy by size, not weight.
@@ -140,8 +144,8 @@ A warm, horticultural palette: a deep cultivated green and a golden accent set a
 - **Warm Off-White Background** (#FEFDFB): The page canvas. Warmer than white, it is the default ground everything sits on.
 - **Surface** (#FAFAF8): Warm off-white for panels and quiet containers (the contact form card sits on this).
 - **Surface Alt** (#F5F5F2): A half-step deeper warm neutral for zone separation.
-- **Warm Ink** (#1A1917): The canonical near-black for text. Warm, never a pure cold black.
-- **Ink Strong** (#1C1917), **Ink Body** (#57534E), **Ink Muted** (#78716C): The functional text scale, the warm Tailwind stone ramp, used site-wide for headings, body, and meta so text agrees with the warm photography.
+- **Warm Ink** (#1A1917, `--foreground`): The one near-black. Page default text and the text on marigold buttons. Headings use Tailwind `stone-900` (#1C1917), which is visually identical; treat the two as one token and do not introduce a third near-black.
+- **Ink Body** (#57534E), **Ink Muted** (#78716C): The rest of the text scale, the warm Tailwind stone ramp (`stone-600`, `stone-500`), for body and meta so text agrees with the warm photography.
 - **Border** (#E7E5E4) and **Border Subtle** (#F5F5F4): Hairline borders on cards, inputs, nav, and dividers. Borders, not shadows, do the resting separation.
 
 ### Named Rules
@@ -149,7 +153,9 @@ A warm, horticultural palette: a deep cultivated green and a golden accent set a
 
 **The Marigold Ground Rule.** #E8960C is a *fill* color, not a text color. As a fill behind warm ink it is fine anywhere. As text it only clears AA over a dark scrim, which is why the hero word "Visionable" can keep it at display size (3.8:1 against a 3:1 large-text bar). For marigold text anywhere else, pick by ground: #A56804 on light, #FCD34D on forest green. Never plain #E8960C.
 
-**The Warm Neutral Rule.** Neutrals tint warm, on the Tailwind stone ramp. The page ground is #FEFDFB and large panels are #FAFAF8 or #F5F5F2, never a clinical pure white field. Pure #FFFFFF is allowed only for crisp content cards sitting on a warm ground.
+**The Token Parity Rule.** Every color named in this document must exist under the same name in `tailwind.config.ts` before a component uses it. A class that references an undefined color (for example `text-accent-light`) compiles to nothing and silently falls back to the inherited color; that is how the hero stars and every sub-page eyebrow rendered dark until October 2026.
+
+**The Warm Neutral Rule.** Neutrals tint warm, on the Tailwind stone ramp. That includes borders: use `stone-200` (#E7E5E4) and `stone-100` (#F5F5F4), never the cool `gray-*` ramp. The page ground is #FEFDFB and large panels are #FAFAF8 or #F5F5F2, never a clinical pure white field. Pure #FFFFFF is allowed only for crisp content cards sitting on a warm ground.
 
 ## 3. Typography
 
@@ -163,16 +169,17 @@ A warm, horticultural palette: a deep cultivated green and a golden accent set a
 - **Headline** (DM Serif Display 400, clamp(1.875rem, 4vw, 2.25rem)): Section titles ("Every Vision Needs a Plan").
 - **Title** (DM Serif Display 400, 1.25rem; CTA banners step to 1.5rem): Card titles, form headings.
 - **Body** (Source Sans 3 400, 1rem, line-height ~1.65): Paragraph copy, set in Ink Body with relaxed leading. Cap measure at 65 to 75 characters; section intros already cap around max-w-2xl.
-- **Label** (Source Sans 3 600, 0.75rem, letter-spacing 0.05em, uppercase): Service tags, section eyebrows ("Areas We Serve"). The smallest tags drop to 11px.
+- **Label** (Source Sans 3 600, 0.75rem, letter-spacing 0.05em, uppercase): Tags and chips ("Most Requested"). The smallest tags drop to 11px.
+- **Eyebrow** (Source Sans 3 600, 0.75rem, letter-spacing 0.12em to 0.2em, uppercase): Section and hero eyebrows and fact-strip labels. Wider tracking than tags, because these sit alone above a headline rather than inside a pill.
 
 ### Named Rules
 **The Serif Weight Rule.** DM Serif Display ships a single weight (400). Applying font-bold or font-semibold to a serif heading triggers synthetic faux-bold, which smears a display serif and reads cheap. Set serif headings at 400 and create hierarchy with size, never with weight.
 
-**The Label Caps Rule.** All-caps is for labels and tags only (Source Sans 3 600, 0.05em tracking). Never set headings or body copy in all caps.
+**The Label Caps Rule.** All-caps is for labels, tags and eyebrows only (Source Sans 3 600; 0.05em on tags, 0.12em to 0.2em on eyebrows). Never set headings or body copy in all caps.
 
 ## 4. Elevation
 
-Depth is quiet and earned. Surfaces are flat at rest, separated by warm hairline borders (#E5E7EB) rather than shadows. A soft shadow and a small upward translate appear only as a response to interaction (hover, focus). The fixed navigation and floating dropdown menus are the only elements that carry a resting shadow, because they genuinely float above the page.
+Depth is quiet and earned. Surfaces are flat at rest, separated by warm hairline borders (#E7E5E4) rather than shadows. A soft shadow and a small upward translate appear only as a response to interaction (hover, focus). The fixed navigation and floating dropdown menus are the only elements that carry a resting shadow, because they genuinely float above the page.
 
 ### Shadow Vocabulary
 - **Resting Float** (`box-shadow: 0 1px 2px rgba(0,0,0,0.05)`, Tailwind shadow-sm): The fixed nav bar only.
@@ -199,18 +206,18 @@ Depth is quiet and earned. Surfaces are flat at rest, separated by warm hairline
 ### Cards / Containers
 - **Corner Style:** Generous (16px, rounded-2xl). Icon tiles inside cards use 12px (rounded-xl).
 - **Background:** White content card on a warm ground. The contact form container instead sits on Surface (#FAFAF8).
-- **Border:** 1px hairline (#E5E7EB). On hover the border tints to Forest Green at 30%.
+- **Border:** 1px hairline (#E7E5E4, `stone-200`). On hover the border tints to Forest Green at 30%.
 - **Shadow Strategy:** Flat at rest, Lift shadow plus translate-y 4px on hover (see Elevation).
 - **Internal Padding:** Roomy (32px, p-8) on featured cards and the form.
 - **Signature detail:** A 2px Forest Green hairline along the top edge that animates in from the left on hover (scale-x 0 to 1, origin-left). This is a top-edge accent, never a side stripe.
 
 ### Inputs / Fields
-- **Style:** White fill, 1px #E5E7EB border, 8px radius, 12px by 16px padding, 0.875rem text. Labels are 0.875rem 500 in Ink Body, 4px above the field.
+- **Style:** White fill, 1px #E7E5E4 border, 8px radius, 12px by 16px padding, 0.875rem text. Labels are 0.875rem 500 in Ink Body, 4px above the field.
 - **Focus:** Border goes transparent and a 2px Forest Green ring appears (focus:ring-2 focus:ring-primary). Always visible, never removed.
 - **Error:** Inline row with an alert icon, red-600 text on a red-50 tint, 8px radius, role="alert".
 
 ### Navigation
-- **Style:** Fixed top bar, white, 1px bottom border (#F3F4F6), Resting Float shadow. Logo left, links center-right, phone plus green "Book Consultation" CTA far right.
+- **Style:** Fixed top bar, white, 1px bottom border (#F5F5F4, `stone-100`), Resting Float shadow. Logo left, links center-right, phone plus green "Book Consultation" CTA far right.
 - **Links:** 0.875rem 500, Ink Body, hover to Forest Green (transition-colors). Dropdowns are white panels (12px radius, Menu shadow, hairline border) revealed on hover with a 2px pad bridge.
 - **Mobile:** Hamburger toggles a full white sheet with grouped, eyebrow-labeled sections and the green CTA pinned at the bottom.
 
@@ -227,23 +234,41 @@ Depth is quiet and earned. Surfaces are flat at rest, separated by warm hairline
 - Imagery is selected from `src/content/gallery.ts` by tag, ranked by how many of a service's tags a photo carries. Every catalogue entry was checked against the actual photograph before being tagged.
 
 ### Hero (signature)
-- Full-bleed project photograph behind a left-to-right dark green gradient scrim (from green-950/90 through green-900/80 to green-950/60) that guarantees text contrast. Display serif headline in white with the brand word in Golden Marigold, a small rating pill above, the Accent button plus a Ghost-on-dark button below, and a row of thin-line trust badges.
+- Full-bleed project photograph behind a left-to-right dark green gradient scrim (from green-950/90 through green-900/80 to green-950/60) that guarantees text contrast. Display serif headline in white with the brand word in Golden Marigold, a small rating pill above, a one-sentence plain description of the company under the headline, the Accent button plus a Ghost-on-dark button below, and at most three thin-line credential lines (licence, and manufacturer certifications the business actually holds). Credentials are evidence and belong here; anything beyond three becomes badge soup.
+
+### Section reuse
+Shared sections are written once and placed deliberately, not dropped onto every template. Each one has a home:
+
+| Section | Lives on | Never on |
+|---|---|---|
+| `Process` (four steps) | Home, Services index | About, city pages, service detail pages |
+| `Testimonials` | Home, About, city pages | — |
+| `BeforeAfter` | Home, service detail pages, Portfolio | City pages |
+| `CTABanner` | Pages that do **not** end in the contact form | Directly above `ContactCTA` (the form is the call to action) |
+| `ContactCTA` contact cards | Every page with the form, except `/contact` | `/contact`, which lists the same details above the form |
+
+### Mobile
+The site is designed at desktop width, but most first visits are on a phone. On screens under 640px:
+- A page should stay within roughly eight screens (about 7,000px at 390px wide). If it does not, cut a repeated section before shrinking type.
+- More than six cards of the same kind collapse: show six and link to the full list, or switch to a text list.
+- Photo cards are for evidence. A list of links (services in a city, cities for a service) is a text list with hairline dividers, not a grid of photo cards that reuse the same images.
 
 ## 6. Do's and Don'ts
 
 ### Do:
 - **Do** lead with real, full-bleed project photography and let the dark green gradient scrim carry hero text contrast.
 - **Do** reserve Golden Marigold (#E8960C) for the single primary action per view, with warm-ink text (#1A1917) on it for AA contrast; use Cultivated Forest Green (#1B6B2A) for brand chrome, links, and secondary actions.
-- **Do** keep surfaces flat with a hairline border (#E5E7EB) at rest and lift them (translate-y, shadow-lg) only on hover or focus.
+- **Do** keep surfaces flat with a hairline border (#E7E5E4) at rest and lift them (translate-y, shadow-lg) only on hover or focus.
 - **Do** give elements room: 32px card padding, generous section spacing, one clear path to the free consultation per section.
 - **Do** pair DM Serif Display headings with Source Sans 3 body, and separate two headings by size, not weight.
 - **Do** prefer warm surfaces (#FEFDFB page, #FAFAF8 panels) over pure white for large areas, and keep focus rings visible (focus:ring-2 focus:ring-primary).
 - **Do** write descriptive alt text on every project image; the imagery carries the brand.
+- **Do** show the real people: the founder and our own crew, photographed on our own job sites. A premium buyer is deciding who will be in their backyard for weeks; the About page must show them. Stock people are never acceptable; real people are required.
 
 ### Don't:
 - **Don't** use clip-art service icons or stock "happy crew" photography. Use real project photos and thin line icons (strokeWidth 1.5).
 - **Don't** add loud "FREE QUOTE" banners, countdown urgency, or hard-sell pricing blocks.
-- **Don't** pile up badge soup: rows of trust seals, review-platform logos, and certification clutter. One quiet 5.0 rating line is enough.
+- **Don't** pile up badge soup: rows of trust seals, review-platform logos, or certification logos. One quiet rating line plus up to three plain-text credential lines is the ceiling, and only for credentials the business holds and can link to.
 - **Don't** build crowded, busy layouts that read as a default template or a bargain operator. Restraint is the premium signal.
 - **Don't** apply font-bold or font-semibold to DM Serif Display headings; it triggers faux-bold. Use size for hierarchy.
 - **Don't** use a colored border-left or border-right thicker than 1px as a stripe accent; the only edge accent is the top hairline that animates in on hover.

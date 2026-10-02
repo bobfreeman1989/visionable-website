@@ -12,13 +12,13 @@ import { photosForArea } from "@/content/gallery";
 const BASE_URL = "https://visionablelandscaping.com";
 
 export const metadata: Metadata = {
-  title: "Bay Area Landscaping Service Areas | Visionable Landscaping",
+  title: "South Bay & Peninsula Landscaping Service Areas | Visionable",
   description:
-    "Visionable Landscaping serves Fremont, Newark, Milpitas, Union City, Hayward, San Ramon, Dublin, Pleasanton, Danville, Walnut Creek, Concord, and nearby Bay Area communities.",
+    "Landscape design-build across the South Bay and Peninsula: San Jose, Saratoga, Los Gatos, Cupertino, Sunnyvale, Mountain View, Los Altos, Palo Alto, San Carlos and more.",
   openGraph: {
-    title: "Bay Area Landscaping Service Areas | Visionable Landscaping",
+    title: "South Bay & Peninsula Landscaping Service Areas | Visionable",
     description:
-      "Find Visionable Landscaping service areas across Fremont, the East Bay, South Bay, and the I-680 corridor.",
+      "Visionable Landscaping service areas across San Jose, the West Valley, Silicon Valley and the Peninsula.",
     url: `${BASE_URL}/areas`,
   },
   alternates: {
@@ -40,7 +40,7 @@ const areasItemListSchema = {
 
 export default function AreasIndexPage() {
   const allSlugs = areas.map((a) => a.slug);
-  const heroPhoto = photosForArea("fremont", allSlugs, 1)[0];
+  const heroPhoto = photosForArea("san-jose", allSlugs, 1)[0];
 
   // Sorted so neighbouring cities sit together and each card names its region,
   // rather than split into per-region sections: three of the six regions hold a
@@ -60,8 +60,8 @@ export default function AreasIndexPage() {
       <main id="main-content" className="pt-16">
         <PageHero
           eyebrow="Local landscaping service areas"
-          title="Landscaping across Fremont, the East Bay, and the I-680 corridor"
-          lede="Based in Fremont and close enough to every city we serve that site visits, deliveries, and callbacks happen quickly. Same crew, same standard, wherever your yard is."
+          title="Landscaping across the South Bay and Peninsula"
+          lede="From West San Jose and the West Valley to Silicon Valley and the Peninsula. One in-house crew and the same standard, wherever your yard is."
           image={{ src: heroPhoto.src, alt: heroPhoto.alt }}
           facts={[
             { label: "Cities served", value: `${areas.length} and nearby` },
@@ -131,7 +131,7 @@ export default function AreasIndexPage() {
 
         <CTABanner
           title="Ready to talk about your yard?"
-          subtitle="Free consultation anywhere along the I-680 corridor. No pressure, just a conversation."
+          subtitle="Free consultation anywhere in the South Bay and Peninsula. No pressure, just a conversation."
           primaryText="Share Your Vision"
           secondaryText="Browse Services"
           secondaryHref="/services"

@@ -25,17 +25,17 @@ const companyLinks = [
 ];
 
 const areaLinks = [
-  { name: "Fremont", slug: "fremont" },
-  { name: "Newark", slug: "newark" },
+  { name: "San Jose", slug: "san-jose" },
+  { name: "Saratoga", slug: "saratoga" },
+  { name: "Los Gatos", slug: "los-gatos" },
+  { name: "Cupertino", slug: "cupertino" },
+  { name: "Sunnyvale", slug: "sunnyvale" },
+  { name: "Mountain View", slug: "mountain-view" },
+  { name: "Los Altos", slug: "los-altos" },
+  { name: "Palo Alto", slug: "palo-alto" },
+  { name: "San Carlos", slug: "san-carlos" },
   { name: "Milpitas", slug: "milpitas" },
-  { name: "Union City", slug: "union-city" },
-  { name: "Hayward", slug: "hayward" },
-  { name: "San Ramon", slug: "san-ramon" },
-  { name: "Dublin", slug: "dublin" },
-  { name: "Pleasanton", slug: "pleasanton" },
-  { name: "Danville", slug: "danville" },
-  { name: "Walnut Creek", slug: "walnut-creek" },
-  { name: "Concord", slug: "concord" },
+  { name: "Fremont", slug: "fremont" },
 ];
 
 export default function Footer() {
@@ -45,9 +45,9 @@ export default function Footer() {
         {/* Brand masthead */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 pb-10 border-b border-stone-800">
           <div className="max-w-md">
-            <img src="/logo-white.png" alt="Visionable Landscaping" className="h-9 w-auto mb-4" loading="lazy" />
+            <img src="/logo-white.png" alt="Visionable Landscaping" width={520} height={116} className="h-9 w-auto mb-4" loading="lazy" />
             <p className="text-sm leading-relaxed">
-              Shaping visions into extraordinary landscapes along the I-680 corridor.
+              Shaping visions into extraordinary landscapes across the South Bay and Peninsula.
               Premium design-build services for homeowners who demand excellence.
             </p>
           </div>
@@ -109,6 +109,9 @@ export default function Footer() {
             {companyLinks.map((l) => (
               <a key={l.label} href={l.href} className="hover:text-white transition-colors">{l.label}</a>
             ))}
+            <a href="https://www.google.com/maps/search/?api=1&query=Visionable+Landscaping+Fremont+CA" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+              Google Reviews
+            </a>
             <a href="https://www.yelp.com/biz/visionable-landscaping-fremont" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
               Yelp Reviews
             </a>

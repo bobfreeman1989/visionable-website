@@ -17,22 +17,22 @@ const pairs: Pair[] = [
   {
     id: "01",
     label: "Outdoor Living Build",
-    location: "Fremont, CA · pergola · composite deck · sectional",
+    location: "Los Altos · pergola · composite deck · sectional",
     beforeSrc: "/photos/before-after/case-1-before-1280.webp",
     afterSrc: "/photos/before-after/case-1-after-1280.webp",
     afterPosition: "object-[50%_35%]",
   },
   {
     id: "02",
-    label: "Backyard Hardscape",
-    location: "East Bay · pavers · grading · planting",
+    label: "Porcelain Paver Patio",
+    location: "San Jose · porcelain pavers · grading · planting",
     beforeSrc: "/photos/before-after/case-2-before-1280.webp",
     afterSrc: "/photos/before-after/case-2-after-1280.webp",
   },
   {
     id: "03",
     label: "Custom Sport Court",
-    location: "East Bay · modular court · hoop · edging",
+    location: "San Jose · modular court · hoop · edging",
     beforeSrc: "/photos/before-after/case-3-before-1280.webp",
     afterSrc: "/photos/before-after/case-3-after-1280.webp",
     afterPosition: "object-[50%_42%]",
@@ -169,7 +169,6 @@ function Comparison({ pair }: { pair: Pair }) {
           fill
           className={`object-cover ${pair.afterPosition ?? "object-center"}`}
           sizes="(max-width: 1024px) 100vw, 1024px"
-          priority={pair.id === "01"}
           unoptimized
           draggable={false}
         />
@@ -185,8 +184,7 @@ function Comparison({ pair }: { pair: Pair }) {
             fill
             className="object-cover object-center"
             sizes="(max-width: 1024px) 100vw, 1024px"
-            priority={pair.id === "01"}
-            unoptimized
+              unoptimized
             draggable={false}
           />
         </div>

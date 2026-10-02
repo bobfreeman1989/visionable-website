@@ -6,13 +6,13 @@ brand
 
 ## Users
 
-Established and premium homeowners in the Bay Area I-680 corridor: Fremont, Newark, Milpitas, Union City, Hayward, San Ramon, Dublin, Pleasanton, Danville, Walnut Creek, Concord. Typically professionals and empty-nesters with the means to invest $20K to $60K+ in a complete outdoor living space, not just a small turf install.
+Established and premium homeowners in the South Bay and Peninsula: San Jose (especially West San Jose: Willow Glen, Cambrian, Almaden, Rose Garden), Saratoga, Los Gatos, Cupertino, Sunnyvale, Mountain View, Los Altos, Palo Alto and San Carlos, plus Milpitas and our Fremont home base. East Bay I-680 cities were retired as SEO targets in October 2026; their old city pages redirect to /areas. Typically professionals and empty-nesters with the means to invest $20K to $60K+ in a complete outdoor living space, not just a small turf install.
 
 Their context: they are researching a significant home investment, often comparing several design-build firms, and they are skeptical. They want proof of taste and craft before they will trust someone in their backyard. The job to be done is to find a design-build partner they believe will get the details right, then book a free design consultation as a low-risk first step.
 
 ## Product Purpose
 
-Visionable Landscaping is a Bay Area outdoor living design-build firm: 3D design first, then build. The website exists to win higher-budget projects by positioning Visionable as a premium, design-led builder rather than a commodity contractor, and to convert qualified premium homeowners into free design consultations.
+Visionable Landscaping is a South Bay and Peninsula outdoor living design-build firm based in Fremont: 3D design first, then build. Credentials: CSLB #1101860, Techo-Bloc certified Techo-Pro contractor, NDS certified professional drainage contractor. The website exists to win higher-budget projects by positioning Visionable as a premium, design-led builder rather than a commodity contractor, and to convert qualified premium homeowners into free design consultations.
 
 Success is not raw traffic or volume of small jobs. Success is a steady flow of high-intent consultation requests from homeowners who already perceive the brand as premium before they ever pick up the phone.
 
