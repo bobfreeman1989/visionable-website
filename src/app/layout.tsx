@@ -114,7 +114,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: "South Bay Outdoor Living Design & Build | Visionable",
   description:
-    "Transform your backyard into an outdoor living space your family actually uses. Pavers, turf, lighting & more. 5.0★ rated, 200+ projects. Free 3D consultation.",
+    "Transform your backyard into an outdoor living space your family uses. Pavers, turf, lighting & more. 5.0★ rated, 200+ projects. Free 3D consultation.",
   openGraph: {
     title: "South Bay Outdoor Living Design & Build | Visionable",
     description:

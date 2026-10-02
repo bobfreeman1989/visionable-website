@@ -64,7 +64,7 @@ export default function Portfolio() {
               <div className="relative aspect-[4/3]">
                 <Image
                   src={p.src}
-                  alt={`${p.alt}, ${p.location}, California, by Visionable Landscaping`}
+                  alt={`${p.alt}, ${p.location}, CA`}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
