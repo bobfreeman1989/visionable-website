@@ -9,10 +9,10 @@ import { heroForService } from "@/content/gallery";
 export const metadata = {
   title: "Landscaping Blog, Tips & Trends | Visionable Landscaping",
   description:
-    "Expert landscaping tips, design trends, and project insights for Bay Area homeowners. Practical advice from Silicon Valley's top-rated design-build team.",
+    "Expert landscaping tips, design trends, and project insights for Bay Area homeowners. Practical advice from a 5.0-rated South Bay design-build team.",
   openGraph: {
     title: "Landscaping Blog, Tips & Trends | Visionable Landscaping",
-    description: "Expert landscaping tips and design inspiration from Silicon Valley's top-rated team.",
+    description: "Landscaping tips and design inspiration from a 5.0-rated South Bay design-build team.",
     url: "https://visionablelandscaping.com/blog",
     type: "website",
     images: [
@@ -27,7 +27,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Landscaping Blog, Tips & Trends | Visionable Landscaping",
-    description: "Expert landscaping tips and design inspiration from Silicon Valley's top-rated team.",
+    description: "Landscaping tips and design inspiration from a 5.0-rated South Bay design-build team.",
     images: ["/og-image.jpg"],
   },
   alternates: { canonical: "https://visionablelandscaping.com/blog" },
@@ -46,7 +46,7 @@ export default function BlogIndex() {
         <PageHero
           eyebrow="Design notes & project stories"
           title="Landscape insights for Bay Area homeowners"
-          lede="What we have learned building 200+ outdoor spaces along the I-680 corridor: materials that hold up, layouts that actually get used, and the questions worth asking before you break ground."
+          lede="What we have learned building 200+ outdoor spaces across the Bay Area: materials that hold up, layouts that actually get used, and the questions worth asking before you break ground."
           image={
             featured?.coverImage
               ? { src: featured.coverImage, alt: featured.title }

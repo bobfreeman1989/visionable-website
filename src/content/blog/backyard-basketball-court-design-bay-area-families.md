@@ -1,7 +1,7 @@
 ---
 title: "Backyard Basketball Court Design for Active Bay Area Families"
 date: "2026-05-21"
-updated: "2026-08-01"
+updated: "2026-10-02"
 excerpt: "A backyard basketball court can turn unused space into a family hub. Learn design ideas for sport courts, safety netting, pavers, turf, and raised beds."
 category: "Project Showcase"
 coverImage: "/photos/blog/backyard-basketball-court-design-bay-area-families/hero.webp"
@@ -11,14 +11,14 @@ featured: true
 
 For families who love basketball, the best court may not be across town. It can be right outside the back door.
 
-This Visionable Landscaping project, originally shared on Xiaohongshu, transformed a backyard area into a private basketball-focused outdoor space. The source note described a custom court for a basketball-loving family, with Warriors-inspired colors, modular sport flooring, safety netting, a sturdy retaining wall, softer ground surfaces, raised planting beds, light gray pavers, [artificial turf](/services/artificial-turf), and pebble edging.
+This Visionable Landscaping project transformed a backyard area into a private basketball-focused outdoor space. The brief was a custom court for a basketball-loving family, with Warriors-inspired colors, modular sport flooring, safety netting, a sturdy retaining wall, softer ground surfaces, raised planting beds, light gray pavers, [artificial turf](/services/artificial-turf), and pebble edging.
 
 The result is more than a place to shoot hoops. It is a backyard that supports kids playing, parents joining in, gardening, and friends gathering. For Bay Area and Silicon Valley homeowners, it is a useful example of how an active family yard can combine recreation, structure, and clean [landscape design](/services/landscape-design).
 
 ## Project Snapshot
 
 - **Project type:** Backyard basketball court and multi-use landscape remodel
-- **Visible source details:** Warriors-inspired color palette, modular anti-slip/durable sport flooring, safety netting, retaining wall, softer ground surface, raised bed planting area, light gray pavers, artificial turf, and pebble border lines
+- **Key features:** Warriors-inspired color palette, modular anti-slip/durable sport flooring, safety netting, retaining wall, softer ground surface, raised bed planting area, light gray pavers, artificial turf, and pebble border lines
 - **Design direction:** Active, practical, organized, and family-friendly
 - **Homeowner goal:** A backyard that supports basketball, gardening, and everyday outdoor time
 - **Best-fit audience:** Bay Area families considering a backyard sport court or multi-use landscape remodel
@@ -42,7 +42,7 @@ This project answered those questions by treating the court as the main feature 
 
 ## Why Safety Netting Matters
 
-The source note highlighted safety netting so children can play with more confidence and balls are less likely to leave the court area. For Bay Area homes where lots can be compact or close to neighbors, containment is a practical part of sport court design.
+We added safety netting so children can play with more confidence and balls are less likely to leave the court area. For Bay Area homes where lots can be compact or close to neighbors, containment is a practical part of sport court design.
 
 Safety netting can help:
 
@@ -69,7 +69,7 @@ Because every yard is different, homeowners should avoid assuming that any flat-
 
 ## Balancing Play, Gardening, and Relaxation
 
-One of the best details in this project is that the basketball court was not the only feature. The source note also described a planting area requested by the homeowner, using raised beds and easy-care, attractive plants.
+One of the best details in this project is that the basketball court was not the only feature. The homeowner also asked for a planting area, using raised beds and easy-care, attractive plants.
 
 That combination matters. A family backyard should not feel like a single-purpose facility unless that is truly the goal. By adding raised beds, [pavers](/services/paver-installation), artificial turf, and pebble edging, the yard gains zones:
 

@@ -16,7 +16,7 @@ export interface ServiceData {
 export const services: ServiceData[] = [
   {
     slug: "paver-installation",
-    updatedAt: "2026-08-01",
+    updatedAt: "2026-10-02",
     title: "Paver Installation",
     shortDesc: "Premium interlocking pavers for patios, driveways, and walkways.",
     metaTitle: "Paver Installation Bay Area | Visionable Landscaping",
@@ -25,15 +25,16 @@ export const services: ServiceData[] = [
     content: [
       "Paver installation is one of our core specialties at Visionable Landscaping. We use premium interlocking pavers from trusted manufacturers to create patios, driveways, walkways, and pool decks that are both beautiful and built to last. Unlike poured concrete, pavers offer superior durability, easier maintenance, and virtually unlimited design possibilities.",
       "Our paver installation process begins with proper site preparation, excavation, grading, and compacted base material, which is the foundation of a long-lasting paver surface. We then install edge restraints, bedding sand, and each paver with precision. The result is a level, well-drained surface that resists cracking, shifting, and settling for decades.",
-      "From classic brick patterns to contemporary large-format slabs, we offer a wide range of paver styles, colors, and textures. Our design team creates custom layouts using 3D rendering software so you can visualize your new patio or driveway before installation begins. Every paver project includes a comprehensive warranty on both materials and workmanship.",
+      "From classic brick patterns to contemporary large-format slabs, we offer a wide range of paver styles, colors, and textures. Our design team creates custom layouts using 3D rendering software so you can visualize your new patio or driveway before installation begins. As a Techo-Bloc certified Techo-Pro contractor, we build Techo-Bloc pavers and walls to the manufacturer's installation standards. Every paver project includes a comprehensive warranty on both materials and workmanship.",
     ],
     benefits: [
+      "Built by a Techo-Bloc certified Techo-Pro contractor",
       "Lasts 25+ years with minimal maintenance",
       "Individual pavers can be replaced if damaged",
       "Superior drainage compared to poured concrete",
       "Wide range of colors, textures, and patterns",
-      "Increases property value and curb appeal",
-      "Resistant to cracking from freeze-thaw cycles",
+      "Adds curb appeal and usable outdoor space",
+      "Laid on a compacted base built to stay level",
     ],
     faqs: [
       { q: "How long does paver installation take?", a: "Most paver patios take 3-5 days. Larger projects like driveways may take 1-2 weeks including site preparation, base work, and paver installation." },
@@ -50,17 +51,17 @@ export const services: ServiceData[] = [
     metaDescription: "Professional artificial turf installation in the Bay Area. Water-saving, low-maintenance synthetic grass. 15-year warranty. Free consultation. (510) 755-5616.",
     heroText: "Save water, eliminate mowing, and enjoy a green lawn year-round with premium artificial turf installed by Visionable Landscaping.",
     content: [
-      "Artificial turf has become one of the most popular landscaping upgrades for Bay Area homeowners, and for good reason. Our premium synthetic turf installations eliminate watering, mowing, fertilizing, and pesticide use while providing a lush, green lawn that looks natural in every season. With California's water concerns, artificial turf is both an environmentally responsible and financially smart choice.",
-      "We use only top-tier turf products with realistic blade profiles, natural color variations, and built-in UV protection. Our installation process includes removing existing sod, grading for proper drainage, installing a compacted base, and securing the turf with professional-grade infill. The result is a soft, durable surface that is safe for children and pets.",
-      "Every artificial turf installation comes with a 15-year manufacturer warranty. We install turf for front yards, backyards, side yards, pet areas, putting greens, and commercial properties throughout the I-680 corridor. Our free consultation includes turf samples so you can see and feel the product before committing.",
+      "Artificial turf has become one of the most popular landscaping upgrades for Bay Area homeowners, and for good reason. Our premium synthetic turf installations eliminate watering, mowing, fertilizing, and pesticide use while providing a lush, green lawn that looks natural in every season. It keeps a yard green through dry Bay Area summers without irrigation.",
+      "We choose turf products with realistic blade profiles, natural color variations, and built-in UV protection. Our installation process includes removing existing sod, grading for proper drainage, installing a compacted base, and securing the turf with professional-grade infill. The result is a soft, durable surface that is safe for children and pets.",
+      "Every artificial turf installation comes with a 15-year manufacturer warranty. We install turf for front yards, backyards, side yards, pet areas, putting greens, and commercial properties throughout the South Bay and Peninsula. Our free consultation includes turf samples so you can see and feel the product before committing.",
     ],
     benefits: [
-      "Saves thousands of gallons of water annually",
+      "No lawn watering once installed",
       "No mowing, fertilizing, or pesticides needed",
       "Stays green and lush year-round",
       "Safe and durable for kids and pets",
       "15-year manufacturer warranty",
-      "Pays for itself in water savings within 3-5 years",
+      "May qualify for local lawn-replacement rebates",
     ],
     faqs: [
       { q: "How long does artificial turf last?", a: "Quality artificial turf lasts 15-20 years with proper installation. Our products come with a 15-year manufacturer warranty." },
@@ -109,7 +110,7 @@ export const services: ServiceData[] = [
       "We integrate hardscaping seamlessly with softscape elements like turf, plantings, and lighting to create a unified outdoor living environment. Our design team works with you to select materials, finishes, and layouts that complement your home's architecture and your personal style. See our portfolio for examples of our hardscaping work across the I-680 corridor.",
     ],
     benefits: [
-      "Adds significant value to your property",
+      "Adds curb appeal and usable outdoor space",
       "Creates functional outdoor living and entertaining areas",
       "Built with premium, long-lasting materials",
       "Engineered for proper drainage and structural integrity",
@@ -133,7 +134,7 @@ export const services: ServiceData[] = [
     content: [
       "A pergola turns a patio or deck into a real outdoor room. Visionable Landscaping designs and builds custom pergolas and shade structures that frame seating areas, dining spaces, outdoor kitchens, and backyard gathering zones. Every pergola is planned as part of the full landscape, so the posts, pavers, lighting, drainage, and furniture layout all work together.",
       "We help Bay Area homeowners choose the right shade solution for the space: modern aluminum pergolas, wood-look structures, motorized louvered systems, attached shade covers, freestanding pergolas, and simple arbor features. During design, we consider sun direction, privacy, HOA constraints, drainage, and how the structure connects with pavers, turf, decking, and planting beds.",
-      "Our design-build process starts with a free on-site consultation and 3D rendering so you can see the pergola in context before construction begins. Whether you want shade over a Fremont paver patio, a dining zone in Dublin, or a complete outdoor room with lighting and seating, we build the structure to feel intentional, durable, and easy to live with.",
+      "Our design-build process starts with a free on-site consultation and 3D rendering so you can see the pergola in context before construction begins. Whether you want shade over a Fremont paver patio, a dining zone in Cupertino, or a complete outdoor room with lighting and seating, we build the structure to feel intentional, durable, and easy to live with.",
     ],
     benefits: [
       "Creates a defined outdoor room for dining and relaxing",
@@ -160,7 +161,7 @@ export const services: ServiceData[] = [
     content: [
       "Fences and gates are not just boundaries. They shape privacy, curb appeal, access, and the way a yard feels from the first step inside. Visionable Landscaping installs and repairs side gates, privacy fences, custom wood gates, fence panels, and outdoor entry details as part of broader front yard and backyard projects.",
       "Because we approach fencing as part of the whole landscape, we pay attention to details that standalone fence crews often miss: how the gate aligns with walkways, how drainage affects posts, whether the fence blocks or frames a view, and how the material works with pavers, turf, planting beds, stucco, and lighting. The result is a fence or gate that feels integrated, not bolted on afterward.",
-      "We handle small repairs, side-yard gate replacements, and full fence upgrades throughout Fremont, Newark, Union City, Milpitas, Hayward, and the I-680 corridor. Every project starts with a practical site review so we can identify post conditions, grade changes, access constraints, and any neighbor or HOA considerations before pricing.",
+      "We handle small repairs, side-yard gate replacements, and full fence upgrades throughout San Jose, Sunnyvale, Cupertino, Palo Alto, Milpitas, Fremont, and the wider South Bay. Every project starts with a practical site review so we can identify post conditions, grade changes, access constraints, and any neighbor or HOA considerations before pricing.",
     ],
     benefits: [
       "Improves privacy, security, and curb appeal",
@@ -178,7 +179,7 @@ export const services: ServiceData[] = [
   },
   {
     slug: "irrigation-drainage",
-    updatedAt: "2026-08-01",
+    updatedAt: "2026-10-02",
     title: "Irrigation & Drainage",
     shortDesc: "Smart water management for turf, planting beds, patios, and problem areas.",
     metaTitle: "Irrigation & Drainage Bay Area | Visionable Landscaping",
@@ -186,10 +187,11 @@ export const services: ServiceData[] = [
     heroText: "Keep water where it belongs. We design irrigation and drainage systems that protect your yard, plants, patios, and home.",
     content: [
       "A beautiful yard fails fast if water is handled poorly. Visionable Landscaping designs and installs irrigation and drainage improvements for Bay Area homeowners who want landscapes that stay healthy without wasting water or creating puddles, erosion, or foundation risk.",
-      "Our irrigation work focuses on efficient, practical systems: drip irrigation for planting beds, smart controller coordination, low-water landscape layouts, and zone planning that matches plant needs. For drainage, we look at the entire property, slope, soil, downspouts, hardscape edges, and low spots, before recommending French drains, catch basins, grading adjustments, permeable surfaces, or discharge routes.",
+      "Our irrigation work focuses on efficient, practical systems: drip irrigation for planting beds, smart controller coordination, low-water landscape layouts, and zone planning that matches plant needs. For drainage, we look at the entire property, slope, soil, downspouts, hardscape edges, and low spots, before recommending French drains, catch basins, grading adjustments, permeable surfaces, or discharge routes. We are an NDS certified professional drainage contractor.",
       "Irrigation and drainage are often built into larger projects like paver patios, artificial turf, retaining walls, and complete backyard remodels. Handling them during the design-build phase prevents expensive fixes later and gives every surface, plant, and structure a better chance of lasting.",
     ],
     benefits: [
+      "Designed and built by an NDS certified professional drainage contractor",
       "Protects patios, turf, planting beds, and foundations from water issues",
       "Supports low-water, drought-conscious Bay Area landscaping",
       "Pairs naturally with paver, turf, retaining wall, and remodel projects",
@@ -266,7 +268,7 @@ export const services: ServiceData[] = [
     metaDescription: "Full backyard remodels in the Bay Area. Design-build transformations with pavers, turf, lighting & more. 5.0-star rated. Free consultation. (510) 755-5616.",
     heroText: "Transform your entire backyard from concept to completion. One team, one vision, one stunning result, handled entirely in-house by Visionable Landscaping.",
     content: [
-      "A complete backyard remodel is the ultimate outdoor transformation, and Visionable Landscaping is the Bay Area's trusted partner for these ambitious projects. We handle everything in-house, design, demolition, grading, hardscaping, planting, irrigation, lighting, and finishing, so there is no miscommunication between trades and every element works together seamlessly.",
+      "A complete backyard remodel is where a yard becomes the room you use most. We handle everything in-house — design, demolition, grading, hardscaping, planting, irrigation, lighting, and finishing, so there is no miscommunication between trades and every element works together seamlessly.",
       "Our complete remodels typically include a combination of paver patios, artificial turf, retaining walls, outdoor lighting, plantings, and custom features like fire pits, outdoor kitchens, or water features. Every project starts with a detailed 3D design that lets you see and refine your vision before construction begins. We lock in pricing upfront so there are no surprises.",
       "From initial consultation to final walkthrough, a complete backyard remodel with Visionable typically takes 3-6 weeks depending on scope. You receive daily progress updates, and our project manager is always available to answer questions. The result is a backyard that feels like a resort, designed for your lifestyle and built to last for decades.",
     ],

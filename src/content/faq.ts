@@ -9,7 +9,7 @@ export type FaqItem = {
 export const homepageFaqs: FaqItem[] = [
   {
     q: "How much does an outdoor living project cost?",
-    a: "Depends on the vision, a patio and turf setup starts around $5K, while a complete outdoor living space with cooking area, lighting, and seating runs $20K-$60K+. We give you a detailed, transparent estimate after seeing your space. No hidden fees.",
+    a: "It depends on the vision. A patio and turf setup starts around $5K, while a complete outdoor living space with cooking area, lighting, and seating runs $20K-$60K+. We give you a detailed, transparent estimate after seeing your space. No hidden fees.",
   },
   {
     q: "How long until I can actually use my new yard?",
@@ -17,7 +17,7 @@ export const homepageFaqs: FaqItem[] = [
   },
   {
     q: "What if I don't have a clear vision yet?",
-    a: "Most clients don't, they just know they want to use their backyard more. That's exactly what the design consultation is for. We help you figure out what you want through 3D renderings you can explore and adjust. The vision gets clearer together.",
+    a: "Most clients don't — they just know they want to use their backyard more. That's exactly what the design consultation is for. We help you figure out what you want through 3D renderings you can explore and adjust. The vision gets clearer together.",
   },
   {
     q: "Is the consultation really free?",
@@ -29,7 +29,7 @@ export const homepageFaqs: FaqItem[] = [
   },
   {
     q: "What areas do you serve?",
-    a: "The I-680 corridor, Fremont, Newark, Milpitas, Union City, Hayward, San Ramon, Dublin, Pleasanton, Danville, Walnut Creek, Concord, and surrounding communities.",
+    a: "The South Bay and Peninsula: San Jose (especially West San Jose), Saratoga, Los Gatos, Cupertino, Sunnyvale, Mountain View, Los Altos, Palo Alto, San Carlos, Milpitas, and our home base of Fremont.",
   },
   {
     q: "Do you offer warranties?",

@@ -1,0 +1,21 @@
+# Visionable Landscaping
+
+> Landscape design-build company based in Fremont, California (CSLB #1101860), serving homeowners in the South Bay and Peninsula: San Jose, Saratoga, Los Gatos, Cupertino, Sunnyvale, Mountain View, Los Altos, Palo Alto, San Carlos, Milpitas and Fremont.
+
+Visionable designs outdoor living spaces in 3D before building them, then builds them with its own in-house crew.
+Visionable is a Techo-Bloc certified Techo-Pro contractor and an NDS certified professional drainage contractor.
+Services include paver patios, artificial turf, pergolas, fences and gates, irrigation and drainage, outdoor lighting, retaining walls, landscape design and complete backyard remodels.
+Consultations are free. Contact: (510) 755-5616, info@visionablelandscaping.com, 581 Emerson St, Fremont, CA 94539.
+
+## Key pages
+
+- [Services](https://visionablelandscaping.com/services): every service, with typical timelines and what each includes
+- [Areas we serve](https://visionablelandscaping.com/areas): city pages for the South Bay and Peninsula
+- [Portfolio](https://visionablelandscaping.com/portfolio): completed projects with the city each was built in
+- [About](https://visionablelandscaping.com/about): the team and how projects are run
+- [Contact](https://visionablelandscaping.com/contact): book a free design consultation
+- [Blog](https://visionablelandscaping.com/blog): project write-ups and planning guides for Bay Area homeowners
+
+## Optional
+
+- [Sitemap](https://visionablelandscaping.com/sitemap.xml)

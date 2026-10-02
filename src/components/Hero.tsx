@@ -42,6 +42,14 @@ export default function Hero() {
           </h1>
         </FadeUp>
 
+        <FadeUp delay={0.25}>
+          <p className="text-white/85 text-lg leading-relaxed max-w-2xl mb-8">
+            Visionable Landscaping is a licensed and insured landscape design-build company in
+            Fremont, CA (CSLB #1101860). We design your outdoor space in 3D, then our own crew
+            builds it across the South Bay and Peninsula.
+          </p>
+        </FadeUp>
+
         <FadeUp delay={0.3}>
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <a

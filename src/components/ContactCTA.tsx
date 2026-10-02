@@ -7,6 +7,8 @@ interface ContactCTAProps {
   /** Passed through to preselect the service dropdown on service pages. */
   defaultService?: string;
   detailsPlaceholder?: string;
+  /** The contact page already lists these details above the form. */
+  showContactCards?: boolean;
 }
 
 export default function ContactCTA({
@@ -14,6 +16,7 @@ export default function ContactCTA({
   subtitle = "Tell us what you're imagining. We'll show you what's possible.",
   defaultService,
   detailsPlaceholder,
+  showContactCards = true,
 }: ContactCTAProps = {}) {
   return (
     <section id="contact" className="py-14 bg-background scroll-mt-16">
@@ -35,7 +38,7 @@ export default function ContactCTA({
             />
           </div>
 
-          <ContactSidebar />
+          <ContactSidebar showContactCards={showContactCards} />
         </div>
       </div>
     </section>

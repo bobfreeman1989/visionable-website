@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import typography from "@tailwindcss/typography";
 
 const config: Config = {
   content: [
@@ -29,6 +30,8 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  // Blog posts render markdown inside `prose`; without the plugin those classes
+  // compile to nothing and articles lose paragraph spacing and list bullets.
+  plugins: [typography],
 };
 export default config;

@@ -35,14 +35,14 @@ export default function NotFound() {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-white font-semibold hover:bg-primary/90 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-white font-semibold hover:bg-primary/90 transition-colors"
               >
                 Get a free consultation
                 <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </Link>
               <Link
                 href="/"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-stone-300 text-stone-900 font-semibold hover:border-stone-400 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-stone-300 text-stone-900 font-semibold hover:border-stone-400 transition-colors"
               >
                 Back to home
               </Link>

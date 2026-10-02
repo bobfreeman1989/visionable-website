@@ -4,14 +4,11 @@ import Link from "next/link";
 import { MapPin, ChevronRight, CheckCircle, ArrowRight, Phone, Mail } from "lucide-react";
 import { areas, getAreaBySlug, faqsForCity } from "@/lib/areas";
 import { services } from "@/lib/services";
-import { photosForArea, heroForService } from "@/content/gallery";
+import { photosForArea, portfolioProjects } from "@/content/gallery";
 import PageHero from "@/components/sections/PageHero";
 import PhotoGallery from "@/components/sections/PhotoGallery";
-import RelatedCards from "@/components/sections/RelatedCards";
 import Accordion from "@/components/sections/Accordion";
 import Testimonials from "@/components/Testimonials";
-import Process from "@/components/Process";
-import CTABanner from "@/components/CTABanner";
 import ContactCTA from "@/components/ContactCTA";
 
 const BASE_URL = "https://visionablelandscaping.com";
@@ -59,8 +56,12 @@ export default function CityPage({ params }: { params: { city: string } }) {
   const allSlugs = areas.map((a) => a.slug);
   // Each city draws a different slice of the catalogue, so eleven pages no
   // longer show a visitor the same eight photographs.
-  const cityPhotos = photosForArea(city.slug, allSlugs, 5);
-  const heroPhoto = photosForArea(city.slug, allSlugs, 6)[5];
+  // photosForArea puts this city's own projects first, so the hero is local
+  // work wherever we have it.
+  const [heroPhoto, ...cityPhotos] = photosForArea(city.slug, allSlugs, 6);
+  const localCount = portfolioProjects.filter(
+    (p) => p.location.toLowerCase().replace(/\s+/g, "-") === city.slug
+  ).length;
 
   const nearbyAreas = city.nearbyAreas
     .map((slug) => getAreaBySlug(slug))
@@ -146,7 +147,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
           image={{ src: heroPhoto.src, alt: heroPhoto.alt }}
           ctaHref="#contact"
           facts={[
-            { label: "Based in", value: "Fremont, minutes away" },
+            { label: "Based in", value: "Fremont, CA" },
             { label: "Projects built", value: "200+ Bay Area yards" },
             { label: "Rated", value: "5.0 on Google & Yelp" },
             { label: "Licensed", value: "CSLB #1101860" },
@@ -236,7 +237,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
                 </div>
 
                 <div className="bg-surface rounded-2xl p-6 border border-stone-200">
-                  <h3 className="font-semibold text-stone-900 mb-3">Nearby areas</h3>
+                  <h3 className="text-lg text-stone-900 mb-3">Nearby areas</h3>
                   <ul className="space-y-2 text-sm">
                     {nearbyAreas.map((nearby) => (
                       <li key={nearby.slug}>
@@ -258,8 +259,12 @@ export default function CityPage({ params }: { params: { city: string } }) {
 
         <PhotoGallery
           photos={cityPhotos}
-          title={`Our work around ${city.name}`}
-          intro={`Recent builds from ${city.name} and the surrounding ${city.region}.`}
+          title={localCount > 1 ? `Our work in ${city.name}` : "Recent work nearby"}
+          intro={
+            localCount > 1
+              ? `Projects we built in ${city.name} lead, followed by recent builds across the South Bay and Peninsula.`
+              : "Recent builds across the South Bay and Peninsula."
+          }
           action={
             <Link
               href="/portfolio"
@@ -270,23 +275,40 @@ export default function CityPage({ params }: { params: { city: string } }) {
           }
         />
 
-        <RelatedCards
-          title={`Landscaping services in ${city.name}`}
-          intro="Every service handled in-house, from the first sketch to the final walkthrough."
-          className="bg-background"
-          columns={3}
-          cards={services.map((s) => {
-            const photo = heroForService(s.slug);
-            return {
-              href: `/services/${s.slug}`,
-              title: `${s.title} in ${city.name}`,
-              blurb: s.shortDesc,
-              image: { src: photo.src, alt: photo.alt },
-            };
-          })}
-        />
-
-        <Process />
+        {/* A compact list rather than ten photo cards: the card version reused the
+            same few service photos three times over and ran to two and a half
+            screens on a phone. The photography on this page is the gallery above. */}
+        <section className="py-14 md:py-16 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl text-stone-900 mb-3">
+              Landscaping services in {city.name}
+            </h2>
+            <p className="text-stone-600 mb-8 max-w-2xl">
+              Every service handled in-house, from the first sketch to the final walkthrough.
+            </p>
+            <ul className="grid gap-x-10 sm:grid-cols-2 lg:grid-cols-3 border-t border-stone-200">
+              {services.map((s) => (
+                <li key={s.slug} className="border-b border-stone-200">
+                  <Link
+                    href={`/services/${s.slug}`}
+                    className="group flex items-start justify-between gap-4 py-4"
+                  >
+                    <span>
+                      <span className="block font-heading text-lg text-stone-900 group-hover:text-primary transition-colors">
+                        {s.title}
+                      </span>
+                      <span className="block text-sm text-stone-500 mt-0.5">{s.shortDesc}</span>
+                    </span>
+                    <ArrowRight
+                      className="w-4 h-4 mt-1.5 shrink-0 text-stone-400 group-hover:text-primary transition-colors"
+                      strokeWidth={1.5}
+                    />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
 
         <section className="py-14 md:py-16 bg-surface">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -302,15 +324,6 @@ export default function CityPage({ params }: { params: { city: string } }) {
 
         <Testimonials />
 
-        <CTABanner
-          title={`Ready to transform your ${city.name} yard?`}
-          subtitle="Free consultation, 3D renderings before we break ground, and transparent pricing."
-          primaryText="Share Your Vision"
-          primaryHref="#contact"
-          secondaryText="See Our Work"
-          secondaryHref="/portfolio"
-          bgImage="/photos/cta-bg.webp"
-        />
 
         <ContactCTA
           title={`Book your free ${city.name} consultation`}

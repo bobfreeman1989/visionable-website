@@ -196,7 +196,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                     prose-blockquote:border-l-primary prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:not-italic prose-blockquote:text-stone-600
                     prose-li:text-stone-600
                     prose-strong:text-stone-800
-                    prose-img:rounded-xl prose-img:shadow-md
+                    prose-img:rounded-xl prose-img:shadow-md prose-img:max-h-[70vh] prose-img:w-auto prose-img:mx-auto
                     prose-hr:border-stone-200"
                   dangerouslySetInnerHTML={{ __html: post.contentHtml }}
                 />
@@ -292,7 +292,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         {mentionedServices.length > 0 && (
           <RelatedCards
             title="The services behind this article"
-            intro="Everything in this piece is work we build in-house, across Fremont and the I-680 corridor."
+            intro="Everything in this piece is work we build in-house, across the South Bay and Peninsula."
             className="bg-surface mt-16"
             cards={mentionedServices.map((s) => {
               const photo = heroForService(s.slug);

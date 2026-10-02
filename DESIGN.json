@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-05-30T12:00:00-07:00",
+  "generatedAt": "2026-10-02T12:00:00-07:00",
   "title": "Design System: Visionable Landscaping",
   "extensions": {
     "colorMeta": {
@@ -25,14 +25,14 @@
       "background": { "role": "neutral", "displayName": "Warm Off-White Background", "canonical": "#FEFDFB" },
       "surface": { "role": "neutral", "displayName": "Surface", "canonical": "#FAFAF8" },
       "surface-alt": { "role": "neutral", "displayName": "Surface Alt", "canonical": "#F5F5F2" },
-      "border": { "role": "neutral", "displayName": "Hairline Border", "canonical": "#E5E7EB" }
+      "border": { "role": "neutral", "displayName": "Hairline Border", "canonical": "#E7E5E4" }
     },
     "typographyMeta": {
       "display": { "displayName": "Display", "purpose": "Hero headline only. DM Serif Display at 400; never bolded." },
       "headline": { "displayName": "Headline", "purpose": "Section titles." },
       "title": { "displayName": "Title", "purpose": "Card titles and form headings." },
       "body": { "displayName": "Body", "purpose": "Paragraph copy in Source Sans 3, measure capped 65 to 75ch." },
-      "label": { "displayName": "Label", "purpose": "Uppercase eyebrows and tags, 0.05em tracking." }
+      "label": { "displayName": "Label", "purpose": "Uppercase tags and chips at 0.05em tracking; eyebrows and fact-strip labels use 0.12em to 0.2em." }
     },
     "shadows": [
       { "name": "resting-float", "value": "0 1px 2px rgba(0,0,0,0.05)", "purpose": "Fixed nav bar only." },
@@ -85,7 +85,7 @@
       "refersTo": "button-inverse",
       "description": "Primary action inside a green CTA banner. Warm-white fill, green text, lifts on hover.",
       "html": "<div style='background:linear-gradient(90deg,#1B6B2A,#15803D);padding:24px;border-radius:12px;display:inline-block'><a class='ds-btn-inverse' href='#'>Share Your Vision<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' width='16' height='16'><path stroke-linecap='round' stroke-linejoin='round' d='M17 8l4 4m0 0l-4 4m4-4H3'/></svg></a></div>",
-      "css": ".ds-btn-inverse{display:inline-flex;align-items:center;gap:8px;background:#FEFDFB;color:#1B6B2A;font-family:'Source Sans 3',system-ui,sans-serif;font-size:1rem;font-weight:600;padding:14px 32px;border-radius:8px;text-decoration:none;transition:transform .3s,box-shadow .3s,background .3s}.ds-btn-inverse:hover{background:#F3F4F6;transform:translateY(-2px);box-shadow:0 10px 15px -3px rgba(0,0,0,0.1)}"
+      "css": ".ds-btn-inverse{display:inline-flex;align-items:center;gap:8px;background:#FEFDFB;color:#1B6B2A;font-family:'Source Sans 3',system-ui,sans-serif;font-size:1rem;font-weight:600;padding:14px 32px;border-radius:8px;text-decoration:none;transition:transform .3s,box-shadow .3s,background .3s}.ds-btn-inverse:hover{background:#F5F5F4;transform:translateY(-2px);box-shadow:0 10px 15px -3px rgba(0,0,0,0.1)}"
     },
     {
       "name": "Text Input",
@@ -93,7 +93,7 @@
       "refersTo": "input-field",
       "description": "Labeled field with a green focus ring. Always-visible focus state.",
       "html": "<div style='display:flex;flex-direction:column;gap:4px;max-width:320px'><label class='ds-label' for='ds-name'>Full Name *</label><input class='ds-input' id='ds-name' type='text' placeholder='Your name'/></div>",
-      "css": ".ds-label{font-family:'Source Sans 3',system-ui,sans-serif;font-size:.875rem;font-weight:500;color:#4B5563}.ds-input{width:100%;box-sizing:border-box;background:#FFFFFF;color:#1A1917;font-family:'Source Sans 3',system-ui,sans-serif;font-size:.875rem;padding:12px 16px;border:1px solid #E5E7EB;border-radius:8px;outline:none;transition:box-shadow .2s,border-color .2s}.ds-input::placeholder{color:#9CA3AF}.ds-input:focus{border-color:transparent;box-shadow:0 0 0 2px #1B6B2A}"
+      "css": ".ds-label{font-family:'Source Sans 3',system-ui,sans-serif;font-size:.875rem;font-weight:500;color:#57534E}.ds-input{width:100%;box-sizing:border-box;background:#FFFFFF;color:#1A1917;font-family:'Source Sans 3',system-ui,sans-serif;font-size:.875rem;padding:12px 16px;border:1px solid #E7E5E4;border-radius:8px;outline:none;transition:box-shadow .2s,border-color .2s}.ds-input::placeholder{color:#9CA3AF}.ds-input:focus{border-color:transparent;box-shadow:0 0 0 2px #1B6B2A}"
     },
     {
       "name": "Service Card",
@@ -101,7 +101,7 @@
       "refersTo": "card-service",
       "description": "Flat white card with hairline border, icon tile, and a top-edge accent that animates in on hover.",
       "html": "<a class='ds-card' href='#'><span class='ds-card-edge'></span><span class='ds-card-icon'><svg viewBox='0 0 24 24' fill='none' stroke='#1B6B2A' stroke-width='1.5' width='28' height='28'><path stroke-linecap='round' stroke-linejoin='round' d='M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z'/><path stroke-linecap='round' stroke-linejoin='round' d='M2 21c0-3 1.85-5.36 5.08-6'/></svg></span><span class='ds-card-body'><span class='ds-card-head'><span class='ds-card-title'>Outdoor Living Design</span><span class='ds-tag'>Where Every Vision Starts</span></span><span class='ds-card-desc'>Walk through your future backyard in 3D before we break ground. We design around how you live.</span></span></a>",
-      "css": ".ds-card{position:relative;display:flex;align-items:flex-start;gap:20px;background:#FFFFFF;border:1px solid #E5E7EB;border-radius:16px;padding:32px;text-decoration:none;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s}.ds-card:hover{transform:translateY(-4px);box-shadow:0 10px 15px -3px rgba(0,0,0,0.1);border-color:rgba(27,107,42,0.3)}.ds-card-edge{position:absolute;top:0;left:0;right:0;height:2px;background:#1B6B2A;transform:scaleX(0);transform-origin:left;transition:transform .3s}.ds-card:hover .ds-card-edge{transform:scaleX(1)}.ds-card-icon{flex-shrink:0;width:56px;height:56px;border-radius:12px;background:#E8F0EA;display:flex;align-items:center;justify-content:center}.ds-card-body{display:flex;flex-direction:column;gap:8px}.ds-card-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.ds-card-title{font-family:'DM Serif Display',Georgia,serif;font-size:1.25rem;color:#111827}.ds-tag{font-family:'Source Sans 3',system-ui,sans-serif;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#1B6B2A;background:#EDF3EE;padding:2px 10px;border-radius:9999px}.ds-card-desc{font-family:'Source Sans 3',system-ui,sans-serif;font-size:1rem;line-height:1.6;color:#6B7280}"
+      "css": ".ds-card{position:relative;display:flex;align-items:flex-start;gap:20px;background:#FFFFFF;border:1px solid #E7E5E4;border-radius:16px;padding:32px;text-decoration:none;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s}.ds-card:hover{transform:translateY(-4px);box-shadow:0 10px 15px -3px rgba(0,0,0,0.1);border-color:rgba(27,107,42,0.3)}.ds-card-edge{position:absolute;top:0;left:0;right:0;height:2px;background:#1B6B2A;transform:scaleX(0);transform-origin:left;transition:transform .3s}.ds-card:hover .ds-card-edge{transform:scaleX(1)}.ds-card-icon{flex-shrink:0;width:56px;height:56px;border-radius:12px;background:#E8F0EA;display:flex;align-items:center;justify-content:center}.ds-card-body{display:flex;flex-direction:column;gap:8px}.ds-card-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.ds-card-title{font-family:'DM Serif Display',Georgia,serif;font-size:1.25rem;color:#111827}.ds-tag{font-family:'Source Sans 3',system-ui,sans-serif;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#1B6B2A;background:#EDF3EE;padding:2px 10px;border-radius:9999px}.ds-card-desc{font-family:'Source Sans 3',system-ui,sans-serif;font-size:1rem;line-height:1.6;color:#6B7280}"
     },
     {
       "name": "Filter Pill",
@@ -109,7 +109,7 @@
       "refersTo": "chip-filter",
       "description": "Portfolio category filter. Active is solid green; idle is white with a hairline border.",
       "html": "<div style='display:flex;gap:8px;flex-wrap:wrap'><button class='ds-pill ds-pill-active'>All Projects</button><button class='ds-pill'>Patios</button><button class='ds-pill'>Turf</button></div>",
-      "css": ".ds-pill{font-family:'Source Sans 3',system-ui,sans-serif;font-size:.875rem;font-weight:500;padding:10px 20px;border-radius:9999px;background:#FFFFFF;color:#4B5563;border:1px solid #E5E7EB;cursor:pointer;transition:border-color .3s,color .3s,background .3s,box-shadow .3s}.ds-pill:hover{border-color:#1B6B2A;color:#1B6B2A}.ds-pill-active{background:#1B6B2A;color:#FFFFFF;border-color:#1B6B2A;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1)}.ds-pill:focus-visible{outline:2px solid #1B6B2A;outline-offset:2px}"
+      "css": ".ds-pill{font-family:'Source Sans 3',system-ui,sans-serif;font-size:.875rem;font-weight:500;padding:10px 20px;border-radius:9999px;background:#FFFFFF;color:#57534E;border:1px solid #E7E5E4;cursor:pointer;transition:border-color .3s,color .3s,background .3s,box-shadow .3s}.ds-pill:hover{border-color:#1B6B2A;color:#1B6B2A}.ds-pill-active{background:#1B6B2A;color:#FFFFFF;border-color:#1B6B2A;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1)}.ds-pill:focus-visible{outline:2px solid #1B6B2A;outline-offset:2px}"
     },
     {
       "name": "Navigation Bar",
@@ -117,7 +117,7 @@
       "refersTo": "nav",
       "description": "Fixed white bar with serif wordmark, sans links, and the green Book Consultation CTA.",
       "html": "<nav class='ds-nav'><span class='ds-nav-brand'>Visionable</span><div class='ds-nav-links'><a class='ds-nav-link' href='#'>Portfolio</a><a class='ds-nav-link' href='#'>About</a><a class='ds-nav-link' href='#'>Blog</a><a class='ds-nav-cta' href='#'>Book Consultation</a></div></nav>",
-      "css": ".ds-nav{display:flex;align-items:center;justify-content:space-between;gap:24px;background:#FFFFFF;border-bottom:1px solid #F3F4F6;box-shadow:0 1px 2px rgba(0,0,0,0.05);padding:14px 24px;border-radius:8px}.ds-nav-brand{font-family:'DM Serif Display',Georgia,serif;font-size:1.25rem;color:#1B6B2A}.ds-nav-links{display:flex;align-items:center;gap:20px}.ds-nav-link{font-family:'Source Sans 3',system-ui,sans-serif;font-size:.875rem;font-weight:500;color:#4B5563;text-decoration:none;transition:color .2s}.ds-nav-link:hover{color:#1B6B2A}.ds-nav-cta{font-family:'Source Sans 3',system-ui,sans-serif;font-size:.875rem;font-weight:600;color:#FFFFFF;background:#1B6B2A;padding:10px 20px;border-radius:8px;text-decoration:none;transition:background .2s}.ds-nav-cta:hover{background:#145520}"
+      "css": ".ds-nav{display:flex;align-items:center;justify-content:space-between;gap:24px;background:#FFFFFF;border-bottom:1px solid #F5F5F4;box-shadow:0 1px 2px rgba(0,0,0,0.05);padding:14px 24px;border-radius:8px}.ds-nav-brand{font-family:'DM Serif Display',Georgia,serif;font-size:1.25rem;color:#1B6B2A}.ds-nav-links{display:flex;align-items:center;gap:20px}.ds-nav-link{font-family:'Source Sans 3',system-ui,sans-serif;font-size:.875rem;font-weight:500;color:#57534E;text-decoration:none;transition:color .2s}.ds-nav-link:hover{color:#1B6B2A}.ds-nav-cta{font-family:'Source Sans 3',system-ui,sans-serif;font-size:.875rem;font-weight:600;color:#FFFFFF;background:#1B6B2A;padding:10px 20px;border-radius:8px;text-decoration:none;transition:background .2s}.ds-nav-cta:hover{background:#145520}"
     }
   ],
   "narrative": {
@@ -134,13 +134,13 @@
       { "name": "The Marigold Rarity Rule", "section": "colors", "body": "Golden Marigold (#E8960C) means \"act now.\" It belongs to one action per view and the rating stars, nothing else. If marigold covers more than roughly 10% of a screen, the screen is wrong. Forest green carries everything else." },
       { "name": "The Warm Neutral Rule", "section": "colors", "body": "Neutrals tint warm. The page ground is #FEFDFB and large panels are #FAFAF8 or #F5F5F2, never a clinical pure white field. Pure #FFFFFF is allowed only for crisp content cards sitting on a warm ground." },
       { "name": "The Serif Weight Rule", "section": "typography", "body": "DM Serif Display ships a single weight (400). Applying font-bold or font-semibold to a serif heading triggers synthetic faux-bold, which smears a display serif and reads cheap. Set serif headings at 400 and create hierarchy with size, never with weight." },
-      { "name": "The Label Caps Rule", "section": "typography", "body": "All-caps is for labels and tags only (Source Sans 3 600, 0.05em tracking). Never set headings or body copy in all caps." },
+      { "name": "The Label Caps Rule", "section": "typography", "body": "All-caps is for labels, tags and eyebrows only (Source Sans 3 600; 0.05em on tags, 0.12em to 0.2em on eyebrows). Never set headings or body copy in all caps." },
       { "name": "The Flat-by-Default Rule", "section": "elevation", "body": "A surface is flat with a 1px warm border until the user interacts with it. On hover or focus it earns a Lift shadow and a translate-y of 4px (cards) or 2px (CTAs), returning to flat on release. Never ship a resting drop-shadow on a card." }
     ],
     "dos": [
       "Do lead with real, full-bleed project photography and let the dark green gradient scrim carry hero text contrast.",
       "Do reserve Golden Marigold (#E8960C) for the single primary action per view; use Cultivated Forest Green (#1B6B2A) for brand chrome, links, and secondary actions.",
-      "Do keep surfaces flat with a hairline border (#E5E7EB) at rest and lift them (translate-y, shadow-lg) only on hover or focus.",
+      "Do keep surfaces flat with a hairline border (#E7E5E4) at rest and lift them (translate-y, shadow-lg) only on hover or focus.",
       "Do give elements room: 32px card padding, generous section spacing, one clear path to the free consultation per section.",
       "Do pair DM Serif Display headings with Source Sans 3 body, and separate two headings by size, not weight.",
       "Do prefer warm surfaces (#FEFDFB page, #FAFAF8 panels) over pure white for large areas, and keep focus rings visible (focus:ring-2 focus:ring-primary).",
@@ -149,7 +149,7 @@
     "donts": [
       "Don't use clip-art service icons or stock \"happy crew\" photography. Use real project photos and thin line icons (strokeWidth 1.5).",
       "Don't add loud \"FREE QUOTE\" banners, countdown urgency, or hard-sell pricing blocks.",
-      "Don't pile up badge soup: rows of trust seals, review-platform logos, and certification clutter. One quiet 5.0 rating line is enough.",
+      "Don't pile up badge soup: rows of trust seals, review-platform logos, or certification logos. One quiet rating line plus up to three plain-text credential lines is the ceiling, and only for credentials the business holds.",
       "Don't build crowded, busy layouts that read as a default template or a bargain operator. Restraint is the premium signal.",
       "Don't apply font-bold or font-semibold to DM Serif Display headings; it triggers faux-bold. Use size for hierarchy.",
       "Don't use a colored border-left or border-right thicker than 1px as a stripe accent; the only edge accent is the top hairline that animates in on hover.",

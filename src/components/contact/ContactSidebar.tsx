@@ -4,9 +4,10 @@ import {
 } from "@/content/contact";
 import { Check } from "lucide-react";
 
-export function ContactSidebar() {
+export function ContactSidebar({ showContactCards = true }: { showContactCards?: boolean }) {
   return (
     <div className="lg:col-span-2 space-y-6">
+      {showContactCards && (
       <div className="grid grid-cols-2 gap-4">
         {contactInfo.map((item) => (
           <div key={item.title} className="bg-surface rounded-xl p-4 border border-stone-200">
@@ -17,6 +18,7 @@ export function ContactSidebar() {
           </div>
         ))}
       </div>
+      )}
 
       <div className="bg-surface rounded-xl p-6 border border-stone-200">
         <h4 className="font-bold text-stone-900 mb-4">Why Visionable?</h4>

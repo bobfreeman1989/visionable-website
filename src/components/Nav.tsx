@@ -4,17 +4,17 @@ import Link from "next/link";
 import { ChevronDown, Menu, Phone, X } from "lucide-react";
 
 const areaLinks = [
-  { name: "Fremont", slug: "fremont" },
-  { name: "Newark", slug: "newark" },
+  { name: "San Jose", slug: "san-jose" },
+  { name: "Saratoga", slug: "saratoga" },
+  { name: "Los Gatos", slug: "los-gatos" },
+  { name: "Cupertino", slug: "cupertino" },
+  { name: "Sunnyvale", slug: "sunnyvale" },
+  { name: "Mountain View", slug: "mountain-view" },
+  { name: "Los Altos", slug: "los-altos" },
+  { name: "Palo Alto", slug: "palo-alto" },
+  { name: "San Carlos", slug: "san-carlos" },
   { name: "Milpitas", slug: "milpitas" },
-  { name: "Union City", slug: "union-city" },
-  { name: "Hayward", slug: "hayward" },
-  { name: "San Ramon", slug: "san-ramon" },
-  { name: "Dublin", slug: "dublin" },
-  { name: "Pleasanton", slug: "pleasanton" },
-  { name: "Danville", slug: "danville" },
-  { name: "Walnut Creek", slug: "walnut-creek" },
-  { name: "Concord", slug: "concord" },
+  { name: "Fremont", slug: "fremont" },
 ];
 
 const serviceLinks = [
@@ -50,7 +50,7 @@ export default function Nav() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-3">
           <a href="/" className="flex items-center gap-2">
-            <img src="/logo.png" alt="Visionable Landscaping" className="h-10 w-auto" />
+            <img src="/logo.png" alt="Visionable Landscaping" width={360} height={81} className="h-10 w-auto" />
           </a>
 
           {/* Desktop Nav */}

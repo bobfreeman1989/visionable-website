@@ -2,25 +2,25 @@ const steps = [
   {
     num: "01",
     title: "Share Your Vision",
-    desc: "We visit your home, see the space, and learn what matters, weekend cookouts? A quiet morning coffee spot? Somewhere the kids won\u2019t want to leave?",
+    desc: "We visit your home, see the space, and learn what matters to you — weekend cookouts? A quiet morning coffee spot? Somewhere the kids won\u2019t want to leave?",
     timeline: "1-2 hours",
   },
   {
     num: "02",
     title: "See It Before It\u2019s Real",
-    desc: "3D renderings of your future yard. Move things around, try layouts, change materials. Your vision becomes something you can walk through.",
+    desc: "3D renderings of your future yard. Move things around, try layouts, change materials. Your vision becomes something you can walk through, usually within 1–2 weeks of the visit.",
     timeline: "1-2 weeks",
   },
   {
     num: "03",
     title: "Watch It Come to Life",
-    desc: "Our crew builds it, on time, on budget, with daily photo updates. Your vision, taking shape.",
+    desc: "Our own crew builds it — on schedule, to the agreed price, with daily photo updates. Most builds take 2–6 weeks. Your vision, taking shape.",
     timeline: "2-6 weeks",
   },
   {
     num: "04",
     title: "Live In It",
-    desc: "Final walkthrough, care guide, and warranty. Then invite everyone over, the best test of any outdoor space is the first gathering.",
+    desc: "Final walkthrough, care guide, and warranty. Then invite everyone over. The best test of any outdoor space is the first gathering.",
     timeline: "Day 1",
   },
 ];

@@ -1,7 +1,7 @@
 ---
 title: "Backyard Garden Design with Curved Concrete Walkways and Raised Beds"
 date: "2026-05-20"
-updated: "2026-08-01"
+updated: "2026-10-02"
 excerpt: "A Bay Area backyard can be a garden, vegetable space, and family-friendly retreat. Learn design takeaways from a curved walkway and raised bed project."
 category: "Project Showcase"
 coverImage: "/photos/blog/backyard-garden-curved-concrete-walkway-raised-beds-bay-area/hero.webp"
@@ -11,14 +11,14 @@ featured: false
 
 A lively backyard can be more than one thing at the same time. It can be a flower garden, a vegetable garden, and a small family retreat where everyone has a reason to step outside.
 
-This Visionable Landscaping Xiaohongshu project showed a backyard designed around a large curved concrete walkway and several custom raised beds. The result was clean, organized, and practical while still feeling soft and inviting.
+This Visionable Landscaping project is a backyard designed around a large curved concrete walkway and several custom raised beds. The result was clean, organized, and practical while still feeling soft and inviting.
 
 For Bay Area homeowners, especially in [Fremont](/areas/fremont), San Jose, and nearby Silicon Valley communities, this type of backyard design is a strong example of how hardscape and planting areas can work together. Instead of treating the walkway, garden, and open areas as separate pieces, the design uses curves to create movement and raised beds to make gardening easier to enjoy.
 
 ## Project Snapshot
 
 - **Project type:** Backyard garden and family-use landscape design
-- **Visible source details:** Curved concrete walkway, central garden area, custom raised beds, easy-care vegetable-growing layout, and a grey charcoal tan color answer noted in the comments
+- **Key features:** Curved concrete walkway, central garden area, custom raised beds, easy-care vegetable-growing layout, and a grey, charcoal and tan color palette
 - **Design direction:** Soft, layered, clean, and practical
 - **Homeowner goal:** A yard that supports planting, vegetables, and family time
 - **Best-fit audience:** Bay Area homeowners who want a backyard that feels useful without becoming cluttered
@@ -39,7 +39,7 @@ For homeowners planning a [backyard remodel](/services/complete-backyard-remodel
 
 ## Raised Beds Make Gardening Cleaner and Easier
 
-The source note explained that the homeowners wanted to grow vegetables, so Visionable added several custom raised beds. Raised beds are popular because they make a vegetable garden feel intentional rather than temporary.
+The homeowners wanted to grow vegetables, so Visionable added several custom raised beds. Raised beds are popular because they make a vegetable garden feel intentional rather than temporary.
 
 Raised garden beds can offer several practical benefits:
 
