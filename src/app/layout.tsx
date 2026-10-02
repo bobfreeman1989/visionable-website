@@ -95,6 +95,7 @@ const localBusinessSchema = {
   sameAs: [
     "https://www.yelp.com/biz/visionable-landscaping-fremont",
     "https://www.facebook.com/p/Visionable-Landscaping-100089900322769",
+    "https://www.instagram.com/visionablelandscaping/",
     "https://www.techo-bloc.com/landscape-contractor/usa/california/fremont/visionable-landscaping",
   ],
 };

@@ -66,6 +66,17 @@ export default function Footer() {
               <MapPin className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
               <span>581 Emerson St, Fremont, CA 94539</span>
             </div>
+            <div className="flex items-center gap-2">
+              {/* Lucide's Instagram glyph, inlined because Lucide is dropping brand icons. */}
+              <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+              </svg>
+              <a href="https://www.instagram.com/visionablelandscaping/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                @visionablelandscaping
+              </a>
+            </div>
             <a
               href="/contact"
               className="mt-3 inline-block bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors"
