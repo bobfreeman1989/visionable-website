@@ -95,6 +95,7 @@ const localBusinessSchema = {
   sameAs: [
     "https://www.yelp.com/biz/visionable-landscaping-fremont",
     "https://www.facebook.com/p/Visionable-Landscaping-100089900322769",
+    "https://www.instagram.com/visionablelandscaping/",
     "https://www.techo-bloc.com/landscape-contractor/usa/california/fremont/visionable-landscaping",
   ],
 };
@@ -113,7 +114,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: "South Bay Outdoor Living Design & Build | Visionable",
   description:
-    "Transform your backyard into an outdoor living space your family actually uses. Pavers, turf, lighting & more. 5.0★ rated, 200+ projects. Free 3D consultation.",
+    "Transform your backyard into an outdoor living space your family uses. Pavers, turf, lighting & more. 5.0★ rated, 200+ projects. Free 3D consultation.",
   openGraph: {
     title: "South Bay Outdoor Living Design & Build | Visionable",
     description:
