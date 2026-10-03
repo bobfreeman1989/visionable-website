@@ -150,8 +150,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    // suppressHydrationWarning: the inline script below adds the `js` class
+    // before React hydrates, which React would otherwise report as a mismatch.
+    <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Marks the page as scripted before first paint, so scroll-reveal
+            content starts hidden only when the script that reveals it can run. */}
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <script

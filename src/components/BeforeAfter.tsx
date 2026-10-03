@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ChevronsLeftRight } from "lucide-react";
+import Reveal from "@/components/motion/Reveal";
 
 type Pair = {
   id: string;
@@ -55,7 +56,7 @@ export default function BeforeAfter() {
   return (
     <section id="before-after" className="scroll-mt-24 bg-background py-14 sm:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-8 grid gap-4 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+        <Reveal className="mb-8 grid gap-4 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
               Before &amp; After
@@ -67,7 +68,7 @@ export default function BeforeAfter() {
           <p className="text-stone-500 max-w-2xl lg:ml-auto lg:text-right">
             Drag the slider to compare the starting point with the finished build. Switch between three recent projects below.
           </p>
-        </div>
+        </Reveal>
 
         <Comparison key={pair.id} pair={pair} />
 

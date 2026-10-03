@@ -190,6 +190,15 @@ Depth is quiet and earned. Surfaces are flat at rest, separated by warm hairline
 ### Named Rules
 **The Flat-by-Default Rule.** A surface is flat with a 1px warm border until the user interacts with it. On hover or focus it earns a Lift shadow and a translate-y of 4px (cards) or 2px (CTAs), returning to flat on release. Never ship a resting drop-shadow on a card.
 
+### Motion
+Motion confirms what the visitor did or shows where they are. It never carries meaning on its own, and every effect has a still fallback.
+- **Scroll reveal** (`components/motion/Reveal.tsx`): section headers and card rows fade up 24px the first time they enter the viewport, cards staggered 80 to 150ms apart. Content starts hidden only under `html.js`, so no-JS visitors and crawlers always see it.
+- **Process steps:** as each step arrives, its number fills with Forest Green and the dashed connector draws toward the next step.
+- **Hero drift:** the hero photograph moves slower than the page (CSS scroll-driven animation, no JavaScript). Browsers without support show a still image.
+- **Portfolio filter:** cards glide to their new grid slot through the View Transitions API, with the old remount fade as the fallback.
+- **Status feedback:** the form button steps through Sending, then Sent with a check, before the success panel; a failed send shakes the error row once. The testimonial strip shows a thin progress bar and dims an arrow at either end.
+- **Limits:** no motion library (CSS plus IntersectionObserver only), one easing curve (`cubic-bezier(0.22, 1, 0.36, 1)`), nothing loops, and `prefers-reduced-motion` turns every effect off and shows the final state.
+
 ## 5. Components
 
 ### Buttons

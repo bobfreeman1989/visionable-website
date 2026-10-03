@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { homepageFaqs } from "@/content/faq";
+import Reveal from "@/components/motion/Reveal";
 
 export default function FAQ() {
   const [openIdx, setOpenIdx] = useState<number | null>(null);
@@ -9,14 +10,14 @@ export default function FAQ() {
   return (
     <section id="faq" className="py-14 bg-background">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8">
+        <Reveal className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl text-stone-900 mb-4">
             Questions? We&apos;ve Got Answers.
           </h2>
           <p className="text-stone-500">
             Everything you need to know before getting started.
           </p>
-        </div>
+        </Reveal>
         <div className="space-y-3">
           {homepageFaqs.map((f, i) => (
               <div key={i} className="border border-stone-200 rounded-xl overflow-hidden bg-white">
