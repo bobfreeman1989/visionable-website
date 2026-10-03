@@ -1,3 +1,5 @@
+import Reveal from "@/components/motion/Reveal";
+
 const steps = [
   {
     num: "01",
@@ -29,24 +31,25 @@ export default function Process() {
   return (
     <section id="process" className="py-14 bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10">
+        <Reveal className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl text-stone-900 mb-4">
             From Vision to &ldquo;Come Over for Dinner&rdquo;
           </h2>
           <p className="text-stone-500 max-w-2xl mx-auto">
             Four steps from the yard you have to the outdoor space you&apos;ve been picturing.
           </p>
-        </div>
+        </Reveal>
 
         {/* Horizontal 4-column layout */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((s, i) => (
-              <div key={s.num} className="relative bg-background rounded-2xl p-6 border border-stone-200 hover:shadow-lg hover:-translate-y-1 transition-[transform,box-shadow] duration-300 h-full group">
+            <Reveal key={s.num} delay={i * 150} className="h-full">
+              <div className="relative bg-background rounded-2xl p-6 border border-stone-200 hover:shadow-lg hover:-translate-y-1 transition-[transform,box-shadow] duration-300 h-full group">
                 {/* Connector line */}
                 {i < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-10 -right-3 w-6 border-t-2 border-dashed border-primary/30" />
+                  <div className="process-connector hidden lg:block absolute top-10 -right-3 w-6 border-t-2 border-dashed border-primary/30" />
                 )}
-                <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold mb-3 group-hover:bg-primary-dark transition-colors duration-300">
+                <div className="process-dot inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white text-sm font-bold mb-3">
                   {s.num}
                 </div>
                 <h3 className="text-lg text-stone-900 mb-2">{s.title}</h3>
@@ -55,6 +58,7 @@ export default function Process() {
                   {s.timeline}
                 </span>
               </div>
+            </Reveal>
           ))}
         </div>
       </div>

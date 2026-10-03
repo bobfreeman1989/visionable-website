@@ -1,9 +1,11 @@
 "use client";
 import { useState, useMemo } from "react";
+import { flushSync } from "react-dom";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, MapPin } from "lucide-react";
 import { portfolioProjects } from "@/content/gallery";
+import Reveal from "@/components/motion/Reveal";
 
 const categories = ["All", "Hardscaping", "Landscaping", "Outdoor Living"];
 
@@ -20,6 +22,17 @@ export default function Portfolio() {
   );
 
   function switchCategory(cat: string) {
+    if (cat === active) return;
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // Where the browser supports View Transitions, each card keeps a stable
+    // view-transition-name, so cards that stay glide to their new grid slot and
+    // the rest fade in or out. Elsewhere the grid re-mounts with a short fade.
+    if ("startViewTransition" in document && !reduceMotion) {
+      document.startViewTransition(() => {
+        flushSync(() => setActive(cat));
+      });
+      return;
+    }
     setActive(cat);
     setAnimKey((k) => k + 1);
   }
@@ -27,7 +40,7 @@ export default function Portfolio() {
   return (
     <section id="portfolio" className="py-16 bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-10 grid gap-5 lg:grid-cols-[1fr_auto] lg:items-end">
+        <Reveal className="mb-10 grid gap-5 lg:grid-cols-[1fr_auto] lg:items-end">
           <div>
             <h2 className="text-3xl md:text-4xl text-stone-900 mb-4">Our Recent Projects</h2>
             <p className="text-stone-500 max-w-2xl">
@@ -50,7 +63,7 @@ export default function Portfolio() {
               </button>
             ))}
           </div>
-        </div>
+        </Reveal>
 
         {/* Uniform 4:3 grid */}
         <div key={animKey} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 animate-fade-in">
@@ -60,6 +73,7 @@ export default function Portfolio() {
               // Phones get the first six; twelve full-width cards was two
               // screens of scrolling before the visitor reached anything else.
               className={`group relative rounded-xl overflow-hidden ${i >= 6 ? "hidden sm:block" : ""}`}
+              style={{ viewTransitionName: `portfolio-${p.id}` }}
             >
               <div className="relative aspect-[4/3]">
                 <Image
