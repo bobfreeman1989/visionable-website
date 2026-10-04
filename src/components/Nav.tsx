@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, Menu, Phone, X } from "lucide-react";
 
@@ -50,7 +51,7 @@ export default function Nav() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-3">
           <a href="/" className="flex items-center gap-2">
-            <img src="/logo.png" alt="Visionable Landscaping" width={360} height={81} className="h-10 w-auto" />
+            <Image src="/logo.png" alt="Visionable Landscaping" width={360} height={81} priority className="h-10 w-auto" />
           </a>
 
           {/* Desktop Nav */}
