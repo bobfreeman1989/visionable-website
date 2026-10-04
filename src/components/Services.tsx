@@ -1,9 +1,10 @@
-import {
-  featuredServices,
-  secondaryServices,
-} from "@/content/services";
-import { FeaturedServiceCard } from "@/components/services/FeaturedServiceCard";
-import { SecondaryServiceCard } from "@/components/services/SecondaryServiceCard";
+import { featuredServices, secondaryServices } from "@/content/services";
+import { photos } from "@/content/gallery";
+import ServiceShowcase from "@/components/services/ServiceShowcase";
+
+const alts = [...featuredServices, ...secondaryServices].map(
+  (s) => photos.find((p) => p.src === s.photo)?.alt ?? ""
+);
 
 export default function Services() {
   return (
@@ -17,18 +18,7 @@ export default function Services() {
             You imagine how you want to live outdoors. We figure out how to build it, and make sure it lasts.
           </p>
         </div>
-
-        <div className="grid md:grid-cols-2 gap-6 mb-6">
-          {featuredServices.map((service) => (
-            <FeaturedServiceCard key={service.title} service={service} />
-          ))}
-        </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {secondaryServices.map((service) => (
-            <SecondaryServiceCard key={service.title} service={service} />
-          ))}
-        </div>
+        <ServiceShowcase alts={alts} />
       </div>
     </section>
   );

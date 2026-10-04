@@ -41,6 +41,7 @@ const pairs: Pair[] = [
 
 export default function BeforeAfter() {
   const [activeIdx, setActiveIdx] = useState(0);
+  const hoverTimer = useRef<ReturnType<typeof setTimeout>>();
   const pair = pairs[activeIdx];
 
   useEffect(() => {
@@ -79,6 +80,13 @@ export default function BeforeAfter() {
                 type="button"
                 role="tab"
                 onClick={() => setActiveIdx(i)}
+                // Hover previews a case too; the short delay keeps a cursor
+                // passing over on its way elsewhere from swapping the photo.
+                onMouseEnter={() => {
+                  clearTimeout(hoverTimer.current);
+                  hoverTimer.current = setTimeout(() => setActiveIdx(i), 120);
+                }}
+                onMouseLeave={() => clearTimeout(hoverTimer.current)}
                 aria-selected={i === activeIdx}
                 className={`rounded-xl border px-4 py-3 text-left transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary ${
                   i === activeIdx
