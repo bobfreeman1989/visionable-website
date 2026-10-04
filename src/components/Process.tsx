@@ -1,9 +1,10 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import Image from "next/image";
 import * as m from "motion/react-m";
-import MotionRoot from "@/components/motion/MotionRoot";
+import { useInView, useReducedMotion } from "motion/react";
+import MotionRoot, { ease } from "@/components/motion/MotionRoot";
 
 // Steps 1 and 4 are the same Los Altos yard, so the section opens on the
 // starting point and closes on the finished build. Steps 2 and 3 use finished
@@ -44,10 +45,9 @@ const steps = [
   },
 ];
 
-export default function Process() {
-  const [active, setActive] = useState(0);
-  const baseId = useId();
+const STEP_MS = 5000;
 
+export default function Process() {
   return (
     <section id="process" className="py-14 bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,90 +59,151 @@ export default function Process() {
             Four steps from the yard you have to the outdoor space you&apos;ve been picturing.
           </p>
         </div>
-
         <MotionRoot>
-          <div className="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
-            {/* Photo stage: all four stay mounted and crossfade, so switching never waits on a fetch */}
-            <div className="relative aspect-[4/3] lg:aspect-auto lg:min-h-[28rem] overflow-hidden rounded-2xl bg-stone-200 lg:order-2">
-              {steps.map((s, i) => (
-                <m.div
-                  key={s.num}
-                  className="absolute inset-0"
-                  initial={false}
-                  animate={{ opacity: i === active ? 1 : 0, scale: i === active ? 1 : 1.04 }}
-                  transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                  aria-hidden={i !== active}
-                >
-                  <Image
-                    src={s.src}
-                    alt={i === active ? s.alt : ""}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 55vw"
-                  />
-                </m.div>
-              ))}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/0 to-black/0 pointer-events-none" />
-              <p className="absolute bottom-4 left-5 text-sm font-medium text-white/90" aria-hidden="true">
-                Step {steps[active].num} / 0{steps.length}
-              </p>
-            </div>
-
-            <ol className="flex flex-col gap-3 lg:order-1">
-              {steps.map((s, i) => {
-                const open = i === active;
-                const panelId = `${baseId}-panel-${i}`;
-                const buttonId = `${baseId}-button-${i}`;
-                return (
-                  <li
-                    key={s.num}
-                    className={`rounded-2xl border transition-colors duration-300 ${
-                      open ? "bg-background border-primary/30 shadow-md" : "bg-background/60 border-stone-200 hover:border-primary/30"
-                    }`}
-                  >
-                    <h3>
-                      <button
-                        id={buttonId}
-                        type="button"
-                        aria-expanded={open}
-                        aria-controls={panelId}
-                        onClick={() => setActive(i)}
-                        className="flex w-full items-center gap-4 px-5 py-4 text-left rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                      >
-                        <span
-                          className={`inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold transition-colors duration-300 ${
-                            open ? "bg-primary text-white" : "bg-primary/10 text-primary"
-                          }`}
-                        >
-                          {s.num}
-                        </span>
-                        <span className="text-lg text-stone-900">{s.title}</span>
-                      </button>
-                    </h3>
-                    {/* Collapsed panels stay in the DOM so every step's copy is still indexable */}
-                    <m.div
-                      id={panelId}
-                      role="region"
-                      aria-labelledby={buttonId}
-                      aria-hidden={!open}
-                      initial={false}
-                      animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
-                      className="overflow-hidden"
-                    >
-                      <div className="px-5 pb-5 pl-[4.25rem]">
-                        <p className="text-sm text-stone-500 mb-4 leading-relaxed">{s.desc}</p>
-                        <span className="inline-block text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
-                          {s.timeline}
-                        </span>
-                      </div>
-                    </m.div>
-                  </li>
-                );
-              })}
-            </ol>
-          </div>
+          <Steps />
         </MotionRoot>
       </div>
     </section>
+  );
+}
+
+function Steps() {
+  const [active, setActive] = useState(0);
+  const [prev, setPrev] = useState<number | null>(null);
+  const [paused, setPaused] = useState(false);
+  const [autoplay, setAutoplay] = useState(true);
+  const baseId = useId();
+  const rootRef = useRef<HTMLDivElement>(null);
+  const inView = useInView(rootRef, { amount: 0.5 });
+  const reduceMotion = useReducedMotion();
+  const playing = autoplay && inView && !paused && !reduceMotion;
+
+  function go(i: number) {
+    if (i === active) return;
+    setPrev(active);
+    setActive(i);
+  }
+
+  // Walk through the steps on a timer while the section is on screen; a
+  // click hands control to the visitor for good.
+  useEffect(() => {
+    if (!playing) return;
+    const t = setTimeout(() => go((active + 1) % steps.length), STEP_MS);
+    return () => clearTimeout(t);
+  });
+
+  return (
+    <div
+      ref={rootRef}
+      className="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocus={() => setPaused(true)}
+      onBlur={() => setPaused(false)}
+    >
+      {/* Fixed 4:3 stage: its size never follows the accordion, so switching only repaints the photo */}
+      <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-stone-200 lg:order-2">
+        {/* Every step stays mounted underneath so its photo is cached before it wipes in */}
+        {steps.map((s, i) => (
+          <Image
+            key={s.num}
+            src={s.src}
+            alt=""
+            aria-hidden="true"
+            fill
+            className={`object-cover ${i === prev ? "" : "opacity-0"}`}
+            sizes="(max-width: 1024px) 100vw, 55vw"
+          />
+        ))}
+        <m.div
+          key={active}
+          className="absolute inset-0"
+          initial={prev === null ? false : { clipPath: "inset(0% 0% 0% 100%)", scale: 1.08 }}
+          animate={{ clipPath: "inset(0% 0% 0% 0%)", scale: 1 }}
+          transition={{ duration: 0.9, ease }}
+        >
+          <Image
+            src={steps[active].src}
+            alt={steps[active].alt}
+            fill
+            className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 55vw"
+          />
+        </m.div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-black/0 pointer-events-none" />
+        <div className="absolute bottom-4 left-5 right-5 flex items-center gap-3 text-white" aria-hidden="true">
+          <span className="text-sm font-medium tabular-nums">
+            {steps[active].num} / 0{steps.length}
+          </span>
+          <span className="text-lg font-heading">{steps[active].title}</span>
+        </div>
+      </div>
+
+      <ol className="flex flex-col gap-3 lg:order-1">
+        {steps.map((s, i) => {
+          const open = i === active;
+          const panelId = `${baseId}-panel-${i}`;
+          const buttonId = `${baseId}-button-${i}`;
+          return (
+            <li
+              key={s.num}
+              className={`relative overflow-hidden rounded-2xl border transition-[background-color,border-color,box-shadow] duration-300 ${
+                open ? "bg-background border-primary/30 shadow-md" : "bg-background/60 border-stone-200 hover:border-primary/30"
+              }`}
+            >
+              <h3>
+                <button
+                  id={buttonId}
+                  type="button"
+                  aria-expanded={open}
+                  aria-controls={panelId}
+                  onClick={() => {
+                    setAutoplay(false);
+                    go(i);
+                  }}
+                  className="flex w-full items-center gap-4 px-5 py-4 text-left rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                >
+                  <span
+                    className={`inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold transition-colors duration-300 ${
+                      open ? "bg-primary text-white" : "bg-primary/10 text-primary"
+                    }`}
+                  >
+                    {s.num}
+                  </span>
+                  <span className="text-lg text-stone-900">{s.title}</span>
+                </button>
+              </h3>
+              {/* Collapsed panels stay in the DOM so every step's copy is still indexable */}
+              <m.div
+                id={panelId}
+                role="region"
+                aria-labelledby={buttonId}
+                aria-hidden={!open}
+                initial={false}
+                animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
+                className="overflow-hidden"
+              >
+                <div className="px-5 pb-5 pl-[4.25rem]">
+                  <p className="text-sm text-stone-500 mb-4 leading-relaxed">{s.desc}</p>
+                  <span className="inline-block text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
+                    {s.timeline}
+                  </span>
+                </div>
+              </m.div>
+              {/* Autoplay progress: restarts with each step, freezes while paused */}
+              {open && autoplay && !reduceMotion && (
+                <m.div
+                  key={`${active}-${playing}`}
+                  className="absolute bottom-0 left-0 h-0.5 w-full origin-left bg-primary"
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: playing ? 1 : 0 }}
+                  transition={{ duration: playing ? STEP_MS / 1000 : 0, ease: "linear" }}
+                />
+              )}
+            </li>
+          );
+        })}
+      </ol>
+    </div>
   );
 }
