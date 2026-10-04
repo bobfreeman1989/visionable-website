@@ -77,6 +77,19 @@ function Steps() {
   const inView = useInView(rootRef, { amount: 0.5 });
   const reduceMotion = useReducedMotion();
   const playing = autoplay && inView && !paused && !reduceMotion;
+  // Desktop with a mouse: every step stays expanded and the pointer picks the
+  // photo. Collapsing rows under a hovering cursor would shift the next row
+  // into place and re-trigger hover, so that mode never changes layout.
+  const [canHover, setCanHover] = useState(false);
+  const hoverTimer = useRef<ReturnType<typeof setTimeout>>();
+
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px) and (hover: hover)");
+    const update = () => setCanHover(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
 
   function go(i: number) {
     if (i === active) return;
@@ -84,8 +97,15 @@ function Steps() {
     setActive(i);
   }
 
+  // A short intent delay so sweeping the cursor across rows doesn't fire a
+  // wipe for every row it passes over.
+  function hoverTo(i: number) {
+    clearTimeout(hoverTimer.current);
+    hoverTimer.current = setTimeout(() => go(i), 80);
+  }
+
   // Walk through the steps on a timer while the section is on screen; a
-  // click hands control to the visitor for good.
+  // click hands control to the visitor for good, hover pauses it.
   useEffect(() => {
     if (!playing) return;
     const t = setTimeout(() => go((active + 1) % steps.length), STEP_MS);
@@ -95,14 +115,19 @@ function Steps() {
   return (
     <div
       ref={rootRef}
-      className="grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-start"
+      className={`grid gap-6 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] ${canHover ? "items-stretch" : "lg:items-start"}`}
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocus={() => setPaused(true)}
       onBlur={() => setPaused(false)}
     >
-      {/* Fixed 4:3 stage: its size never follows the accordion, so switching only repaints the photo */}
-      <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-stone-200 lg:order-2">
+      {/* 4:3 stage that never follows the accordion. In hover mode the rows
+          never change height, so the stage can safely match the list. */}
+      <div
+        className={`relative overflow-hidden rounded-2xl bg-stone-200 lg:order-2 ${
+          canHover ? "min-h-[26rem]" : "aspect-[4/3]"
+        }`}
+      >
         {/* Every step stays mounted underneath so its photo is cached before it wipes in */}
         {steps.map((s, i) => (
           <Image
@@ -120,7 +145,7 @@ function Steps() {
           className="absolute inset-0"
           initial={prev === null ? false : { clipPath: "inset(0% 0% 0% 100%)", scale: 1.08 }}
           animate={{ clipPath: "inset(0% 0% 0% 0%)", scale: 1 }}
-          transition={{ duration: 0.9, ease }}
+          transition={{ duration: 0.7, ease }}
         >
           <Image
             src={steps[active].src}
@@ -139,29 +164,33 @@ function Steps() {
         </div>
       </div>
 
-      <ol className="flex flex-col gap-3 lg:order-1">
+      <ol className="flex flex-col gap-2 lg:order-1">
         {steps.map((s, i) => {
           const open = i === active;
+          const expanded = canHover || open;
           const panelId = `${baseId}-panel-${i}`;
           const buttonId = `${baseId}-button-${i}`;
           return (
             <li
               key={s.num}
-              className={`relative overflow-hidden rounded-2xl border transition-[background-color,border-color,box-shadow] duration-300 ${
+              onMouseEnter={canHover ? () => hoverTo(i) : undefined}
+              onMouseLeave={canHover ? () => clearTimeout(hoverTimer.current) : undefined}
+              className={`relative overflow-hidden rounded-2xl border transition-[background-color,border-color,box-shadow,opacity] duration-300 ${
                 open ? "bg-background border-primary/30 shadow-md" : "bg-background/60 border-stone-200 hover:border-primary/30"
-              }`}
+              } ${canHover && !open ? "opacity-60" : ""}`}
             >
               <h3>
                 <button
                   id={buttonId}
                   type="button"
-                  aria-expanded={open}
+                  aria-expanded={expanded}
                   aria-controls={panelId}
                   onClick={() => {
                     setAutoplay(false);
                     go(i);
                   }}
-                  className="flex w-full items-center gap-4 px-5 py-4 text-left rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                  onFocus={canHover ? () => go(i) : undefined}
+                  className="flex w-full items-center gap-4 px-5 py-3.5 text-left rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                 >
                   <span
                     className={`inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-sm font-bold transition-colors duration-300 ${
@@ -171,6 +200,9 @@ function Steps() {
                     {s.num}
                   </span>
                   <span className="text-lg text-stone-900">{s.title}</span>
+                  <span className="ml-auto shrink-0 text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
+                    {s.timeline}
+                  </span>
                 </button>
               </h3>
               {/* Collapsed panels stay in the DOM so every step's copy is still indexable */}
@@ -178,16 +210,13 @@ function Steps() {
                 id={panelId}
                 role="region"
                 aria-labelledby={buttonId}
-                aria-hidden={!open}
+                aria-hidden={!expanded}
                 initial={false}
-                animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
+                animate={{ height: expanded ? "auto" : 0, opacity: expanded ? 1 : 0 }}
                 className="overflow-hidden"
               >
-                <div className="px-5 pb-5 pl-[4.25rem]">
-                  <p className="text-sm text-stone-500 mb-4 leading-relaxed">{s.desc}</p>
-                  <span className="inline-block text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
-                    {s.timeline}
-                  </span>
+                <div className="px-5 pb-4 pl-[4.25rem]">
+                  <p className="text-sm text-stone-500 leading-relaxed">{s.desc}</p>
                 </div>
               </m.div>
               {/* Autoplay progress: restarts with each step, freezes while paused */}
