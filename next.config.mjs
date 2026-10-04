@@ -18,10 +18,13 @@ const retiredCities = [
 const nextConfig = {
   async headers() {
     // Inline scripts are needed for the JSON-LD blocks, the deferred gtag
-    // loader and Next's own hydration data, hence 'unsafe-inline'.
+    // loader and Next's own hydration data, hence 'unsafe-inline'. `next dev`
+    // also evals its webpack/React Refresh modules, so 'unsafe-eval' is added
+    // for the dev server only; production builds never get it.
+    const devEval = process.env.NODE_ENV === "development" ? " 'unsafe-eval'" : "";
     const csp = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' https://*.googletagmanager.com https://va.vercel-scripts.com",
+      `script-src 'self' 'unsafe-inline'${devEval} https://*.googletagmanager.com https://va.vercel-scripts.com`,
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: blob: https://*.google-analytics.com https://*.googletagmanager.com https://*.g.doubleclick.net https://www.google.com",
       "font-src 'self' data:",
