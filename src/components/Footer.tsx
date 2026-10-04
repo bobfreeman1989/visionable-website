@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MapPin } from "lucide-react";
 
@@ -45,7 +46,7 @@ export default function Footer() {
         {/* Brand masthead */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 pb-10 border-b border-stone-800">
           <div className="max-w-md">
-            <img src="/logo-white.png" alt="Visionable Landscaping" width={520} height={116} className="h-9 w-auto mb-4" loading="lazy" />
+            <Image src="/logo-white.png" alt="Visionable Landscaping" width={520} height={116} className="h-9 w-auto mb-4" />
             <p className="text-sm leading-relaxed">
               Shaping visions into extraordinary landscapes across the South Bay and Peninsula.
               Premium design-build services for homeowners who demand excellence.
