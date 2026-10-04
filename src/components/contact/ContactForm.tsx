@@ -1,6 +1,6 @@
 "use client";
 import { FormEvent, useState } from "react";
-import { AlertCircle, ArrowRight, Loader2 } from "lucide-react";
+import { AlertCircle, ArrowRight, Check, Loader2 } from "lucide-react";
 import {
   contactBudgetOptions,
   contactServiceOptions,
@@ -8,7 +8,9 @@ import {
 import type { ContactRequest } from "@/lib/contact";
 import { ContactSuccessState } from "@/components/contact/ContactSuccessState";
 
-type Status = "idle" | "sending" | "success" | "error";
+// "sent" is a brief beat where the button itself confirms the send before the
+// form gives way to the success message.
+type Status = "idle" | "sending" | "sent" | "success" | "error";
 
 interface ContactFormProps {
   /** Preselects the service dropdown so a visitor arriving from a service page
@@ -21,6 +23,8 @@ export function ContactForm({ defaultService = "", detailsPlaceholder }: Contact
   const [status, setStatus] = useState<Status>("idle");
   const [serviceChosen, setServiceChosen] = useState(Boolean(defaultService));
   const [budgetChosen, setBudgetChosen] = useState(false);
+  // Bumped on every failure so the error row re-mounts and shakes again.
+  const [errorCount, setErrorCount] = useState(0);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -49,12 +53,14 @@ export function ContactForm({ defaultService = "", detailsPlaceholder }: Contact
         throw new Error("Failed to send contact request");
       }
 
-      setStatus("success");
+      setStatus("sent");
       form.reset();
       setServiceChosen(Boolean(defaultService));
       setBudgetChosen(false);
+      window.setTimeout(() => setStatus("success"), 900);
     } catch {
       setStatus("error");
+      setErrorCount((n) => n + 1);
     }
   }
 
@@ -70,7 +76,7 @@ export function ContactForm({ defaultService = "", detailsPlaceholder }: Contact
       {status === "success" ? (
         <ContactSuccessState onReset={() => setStatus("idle")} />
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-4" aria-busy={status === "sending"}>
+        <form onSubmit={handleSubmit} className="space-y-4" aria-busy={status === "sending" || status === "sent"}>
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
               <label htmlFor="contact-name" className="block text-sm font-medium text-stone-700 mb-1">Full Name *</label>
@@ -123,14 +129,21 @@ export function ContactForm({ defaultService = "", detailsPlaceholder }: Contact
 
           <button
             type="submit"
-            disabled={status === "sending"}
-            className="w-full bg-accent disabled:opacity-70 disabled:cursor-not-allowed text-foreground py-4 rounded-lg font-semibold text-lg transition-[transform,box-shadow] inline-flex items-center justify-center gap-2 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+            disabled={status === "sending" || status === "sent"}
+            className={`w-full bg-accent disabled:cursor-not-allowed text-foreground py-4 rounded-lg font-semibold text-lg transition-[transform,box-shadow,opacity] inline-flex items-center justify-center gap-2 shadow-md enabled:hover:shadow-lg enabled:hover:-translate-y-0.5 ${
+              status === "sending" ? "opacity-70" : ""
+            }`}
           >
             {status === "sending" ? (
-              <>
+              <span key="sending" className="inline-flex items-center gap-2 animate-label-in">
                 <Loader2 className="w-5 h-5 animate-spin" />
                 Sending&hellip;
-              </>
+              </span>
+            ) : status === "sent" ? (
+              <span key="sent" className="inline-flex items-center gap-2 animate-label-in">
+                <Check className="w-5 h-5" strokeWidth={2} />
+                Sent
+              </span>
             ) : (
               <>
                 Share Your Vision
@@ -140,7 +153,7 @@ export function ContactForm({ defaultService = "", detailsPlaceholder }: Contact
           </button>
 
           {status === "error" && (
-            <div role="alert" aria-live="polite" className="flex items-center gap-2 text-red-600 bg-red-50 px-4 py-3 rounded-lg text-sm">
+            <div key={errorCount} role="alert" aria-live="polite" className="flex items-center gap-2 text-red-600 bg-red-50 px-4 py-3 rounded-lg text-sm animate-shake">
               <AlertCircle className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
               Something went wrong. Please try again or call us directly.
             </div>

@@ -88,6 +88,44 @@ h1, h2, h3 {
   .fade-up { animation: none; }
 }
 
+/* Hero photo drifts slower than the page as you scroll past it.
+ * Pure CSS scroll-driven animation; browsers without support keep a still image. */
+@keyframes heroDrift {
+  from { transform: translateY(0) scale(1.06); }
+  to { transform: translateY(18%) scale(1.06); }
+}
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-drift {
+      animation: heroDrift linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 100vh;
+    }
+  }
+}
+
+/* Contact form: the submit label swaps Sending… → Sent, and a failed send
+ * shakes the error row once. */
+@keyframes labelIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-label-in {
+  animation: labelIn 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+.animate-shake {
+  animation: shake 0.4s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-label-in,
+  .animate-shake { animation: none; }
+}
+
 /* Hide scrollbar for testimonials carousel */
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
