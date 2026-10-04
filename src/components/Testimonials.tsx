@@ -70,18 +70,24 @@ export default function Testimonials() {
   );
 }
 
+/** Width of each edge zone, as a share of the track. */
+const EDGE = 0.18;
+/** Top speed in px/s, reached only with the pointer right at the edge (~1 card/s). */
+const MAX_SPEED = 380;
+
 /**
- * On desktop with a mouse, the track follows the pointer: its horizontal
- * position over the track maps to the scroll position (left edge = first
- * review, right edge = last), eased so the cards glide rather than jump.
- * Touch screens keep native swipe with snapping. Returns whether it's active,
- * since scroll-snap has to be off while it drives scrollLeft.
+ * On desktop with a mouse, resting the pointer near either end of the track
+ * scrolls it that way; the middle is a dead zone, so reading a card never
+ * moves it. Speed ramps up with how deep into the edge zone the pointer is.
+ * Touch screens and reduced-motion visitors keep native scrolling with snap.
+ * Returns whether it's active, since scroll-snap has to be off while it
+ * drives scrollLeft.
  */
 function usePointerScroll(ref: React.RefObject<HTMLDivElement>) {
   const [active, setActive] = useState(false);
 
   useEffect(() => {
-    const mq = window.matchMedia("(min-width: 1024px) and (hover: hover)");
+    const mq = window.matchMedia("(min-width: 1024px) and (hover: hover) and (prefers-reduced-motion: no-preference)");
     const update = () => setActive(mq.matches);
     update();
     mq.addEventListener("change", update);
@@ -91,40 +97,46 @@ function usePointerScroll(ref: React.RefObject<HTMLDivElement>) {
   useEffect(() => {
     const el = ref.current;
     if (!active || !el) return;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    let target = el.scrollLeft;
-    let current = el.scrollLeft;
+    let velocity = 0; // px/s, negative = towards the first review
     let frame = 0;
+    let last = 0;
+    let pos = el.scrollLeft;
 
-    function tick() {
-      current += (target - current) * 0.12;
-      if (Math.abs(target - current) < 0.5) current = target;
-      el!.scrollLeft = current;
-      frame = current === target ? 0 : requestAnimationFrame(tick);
-    }
-
-    function onEnter() {
-      // Pick up wherever the arrow buttons or a trackpad left it.
-      current = el!.scrollLeft;
+    function tick(now: number) {
+      const dt = last ? Math.min(now - last, 50) / 1000 : 0;
+      last = now;
+      // Track the position as a float: slow drifts move well under a pixel
+      // per frame, which scrollLeft alone would round away.
+      const max = el!.scrollWidth - el!.clientWidth;
+      pos = Math.min(max, Math.max(0, pos + velocity * dt));
+      el!.scrollLeft = pos;
+      const atEnd = (velocity < 0 && pos === 0) || (velocity > 0 && pos === max);
+      frame = velocity && !atEnd ? requestAnimationFrame(tick) : 0;
     }
 
     function onMove(e: MouseEvent) {
       const rect = el!.getBoundingClientRect();
-      // The outer 12% on each side are dead zones, so the ends are easy to reach.
-      const ratio = Math.min(1, Math.max(0, (e.clientX - rect.left - rect.width * 0.12) / (rect.width * 0.76)));
-      target = ratio * (el!.scrollWidth - el!.clientWidth);
-      if (reduce) {
-        el!.scrollLeft = current = target;
-      } else if (!frame) {
+      const x = (e.clientX - rect.left) / rect.width;
+      const depth = x < EDGE ? -(EDGE - x) / EDGE : x > 1 - EDGE ? (x - (1 - EDGE)) / EDGE : 0;
+      // Squared so the first part of the zone is a gentle drift.
+      velocity = Math.sign(depth) * depth * depth * MAX_SPEED;
+      if (velocity && !frame) {
+        last = 0;
+        // Resume from wherever the arrow buttons or a trackpad left it.
+        pos = el!.scrollLeft;
         frame = requestAnimationFrame(tick);
       }
     }
 
-    el.addEventListener("mouseenter", onEnter);
+    function onLeave() {
+      velocity = 0;
+    }
+
     el.addEventListener("mousemove", onMove);
+    el.addEventListener("mouseleave", onLeave);
     return () => {
-      el.removeEventListener("mouseenter", onEnter);
       el.removeEventListener("mousemove", onMove);
+      el.removeEventListener("mouseleave", onLeave);
       cancelAnimationFrame(frame);
     };
   }, [active, ref]);
