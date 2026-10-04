@@ -5,7 +5,7 @@ import { heroBadges } from "@/content/hero";
 export default function Hero() {
   return (
     <section className="relative pt-20 min-h-[70vh] lg:min-h-screen flex items-center overflow-hidden">
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 hero-drift">
         <picture>
           <source srcSet="/hero.webp" media="(min-width: 768px)" type="image/webp" />
           <img

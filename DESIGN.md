@@ -190,6 +190,24 @@ Depth is quiet and earned. Surfaces are flat at rest, separated by warm hairline
 ### Named Rules
 **The Flat-by-Default Rule.** A surface is flat with a 1px warm border until the user interacts with it. On hover or focus it earns a Lift shadow and a translate-y of 4px (cards) or 2px (CTAs), returning to flat on release. Never ship a resting drop-shadow on a card.
 
+### Motion
+Motion confirms what the visitor did, or shows them where they are. It never carries meaning on its own, and every effect has a still fallback.
+
+**Where it lives**
+- **Hero drift:** the hero photograph moves slower than the page (CSS scroll-driven animation, no JavaScript). Browsers without support show a still image.
+- **Process and Services stages:** a list beside one large photo. On desktop with a mouse, hovering or focusing a row selects it and the new photo wipes in from the right. Process also autoplays every 5s while in view, with a progress hairline; it pauses on hover and stops for good after a click. Touch screens get a tap accordion (Process) or a swipeable row of photo cards (Services).
+- **Portfolio:** cards rise in the first time they're seen; filtering slides the remaining cards into their new slots; a card opens into a lightbox that grows out of the card itself.
+- **Before/after:** hovering a case card selects it.
+- **Reviews:** on desktop the strip scrolls only while the pointer rests near either edge, faster the closer it gets (up to about one card a second). The middle is a dead zone, so a card never moves while it's being read.
+- **Status feedback:** the contact button steps through Sending… and Sent ✓ before the success panel; a failed send shakes the error row once.
+
+**Rules**
+- **CSS first.** Hover, fades and anything a keyframe can do stay in CSS. Reach for `motion` only for layout and shared-element animation, wrapped in `components/motion/MotionRoot` (lazy-loaded features, `m.*` elements, `reducedMotion="user"`).
+- **Hover never moves the layout.** Rows that respond to hover keep a fixed height. If hovering one row could shift another under the cursor, the hover would re-trigger. Hover selection waits 80–120ms, so a cursor passing through doesn't fire.
+- **One feel.** Easing is a fast start with a long, soft settle: `ease` from `MotionRoot` for Motion, `cubic-bezier(0.22, 1, 0.36, 1)` in CSS. No bouncy springs. Most transitions run 0.25–0.7s.
+- **Nothing loops forever.** The Process autoplay is the only timed motion, and it yields to the visitor.
+- **Reduced motion:** `prefers-reduced-motion` turns off transforms, the autoplay, the edge scrolling, the hero drift and the shake, and shows the final state. Content is never hidden behind an animation that might not run.
+
 ## 5. Components
 
 ### Buttons
