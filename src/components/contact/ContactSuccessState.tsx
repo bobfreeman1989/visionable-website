@@ -8,7 +8,7 @@ export function ContactSuccessState({ onReset }: ContactSuccessStateProps) {
   return (
     <div className="text-center py-12" aria-live="polite">
       <CheckCircle className="w-12 h-12 text-primary mx-auto mb-4" />
-      <h4 className="text-xl font-bold text-stone-900 mb-2">We Got Your Vision!</h4>
+      <h4 className="text-xl font-bold text-stone-900 mb-2">Thank you. We have your request.</h4>
       <p className="text-stone-500">
         We&apos;ll reach out within 24 hours to schedule your consultation.
       </p>

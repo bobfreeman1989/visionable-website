@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import PhoneLink from "@/components/PhoneLink";
 import { ArrowRight, Phone } from "lucide-react";
 
 export type HeroFact = { label: string; value: string };
@@ -72,13 +73,13 @@ export default function PageHero({
           >
             Share Your Vision <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
           </Link>
-          <a
-            href="tel:+15107555616"
+          <PhoneLink
+            location="page_hero"
             className="border-2 border-white/30 text-white hover:bg-white/10 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-colors"
           >
             <Phone className="w-4 h-4" strokeWidth={1.5} />
             (510) 755-5616
-          </a>
+          </PhoneLink>
         </div>
 
         {facts && facts.length > 0 && (

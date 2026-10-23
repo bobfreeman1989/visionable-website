@@ -66,7 +66,7 @@ export default function AreasIndexPage() {
           facts={[
             { label: "Cities served", value: `${areas.length} and nearby` },
             { label: "Home base", value: "Fremont, CA" },
-            { label: "Projects built", value: "200+" },
+            { label: "Projects built", value: "100+" },
             { label: "Rated", value: "5.0 on Google & Yelp" },
           ]}
         />
@@ -131,7 +131,7 @@ export default function AreasIndexPage() {
 
         <CTABanner
           title="Ready to talk about your yard?"
-          subtitle="Free consultation anywhere in the South Bay and Peninsula. No pressure, just a conversation."
+          subtitle="Free design consultation anywhere in the South Bay and Peninsula. No pressure, just a conversation."
           primaryText="Share Your Vision"
           secondaryText="Browse Services"
           secondaryHref="/services"

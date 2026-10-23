@@ -46,7 +46,7 @@ export default function BlogIndex() {
         <PageHero
           eyebrow="Design notes & project stories"
           title="Landscape insights for Bay Area homeowners"
-          lede="What we have learned building 200+ outdoor spaces across the Bay Area: materials that hold up, layouts that actually get used, and the questions worth asking before you break ground."
+          lede="What we have learned building 100+ outdoor spaces across the South Bay and Peninsula: materials that hold up, layouts that actually get used, and the questions worth asking before you break ground."
           image={
             featured?.coverImage
               ? { src: featured.coverImage, alt: featured.title }
@@ -68,7 +68,7 @@ export default function BlogIndex() {
 
         <CTABanner
           title="Reading is one thing. Standing in it is another."
-          subtitle="Book a free consultation and we will show you what your yard could become, in 3D, before anything is built."
+          subtitle="Book a free design consultation. In the design phase we show you what your yard could become, in 3D, before anything is built."
           primaryText="Share Your Vision"
           secondaryText="Browse Services"
           secondaryHref="/services"

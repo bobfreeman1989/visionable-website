@@ -204,7 +204,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                 {/* CTA */}
                 <div className="mt-12 bg-primary/5 rounded-2xl p-8 text-center border border-primary/10">
                   <h3 className="text-xl text-stone-900 mb-2">Ready to Transform Your Yard?</h3>
-                  <p className="text-stone-600 mb-4">Schedule a free consultation and let&apos;s bring your vision to life.</p>
+                  <p className="text-stone-600 mb-4">Schedule a free design consultation and let&apos;s bring your vision to life.</p>
                   <a
                     href="/contact"
                     className="inline-flex items-center gap-2 bg-accent text-foreground px-6 py-3 rounded-lg font-semibold transition-all hover:-translate-y-0.5 hover:shadow-lg"
@@ -309,7 +309,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         <div className="mt-16">
           <CTABanner
             title="Ready to build the yard you keep reading about?"
-            subtitle="Free consultation and 3D renderings before anything is built."
+            subtitle="Free design consultation, and 3D renderings in the design phase before anything is built."
             primaryText="Share Your Vision"
             secondaryText="See Our Work"
             secondaryHref="/portfolio"

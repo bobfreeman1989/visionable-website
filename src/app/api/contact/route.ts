@@ -9,6 +9,8 @@ export const runtime = "edge";
 export async function POST(req: NextRequest) {
   try {
     const body = (await req.json()) as ContactRequest;
+    // Attribution fields come from the browser unchecked, so cap their length.
+    const clip = (value?: string) => value?.trim().slice(0, 300) ?? "";
     const payload: ContactRequest = {
       name: body.name?.trim() ?? "",
       email: body.email?.trim() ?? "",
@@ -17,6 +19,10 @@ export async function POST(req: NextRequest) {
       service: body.service?.trim() ?? "",
       budget: body.budget?.trim() ?? "",
       details: body.details?.trim() ?? "",
+      source: clip(body.source),
+      landingPage: clip(body.landingPage),
+      referrer: clip(body.referrer),
+      utm: clip(body.utm),
     };
 
     // Mirror the form: name and email are the only starred fields.

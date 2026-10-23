@@ -26,7 +26,7 @@ export default function Home() {
         <Portfolio />
         <BeforeAfter />
         <CTABanner
-          title="200+ Bay Area Families Had a Vision. We Built It."
+          title="100+ Bay Area Projects. Each One Started as a Vision."
           subtitle="No pressure, just a conversation about what your yard could become."
           primaryText="Share Your Vision"
           secondaryText="See Our Process"

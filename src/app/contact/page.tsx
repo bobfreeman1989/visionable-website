@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ChevronRight, Phone, Mail, MapPin, Clock } from "lucide-react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import PhoneLink from "@/components/PhoneLink";
 import PageHero from "@/components/sections/PageHero";
 import ContactCTA from "@/components/ContactCTA";
 import Accordion from "@/components/sections/Accordion";
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact Visionable Landscaping | Fremont, CA",
     description:
-      "Free consultation with 3D renderings. Call (510) 755-5616 or send your project details — we reply within 24 hours.",
+      "Free design consultation. Call (510) 755-5616 or send your project details — we reply within 24 hours.",
     url: `${BASE_URL}/contact`,
     images: [{ url: heroForService("landscape-design").src }],
   },
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contact Visionable Landscaping | Fremont, CA",
     description:
-      "Free consultation with 3D renderings. Call (510) 755-5616 — we reply within 24 hours.",
+      "Free design consultation. Call (510) 755-5616 — we reply within 24 hours.",
     images: [heroForService("landscape-design").src],
   },
   alternates: { canonical: "/contact" },
@@ -65,7 +66,7 @@ const contactFaqs = [
   },
   {
     q: "Is the consultation really free?",
-    a: "Yes. We visit the property, take measurements, talk through how you want to use the space, and follow up with a proposal and 3D renderings. You only pay if you decide to build.",
+    a: "Yes. We visit the property, take measurements and talk through how you want to use the space at no cost. 3D renderings are part of the paid design phase, so you see the yard before anything is built.",
   },
   {
     q: "What should I have ready before the consultation?",
@@ -139,7 +140,7 @@ export default function ContactPage() {
         <PageHero
           eyebrow="Serving the South Bay & Peninsula"
           title="Contact Visionable Landscaping"
-          lede="Tell us about the yard. We visit, measure, and follow up with 3D renderings before anything is built — at no cost, whether or not you go ahead."
+          lede="Tell us about the yard. The site visit is free: we visit, measure, and talk through what you want. 3D renderings come in the paid design phase, before anything is built."
           image={{ src: heroPhoto.src, alt: heroPhoto.alt }}
           ctaHref="#contact"
           above={
@@ -157,7 +158,7 @@ export default function ContactPage() {
           facts={[
             { label: "Phone", value: "(510) 755-5616" },
             { label: "Response time", value: "Within 24 hours" },
-            { label: "Consultation", value: "Free, with 3D renderings" },
+            { label: "Design consultation", value: "Free site visit" },
             { label: "Licensed", value: "CSLB #1101860" },
           ]}
         />
@@ -183,7 +184,11 @@ export default function ContactPage() {
                     <p className="text-sm text-stone-500 mt-1">{sub}</p>
                   </>
                 );
-                return href ? (
+                return href?.startsWith("tel:") ? (
+                  <PhoneLink key={label} location="contact_details" className="rounded-2xl border border-stone-200 bg-white p-6 transition-[transform,box-shadow,border-color] hover:-translate-y-0.5 hover:shadow-md hover:border-primary/30">
+                    {body}
+                  </PhoneLink>
+                ) : href ? (
                   <a
                     key={label}
                     href={href}
@@ -206,7 +211,7 @@ export default function ContactPage() {
 
         {/* The form itself — same component the rest of the site uses */}
         <ContactCTA
-          title="Book your free consultation"
+          title="Book your free design consultation"
           subtitle="Tell us what you're imagining. We'll show you what's possible — on your property, in 3D, before anything gets built."
           showContactCards={false}
         />

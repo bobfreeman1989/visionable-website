@@ -10,6 +10,7 @@ import PhotoGallery from "@/components/sections/PhotoGallery";
 import Accordion from "@/components/sections/Accordion";
 import Testimonials from "@/components/Testimonials";
 import ContactCTA from "@/components/ContactCTA";
+import PhoneLink from "@/components/PhoneLink";
 
 const BASE_URL = "https://visionablelandscaping.com";
 
@@ -148,8 +149,8 @@ export default function CityPage({ params }: { params: { city: string } }) {
           ctaHref="#contact"
           facts={[
             { label: "Based in", value: "Fremont, CA" },
-            { label: "Projects built", value: "200+ Bay Area yards" },
-            { label: "Rated", value: "5.0 on Google & Yelp" },
+            { label: "Projects built", value: "100+" },
+            { label: "Rated", value: "5.0 on Google (26) and Yelp (6)" },
             { label: "Licensed", value: "CSLB #1101860" },
           ]}
           above={
@@ -189,11 +190,10 @@ export default function CityPage({ params }: { params: { city: string } }) {
                 <div className="mt-8 grid sm:grid-cols-2 gap-3">
                   {[
                     "CSLB licensed (#1101860) and insured",
-                    "5.0 stars on Google and Yelp",
-                    "200+ projects completed",
-                    "Free 3D design renderings",
-                    "In-house crew, no subcontractors",
-                    "Materials and workmanship warranty",
+                    "5.0 on Google (26 reviews) and Yelp (6 reviews)",
+                    "100+ projects completed",
+                    "Free design consultation",
+                    "Written workmanship warranty",
                   ].map((item) => (
                     <div key={item} className="flex items-start gap-2.5 text-stone-600">
                       <CheckCircle
@@ -208,14 +208,14 @@ export default function CityPage({ params }: { params: { city: string } }) {
 
               <aside className="lg:sticky lg:top-24 lg:self-start space-y-5">
                 <div className="bg-primary text-white rounded-2xl p-6">
-                  <h3 className="text-lg mb-1">Free consultation in {city.name}</h3>
+                  <h3 className="text-lg mb-1">Free design consultation in {city.name}</h3>
                   <p className="text-green-100 text-sm mb-5">
-                    We visit, measure, and follow up with 3D renderings. You only pay if you build.
+                    We visit and measure for free. 3D renderings are part of the paid design phase.
                   </p>
                   <div className="space-y-3 text-sm">
-                    <a href="tel:+15107555616" className="flex items-center gap-2 hover:underline">
+                    <PhoneLink location="city_sidebar" className="flex items-center gap-2 hover:underline">
                       <Phone className="w-4 h-4" strokeWidth={1.5} /> (510) 755-5616
-                    </a>
+                    </PhoneLink>
                     <a
                       href="mailto:info@visionablelandscaping.com"
                       className="flex items-center gap-2 hover:underline break-all"
