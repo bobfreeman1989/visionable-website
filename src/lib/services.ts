@@ -125,11 +125,11 @@ export const services: ServiceData[] = [
   },
   {
     slug: "pergola-installation",
-    updatedAt: "2026-08-01",
+    updatedAt: "2026-10-19",
     title: "Pergola Installation",
     shortDesc: "Custom pergolas and shade structures for comfortable Bay Area outdoor living.",
-    metaTitle: "Pergola Installation Bay Area | Visionable Landscaping",
-    metaDescription: "Custom pergola installation in the Bay Area. Shade structures, outdoor rooms, composite decking coordination & 3D design. Free consultation. (510) 755-5616.",
+    metaTitle: "Pergola Installation Bay Area | Custom & Louvered Pergolas",
+    metaDescription: "Custom pergola installation in the Bay Area: aluminum, wood-look & motorized louvered pergolas, designed in 3D first. Free consultation. (510) 755-5616.",
     heroText: "Create shade, structure, and a true outdoor room with a custom pergola designed around how your family uses the backyard.",
     content: [
       "A pergola turns a patio or deck into a real outdoor room. Visionable Landscaping designs and builds custom pergolas and shade structures that frame seating areas, dining spaces, outdoor kitchens, and backyard gathering zones. Every pergola is planned as part of the full landscape, so the posts, pavers, lighting, drainage, and furniture layout all work together.",

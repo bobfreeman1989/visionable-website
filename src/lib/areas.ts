@@ -176,12 +176,12 @@ export const areas: CityData[] = [
   },
   {
     slug: "fremont",
-    updatedAt: "2026-10-01",
+    updatedAt: "2026-10-19",
     name: "Fremont",
     county: "Alameda",
     region: "East Bay",
-    metaTitle: "Fremont CA Landscaping | Pavers, Turf & Backyard Remodels",
-    metaDescription: "Landscaping in Fremont, CA from our Fremont base. Pavers, artificial turf, landscape design & hardscaping. 5.0-star rated. Free consultation. (510) 755-5616.",
+    metaTitle: "Fremont Landscaping & Hardscaping | Pavers, Turf & Remodels",
+    metaDescription: "Landscape construction & hardscaping in Fremont, CA, from Mission San Jose to Warm Springs. Pavers, turf & backyard remodels. 5.0-star rated. (510) 755-5616.",
     heroText: "Visionable Landscaping delivers premium design-build services to Fremont homeowners. From pavers and turf to complete backyard remodels, 5.0-star rated, licensed, and insured.",
     content: [
       "As Fremont's locally based landscaping company, Visionable Landscaping understands the unique character of this city's diverse neighborhoods. From the established homes of Niles and Mission San Jose to the newer developments in Warm Springs, every Fremont property has distinct landscaping needs shaped by the Mediterranean climate, clay-heavy soils, and local HOA requirements.",
