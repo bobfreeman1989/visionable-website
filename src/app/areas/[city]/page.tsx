@@ -284,7 +284,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
               Landscaping services in {city.name}
             </h2>
             <p className="text-stone-600 mb-8 max-w-2xl">
-              Every service handled in-house, from the first sketch to the final walkthrough.
+              Every service built by our own crew, from the first sketch to the final walkthrough.
             </p>
             <ul className="grid gap-x-10 sm:grid-cols-2 lg:grid-cols-3 border-t border-stone-200">
               {services.map((s) => (
@@ -327,7 +327,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
 
         <ContactCTA
           title={`Book your free ${city.name} consultation`}
-          subtitle="Tell us about the yard. We'll visit, measure, and follow up with 3D renderings before anything is built."
+          subtitle="Tell us about the yard. The design consultation is free, and in the paid design phase you see the yard in 3D before anything is built."
           detailsPlaceholder={`What are you picturing for your ${city.name} yard? Rough size, what you want to use it for, anything you already know you want.`}
         />
       </div>

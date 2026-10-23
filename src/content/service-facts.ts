@@ -17,14 +17,14 @@ export const serviceFacts: Record<string, HeroFact[]> = {
   ],
   "artificial-turf": [
     { label: "Typical timeline", value: "Days, not weeks" },
-    { label: "Warranty", value: "15-year manufacturer" },
+    { label: "Warranty", value: "Written workmanship" },
     { label: "Lifespan", value: "15–20 years" },
     { label: "Safe for", value: "Kids and pets" },
   ],
   "landscape-design": [
     { label: "Design timeline", value: "1–2 weeks" },
     { label: "You see first", value: "3D renderings (paid design phase)" },
-    { label: "Team", value: "Design + build in-house" },
+    { label: "Team", value: "Design + build, our own crew" },
     { label: "Site visit", value: "Free" },
   ],
   hardscaping: [

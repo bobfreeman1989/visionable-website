@@ -8,17 +8,19 @@ export const runtime = "edge";
 
 export async function POST(req: NextRequest) {
   try {
-    const body = (await req.json()) as ContactRequest;
-    // Attribution fields come from the browser unchecked, so cap their length.
-    const clip = (value?: string) => value?.trim().slice(0, 300) ?? "";
+    const body = (await req.json()) as Record<string, unknown>;
+    // The body comes from the browser unchecked: ignore non-strings, and cap the
+    // attribution fields, which the visitor never sees or types.
+    const text = (value: unknown) => (typeof value === "string" ? value.trim() : "");
+    const clip = (value: unknown) => text(value).slice(0, 300);
     const payload: ContactRequest = {
-      name: body.name?.trim() ?? "",
-      email: body.email?.trim() ?? "",
-      phone: body.phone?.trim() ?? "",
-      address: body.address?.trim() ?? "",
-      service: body.service?.trim() ?? "",
-      budget: body.budget?.trim() ?? "",
-      details: body.details?.trim() ?? "",
+      name: text(body.name),
+      email: text(body.email),
+      phone: text(body.phone),
+      address: text(body.address),
+      service: text(body.service),
+      budget: text(body.budget),
+      details: text(body.details),
       source: clip(body.source),
       landingPage: clip(body.landingPage),
       referrer: clip(body.referrer),

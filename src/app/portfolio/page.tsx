@@ -120,7 +120,7 @@ export default function PortfolioPage() {
         <PageHero
           eyebrow="Completed projects across the Bay Area"
           title="100+ Bay Area yards, built and photographed"
-          lede="Every photograph below is a yard we designed and built with our own crew — no stock imagery, no subcontracted work. Locations are the real ones."
+          lede="Every photograph below is a yard we designed and built with our own crew — no stock imagery. Locations are the real ones."
           image={{ src: heroPhoto.src, alt: heroPhoto.alt }}
           ctaHref="#contact"
           above={
@@ -139,7 +139,7 @@ export default function PortfolioPage() {
             { label: "Projects built", value: "100+" },
             { label: "Cities", value: "South Bay & Peninsula" },
             { label: "Rated", value: "5.0 on Google & Yelp" },
-            { label: "Crew", value: "In-house, no subs" },
+            { label: "Built by", value: "Our own crew" },
           ]}
         />
 
@@ -254,7 +254,7 @@ export default function PortfolioPage() {
 
         <ContactCTA
           title="Start your project"
-          subtitle="Tell us about the space. We'll visit, measure, and follow up with 3D renderings before anything is built."
+          subtitle="Tell us about the space. The design consultation is free, and in the paid design phase you see the yard in 3D before anything is built."
         />
       </main>
       <Footer />

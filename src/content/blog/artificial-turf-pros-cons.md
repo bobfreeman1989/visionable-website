@@ -50,7 +50,7 @@ Turf works best for lawns, play areas, and pet runs. For garden beds and slopes,
 5. **Add infill** (sand or organic) for weight and natural feel
 6. **Brush and groom** for a finished look
 
-> We only use turf with a 15+ year warranty and UV protection rated for California sun.
+> We only use turf with UV protection rated for California sun.
 
 ## Bottom Line
 

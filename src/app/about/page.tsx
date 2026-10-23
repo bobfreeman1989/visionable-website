@@ -1,6 +1,6 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import { Flag, BadgeCheck, Award, Star } from "lucide-react";
+import { Flag, BadgeCheck, Award } from "lucide-react";
 import type { Metadata } from "next";
 import PageHero from "@/components/sections/PageHero";
 import AlternatingFeatures from "@/components/sections/AlternatingFeatures";
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const pillars = [
   {
     title: "One team, from first sketch to final stone",
-    body: "Design, hardscaping, planting, lighting, and irrigation are handled by our own crew, and you deal with the same people from first visit to final walkthrough. We choose premium materials and sweat the finishing details most builders skip, because those are the details you live with every day.",
+    body: "Design, hardscaping, planting, lighting, and irrigation are handled by our own crew. We choose premium materials and sweat the finishing details most builders skip, because those are the details you live with every day.",
     bullets: [
       "One point of contact from estimate to walkthrough",
       "Premium materials from trusted Bay Area suppliers",
@@ -63,7 +63,6 @@ const milestones = [
   { year: "2022", label: "Visionable Landscaping LLC formed", Icon: Flag },
   { year: "2023", label: "CSLB C-27 license issued (#1101860)", Icon: BadgeCheck },
   { year: "2026", label: "Techo-Bloc Techo-Pro and NDS certified", Icon: Award },
-  { year: "2026", label: "5.0 on Google (26 reviews) and Yelp (6 reviews)", Icon: Star },
 ];
 
 export default function AboutPage() {

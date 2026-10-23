@@ -26,9 +26,9 @@ const UTM_KEYS = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_c
 
 function currentTouch(): FirstTouch {
   const params = new URLSearchParams(window.location.search);
-  const utm = UTM_KEYS.filter((key) => params.get(key))
-    .map((key) => `${key}=${params.get(key)}`)
-    .join("&");
+  const utm = new URLSearchParams(
+    UTM_KEYS.filter((key) => params.get(key)).map((key) => [key, params.get(key) as string]),
+  ).toString();
   return {
     landingPage: window.location.pathname,
     referrer: document.referrer,

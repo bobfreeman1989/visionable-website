@@ -168,7 +168,7 @@ export default function ContactPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl text-stone-900 mb-3">How to reach us</h2>
             <p className="text-stone-600 max-w-2xl mb-9">
-              One in-house team, based in Fremont. The fastest route is the phone during business
+              Our own crew, based in Fremont. The fastest route is the phone during business
               hours; everything else we answer the same or next day.
             </p>
 
@@ -212,7 +212,7 @@ export default function ContactPage() {
         {/* The form itself — same component the rest of the site uses */}
         <ContactCTA
           title="Book your free design consultation"
-          subtitle="Tell us what you're imagining. We'll show you what's possible — on your property, in 3D, before anything gets built."
+          subtitle="Tell us what you're imagining. The design consultation is free; in the paid design phase we show you what's possible on your property, in 3D, before anything gets built."
           showContactCards={false}
         />
 

@@ -38,7 +38,7 @@ export const areas: CityData[] = [
     region: "West Valley",
     metaTitle: "Saratoga CA Landscaping | Hillside Patios, Walls & Lighting",
     metaDescription: "Landscape design-build in Saratoga, CA. Hillside retaining walls, stone & paver patios, lighting and outdoor living. Free design consultation. (510) 755-5616.",
-    heroText: "Landscape design-build for Saratoga's large lots and foothill properties. Retaining walls, stone and paver patios, lighting and outdoor living, built by one in-house crew.",
+    heroText: "Landscape design-build for Saratoga's large lots and foothill properties. Retaining walls, stone and paver patios, lighting and outdoor living, built by our own crew.",
     content: [
       "Saratoga properties run from the flatter lots near the Village and the Golden Triangle to hillside homes up toward the Santa Cruz Mountains foothills. Bigger lots, real slopes and mature oaks mean Saratoga landscapes need more planning than a typical tract backyard: how water moves across the site, where a retaining wall is structural rather than decorative, and how a patio sits against the grade.",
       "Saratoga regulates work around protected trees, so we map the existing trees before we design and plan patios, walls and trenching to stay out of root zones that need protecting. On hillside properties we lean on hardscape, gravel and well-spaced planting close to the house rather than dense shrubs, and we design landscape lighting that shows off the property without glare spilling onto neighboring lots. A recent Saratoga project paired a covered outdoor kitchen and bar with a new paver patio.",
@@ -74,7 +74,7 @@ export const areas: CityData[] = [
     content: [
       "Cupertino homeowners usually come to us with a clear brief: a backyard the whole family can use, that looks clean year-round and does not take a weekend of work to maintain. In neighborhoods like Monta Vista, Rancho Rinconada, Garden Gate and Seven Springs, that typically means replacing a tired lawn and patchy concrete with a paver patio, artificial turf, a pergola for shade and planting that holds up through dry summers.",
       "Many Cupertino lots are modest in size, so layout matters more than budget. We plan circulation, seating, a play or turf area and storage in the 3D design so every square foot has a job.",
-      "Cupertino also regulates protected trees, so mature trees are surveyed and designed around rather than discovered mid-project. From demolition to the final walkthrough, the work is done by our in-house crew, with daily updates and a written warranty. Book a free design consultation to see what your yard could become.",
+      "Cupertino also regulates protected trees, so mature trees are surveyed and designed around rather than discovered mid-project. From demolition to the final walkthrough, the work is done by our own crew, with daily updates and a written warranty. Book a free design consultation to see what your yard could become.",
     ],
     nearbyAreas: ["sunnyvale", "saratoga", "los-altos", "san-jose"],
   },
@@ -106,7 +106,7 @@ export const areas: CityData[] = [
     content: [
       "Mountain View has an unusual mix of housing: older bungalows in Old Mountain View, larger lots around Waverly Park and Cuesta Park, Eichler neighborhoods like Monta Loma, and plenty of newer homes with compact yards. That range means there is no single Mountain View backyard, and we do not design one. Each project starts with how you actually use the space.",
       "Our Mountain View clients tend to want clean, modern yards: large-format pavers or concrete, artificial turf for kids and dogs, a pergola or shade structure, and planting that stays tidy without constant care. Side yards are a frequent add-on, turning a strip of dirt and trash cans into a paved path with screening and a gate that actually closes. A recent Mountain View build paired a low composite deck with an artificial turf lawn and stepping pavers.",
-      "On a small lot every detail shows, so we focus on clean edges, consistent joints and lighting that is warm rather than glaring. You see the finished design in 3D before we begin, pay a fixed price, and work with one in-house crew the whole way through.",
+      "On a small lot every detail shows, so we focus on clean edges, consistent joints and lighting that is warm rather than glaring. You see the finished design in 3D before we begin, pay a fixed price, and work with our own crew the whole way through.",
     ],
     nearbyAreas: ["sunnyvale", "los-altos", "palo-alto"],
   },
@@ -138,7 +138,7 @@ export const areas: CityData[] = [
     content: [
       "Palo Alto has some of the most distinctive residential architecture in the Bay Area, from the Eichler neighborhoods of Greenmeadow and Midtown to the older homes of Old Palo Alto, Professorville and Crescent Park. A good Palo Alto landscape respects the house it belongs to: clean lines and floor-to-ceiling views for a mid-century home, softer layering and traditional materials for an older one.",
       "Palo Alto protects a wide range of trees, including native oaks and redwoods, and the city's rules affect where you can trench, pave or build near them. We survey the existing trees before design and lay out patios, walls and utility runs accordingly, so permitting questions get answered at the planning stage instead of halfway through construction. Recent Palo Alto projects include a horizontal redwood fence with matching planters, and lit decking with large stepping pavers.",
-      "Typical Palo Alto projects for us combine a paver or stone patio, a pergola or shade structure, artificial turf or a small lawn, low-water planting and landscape lighting. You see it all in 3D first, and our in-house crew builds it with daily updates. We are CSLB licensed (#1101860), insured and rated 5.0 on Google (26 reviews) and Yelp (6 reviews).",
+      "Typical Palo Alto projects for us combine a paver or stone patio, a pergola or shade structure, artificial turf or a small lawn, low-water planting and landscape lighting. You see it all in 3D first, and our own crew builds it with daily updates. We are CSLB licensed (#1101860), insured and rated 5.0 on Google (26 reviews) and Yelp (6 reviews).",
     ],
     nearbyAreas: ["los-altos", "mountain-view", "san-carlos"],
   },
@@ -166,11 +166,11 @@ export const areas: CityData[] = [
     region: "South Bay",
     metaTitle: "Milpitas CA Landscaping | Artificial Turf & Paver Patios",
     metaDescription: "Expert landscaping in Milpitas, CA. Artificial turf, pavers, hardscaping & outdoor lighting. 5.0-star rated, CSLB licensed. Free design consultation. (510) 755-5616.",
-    heroText: "Professional landscaping for Milpitas homeowners at the northern edge of Silicon Valley. Design-build excellence from a locally trusted team.",
+    heroText: "Professional landscaping for Milpitas homeowners at the northern edge of Silicon Valley. Design-build from a team based in nearby Fremont.",
     content: [
-      "Milpitas sits at the crossroads of Silicon Valley and the East Bay, and its landscaping needs reflect that unique position. Visionable Landscaping has transformed dozens of Milpitas yards, from the hillside properties near Ed Levin County Park to the family neighborhoods around Calaveras Boulevard. We understand the specific challenges Milpitas homeowners face, including varied terrain, strict water conservation requirements, and HOA guidelines.",
-      "Artificial turf is especially popular among Milpitas residents looking to cut water bills without sacrificing curb appeal. Our premium turf installations include proper drainage, realistic blade profiles, and a 15-year warranty. For homeowners wanting a more comprehensive transformation, our complete backyard remodels combine pavers, lighting, turf, and custom plantings into a cohesive outdoor living space.",
-      "As a locally owned company just up the road in Fremont, we offer Milpitas homeowners the rare combination of premium quality and local accountability. Our 5.0-star reviews on Google and Yelp speak for themselves. Book a free design consultation and see why your neighbors trust Visionable.",
+      "Milpitas sits at the crossroads of Silicon Valley and the East Bay, and its landscaping needs reflect that unique position. We work across Milpitas, from the hillside properties near Ed Levin County Park to the family neighborhoods around Calaveras Boulevard. We understand the specific challenges Milpitas homeowners face, including varied terrain, strict water conservation requirements, and HOA guidelines.",
+      "Artificial turf is especially popular among Milpitas residents looking to cut water bills without sacrificing curb appeal. Our premium turf installations include proper drainage and realistic blade profiles. For homeowners wanting a more comprehensive transformation, our complete backyard remodels combine pavers, lighting, turf, and custom plantings into a cohesive outdoor living space.",
+      "As a locally owned company just up the road in Fremont, we offer Milpitas homeowners the rare combination of premium quality and local accountability. We are rated 5.0 on Google (26 reviews) and Yelp (6 reviews). Book a free design consultation and see why your neighbors trust Visionable.",
     ],
     nearbyAreas: ["san-jose", "fremont", "sunnyvale"],
   },
@@ -185,7 +185,7 @@ export const areas: CityData[] = [
     heroText: "Visionable Landscaping delivers premium design-build services to Fremont homeowners. From pavers and turf to complete backyard remodels, licensed and insured.",
     content: [
       "As Fremont's locally based landscaping company, Visionable Landscaping understands the unique character of this city's diverse neighborhoods. From the established homes of Niles and Mission San Jose to the newer developments in Warm Springs, every Fremont property has distinct landscaping needs shaped by the Mediterranean climate, clay-heavy soils, and local HOA requirements.",
-      "Fremont homeowners consistently choose us for paver patios, artificial turf installations, and complete backyard remodels. Our proximity means faster response times, lower project costs, and deep familiarity with Fremont's permitting process. Whether you're looking to replace a water-hungry lawn with drought-resistant turf or create an outdoor living space with pavers and lighting, we bring years of local expertise to every project.",
+      "Fremont homeowners consistently choose us for paver patios, artificial turf installations, and complete backyard remodels. Being based here means we are close by for site visits and follow-up. Whether you're looking to replace a water-hungry lawn with drought-resistant turf or create an outdoor living space with pavers and lighting, we design it and our own crew builds it.",
       "With 100+ projects completed and a 5.0 rating on Google (26 reviews) and Yelp (6 reviews), Visionable Landscaping builds for Fremont residents who want quality craftsmanship without the hassle. Every project starts with a free design consultation. 3D renderings in the paid design phase let you see your vision before we break ground.",
     ],
     nearbyAreas: ["milpitas", "san-jose", "sunnyvale"],

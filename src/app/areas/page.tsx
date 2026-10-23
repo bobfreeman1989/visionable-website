@@ -61,7 +61,7 @@ export default function AreasIndexPage() {
         <PageHero
           eyebrow="Local landscaping service areas"
           title="Landscaping across the South Bay and Peninsula"
-          lede="From West San Jose and the West Valley to Silicon Valley and the Peninsula. One in-house crew and the same standard, wherever your yard is."
+          lede="From West San Jose and the West Valley to Silicon Valley and the Peninsula. Our own crew and the same standard, wherever your yard is."
           image={{ src: heroPhoto.src, alt: heroPhoto.alt }}
           facts={[
             { label: "Cities served", value: `${areas.length} and nearby` },

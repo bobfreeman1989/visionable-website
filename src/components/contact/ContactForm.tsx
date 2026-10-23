@@ -15,10 +15,14 @@ import { ContactSuccessState } from "@/components/contact/ContactSuccessState";
 // form gives way to the success message.
 type Status = "idle" | "sending" | "sent" | "success" | "error";
 
-/** Only the city name goes to analytics, never the street address. */
+/** Only the city name goes to analytics, never the street address. The street
+ *  part (before the first comma) is skipped so "123 Palo Alto Ave, Fremont"
+ *  reads as Fremont, and the longest name wins so "San Jose" beats "San". */
 function cityFromAddress(address: string) {
-  const lower = address.toLowerCase();
-  return Object.values(serviceAreas).flat().find((city) => lower.includes(city.toLowerCase())) ?? "";
+  const parts = address.split(",");
+  const rest = (parts.length > 1 ? parts.slice(1).join(",") : address).toLowerCase();
+  const cities = Object.values(serviceAreas).flat().sort((a, b) => b.length - a.length);
+  return cities.find((city) => rest.includes(city.toLowerCase())) ?? "";
 }
 
 interface ContactFormProps {

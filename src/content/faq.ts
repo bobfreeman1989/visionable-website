@@ -25,7 +25,7 @@ export const homepageFaqs: FaqItem[] = [
   },
   {
     q: "Are you licensed and insured?",
-    a: "Yes. Fully licensed with the California Contractors State License Board, with comprehensive liability and workers' comp insurance.",
+    a: "Yes. Fully licensed with the California Contractors State License Board, and insured, with workers' comp coverage.",
   },
   {
     q: "What areas do you serve?",

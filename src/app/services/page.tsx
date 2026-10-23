@@ -66,7 +66,7 @@ export default function ServicesIndexPage() {
         <PageHero
           eyebrow="South Bay & Peninsula landscaping services"
           title="Design-build landscaping for outdoor living spaces that last"
-          lede="One in-house team handles pavers, turf, pergolas, fencing, irrigation, drainage, design, lighting, retaining walls, and complete backyard remodels across the South Bay and Peninsula."
+          lede="Our own crew handles pavers, turf, pergolas, fencing, irrigation, drainage, design, lighting, retaining walls, and complete backyard remodels across the South Bay and Peninsula."
           image={{ src: heroPhoto.src, alt: heroPhoto.alt }}
           facts={[
             { label: "Projects built", value: "100+" },

@@ -21,8 +21,8 @@ export const contactInfo: ContactInfoItem[] = [
 ];
 
 export const whyChooseItems = [
-  "See your yard in 3D before we build (design phase)",
-  "One in-house crew, start to finish",
+  "See your yard in 3D in the design phase, before we build",
+  "Our own crew, start to finish",
   "Licensed & insured · CSLB #1101860",
   "Techo-Bloc certified Techo-Pro contractor",
   "NDS certified professional drainage contractor",
