@@ -41,9 +41,9 @@ This is especially important for modern yards, where small field decisions can a
 
 ## Premium Pavers Create the Clean Foundation
 
-Pavers are one of the most visible parts of a modern backyard. In this project, the focus was on premium pavers and careful paver joint alignment.
+Pavers are one of the most visible parts of a modern backyard. In this project, the focus was on premium pavers and careful [paver joint alignment](/blog/front-and-back-yard-paver-landscape-design-bay-area).
 
-For a minimalist design, pavers should not feel like a generic patio surface. They need to support the overall architecture of the yard. The pattern, color, scale, edge detail, and installation quality all influence whether the space feels refined or busy.
+For a minimalist design, pavers should not feel like a generic patio surface. They need to support the overall architecture of the yard. The pattern, color, scale, edge detail, and installation quality all influence whether the space feels refined or busy. Our [paver selection guide](/blog/how-to-choose-pavers) covers the material side.
 
 Homeowner takeaway: when reviewing paver options, look beyond the sample color. Ask how the paver size, joint layout, border treatment, and transition to other surfaces will work in the full yard.
 

@@ -39,7 +39,7 @@ Artificial turf can get hot in direct sun — up to 20°F warmer than natural gr
 While turf saves water, it's a petroleum-based product. We use recyclable turf options when available.
 
 ### Not Suitable Everywhere
-Turf works best for lawns, play areas, and pet runs. For garden beds and slopes, natural plantings are still the better choice.
+Turf works best for lawns, play areas, and pet runs. For [garden beds](/blog/backyard-garden-curved-concrete-walkway-raised-beds-bay-area) and slopes, natural plantings are still the better choice.
 
 ## Our Installation Process
 
