@@ -8,6 +8,12 @@ export type ContactRequest = {
   service?: string;
   budget?: string;
   details?: string;
+  /** "How did you find us?" answer. */
+  source?: string;
+  /** First-touch attribution captured in the browser session. */
+  landingPage?: string;
+  referrer?: string;
+  utm?: string;
 };
 
 function escapeHtml(value: string) {
@@ -35,6 +41,10 @@ export function buildContactEmailHtml(payload: ContactRequest) {
       <tr><td style="padding:8px;font-weight:bold">Service</td><td style="padding:8px">${present(payload.service)}</td></tr>
       <tr><td style="padding:8px;font-weight:bold">Budget</td><td style="padding:8px">${present(payload.budget)}</td></tr>
       <tr><td style="padding:8px;font-weight:bold">Details</td><td style="padding:8px">${present(payload.details)}</td></tr>
+      <tr><td style="padding:8px;font-weight:bold">Found us via</td><td style="padding:8px">${present(payload.source)}</td></tr>
+      <tr><td style="padding:8px;font-weight:bold">Landing page</td><td style="padding:8px">${present(payload.landingPage)}</td></tr>
+      <tr><td style="padding:8px;font-weight:bold">Referrer</td><td style="padding:8px">${present(payload.referrer)}</td></tr>
+      <tr><td style="padding:8px;font-weight:bold">UTM</td><td style="padding:8px">${present(payload.utm)}</td></tr>
     </table>
   `;
 }

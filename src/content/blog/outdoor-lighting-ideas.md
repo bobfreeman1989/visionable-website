@@ -16,7 +16,7 @@ Guide guests safely while creating a welcoming ambiance. Low-profile LED path li
 
 ## 2. Uplighting Trees
 
-Position lights at the base of specimen trees to create dramatic shadows and highlight canopy structure. This single technique can make your yard feel like a resort.
+Position lights at the base of specimen trees to create dramatic shadows and highlight canopy structure. This single technique adds depth to the whole yard at night.
 
 ![Curved concrete patio with a lit low retaining wall and gravel border](/photos/services/lighting02.webp)
 

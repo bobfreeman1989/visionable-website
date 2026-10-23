@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import PhoneLink from "@/components/PhoneLink";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 const serviceLinks = [
@@ -49,13 +50,13 @@ export default function Footer() {
             <Image src="/logo-white.png" alt="Visionable Landscaping" width={520} height={116} className="h-9 w-auto mb-4" />
             <p className="text-sm leading-relaxed">
               Shaping visions into extraordinary landscapes across the South Bay and Peninsula.
-              Premium design-build services for homeowners who demand excellence.
+              Landscape design-build for South Bay and Peninsula homeowners.
             </p>
           </div>
           <div className="space-y-2 text-sm shrink-0">
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
-              <a href="tel:510-755-5616" className="hover:text-white transition-colors">(510) 755-5616</a>
+              <PhoneLink location="footer" className="hover:text-white transition-colors">(510) 755-5616</PhoneLink>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
