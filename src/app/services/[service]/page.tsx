@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ChevronRight, ArrowRight } from "lucide-react";
 import { services, getServiceBySlug, contactOptionForService } from "@/lib/services";
 import { areas } from "@/lib/areas";
-import { photosForService, heroForService } from "@/content/gallery";
+import { photosForService, heroForService, tagsForService } from "@/content/gallery";
 import { serviceFacts } from "@/content/service-facts";
 import PageHero from "@/components/sections/PageHero";
 import PhotoGallery from "@/components/sections/PhotoGallery";
@@ -177,7 +177,7 @@ export default function ServicePage({ params }: { params: { service: string } })
           }
         />
 
-        <BeforeAfter />
+        <BeforeAfter tags={tagsForService(service.slug)} />
 
         <section className="py-14 md:py-16 bg-background">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -9,7 +9,7 @@ export type FaqItem = {
 export const homepageFaqs: FaqItem[] = [
   {
     q: "How much does an outdoor living project cost?",
-    a: "Most complete backyard projects fall in the range that lets us design, build and finish the space properly; we give you a fixed price after the design phase.",
+    a: "Cost depends on scope, materials, site access and site conditions. We talk through your budget at the free design consultation, design to that number, and confirm a fixed construction price after the design phase.",
   },
   {
     q: "How long until I can actually use my new yard?",

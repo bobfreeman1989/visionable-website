@@ -7,9 +7,9 @@ import { useInView, useReducedMotion } from "motion/react";
 import MotionRoot, { ease } from "@/components/motion/MotionRoot";
 
 // Steps 1 and 4 are the same Los Altos yard, so the section opens on the
-// starting point and closes on the finished build. Steps 2 and 3 use finished
-// project photos as stand-ins until we have a real 3D render and a
-// mid-build shot; the alt text describes what is actually in frame.
+// starting point and closes on the finished build. Step 2 uses a finished
+// yard as a stand-in until we have a real 3D render; step 3 is a real
+// mid-build shot. The alt text describes what is actually in frame.
 const steps = [
   {
     num: "01",
@@ -17,23 +17,23 @@ const steps = [
     desc: "A free design consultation: we visit your home, see the space, and learn what matters to you — weekend cookouts? A quiet morning coffee spot? Somewhere the kids won’t want to leave?",
     timeline: "1–2 hours",
     src: "/photos/before-after/case-1-before-1280.webp",
-    alt: "Los Altos backyard before the project, bare and unfinished",
+    alt: "Los Altos backyard before the project, with an old gazebo, shed and gravel",
   },
   {
     num: "02",
     title: "See It Before It’s Real",
     desc: "In the paid design phase, 3D renderings of your future yard let you move things around, try layouts and change materials, so you see the yard before anything is built. Usually within 1–2 weeks of the visit.",
     timeline: "1–2 weeks",
-    src: "/photos/portfolio/p02.webp",
-    alt: "Pergola lounge with pavers and turf in a finished Bay Area backyard",
+    src: "/photos/services/design01.webp",
+    alt: "Finished backyard with a pergola lounge, curved planting beds and a paver path",
   },
   {
     num: "03",
     title: "Watch It Come to Life",
     desc: "Our own crew builds it, with daily photo updates. You sign a fixed-price contract. If the site reveals something we could not see, such as buried concrete, we show you and you approve any change in writing before we do it. Most builds take 2–6 weeks.",
     timeline: "2–6 weeks",
-    src: "/photos/portfolio/p10.webp",
-    alt: "Finished porcelain paver patio",
+    src: "/photos/before-after/case-3-before-1280.webp",
+    alt: "Mid-build: compacted base and edge forms set for a backyard sports court",
   },
   {
     num: "04",

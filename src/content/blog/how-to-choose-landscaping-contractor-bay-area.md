@@ -149,7 +149,7 @@ Choosing the right landscaping contractor is one of the most important decisions
 
 If you are planning a backyard remodel, [paver patio](/services/paver-installation), retaining wall, drainage repair, artificial turf installation, pergola, or outdoor kitchen in Fremont, San Jose, or the surrounding Bay Area, Visionable Landscaping can help turn your idea into a clear, buildable plan.
 
-**Request a Free Estimate** and tell us what you want your outdoor space to become.
+[Book a free design consultation](/contact#contact) and tell us what you want your outdoor space to become.
 
 ---
 

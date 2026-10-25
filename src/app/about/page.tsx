@@ -2,6 +2,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { Flag, BadgeCheck, Award } from "lucide-react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import PageHero from "@/components/sections/PageHero";
 import AlternatingFeatures from "@/components/sections/AlternatingFeatures";
 import PhotoGallery from "@/components/sections/PhotoGallery";
@@ -83,8 +84,8 @@ export default function AboutPage() {
           }
           lede="A Fremont-based design-build team with 100+ projects built and a 5.0 rating on Google (26 reviews) and Yelp (6 reviews). We take what you envision and make it real."
           image={{
-            src: "/photos/services/lighting01.webp",
-            alt: "Backyard at dusk with a lit built-in seat wall beside an artificial turf lawn",
+            src: "/photos/services/bench03.webp",
+            alt: "Curved white seat wall with built-in lights around an artificial turf lawn and stamped concrete patio at dusk",
           }}
           facts={[
             { label: "Projects completed", value: "100+" },
@@ -103,6 +104,19 @@ export default function AboutPage() {
                 <p className="text-stone-500">
                   A local team that lives and works in the communities we serve.
                 </p>
+                <figure className="mt-8 max-w-xs">
+                  <Image
+                    src="/about.jpg"
+                    alt="Kun Huang, founder of Visionable Landscaping"
+                    width={797}
+                    height={977}
+                    sizes="(max-width: 1024px) 320px, 300px"
+                    className="rounded-2xl border border-stone-200 bg-stone-100"
+                  />
+                  <figcaption className="mt-3 text-sm text-stone-500">
+                    Kun Huang (Bob), founder and C-27 qualifying individual
+                  </figcaption>
+                </figure>
               </div>
               <div className="space-y-6 text-stone-600 text-lg leading-relaxed">
                 <p>
@@ -130,9 +144,6 @@ export default function AboutPage() {
                   extraordinary, build it with precision, and stand behind our work. Our own crew
                   builds every project, and you deal with the same people from first visit to final
                   walkthrough.
-                </p>
-                <p className="text-base text-stone-500">
-                  Kun Huang, founder and C-27 qualifying individual
                 </p>
               </div>
             </div>

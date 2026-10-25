@@ -108,11 +108,11 @@ Yes, a custom screen or fence can help conceal utility areas while improving the
 
 This project used olive trees and bird of paradise for a relaxed California feel. In general, modern planting works best when the palette is simple, sculptural, and selected for the site’s sun, space, and maintenance needs.
 
-## Request a Free Estimate
+## Start your own project
 
 Planning a modern backyard renovation in the Bay Area, Fremont, San Jose, or nearby communities? Visionable Landscaping can help turn a bare or underused yard into a clean, comfortable outdoor retreat.
 
-[Request a Free Estimate](https://visionablelandscaping.com/contact)
+[Book a free design consultation](/contact#contact)
 
 ## Project Photo Gallery
 
