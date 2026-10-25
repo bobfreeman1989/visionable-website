@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, MapPin } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import CTABanner from "@/components/CTABanner";
@@ -12,13 +12,13 @@ import { photosForArea } from "@/content/gallery";
 const BASE_URL = "https://visionablelandscaping.com";
 
 export const metadata: Metadata = {
-  title: "South Bay & Peninsula Landscaping Service Areas | Visionable",
+  title: "Bay Area Landscaping Service Areas | Visionable",
   description:
-    "Landscape design-build across the South Bay and Peninsula: San Jose, Saratoga, Los Gatos, Cupertino, Sunnyvale, Mountain View, Los Altos, Palo Alto, San Carlos and more.",
+    "Landscape design-build across the Bay Area: San Jose, Saratoga, Los Gatos, Cupertino, Sunnyvale, Mountain View, Los Altos, Palo Alto, San Carlos and more.",
   openGraph: {
-    title: "South Bay & Peninsula Landscaping Service Areas | Visionable",
+    title: "Bay Area Landscaping Service Areas | Visionable",
     description:
-      "Visionable Landscaping service areas across San Jose, the West Valley, Silicon Valley and the Peninsula.",
+      "Visionable Landscaping service areas across the Bay Area.",
     url: `${BASE_URL}/areas`,
   },
   alternates: {
@@ -60,8 +60,8 @@ export default function AreasIndexPage() {
       <main id="main-content" className="pt-16">
         <PageHero
           eyebrow="Local landscaping service areas"
-          title="Landscaping across the South Bay and Peninsula"
-          lede="From West San Jose and the West Valley to Silicon Valley and the Peninsula. Our own crew and the same standard, wherever your yard is."
+          title="Landscaping across the Bay Area"
+          lede="From San Jose to Palo Alto and San Mateo. Our own crew and the same standard, wherever your yard is."
           image={{ src: heroPhoto.src, alt: heroPhoto.alt }}
           facts={[
             { label: "Cities served", value: `${areas.length} and nearby` },
@@ -75,17 +75,6 @@ export default function AreasIndexPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-9 grid gap-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
               <h2 className="text-3xl md:text-4xl text-stone-900">Cities we serve</h2>
-              <div className="flex flex-wrap gap-2 lg:justify-end">
-                {regionOrder.map((region) => (
-                  <span
-                    key={region}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-stone-200 bg-white px-3.5 py-1.5 text-sm text-stone-700"
-                  >
-                    <MapPin className="w-3.5 h-3.5 text-primary" strokeWidth={1.5} />
-                    {region}
-                  </span>
-                ))}
-              </div>
             </div>
 
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -112,7 +101,7 @@ export default function AreasIndexPage() {
                     </div>
                     <div className="p-5">
                       <p className="text-xs uppercase tracking-[0.12em] text-primary font-semibold mb-2">
-                        {area.county} County · {area.region}
+                        {area.county} County
                       </p>
                       <p className="text-sm text-stone-600 leading-relaxed mb-4 line-clamp-3">
                         {area.heroText}
@@ -131,7 +120,7 @@ export default function AreasIndexPage() {
 
         <CTABanner
           title="Ready to talk about your yard?"
-          subtitle="Free design consultation anywhere in the South Bay and Peninsula. No pressure, just a conversation."
+          subtitle="Free design consultation anywhere in the Bay Area. No pressure, just a conversation."
           primaryText="Share Your Vision"
           secondaryText="Browse Services"
           secondaryHref="/services"

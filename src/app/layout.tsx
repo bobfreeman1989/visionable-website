@@ -20,7 +20,7 @@ const localBusinessSchema = {
   additionalType: "https://schema.org/HomeAndConstructionBusiness",
   name: "Visionable Landscaping",
   description:
-    "Premium landscape design-build services across the South Bay and Peninsula. Hardscaping, artificial turf, outdoor lighting, pergolas, fencing, irrigation, drainage, and complete yard transformations.",
+    "Premium landscape design-build services across the Bay Area. Hardscaping, artificial turf, outdoor lighting, pergolas, fencing, irrigation, drainage, and complete yard transformations.",
   keywords: [
     "landscaping San Jose CA",
     "landscaping Saratoga CA",
@@ -28,8 +28,8 @@ const localBusinessSchema = {
     "landscaping Cupertino CA",
     "landscaping Palo Alto CA",
     "landscaping Los Altos CA",
-    "paver installation South Bay",
-    "artificial turf installation South Bay",
+    "paver installation Bay Area",
+    "artificial turf installation Bay Area",
     "pergola installation Bay Area",
     "fence and gate installation Bay Area",
     "irrigation and drainage Bay Area",
@@ -113,11 +113,11 @@ const websiteSchema = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
-  title: "South Bay Outdoor Living Design & Build | Visionable",
+  title: "Bay Area Outdoor Living Design & Build | Visionable",
   description:
     "Transform your backyard into an outdoor living space your family uses. Pavers, turf, lighting & more. 5.0★ rated, 100+ projects. Free design consultation.",
   openGraph: {
-    title: "South Bay Outdoor Living Design & Build | Visionable",
+    title: "Bay Area Outdoor Living Design & Build | Visionable",
     description:
       "Transform your backyard into an outdoor living space. Hardscaping, pavers, artificial turf, lighting & landscape design. 5.0★ rated. Free design consultation.",
     url: BASE_URL,
@@ -137,7 +137,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Visionable Landscaping | Bay Area Outdoor Living",
     description:
-      "South Bay & Peninsula outdoor living design & build. 5.0★ rated, 100+ projects. Free design consultation.",
+      "Bay Area outdoor living design & build. 5.0★ rated, 100+ projects. Free design consultation.",
     images: ["/og-image.jpg"],
   },
   alternates: {

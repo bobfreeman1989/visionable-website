@@ -17,7 +17,7 @@ const BASE_URL = "https://visionablelandscaping.com";
 export const metadata: Metadata = {
   title: "Landscaping Services Bay Area | Visionable Landscaping",
   description:
-    "Landscape design-build services for South Bay and Peninsula homes: pavers, turf, pergolas, fencing, drainage, lighting, retaining walls and full remodels.",
+    "Landscape design-build services for Bay Area homes: pavers, turf, pergolas, fencing, drainage, lighting, retaining walls and full remodels.",
   openGraph: {
     title: "Landscaping Services Bay Area | Visionable Landscaping",
     description:
@@ -64,9 +64,9 @@ export default function ServicesIndexPage() {
       <Nav />
       <main id="main-content" className="pt-16">
         <PageHero
-          eyebrow="South Bay & Peninsula landscaping services"
+          eyebrow="Bay Area landscaping services"
           title="Design-build landscaping for outdoor living spaces that last"
-          lede="Our own crew handles pavers, turf, pergolas, fencing, irrigation, drainage, design, lighting, retaining walls, and complete backyard remodels across the South Bay and Peninsula."
+          lede="Our own crew handles pavers, turf, pergolas, fencing, irrigation, drainage, design, lighting, retaining walls, and complete backyard remodels across the Bay Area."
           image={{ src: heroPhoto.src, alt: heroPhoto.alt }}
           facts={[
             { label: "Projects built", value: "100+" },
@@ -193,7 +193,7 @@ export default function ServicesIndexPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-xl text-stone-900 mb-2">Where we work</h2>
             <p className="text-stone-600 mb-5 max-w-2xl">
-              Serving San Jose, the West Valley, Silicon Valley and the Peninsula from our Fremont base.
+              Serving the Bay Area from our Fremont base.
             </p>
             <div className="flex flex-wrap gap-2.5">
               {areas.map((area) => (

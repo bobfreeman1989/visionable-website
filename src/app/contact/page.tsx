@@ -16,7 +16,7 @@ const BASE_URL = "https://visionablelandscaping.com";
 export const metadata: Metadata = {
   title: "Contact Visionable Landscaping | Fremont, CA | (510) 755-5616",
   description:
-    "Book a free landscaping consultation across the South Bay and Peninsula. Call (510) 755-5616, email info@visionablelandscaping.com, or send us your project details. We reply within 24 hours.",
+    "Book a free landscaping consultation across the Bay Area. Call (510) 755-5616, email info@visionablelandscaping.com, or send us your project details. We reply within 24 hours.",
   openGraph: {
     title: "Contact Visionable Landscaping | Fremont, CA",
     description:
@@ -74,7 +74,7 @@ const contactFaqs = [
   },
   {
     q: "Do you charge for travel outside Fremont?",
-    a: "No. Consultations anywhere in our service area — San Jose, the West Valley, Silicon Valley, the Peninsula and Fremont — are free.",
+    a: "No. Consultations anywhere in our Bay Area service area are free.",
   },
 ];
 
@@ -138,7 +138,7 @@ export default function ContactPage() {
       <Nav />
       <main id="main-content" className="pt-16">
         <PageHero
-          eyebrow="Serving the South Bay & Peninsula"
+          eyebrow="Serving the Bay Area"
           title="Contact Visionable Landscaping"
           lede="Tell us about the yard. The site visit is free: we visit, measure, and talk through what you want. 3D renderings come in the paid design phase, before anything is built."
           image={{ src: heroPhoto.src, alt: heroPhoto.alt }}
@@ -221,8 +221,7 @@ export default function ContactPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl text-stone-900 mb-3">Where we work</h2>
             <p className="text-stone-600 max-w-2xl mb-8">
-              Based at 581 Emerson St in Fremont, building across San Jose, the West Valley,
-              Silicon Valley and the Peninsula. Not listed? Call anyway — we cover more
+              Based at 581 Emerson St in Fremont, building across the Bay Area. Not listed? Call anyway — we cover more
               of the greater Bay Area than we have pages for.
             </p>
             <div className="flex flex-wrap gap-2.5 mb-10">

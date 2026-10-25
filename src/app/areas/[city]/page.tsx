@@ -142,7 +142,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
 
       <div className="pt-16">
         <PageHero
-          eyebrow={`${city.county} County · ${city.region}`}
+          eyebrow={`${city.county} County · Bay Area`}
           title={`Landscaping in ${city.name}, CA`}
           lede={city.heroText}
           image={{ src: heroPhoto.src, alt: heroPhoto.alt }}
@@ -225,7 +225,7 @@ export default function CityPage({ params }: { params: { city: string } }) {
                     </a>
                     <div className="flex items-center gap-2">
                       <MapPin className="w-4 h-4 shrink-0" strokeWidth={1.5} />
-                      Serving {city.name} &amp; {city.region}
+                      Serving {city.name} &amp; nearby cities
                     </div>
                   </div>
                   <Link
@@ -262,8 +262,8 @@ export default function CityPage({ params }: { params: { city: string } }) {
           title={localCount > 1 ? `Our work in ${city.name}` : "Recent work nearby"}
           intro={
             localCount > 1
-              ? `Projects we built in ${city.name} lead, followed by recent builds across the South Bay and Peninsula.`
-              : "Recent builds across the South Bay and Peninsula."
+              ? `Projects we built in ${city.name} lead, followed by recent builds across the Bay Area.`
+              : "Recent builds across the Bay Area."
           }
           action={
             <Link

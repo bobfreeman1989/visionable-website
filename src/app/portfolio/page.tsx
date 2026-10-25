@@ -137,7 +137,7 @@ export default function PortfolioPage() {
           }
           facts={[
             { label: "Projects built", value: "100+" },
-            { label: "Cities", value: "South Bay & Peninsula" },
+            { label: "Area", value: "Bay Area" },
             { label: "Rated", value: "5.0 on Google & Yelp" },
             { label: "Built by", value: "Our own crew" },
           ]}

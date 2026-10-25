@@ -166,7 +166,7 @@ export default function ServicePage({ params }: { params: { service: string } })
         <PhotoGallery
           photos={gallery}
           title={`Recent ${service.title.toLowerCase()} projects`}
-          intro={`Builds from across the South Bay and Peninsula where ${service.title.toLowerCase()} is part of the work.`}
+          intro={`Builds from across the Bay Area where ${service.title.toLowerCase()} is part of the work.`}
           action={
             <Link
               href="/portfolio"

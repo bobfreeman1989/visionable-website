@@ -16,7 +16,7 @@ export type ContactInfoItem = {
 export const contactInfo: ContactInfoItem[] = [
   { Icon: Phone, title: "Call Us", main: "(510) 755-5616", sub: "Mon-Fri, 7:30 AM - 5:00 PM" },
   { Icon: Mail, title: "Email", main: "info@visionable\nlandscaping.com", sub: "We reply within 24 hours" },
-  { Icon: MapPin, title: "Service Area", main: "Bay Area", sub: "South Bay, Peninsula & Fremont" },
+  { Icon: MapPin, title: "Service Area", main: "Bay Area", sub: "Based in Fremont" },
   { Icon: Calendar, title: "Site Visits", main: "7 days a week", sub: "Evenings by appointment" },
 ];
 
@@ -29,8 +29,7 @@ export const whyChooseItems = [
 ] as const;
 
 export const serviceAreas: Record<string, string[]> = {
-  "South Bay": ["San Jose", "Santa Clara", "Sunnyvale", "Cupertino", "Mountain View", "Los Altos", "Saratoga", "Los Gatos"],
-  "Peninsula": ["Palo Alto", "Atherton", "San Carlos", "San Mateo"],
+  "Bay Area": ["San Jose", "Santa Clara", "Sunnyvale", "Cupertino", "Mountain View", "Los Altos", "Saratoga", "Los Gatos", "Palo Alto", "Atherton", "San Carlos", "San Mateo"],
   "Home base": ["Fremont"],
 };
 

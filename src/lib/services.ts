@@ -53,7 +53,7 @@ export const services: ServiceData[] = [
     content: [
       "Artificial turf has become one of the most popular landscaping upgrades for Bay Area homeowners, and for good reason. Our premium synthetic turf installations eliminate watering, mowing, fertilizing, and pesticide use while providing a lush, green lawn that looks natural in every season. It keeps a yard green through dry Bay Area summers without irrigation.",
       "We choose turf products with realistic blade profiles, natural color variations, and built-in UV protection. Our installation process includes removing existing sod, grading for proper drainage, installing a compacted base, and securing the turf with professional-grade infill. The result is a soft, durable surface that is safe for children and pets.",
-      "Every artificial turf installation comes with a written workmanship warranty. We install turf for front yards, backyards, side yards, pet areas, putting greens, and commercial properties throughout the South Bay and Peninsula. Our free design consultation includes turf samples so you can see and feel the product before committing.",
+      "Every artificial turf installation comes with a written workmanship warranty. We install turf for front yards, backyards, side yards, pet areas, putting greens, and commercial properties throughout the Bay Area. Our free design consultation includes turf samples so you can see and feel the product before committing.",
     ],
     benefits: [
       "No lawn watering once installed",
@@ -106,7 +106,7 @@ export const services: ServiceData[] = [
     content: [
       "Hardscaping forms the structural backbone of any great landscape. Visionable Landscaping designs and builds custom hardscape features including fire pits, outdoor kitchens, seat walls, stone veneer, water features, and decorative borders. These elements add both functionality and visual interest to your outdoor space while increasing your property's value.",
       "Our hardscaping projects use premium materials, natural stone, manufactured stone veneer, concrete block, and porcelain, selected for durability and aesthetics. Every hardscape element is engineered with proper footings, drainage, and structural support to withstand the Bay Area's conditions for decades. Whether you want a cozy fire pit for cool evenings or a full outdoor kitchen for entertaining, we build it right the first time.",
-      "We integrate hardscaping seamlessly with softscape elements like turf, plantings, and lighting to create a unified outdoor living environment. Our design team works with you to select materials, finishes, and layouts that complement your home's architecture and your personal style. See our portfolio for examples of our hardscaping work across the South Bay and Peninsula.",
+      "We integrate hardscaping seamlessly with softscape elements like turf, plantings, and lighting to create a unified outdoor living environment. Our design team works with you to select materials, finishes, and layouts that complement your home's architecture and your personal style. See our portfolio for examples of our hardscaping work across the Bay Area.",
     ],
     benefits: [
       "Adds curb appeal and usable outdoor space",
@@ -160,7 +160,7 @@ export const services: ServiceData[] = [
     content: [
       "Fences and gates are not just boundaries. They shape privacy, curb appeal, access, and the way a yard feels from the first step inside. Visionable Landscaping installs and repairs side gates, privacy fences, custom wood gates, fence panels, and outdoor entry details as part of broader front yard and backyard projects.",
       "Because we approach fencing as part of the whole landscape, we pay attention to details that standalone fence crews often miss: how the gate aligns with walkways, how drainage affects posts, whether the fence blocks or frames a view, and how the material works with pavers, turf, planting beds, stucco, and lighting. The result is a fence or gate that feels integrated, not bolted on afterward.",
-      "We handle small repairs, side-yard gate replacements, and full fence upgrades throughout San Jose, Sunnyvale, Cupertino, Palo Alto, Fremont, and the wider South Bay. Every project starts with a practical site review so we can identify post conditions, grade changes, access constraints, and any neighbor or HOA considerations before pricing.",
+      "We handle small repairs, side-yard gate replacements, and full fence upgrades throughout San Jose, Sunnyvale, Cupertino, Palo Alto, Fremont, and the wider Bay Area. Every project starts with a practical site review so we can identify post conditions, grade changes, access constraints, and any neighbor or HOA considerations before pricing.",
     ],
     benefits: [
       "Improves privacy, security, and curb appeal",

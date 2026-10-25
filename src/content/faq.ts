@@ -29,7 +29,7 @@ export const homepageFaqs: FaqItem[] = [
   },
   {
     q: "What areas do you serve?",
-    a: "The South Bay and Peninsula: San Jose, Santa Clara, Sunnyvale, Cupertino, Mountain View, Los Altos, Palo Alto, Saratoga, Los Gatos, San Carlos, San Mateo, Atherton, and our home base of Fremont.",
+    a: "The Bay Area: San Jose, Santa Clara, Sunnyvale, Cupertino, Mountain View, Los Altos, Palo Alto, Saratoga, Los Gatos, San Carlos, San Mateo, Atherton, and our home base of Fremont.",
   },
   {
     q: "Do you offer warranties?",

@@ -13,7 +13,7 @@ import { photos, extraPhotos } from "@/content/gallery";
 export const metadata: Metadata = {
   title: "About Visionable Landscaping | Bay Area's Trusted Landscape Team",
   description:
-    "Meet the team behind 100+ South Bay and Peninsula landscape projects. Licensed, insured, and committed to turning your outdoor vision into reality. Serving San Jose, Silicon Valley & the Peninsula.",
+    "Meet the team behind 100+ Bay Area landscape projects. Licensed, insured, and committed to turning your outdoor vision into reality.",
   alternates: {
     canonical: "/about",
   },
@@ -125,7 +125,7 @@ export default function AboutPage() {
                   the craft.
                 </p>
                 <p>
-                  We&apos;ve completed more than 100 projects across the South Bay and Peninsula,
+                  We&apos;ve completed more than 100 projects across the Bay Area,
                   from intimate courtyard gardens in Fremont to complete backyard remodels in San
                   Jose. Our crews bring 15+ years of hands-on experience building Bay
                   Area landscapes.
