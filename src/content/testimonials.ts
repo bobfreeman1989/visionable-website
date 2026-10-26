@@ -10,6 +10,11 @@ export type TestimonialReview = {
   source: string;
 };
 
+/** The six shown on the site, in order: whole-yard projects first, then the
+ *  one review that proves permit and inspection work (JQ T.). The rest stay in
+ *  `testimonialReviews` as verified source material. */
+export const featuredReviewNames = ["Yang G.", "Wen S.", "Ning L.", "Jing M.", "Yu Z.", "JQ T."];
+
 /** Reviews are quoted verbatim from the Visionable Landscaping Google Business
  *  Profile (5.0, 26 reviews) and Yelp page (5.0, 6 reviews), both re-read on
  *  2026-10-23; "…" marks a trimmed passage. Names are shortened to first name +
@@ -106,3 +111,9 @@ export const testimonialReviews: TestimonialReview[] = [
     source: "Yelp review",
   },
 ];
+
+export const featuredReviews: TestimonialReview[] = featuredReviewNames.map((name) => {
+  const review = testimonialReviews.find((r) => r.name === name);
+  if (!review) throw new Error(`Featured review not found: ${name}`);
+  return review;
+});

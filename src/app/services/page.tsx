@@ -11,6 +11,7 @@ import { services } from "@/lib/services";
 import { areas } from "@/lib/areas";
 import { heroForService } from "@/content/gallery";
 import { serviceFacts } from "@/content/service-facts";
+import { ratingShort } from "@/content/reviews";
 
 const BASE_URL = "https://visionablelandscaping.com";
 
@@ -70,7 +71,7 @@ export default function ServicesIndexPage() {
           image={{ src: heroPhoto.src, alt: heroPhoto.alt }}
           facts={[
             { label: "Projects built", value: "100+" },
-            { label: "Rated", value: "5.0 on Google & Yelp" },
+            { label: "Rated", value: ratingShort },
             { label: "Licensed", value: "CSLB #1101860" },
             { label: "Design consultation", value: "Free site visit" },
           ]}

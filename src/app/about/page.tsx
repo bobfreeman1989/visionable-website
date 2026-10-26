@@ -9,6 +9,7 @@ import PhotoGallery from "@/components/sections/PhotoGallery";
 import CTABanner from "@/components/CTABanner";
 import Testimonials from "@/components/Testimonials";
 import { photos, extraPhotos } from "@/content/gallery";
+import { ratingShort, ratingLong } from "@/content/reviews";
 
 export const metadata: Metadata = {
   title: "About Visionable Landscaping | Bay Area's Trusted Landscape Team",
@@ -82,14 +83,14 @@ export default function AboutPage() {
               outdoor reality
             </>
           }
-          lede="A Fremont-based design-build team with 100+ projects built and a 5.0 rating on Google (26 reviews) and Yelp (6 reviews). We take what you envision and make it real."
+          lede={`A Fremont-based design-build team with 100+ projects built, rated ${ratingLong}. We take what you envision and make it real.`}
           image={{
             src: "/photos/services/bench03.webp",
             alt: "Curved white seat wall with built-in lights around an artificial turf lawn and stamped concrete patio at dusk",
           }}
           facts={[
             { label: "Projects completed", value: "100+" },
-            { label: "Rated", value: "5.0 on Google (26) and Yelp (6)" },
+            { label: "Rated", value: ratingShort },
             { label: "Certified", value: "Techo-Pro · NDS" },
             { label: "Licensed & insured", value: "CSLB #1101860" },
           ]}

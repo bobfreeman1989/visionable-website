@@ -8,6 +8,7 @@ import CTABanner from "@/components/CTABanner";
 import PageHero from "@/components/sections/PageHero";
 import { areas } from "@/lib/areas";
 import { photosForArea } from "@/content/gallery";
+import { ratingShort } from "@/content/reviews";
 
 const BASE_URL = "https://visionablelandscaping.com";
 
@@ -67,7 +68,7 @@ export default function AreasIndexPage() {
             { label: "Cities served", value: `${areas.length} and nearby` },
             { label: "Home base", value: "Fremont, CA" },
             { label: "Projects built", value: "100+" },
-            { label: "Rated", value: "5.0 on Google & Yelp" },
+            { label: "Rated", value: ratingShort },
           ]}
         />
 

@@ -1,7 +1,8 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { testimonialReviews } from "@/content/testimonials";
+import { featuredReviews } from "@/content/testimonials";
+import { ratingShort } from "@/content/reviews";
 import { TestimonialCard } from "@/components/testimonials/TestimonialCard";
 
 export default function Testimonials() {
@@ -22,12 +23,9 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between mb-10">
           <div>
-            <h2 className="text-3xl md:text-4xl text-stone-900 mb-4">Real Visions. Real Backyards.</h2>
-            <p className="text-stone-500 max-w-xl">
-              Bay Area families who stopped imagining and started living outdoors.
-            </p>
-            <p className="mt-3 text-xs uppercase tracking-[0.2em] text-stone-600">
-              5.0 on Google and Yelp · {testimonialReviews.length} review excerpts
+            <h2 className="text-3xl md:text-4xl text-stone-900 mb-3">What homeowners say</h2>
+            <p className="text-xs uppercase tracking-[0.2em] text-stone-600">
+              {ratingShort} · quoted word for word
             </p>
           </div>
           <div className="flex gap-2">
@@ -56,7 +54,7 @@ export default function Testimonials() {
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           aria-label="Customer testimonials"
         >
-          {testimonialReviews.map((review) => (
+          {featuredReviews.map((review) => (
             <div
               key={review.name}
               className="flex-shrink-0 w-[85vw] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] snap-start"

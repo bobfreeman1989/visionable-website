@@ -230,7 +230,7 @@ Motion confirms what the visitor did, or shows them where they are. It never car
 - **Signature detail:** A 2px Forest Green hairline along the top edge that animates in from the left on hover (scale-x 0 to 1, origin-left). This is a top-edge accent, never a side stripe.
 
 ### Inputs / Fields
-- **Style:** White fill, 1px #E7E5E4 border, 8px radius, 12px by 16px padding, 0.875rem text. Labels are 0.875rem 500 in Ink Body, 4px above the field.
+- **Style:** White fill, 1px #E7E5E4 border, 8px radius, 12px by 16px padding, 1rem text (16px, so iOS does not zoom the page on focus). Personal fields carry `autoComplete`. Labels are 0.875rem 500 in Ink Body, 4px above the field.
 - **Focus:** Border goes transparent and a 2px Forest Green ring appears (focus:ring-2 focus:ring-primary). Always visible, never removed.
 - **Error:** Inline row with an alert icon, red-600 text on a red-50 tint, 8px radius, role="alert".
 

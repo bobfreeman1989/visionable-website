@@ -12,7 +12,7 @@ interface ContactCTAProps {
 }
 
 export default function ContactCTA({
-  title = "What's Your Vision?",
+  title = "Tell us about your yard",
   subtitle = "Tell us what you're imagining. We'll show you what's possible.",
   defaultService,
   detailsPlaceholder,

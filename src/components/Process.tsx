@@ -30,7 +30,7 @@ const steps = [
   {
     num: "03",
     title: "Watch It Come to Life",
-    desc: "Our own crew builds it, with daily photo updates. You sign a fixed-price contract. If the site reveals something we could not see, such as buried concrete, we show you and you approve any change in writing before we do it. Most builds take 2–6 weeks.",
+    desc: "Our own crew builds it on a fixed-price contract, with daily photo updates. If the site turns up something hidden, like buried concrete, you approve any change in writing first. Most builds take 2–6 weeks.",
     timeline: "2–6 weeks",
     src: "/photos/before-after/case-3-before-1280.webp",
     alt: "Mid-build: compacted base and edge forms set for a backyard sports court",

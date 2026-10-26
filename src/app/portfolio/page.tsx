@@ -10,6 +10,7 @@ import ContactCTA from "@/components/ContactCTA";
 import { portfolioProjects, photos, extraPhotos, heroForService } from "@/content/gallery";
 import { areas } from "@/lib/areas";
 import { services } from "@/lib/services";
+import { ratingShort } from "@/content/reviews";
 
 const BASE_URL = "https://visionablelandscaping.com";
 
@@ -138,7 +139,7 @@ export default function PortfolioPage() {
           facts={[
             { label: "Projects built", value: "100+" },
             { label: "Area", value: "Bay Area" },
-            { label: "Rated", value: "5.0 on Google & Yelp" },
+            { label: "Rated", value: ratingShort },
             { label: "Built by", value: "Our own crew" },
           ]}
         />
