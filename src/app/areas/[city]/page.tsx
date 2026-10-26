@@ -69,40 +69,26 @@ export default function CityPage({ params }: { params: { city: string } }) {
     .map((slug) => getAreaBySlug(slug))
     .filter((a): a is NonNullable<typeof a> => Boolean(a));
 
+  // A WebPage about the one business entity (declared in the root layout),
+  // listing what that business offers here. Re-describing the business on
+  // every city page created a dozen competing LocalBusiness entities.
   const schema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Visionable Landscaping",
-    description: `Professional landscaping services in ${city.name}, CA. Hardscaping, paver installation, artificial turf, pergolas, fence and gate installation, irrigation and drainage, outdoor lighting, and complete backyard remodels.`,
+    "@type": "WebPage",
+    "@id": `${BASE_URL}/areas/${city.slug}`,
     url: `${BASE_URL}/areas/${city.slug}`,
-    telephone: "+1-510-755-5616",
-    email: "info@visionablelandscaping.com",
+    name: city.metaTitle,
+    description: city.metaDescription,
     image: `${BASE_URL}${heroPhoto.src}`,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "581 Emerson St",
-      addressLocality: "Fremont",
-      addressRegion: "CA",
-      postalCode: "94539",
-      addressCountry: "US",
-    },
-    areaServed: { "@type": "City", name: `${city.name}, CA` },
-    priceRange: "$$-$$$$",
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: `Landscaping services in ${city.name}, CA`,
-      itemListElement: services.map((service) => ({
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: `${service.title} in ${city.name}, CA`,
-          description: service.shortDesc,
-          areaServed: { "@type": "City", name: `${city.name}, CA` },
-          provider: { "@type": "LocalBusiness", name: "Visionable Landscaping" },
-          url: `${BASE_URL}/services/${service.slug}`,
-        },
-      })),
-    },
+    about: { "@id": `${BASE_URL}/#business` },
+    mainEntity: services.map((service) => ({
+      "@type": "Service",
+      name: `${service.title} in ${city.name}, CA`,
+      description: service.shortDesc,
+      url: `${BASE_URL}/services/${service.slug}`,
+      areaServed: { "@type": "City", name: `${city.name}, CA` },
+      provider: { "@id": `${BASE_URL}/#business` },
+    })),
   };
 
   const cityFaqs = faqsForCity(city);

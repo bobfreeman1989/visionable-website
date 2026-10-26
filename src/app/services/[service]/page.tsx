@@ -84,20 +84,8 @@ export default function ServicePage({ params }: { params: { service: string } })
     description: service.metaDescription,
     url: `${BASE_URL}/services/${service.slug}`,
     image: `${BASE_URL}${hero.src}`,
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Visionable Landscaping",
-      telephone: "+1-510-755-5616",
-      email: "info@visionablelandscaping.com",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "581 Emerson St",
-        addressLocality: "Fremont",
-        addressRegion: "CA",
-        postalCode: "94539",
-        addressCountry: "US",
-      },
-    },
+    // The business itself is declared once, in the root layout.
+    provider: { "@id": `${BASE_URL}/#business` },
     areaServed: areas.map((a) => ({ "@type": "City", name: `${a.name}, CA` })),
   };
 
