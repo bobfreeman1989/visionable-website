@@ -40,7 +40,7 @@ export const serviceFacts: Record<string, HeroFact[]> = {
     { label: "Consultation", value: "Free" },
   ],
   "fence-and-gate": [
-    { label: "Scope", value: "Install, repair, custom gates" },
+    { label: "Scope", value: "New fences, custom gates" },
     { label: "Matching", value: "Matched to existing fence" },
     { label: "Shared fence lines", value: "Neighbor coordination" },
     { label: "HOA rules", value: "Flagged before work" },

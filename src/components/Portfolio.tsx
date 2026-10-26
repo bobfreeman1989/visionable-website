@@ -62,9 +62,9 @@ export default function Portfolio() {
                   initial={{ opacity: 0, scale: 0.85 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.85, transition: { duration: 0.25 } }}
-                  // Phones get the first six; twelve full-width cards was two
-                  // screens of scrolling before the visitor reached anything else.
-                  className={i >= 6 ? "hidden sm:block" : undefined}
+                  // Phones get the first three; the "see every project" link
+                  // below carries the rest, so the home page stays short.
+                  className={i >= 3 ? "hidden sm:block" : undefined}
                 >
                   {/* First pass through the viewport: cards rise in, staggered by column */}
                   <m.div
@@ -194,7 +194,13 @@ function Lightbox({
         <div className="relative aspect-[4/3] w-full">
           {thumb && (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={thumb} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover" />
+            <img
+              src={thumb}
+              alt=""
+              aria-hidden="true"
+              // Placeholder while loading, then a soft backdrop behind the full photo
+              className={`absolute inset-0 h-full w-full object-cover transition-[filter,opacity] duration-300 ${sharp ? "blur-2xl opacity-40" : ""}`}
+            />
           )}
           <Image
             src={project.src}
@@ -202,7 +208,9 @@ function Lightbox({
             fill
             loading="eager"
             onLoad={() => setSharp(true)}
-            className={`object-cover transition-opacity duration-300 ${sharp ? "opacity-100" : "opacity-0"}`}
+            // Contain, not cover: the visitor opened this to see the whole photo,
+            // and portrait shots lost their top and bottom in a 4:3 crop.
+            className={`object-contain transition-opacity duration-300 ${sharp ? "opacity-100" : "opacity-0"}`}
             sizes="(max-width: 1024px) 100vw, 1024px"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0" />

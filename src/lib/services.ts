@@ -16,14 +16,14 @@ export interface ServiceData {
 export const services: ServiceData[] = [
   {
     slug: "paver-installation",
-    updatedAt: "2026-10-22",
+    updatedAt: "2026-10-25",
     title: "Paver Installation",
     shortDesc: "Premium interlocking pavers for patios, driveways, and walkways.",
     metaTitle: "Paver Installation Bay Area | Visionable Landscaping",
     metaDescription: "Professional paver installation in the Bay Area. Patios, driveways, walkways with premium interlocking pavers. 5.0-star rated. Free design consultation. (510) 755-5616.",
-    heroText: "Transform your outdoor space with premium interlocking pavers. Custom-designed patios, driveways, and walkways built to last by Visionable Landscaping.",
+    heroText: "Paver patios, walkways and driveways designed with the rest of the yard, set on a compacted base and built by our own crew.",
     content: [
-      "Paver installation is one of our core specialties at Visionable Landscaping. We use premium interlocking pavers from trusted manufacturers to create patios, driveways, walkways, and pool decks that are both beautiful and built to last. Unlike poured concrete, pavers offer superior durability, easier maintenance, and virtually unlimited design possibilities.",
+      "Most of the paving we build is part of a larger backyard: the patio you eat on, the path to the side gate, the landing outside the slider. We lay it out together with the planting, lighting and drainage around it, so the paving reads as part of the yard rather than a slab dropped into it. Patios, walkways, driveways and pool decks all start the same way, with the base.",
       "Our paver installation process begins with proper site preparation, excavation, grading, and compacted base material, which is the foundation of a long-lasting paver surface. We then install edge restraints, bedding sand, and each paver with precision. The result is a level, well-drained surface that resists cracking, shifting, and settling for decades.",
       "From classic brick patterns to contemporary large-format slabs, we offer a wide range of paver styles, colors, and textures. Our design team creates custom layouts using 3D rendering software so you can visualize your new patio or driveway before installation begins. As a Techo-Bloc certified Techo-Pro contractor, we build Techo-Bloc pavers and walls to the manufacturer's installation standards. Every paver project comes with a written workmanship warranty.",
     ],
@@ -44,7 +44,7 @@ export const services: ServiceData[] = [
   },
   {
     slug: "artificial-turf",
-    updatedAt: "2026-10-22",
+    updatedAt: "2026-10-25",
     title: "Artificial Turf",
     shortDesc: "Low-maintenance, water-saving synthetic turf that looks and feels natural.",
     metaTitle: "Artificial Turf Installation Bay Area | Visionable Landscaping",
@@ -53,7 +53,7 @@ export const services: ServiceData[] = [
     content: [
       "Artificial turf has become one of the most popular landscaping upgrades for Bay Area homeowners, and for good reason. Our premium synthetic turf installations eliminate watering, mowing, fertilizing, and pesticide use while providing a lush, green lawn that looks natural in every season. It keeps a yard green through dry Bay Area summers without irrigation.",
       "We choose turf products with realistic blade profiles, natural color variations, and built-in UV protection. Our installation process includes removing existing sod, grading for proper drainage, installing a compacted base, and securing the turf with professional-grade infill. The result is a soft, durable surface that is safe for children and pets.",
-      "Every artificial turf installation comes with a written workmanship warranty. We install turf for front yards, backyards, side yards, pet areas, putting greens, and commercial properties throughout the Bay Area. Our free design consultation includes turf samples so you can see and feel the product before committing.",
+      "Every artificial turf installation comes with a written workmanship warranty. We install turf for front yards, backyards, side yards, pet areas and putting greens throughout the Bay Area. Our free design consultation includes turf samples so you can see and feel the product before committing.",
     ],
     benefits: [
       "No lawn watering once installed",
@@ -70,14 +70,14 @@ export const services: ServiceData[] = [
   },
   {
     slug: "landscape-design",
-    updatedAt: "2026-10-22",
+    updatedAt: "2026-10-25",
     title: "Landscape Design",
     shortDesc: "Custom 3D landscape designs tailored to your property and lifestyle.",
     metaTitle: "Landscape Design Bay Area | Visionable Landscaping",
     metaDescription: "Custom landscape design in the Bay Area. 3D renderings, drought-tolerant plans & complete design-build services. 5.0-star rated. Free design consultation. (510) 755-5616.",
-    heroText: "See your dream yard before we build it. Custom 3D landscape designs tailored to your property, lifestyle, and budget.",
+    heroText: "We design the whole yard around how you will use it, then our own crew builds what we drew. 3D renderings in the paid design phase let you see it before anything is built.",
     content: [
-      "Great landscaping starts with great design. At Visionable Landscaping, every project begins with a thorough design phase where we listen to your goals, assess your property, and create a custom plan that maximizes both beauty and functionality. Our design process uses professional 3D rendering software so you can see what your finished yard will look like before any work begins.",
+      "Design is where the expensive mistakes get caught. The free site visit covers how the sun moves across the yard, where water goes after rain, what is worth keeping and how you want to use the space. In the paid design phase we turn that into a plan and 3D renderings you can adjust, and only then price the build as a fixed contract.",
       "Our landscape designs consider every factor: sun exposure, drainage patterns, soil conditions, existing structures, HOA requirements, and your personal aesthetic preferences. We specialize in drought-tolerant designs that thrive in the Bay Area climate, combining native and adapted plants with hardscaping elements like pavers, retaining walls, and lighting to create cohesive, low-maintenance outdoor spaces.",
       "As a design-build company, we handle everything from initial concept through final construction. This integrated approach eliminates the gap between designer vision and builder execution, resulting in projects that match the plan precisely. The site visit is free. 3D renderings are part of the paid design phase, so you see the yard before anything is built.",
     ],
@@ -151,27 +151,25 @@ export const services: ServiceData[] = [
   },
   {
     slug: "fence-and-gate",
-    updatedAt: "2026-10-22",
+    updatedAt: "2026-10-25",
     title: "Fence & Gate Installation",
-    shortDesc: "Privacy fences, side gates, repair work, and custom entry details built cleanly.",
+    shortDesc: "Privacy fences, side gates and custom entry details, built to match the rest of the yard.",
     metaTitle: "Fence & Gate Installation Bay Area | Visionable Landscaping",
-    metaDescription: "Fence and gate installation in the Bay Area. Privacy fencing, side gates, repairs, custom outdoor entries & landscape integration. Free design consultation. (510) 755-5616.",
+    metaDescription: "Fence and gate installation in the Bay Area. Privacy fencing, side gates, custom outdoor entries & landscape integration. Free design consultation. (510) 755-5616.",
     heroText: "Add privacy, security, and a clean finished edge to your yard with fences and gates built to match the rest of the landscape.",
     content: [
       "Fences and gates are not just boundaries. They shape privacy, curb appeal, access, and the way a yard feels from the first step inside. Visionable Landscaping installs and repairs side gates, privacy fences, custom wood gates, fence panels, and outdoor entry details as part of broader front yard and backyard projects.",
       "Because we approach fencing as part of the whole landscape, we pay attention to details that standalone fence crews often miss: how the gate aligns with walkways, how drainage affects posts, whether the fence blocks or frames a view, and how the material works with pavers, turf, planting beds, stucco, and lighting. The result is a fence or gate that feels integrated, not bolted on afterward.",
-      "We handle small repairs, side-yard gate replacements, and full fence upgrades throughout San Jose, Sunnyvale, Cupertino, Palo Alto, Fremont, and the wider Bay Area. Every project starts with a practical site review so we can identify post conditions, grade changes, access constraints, and any neighbor or HOA considerations before pricing.",
+      "We build new fences, side-yard gates and full fence upgrades, usually as part of a wider yard project, throughout San Jose, Sunnyvale, Cupertino, Palo Alto, Fremont, and the wider Bay Area. Every project starts with a practical site review so we can identify post conditions, grade changes, access constraints, and any neighbor or HOA considerations before pricing.",
     ],
     benefits: [
       "Improves privacy, security, and curb appeal",
       "Useful for side-yard access, pet areas, and backyard separation",
       "Integrated with pavers, lighting, turf, and planting design",
-      "Repair and replacement options for smaller projects",
       "Practical site review before quoting",
       "Built by a licensed and insured landscape contractor",
     ],
     faqs: [
-      { q: "Do you handle small fence or gate repairs?", a: "Yes. We can handle smaller fence and gate repairs when they fit our schedule or when they are part of a broader landscape project." },
       { q: "Can a new gate match my existing fence?", a: "Usually. We review the existing material, height, posts, hardware, and finish during the site visit and recommend the cleanest match or upgrade." },
       { q: "Do fence projects need neighbor approval?", a: "Shared fence lines often require neighbor coordination, and some HOAs have material or height rules. We flag those items before work begins." },
     ],
@@ -299,7 +297,8 @@ const contactOptionBySlug: Record<string, string> = {
   "hardscaping": "Hardscaping / Pavers",
   "retaining-walls": "Hardscaping / Pavers",
   "artificial-turf": "Artificial Turf",
-  "landscape-design": "Landscape Design Only",
+  // No preset for landscape-design: most visitors there want design + build,
+  // and "Landscape Design Only" would mislabel their request.
   "pergola-installation": "Pergola / Shade Structures",
   "fence-and-gate": "Fencing & Gates",
   "irrigation-drainage": "Irrigation / Drainage",

@@ -163,8 +163,15 @@ export default function ContactPage() {
           ]}
         />
 
-        {/* Contact details */}
-        <section className="py-14 md:py-16 bg-background">
+        {/* The form comes first, straight after the hero — same component the rest of the site uses */}
+        <ContactCTA
+          title="Book your free design consultation"
+          subtitle="Tell us what you're imagining. The design consultation is free; in the paid design phase we show you what's possible on your property, in 3D, before anything gets built."
+          showContactCards={false}
+        />
+
+        {/* Contact details, after the form: the hero already carries the phone */}
+        <section className="py-14 md:py-16 bg-surface">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl text-stone-900 mb-3">How to reach us</h2>
             <p className="text-stone-600 max-w-2xl mb-9">
@@ -209,15 +216,9 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* The form itself — same component the rest of the site uses */}
-        <ContactCTA
-          title="Book your free design consultation"
-          subtitle="Tell us what you're imagining. The design consultation is free; in the paid design phase we show you what's possible on your property, in 3D, before anything gets built."
-          showContactCards={false}
-        />
 
         {/* Service area — real internal links, not a paragraph of city names */}
-        <section className="py-14 md:py-16 bg-surface">
+        <section className="py-14 md:py-16 bg-background">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl text-stone-900 mb-3">Where we work</h2>
             <p className="text-stone-600 max-w-2xl mb-8">
@@ -251,7 +252,7 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <section className="py-14 md:py-16 bg-background">
+        <section className="py-14 md:py-16 bg-surface">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl text-stone-900 mb-3">
               Before you get in touch

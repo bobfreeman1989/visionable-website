@@ -61,12 +61,17 @@ export default function BeforeAfter({ tags }: BeforeAfterProps = {}) {
   const pair = shown[activeIdx];
 
   useEffect(() => {
-    shown.forEach((p) => {
-      [p.beforeSrc, p.afterSrc].forEach((src) => {
-        const img = new window.Image();
-        img.src = src;
+    // Warm the other cases once the browser is idle, so they don't compete
+    // with the hero image now that this section sits right under it.
+    const warm = () =>
+      shown.slice(1).forEach((p) => {
+        [p.beforeSrc, p.afterSrc].forEach((src) => {
+          const img = new window.Image();
+          img.src = src;
+        });
       });
-    });
+    const idle = window.requestIdleCallback ?? ((cb: () => void) => window.setTimeout(cb, 2000));
+    idle(warm);
     // Recompute only when the tag filter changes.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tags?.join(",")]);

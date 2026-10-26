@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import FadeUp from "@/components/motion/FadeUp";
 import { heroBadges } from "@/content/hero";
+import { ratingShort } from "@/content/reviews";
 
 export default function Hero() {
   return (
@@ -32,7 +33,7 @@ export default function Hero() {
               <span key={index} className="text-accent-light text-sm">★</span>
             ))}
           </div>
-          <span className="text-white/90 text-sm font-medium">5.0 on Google (26) and Yelp (6)</span>
+          <span className="text-white/90 text-sm font-medium">{ratingShort}</span>
         </FadeUp>
 
         <FadeUp delay={0.2}>

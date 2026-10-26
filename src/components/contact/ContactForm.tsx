@@ -88,9 +88,8 @@ export function ContactForm({ defaultService = "", detailsPlaceholder }: Contact
 
   return (
     <div className="bg-surface rounded-2xl p-8 border border-stone-200">
-      <h3 className="text-xl text-stone-900 mb-2">
-        Book Your Free Design Consultation
-      </h3>
+      {/* No heading of its own: the form always sits under a ContactCTA title,
+          and a second "Book your…" heading right below it read as a stutter. */}
       <p className="text-sm text-stone-500 mb-6">
         We&apos;ll reach out within 24 hours to schedule your design visit.
       </p>
@@ -102,25 +101,25 @@ export function ContactForm({ defaultService = "", detailsPlaceholder }: Contact
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
               <label htmlFor="contact-name" className="block text-sm font-medium text-stone-700 mb-1">Full Name *</label>
-              <input id="contact-name" name="contact-name" type="text" required maxLength={80} placeholder="Your name" className="w-full border border-stone-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white" />
+              <input id="contact-name" name="contact-name" autoComplete="name" type="text" required maxLength={80} placeholder="Your name" className="w-full border border-stone-300 rounded-lg px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white" />
             </div>
             <div>
               <label htmlFor="contact-phone" className="block text-sm font-medium text-stone-700 mb-1">Phone <span className="text-stone-600 font-normal">(optional)</span></label>
-              <input id="contact-phone" name="contact-phone" type="tel" maxLength={32} placeholder="(510) 555-1234" className="w-full border border-stone-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white" />
+              <input id="contact-phone" name="contact-phone" autoComplete="tel" type="tel" maxLength={32} placeholder="(510) 555-1234" className="w-full border border-stone-300 rounded-lg px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white" />
             </div>
           </div>
           <div>
             <label htmlFor="contact-email" className="block text-sm font-medium text-stone-700 mb-1">Email *</label>
-            <input id="contact-email" name="contact-email" type="email" required maxLength={120} placeholder="you@email.com" className="w-full border border-stone-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white" />
+            <input id="contact-email" name="contact-email" autoComplete="email" type="email" required maxLength={120} placeholder="you@email.com" className="w-full border border-stone-300 rounded-lg px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white" />
           </div>
           <div>
             <label htmlFor="contact-address" className="block text-sm font-medium text-stone-700 mb-1">Property Address <span className="text-stone-600 font-normal">(optional)</span></label>
-            <input id="contact-address" name="contact-address" type="text" maxLength={160} placeholder="Street, City, State" className="w-full border border-stone-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white" />
+            <input id="contact-address" name="contact-address" autoComplete="street-address" type="text" maxLength={160} placeholder="Street, City, State" className="w-full border border-stone-300 rounded-lg px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white" />
           </div>
           <div className="grid sm:grid-cols-2 gap-4">
             <div>
               <label htmlFor="contact-service" className="block text-sm font-medium text-stone-700 mb-1">What do you need? <span className="text-stone-600 font-normal">(optional)</span></label>
-              <select id="contact-service" name="contact-service" defaultValue={defaultService} onChange={(e) => setServiceChosen(e.currentTarget.value !== "")} className={`w-full border border-stone-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white ${serviceChosen ? "text-stone-900" : "text-stone-500"}`}>
+              <select id="contact-service" name="contact-service" defaultValue={defaultService} onChange={(e) => setServiceChosen(e.currentTarget.value !== "")} className={`w-full border border-stone-300 rounded-lg px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white ${serviceChosen ? "text-stone-900" : "text-stone-500"}`}>
                 <option value="">Select a service</option>
                 {contactServiceOptions.map((option) => (
                   <option key={option} value={option}>{option}</option>
@@ -129,7 +128,7 @@ export function ContactForm({ defaultService = "", detailsPlaceholder }: Contact
             </div>
             <div>
               <label htmlFor="contact-budget" className="block text-sm font-medium text-stone-700 mb-1">Budget Range</label>
-              <select id="contact-budget" name="contact-budget" defaultValue="" onChange={(e) => setBudgetChosen(e.currentTarget.value !== "")} className={`w-full border border-stone-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white ${budgetChosen ? "text-stone-900" : "text-stone-500"}`}>
+              <select id="contact-budget" name="contact-budget" defaultValue="" onChange={(e) => setBudgetChosen(e.currentTarget.value !== "")} className={`w-full border border-stone-300 rounded-lg px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white ${budgetChosen ? "text-stone-900" : "text-stone-500"}`}>
                 <option value="">Optional</option>
                 {contactBudgetOptions.map((option) => (
                   <option key={option} value={option}>{option}</option>
@@ -139,7 +138,7 @@ export function ContactForm({ defaultService = "", detailsPlaceholder }: Contact
           </div>
           <div>
             <label htmlFor="contact-source" className="block text-sm font-medium text-stone-700 mb-1">How did you find us? <span className="text-stone-600 font-normal">(optional)</span></label>
-            <select id="contact-source" name="contact-source" defaultValue="" onChange={(e) => setSourceChosen(e.currentTarget.value !== "")} className={`w-full border border-stone-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white ${sourceChosen ? "text-stone-900" : "text-stone-500"}`}>
+            <select id="contact-source" name="contact-source" defaultValue="" onChange={(e) => setSourceChosen(e.currentTarget.value !== "")} className={`w-full border border-stone-300 rounded-lg px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white ${sourceChosen ? "text-stone-900" : "text-stone-500"}`}>
               <option value="">Select one</option>
               {contactSourceOptions.map((option) => (
                 <option key={option} value={option}>{option}</option>
@@ -154,7 +153,7 @@ export function ContactForm({ defaultService = "", detailsPlaceholder }: Contact
               rows={4}
               maxLength={1200}
               placeholder={detailsPlaceholder ?? "What’s your vision? What problems are you trying to solve?"}
-              className="w-full border border-stone-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none bg-white"
+              className="w-full border border-stone-300 rounded-lg px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none bg-white"
             />
           </div>
 

@@ -187,70 +187,84 @@ export default function Nav() {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu: the list scrolls, the consultation button stays pinned
+          at the bottom of the sheet. Services and areas fold away so the
+          sheet opens on six lines, not twenty-six. */}
       {open && (
-        <div className="lg:hidden bg-white border-t border-stone-100 px-4 py-4 space-y-1 shadow-lg max-h-[80vh] overflow-y-auto">
-          {links.map((l) => (
-            <a
-              key={l.href + l.label}
-              href={l.href}
-              className="block text-sm font-medium text-stone-600 hover:text-primary py-2"
-              onClick={() => setOpen(false)}
-            >
-              {l.label}
-            </a>
-          ))}
-          <div className="py-2">
-            <p className="text-xs font-semibold text-stone-600 uppercase tracking-wider mb-1">Services</p>
-            <Link
-              href="/services"
-              className="block text-sm font-semibold text-stone-700 hover:text-primary py-1.5 pl-2"
-              onClick={() => setOpen(false)}
-            >
-              All Services
-            </Link>
-            {serviceLinks.map((s) => (
-              <Link
-                key={s.slug}
-                href={`/services/${s.slug}`}
-                className="block text-sm text-stone-600 hover:text-primary py-1.5 pl-2"
+        <div className="lg:hidden bg-white border-t border-stone-100 shadow-lg flex flex-col max-h-[calc(100svh-4rem)]">
+          <div className="overflow-y-auto px-4 py-3">
+            {links.map((l) => (
+              <a
+                key={l.href + l.label}
+                href={l.href}
+                className="block text-sm font-medium text-stone-600 hover:text-primary py-2.5"
                 onClick={() => setOpen(false)}
               >
-                {s.name}
-              </Link>
+                {l.label}
+              </a>
             ))}
+            <details className="group border-t border-stone-100">
+              <summary className="flex items-center justify-between cursor-pointer list-none text-sm font-medium text-stone-600 py-2.5 [&::-webkit-details-marker]:hidden">
+                Services
+                <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180" strokeWidth={1.5} />
+              </summary>
+              <div className="pb-2">
+                <Link
+                  href="/services"
+                  className="block text-sm font-semibold text-stone-700 hover:text-primary py-1.5 pl-2"
+                  onClick={() => setOpen(false)}
+                >
+                  All Services
+                </Link>
+                {serviceLinks.map((s) => (
+                  <Link
+                    key={s.slug}
+                    href={`/services/${s.slug}`}
+                    className="block text-sm text-stone-600 hover:text-primary py-1.5 pl-2"
+                    onClick={() => setOpen(false)}
+                  >
+                    {s.name}
+                  </Link>
+                ))}
+              </div>
+            </details>
+            <details className="group border-t border-stone-100">
+              <summary className="flex items-center justify-between cursor-pointer list-none text-sm font-medium text-stone-600 py-2.5 [&::-webkit-details-marker]:hidden">
+                Areas We Serve
+                <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180" strokeWidth={1.5} />
+              </summary>
+              <div className="pb-2">
+                <Link
+                  href="/areas"
+                  className="block text-sm font-semibold text-stone-700 hover:text-primary py-1.5 pl-2"
+                  onClick={() => setOpen(false)}
+                >
+                  All Areas
+                </Link>
+                {areaLinks.map((a) => (
+                  <Link
+                    key={a.slug}
+                    href={`/areas/${a.slug}`}
+                    className="block text-sm text-stone-600 hover:text-primary py-1.5 pl-2"
+                    onClick={() => setOpen(false)}
+                  >
+                    {a.name}
+                  </Link>
+                ))}
+              </div>
+            </details>
           </div>
-          <div className="py-2">
-            <p className="text-xs font-semibold text-stone-600 uppercase tracking-wider mb-1">Areas We Serve</p>
-            <Link
-              href="/areas"
-              className="block text-sm font-semibold text-stone-700 hover:text-primary py-1.5 pl-2"
-              onClick={() => setOpen(false)}
-            >
-              All Areas
-            </Link>
-            {areaLinks.map((a) => (
-              <Link
-                key={a.slug}
-                href={`/areas/${a.slug}`}
-                className="block text-sm text-stone-600 hover:text-primary py-1.5 pl-2"
-                onClick={() => setOpen(false)}
-              >
-                {a.name}
-              </Link>
-            ))}
-          </div>
-          <div className="pt-3 border-t border-stone-100 space-y-3">
-            <PhoneLink location="nav_menu" className="block text-sm font-medium text-stone-700">
-              (510) 755-5616
-            </PhoneLink>
+          <div className="border-t border-stone-100 px-4 py-3 flex items-center gap-4">
             <a
               href="/contact"
-              className="block bg-primary text-white text-center px-5 py-2.5 rounded-lg text-sm font-semibold"
+              className="flex-1 bg-primary text-white text-center px-5 py-2.5 rounded-lg text-sm font-semibold"
               onClick={() => setOpen(false)}
             >
               Book Consultation
             </a>
+            <PhoneLink location="nav_menu" className="text-sm font-medium text-stone-700">
+              (510) 755-5616
+            </PhoneLink>
           </div>
         </div>
       )}

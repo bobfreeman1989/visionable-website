@@ -33,7 +33,7 @@ export const featuredServices: ServiceItem[] = [
     desc: "Walk through your future backyard in 3D before we break ground. We design around how you live — where you'll cook, where the kids will play, where you'll unwind after work.",
     link: "/services/landscape-design",
     photo: "/photos/services/design01.webp",
-    tag: "Where Every Vision Starts",
+    tag: "Start here",
   },
 ];
 
