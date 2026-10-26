@@ -213,7 +213,7 @@ export function faqsForCity(city: CityData): { q: string; a: string }[] {
   return [
     {
       q: `Do you take on projects in ${city.name}?`,
-      a: `Yes. ${city.name} is one of the ${city.region} cities we focus on. Our office is at 581 Emerson St in Fremont, and our own crews build throughout ${city.county} County. We also work in nearby ${nearbyList}.`,
+      a: `Yes. ${city.name} is one of the Bay Area cities we focus on. Our office is at 581 Emerson St in Fremont, and our own crews build throughout ${city.county} County. We also work in nearby ${nearbyList}.`,
     },
     {
       q: `What happens at the free ${city.name} consultation?`,

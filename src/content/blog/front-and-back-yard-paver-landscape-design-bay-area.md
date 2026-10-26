@@ -109,9 +109,9 @@ If your budget and timing allow, planning both together can create a more cohesi
 
 Sometimes, but it is usually better to plan lighting early so wire routes, fixture placement, and hardscape details can be integrated cleanly.
 
-## Call to Action
+## Start your own project
 
-Ready to create a cleaner, more practical front or backyard? **Request a Free Estimate** from Visionable Landscaping to discuss pavers, lighting, planting, and a design that fits the way your family uses the space.
+Ready to create a cleaner, more practical front or backyard? [Book a free design consultation](/contact#contact) with Visionable Landscaping to discuss pavers, lighting, planting, and a design that fits the way your family uses the space.
 
 ## Project Photo Gallery
 

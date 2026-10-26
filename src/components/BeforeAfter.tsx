@@ -11,16 +11,23 @@ type Pair = {
   beforeSrc: string;
   afterSrc: string;
   afterPosition?: string;
+  /** Badge on the left image. Not every left image is a bare yard: case 3 was
+   *  shot mid-build, so it says so rather than calling it a "before". */
+  beforeLabel?: string;
+  /** Gallery tags this case shows, so a service page only gets cases that
+   *  are about its service. */
+  tags: string[];
 };
 
 const pairs: Pair[] = [
   {
     id: "01",
     label: "Outdoor Living Build",
-    location: "Los Altos · pergola · composite deck · sectional",
+    location: "Los Altos · replaced a gazebo, gravel and shed · pergola · composite deck",
     beforeSrc: "/photos/before-after/case-1-before-1280.webp",
     afterSrc: "/photos/before-after/case-1-after-1280.webp",
     afterPosition: "object-[50%_35%]",
+    tags: ["pergola", "full-remodel", "turf"],
   },
   {
     id: "02",
@@ -28,30 +35,43 @@ const pairs: Pair[] = [
     location: "San Jose · porcelain pavers · grading · planting",
     beforeSrc: "/photos/before-after/case-2-before-1280.webp",
     afterSrc: "/photos/before-after/case-2-after-1280.webp",
+    tags: ["pavers", "hardscape", "drainage"],
   },
   {
     id: "03",
     label: "Custom Sport Court",
-    location: "San Jose · modular court · hoop · edging",
+    location: "San Jose · left image is mid-build: base and forms · modular court · hoop",
     beforeSrc: "/photos/before-after/case-3-before-1280.webp",
     afterSrc: "/photos/before-after/case-3-after-1280.webp",
     afterPosition: "object-[50%_42%]",
+    beforeLabel: "During",
+    tags: ["play", "full-remodel", "turf"],
   },
 ];
 
-export default function BeforeAfter() {
+interface BeforeAfterProps {
+  /** Limit to cases carrying one of these tags; omit to show every case. */
+  tags?: string[];
+}
+
+export default function BeforeAfter({ tags }: BeforeAfterProps = {}) {
+  const shown = tags ? pairs.filter((p) => p.tags.some((t) => tags.includes(t))) : pairs;
   const [activeIdx, setActiveIdx] = useState(0);
   const hoverTimer = useRef<ReturnType<typeof setTimeout>>();
-  const pair = pairs[activeIdx];
+  const pair = shown[activeIdx];
 
   useEffect(() => {
-    pairs.forEach((p) => {
+    shown.forEach((p) => {
       [p.beforeSrc, p.afterSrc].forEach((src) => {
         const img = new window.Image();
         img.src = src;
       });
     });
-  }, []);
+    // Recompute only when the tag filter changes.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [tags?.join(",")]);
+
+  if (!pair) return null;
 
   return (
     <section id="before-after" className="scroll-mt-24 bg-background py-14 sm:py-16">
@@ -66,15 +86,15 @@ export default function BeforeAfter() {
             </h2>
           </div>
           <p className="text-stone-500 max-w-2xl lg:ml-auto lg:text-right">
-            Drag the slider to compare the starting point with the finished build. Switch between three recent projects below.
+            Drag the slider to compare the starting point with the finished build.{shown.length > 1 && ` Switch between ${shown.length} recent projects below.`}
           </p>
         </div>
 
         <Comparison key={pair.id} pair={pair} />
 
         <div className="mt-6">
-          <div className="grid gap-3 sm:grid-cols-3" role="tablist" aria-label="Choose a before and after project">
-            {pairs.map((p, i) => (
+          <div className={`grid gap-3 ${shown.length > 1 ? "sm:grid-cols-3" : "hidden"}`} role="tablist" aria-label="Choose a before and after project">
+            {shown.map((p, i) => (
               <button
                 key={p.id}
                 type="button"
@@ -198,7 +218,7 @@ function Comparison({ pair }: { pair: Pair }) {
         </div>
 
         <span className="absolute top-4 left-4 bg-black/60 text-white text-xs font-semibold tracking-wider uppercase px-3 py-1 rounded-full">
-          Before
+          {pair.beforeLabel ?? "Before"}
         </span>
         <span className="absolute top-4 right-4 bg-primary text-white text-xs font-semibold tracking-wider uppercase px-3 py-1 rounded-full">
           After

@@ -114,9 +114,9 @@ Yes, if the layout is planned carefully. Raised beds, defined paths, and clear z
 
 Make a list of the activities you want your backyard to support, such as gardening, outdoor dining, play, pets, or entertaining. That list should guide the design.
 
-## Call to Action
+## Start your own project
 
-Want a backyard that works as a garden, vegetable space, and family retreat? **Request a Free Estimate** from Visionable Landscaping to explore curved walkways, raised beds, and a practical layout for your home.
+Want a backyard that works as a garden, vegetable space, and family retreat? [Book a free design consultation](/contact#contact) with Visionable Landscaping to explore curved walkways, raised beds, and a practical layout for your home.
 
 ## Project Photo Gallery
 

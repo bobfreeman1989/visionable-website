@@ -127,11 +127,11 @@ Drainage and sub base preparation support the finished hardscape. They help mana
 
 Yes. Visionable Landscaping handled the process from design through construction, including communication, materials, scheduling, and field adjustments.
 
-## Request a Free Estimate
+## Start your own project
 
 Planning a modern backyard remodel in the Bay Area, Fremont, San Jose, or nearby communities? Visionable Landscaping can help turn your ideas into a clean, buildable outdoor living plan.
 
-[Request a Free Estimate](https://visionablelandscaping.com/contact)
+[Book a free design consultation](/contact#contact)
 
 ## Project Photo Gallery
 
@@ -141,6 +141,6 @@ Planning a modern backyard remodel in the Bay Area, Fremont, San Jose, or nearby
 
 ![Deck transition](/photos/blog/modern-minimalist-backyard-design-pavers-deck-pergola/gallery-03.webp)
 
-![Pergola shade](/photos/blog/modern-minimalist-backyard-design-pavers-deck-pergola/gallery-04.webp)
+![Large-format paver patio with a block seat wall](/photos/blog/modern-minimalist-backyard-design-pavers-deck-pergola/gallery-04.webp)
 
-![Evening lighting](/photos/blog/modern-minimalist-backyard-design-pavers-deck-pergola/gallery-05.webp)
+![Flagstone path through river-rock planting beside the house](/photos/blog/modern-minimalist-backyard-design-pavers-deck-pergola/gallery-05.webp)

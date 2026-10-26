@@ -28,78 +28,92 @@ export type Photo = {
   /** Short human caption shown under or over the image. */
   caption: string;
   tags: PhotoTag[];
+  /** Under 1200px wide. Fine in a grid tile, too soft to fill a page hero. */
+  lowRes?: true;
 };
 
 /** Curated hero-grade photography, shot for the site. */
 export const photos: Photo[] = [
   {
     src: "/photos/services/patios01.webp",
+    lowRes: true,
     alt: "Large-format grey paver patio with a white pergola and outdoor sectional",
     caption: "Large-format paver patio with pergola and lounge seating",
     tags: ["pavers", "pergola", "hardscape", "full-remodel"],
   },
   {
     src: "/photos/services/patios02.webp",
+    lowRes: true,
     alt: "Grey paver patio bordered by a raised planter bed and a wood fence",
     caption: "Paver patio with raised planting beds",
     tags: ["pavers", "hardscape", "design"],
   },
   {
     src: "/photos/services/turf01.webp",
+    lowRes: true,
     alt: "Artificial turf putting green with practice cups set into the lawn",
     caption: "Artificial turf putting green",
     tags: ["turf", "play"],
   },
   {
     src: "/photos/services/turf02.webp",
+    lowRes: true,
     alt: "Side yard with artificial turf, redwood raised planters and a paver walkway",
     caption: "Turf lawn with redwood raised planters",
     tags: ["turf", "design", "pavers"],
   },
   {
     src: "/photos/services/pergola01.webp",
+    lowRes: true,
     alt: "Modern dark-framed pergola over a paver patio beside an artificial turf lawn",
     caption: "Modern pergola over pavers, opening onto turf",
     tags: ["pergola", "pavers", "turf"],
   },
   {
     src: "/photos/services/pergola02.webp",
+    lowRes: true,
     alt: "Dark louvered pergola casting striped shadows across a paver patio",
     caption: "Louvered pergola with adjustable shade",
     tags: ["pergola", "pavers"],
   },
   {
     src: "/photos/services/lighting01.webp",
+    lowRes: true,
     alt: "Backyard at dusk with a lit built-in seat wall beside an artificial turf lawn",
     caption: "Integrated seat-wall lighting at dusk",
     tags: ["lighting", "hardscape", "turf"],
   },
   {
     src: "/photos/services/lighting02.webp",
-    alt: "Curved concrete patio with a lit low retaining wall and gravel border",
-    caption: "Curved patio with lit retaining wall",
-    tags: ["lighting", "retaining-wall", "hardscape", "drainage"],
+    lowRes: true,
+    alt: "Large-format grey paver patio with a lit stone-veneer planter wall, flagstone steps set in gravel and a river-rock border",
+    caption: "Paver patio with a lit stone planter wall",
+    tags: ["lighting", "pavers", "hardscape", "drainage"],
   },
   {
     src: "/photos/services/bench01.webp",
-    alt: "Turf lawn with concrete stepping pads leading to a built-in bench along the fence",
-    caption: "Built-in bench with stepping pads across turf",
+    lowRes: true,
+    alt: "Turf lawn with irregular flagstone stepping pads leading to an L-shaped wood bench along the fence",
+    caption: "L-shaped bench with flagstone steppers across turf",
     tags: ["hardscape", "turf", "design"],
   },
   {
     src: "/photos/services/bench02.webp",
+    lowRes: true,
     alt: "Flagstone patio with a floating cantilevered concrete bench",
     caption: "Flagstone patio with a floating concrete bench",
     tags: ["hardscape", "design"],
   },
   {
     src: "/photos/services/fountain01.webp",
+    lowRes: true,
     alt: "Stacked stone water feature set into a gravel dry creek bed",
     caption: "Stone water feature and dry creek bed",
     tags: ["hardscape", "drainage", "design"],
   },
   {
     src: "/photos/services/fountain02.webp",
+    lowRes: true,
     alt: "Stone retaining wall with a tiered fountain and planting along the top",
     caption: "Stone retaining wall with tiered fountain",
     tags: ["retaining-wall", "hardscape"],
@@ -309,6 +323,10 @@ export const photos: Photo[] = [
  * Portfolio set used by the homepage grid. Titles here are what a visitor sees
  * captioned under each photo, so they describe the photo itself rather than a
  * service we would like to sell against it.
+ *
+ * Order is deliberate: phones show the first six, so they lead with six
+ * different yards and cities. The Los Altos yard (p01, p02) and the projects
+ * already shown in Before & After (p09, p10) sit further back.
  */
 export type PortfolioProject = Photo & {
   id: string;
@@ -319,74 +337,15 @@ export type PortfolioProject = Photo & {
 
 export const portfolioProjects: PortfolioProject[] = [
   {
-    id: "1",
-    title: "Deck & Retaining Wall",
+    id: "11",
+    title: "Outdoor Kitchen & Bar",
     category: "Outdoor Living",
-    location: "Los Altos",
-    src: "/photos/portfolio/p01.webp",
-    alt: "Composite deck with a hanging egg chair, stepping pavers set in artificial turf and a low retaining wall",
-    caption: "Deck and retaining wall",
-    tags: ["retaining-wall", "turf", "hardscape"],
-  },
-  {
-    id: "2",
-    title: "Paver, Pergola & Turf",
-    category: "Outdoor Living",
-    location: "Los Altos",
-    src: "/photos/portfolio/p02.webp",
-    alt: "White aluminum pergola over an outdoor sectional, reached by stepping pavers through an artificial turf lawn",
-    caption: "Pergola lounge with pavers and turf",
-    tags: ["pergola", "pavers", "turf", "full-remodel"],
-  },
-  {
-    id: "3",
-    title: "Retaining Wall & Paver Patio",
-    category: "Hardscaping",
-    location: "San Carlos",
-    src: "/photos/portfolio/p03.webp",
-    alt: "Curved block retaining wall wrapping a large paver patio with a contrasting border band",
-    caption: "Curved retaining wall and paver patio",
-    tags: ["retaining-wall", "pavers", "hardscape"],
-  },
-  {
-    id: "4",
-    title: "Paver Patio",
-    category: "Hardscaping",
-    location: "San Jose",
-    src: "/photos/portfolio/p04.webp",
-    alt: "Large paver patio with a swing set and planted borders along a wood fence",
-    caption: "Paver patio with play area",
-    tags: ["pavers", "play"],
-  },
-  {
-    id: "5",
-    title: "Redwood Horizontal Fence",
-    category: "Landscaping",
-    location: "Palo Alto",
-    src: "/photos/portfolio/p05.webp",
-    alt: "Horizontal redwood fence and matching planter boxes around a paver patio",
-    caption: "Horizontal redwood fence",
-    tags: ["fence", "design"],
-  },
-  {
-    id: "6",
-    title: "Deck & Paver Patio",
-    category: "Hardscaping",
-    location: "Sunnyvale",
-    src: "/photos/portfolio/p06.webp",
-    alt: "Paver patio and low deck beside the house with an artificial turf lawn",
-    caption: "Deck and paver patio",
-    tags: ["pavers", "turf"],
-  },
-  {
-    id: "7",
-    title: "Deck & Turf",
-    category: "Outdoor Living",
-    location: "Mountain View",
-    src: "/photos/portfolio/p07.webp",
-    alt: "Low composite deck stepping down to an artificial turf lawn with stepping pavers",
-    caption: "Deck and turf lawn",
-    tags: ["turf", "full-remodel"],
+    location: "Saratoga",
+    src: "/photos/portfolio/p11.webp",
+    lowRes: true,
+    alt: "Covered outdoor kitchen with a built-in grill and a seated bar counter on a light paver patio",
+    caption: "Outdoor kitchen with bar seating",
+    tags: ["outdoor-kitchen", "pergola", "full-remodel"],
   },
   {
     id: "8",
@@ -394,9 +353,54 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "Outdoor Living",
     location: "San Jose",
     src: "/photos/portfolio/p08.webp",
+    lowRes: true,
     alt: "Smooth stucco planter walls with a built-in bench and integrated lighting beside artificial turf",
     caption: "Lit stucco planter and bench",
     tags: ["hardscape", "lighting", "turf"],
+  },
+  {
+    id: "3",
+    title: "Retaining Wall & Paver Patio",
+    category: "Hardscaping",
+    location: "San Carlos",
+    src: "/photos/portfolio/p03.webp",
+    lowRes: true,
+    alt: "Curved block retaining wall wrapping a large paver patio with a contrasting border band",
+    caption: "Curved retaining wall and paver patio",
+    tags: ["retaining-wall", "pavers", "hardscape"],
+  },
+  {
+    id: "12",
+    title: "Lit Decking & Stepping Pavers",
+    category: "Hardscaping",
+    location: "Palo Alto",
+    src: "/photos/portfolio/p12.webp",
+    lowRes: true,
+    alt: "Low deck with recessed deck lights and large stepping pavers in gravel at dusk",
+    caption: "Lit decking and stepping pavers",
+    tags: ["lighting", "pavers"],
+  },
+  {
+    id: "2",
+    title: "Paver, Pergola & Turf",
+    category: "Outdoor Living",
+    location: "Los Altos",
+    src: "/photos/portfolio/p02.webp",
+    lowRes: true,
+    alt: "White aluminum pergola over an outdoor sectional, reached by stepping pavers through an artificial turf lawn",
+    caption: "Pergola lounge with pavers and turf",
+    tags: ["pergola", "pavers", "turf", "full-remodel"],
+  },
+  {
+    id: "7",
+    title: "Deck & Turf",
+    category: "Outdoor Living",
+    location: "Mountain View",
+    src: "/photos/portfolio/p07.webp",
+    lowRes: true,
+    alt: "Low composite deck stepping down to an artificial turf lawn with stepping pavers",
+    caption: "Deck and turf lawn",
+    tags: ["turf", "full-remodel"],
   },
   {
     id: "9",
@@ -404,6 +408,7 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "Outdoor Living",
     location: "San Jose",
     src: "/photos/portfolio/p09.webp",
+    lowRes: true,
     alt: "Blue and yellow modular backyard basketball court with a hoop",
     caption: "Backyard sports court",
     tags: ["play", "full-remodel"],
@@ -414,29 +419,54 @@ export const portfolioProjects: PortfolioProject[] = [
     category: "Hardscaping",
     location: "San Jose",
     src: "/photos/portfolio/p10.webp",
+    lowRes: true,
     alt: "Large-format porcelain paver patio with flagstone stepping stones in gravel and curved planting beds",
     caption: "Porcelain paver patio",
     tags: ["pavers", "hardscape", "drainage"],
   },
   {
-    id: "11",
-    title: "Outdoor Kitchen & Bar",
-    category: "Outdoor Living",
-    location: "Saratoga",
-    src: "/photos/portfolio/p11.webp",
-    alt: "Covered outdoor kitchen with a built-in grill and a seated bar counter on a light paver patio",
-    caption: "Outdoor kitchen with bar seating",
-    tags: ["outdoor-kitchen", "pergola", "full-remodel"],
+    id: "5",
+    title: "Redwood Horizontal Fence",
+    category: "Landscaping",
+    location: "Palo Alto",
+    src: "/photos/portfolio/p05.webp",
+    lowRes: true,
+    alt: "Horizontal redwood fence and matching planter boxes around a paver patio",
+    caption: "Horizontal redwood fence",
+    tags: ["fence", "design"],
   },
   {
-    id: "12",
-    title: "Lit Decking & Stepping Pavers",
+    id: "6",
+    title: "Deck & Paver Patio",
     category: "Hardscaping",
-    location: "Palo Alto",
-    src: "/photos/portfolio/p12.webp",
-    alt: "Low deck with recessed deck lights and large stepping pavers in gravel at dusk",
-    caption: "Lit decking and stepping pavers",
-    tags: ["lighting", "pavers"],
+    location: "Sunnyvale",
+    src: "/photos/portfolio/p06.webp",
+    lowRes: true,
+    alt: "Paver patio and low deck beside the house with an artificial turf lawn",
+    caption: "Deck and paver patio",
+    tags: ["pavers", "turf"],
+  },
+  {
+    id: "4",
+    title: "Paver Patio",
+    category: "Hardscaping",
+    location: "San Jose",
+    src: "/photos/portfolio/p04.webp",
+    lowRes: true,
+    alt: "Large paver patio with a swing set and planted borders along a wood fence",
+    caption: "Paver patio with play area",
+    tags: ["pavers", "play"],
+  },
+  {
+    id: "1",
+    title: "Deck & Retaining Wall",
+    category: "Outdoor Living",
+    location: "Los Altos",
+    src: "/photos/portfolio/p01.webp",
+    lowRes: true,
+    alt: "Composite deck with a hanging egg chair, stepping pavers set in artificial turf and a low retaining wall",
+    caption: "Deck and retaining wall",
+    tags: ["retaining-wall", "turf", "hardscape"],
   },
 ];
 
@@ -444,24 +474,28 @@ export const portfolioProjects: PortfolioProject[] = [
 export const extraPhotos: Photo[] = [
   {
     src: "/photos/portfolio/p13.webp",
+    lowRes: true,
     alt: "White pergola over a play area with oversized decorative spheres",
     caption: "Pergola over a family play area",
     tags: ["pergola", "play"],
   },
   {
     src: "/photos/portfolio/p14.webp",
+    lowRes: true,
     alt: "Overhead view of a circular flagstone patio with a curved seat wall",
     caption: "Circular flagstone patio with seat wall",
     tags: ["hardscape", "design"],
   },
   {
     src: "/photos/portfolio/p15.webp",
+    lowRes: true,
     alt: "Backyard with turf, a climbing structure, outdoor kitchen and pergola",
     caption: "Complete backyard with play, cooking and shade",
     tags: ["full-remodel", "turf", "outdoor-kitchen", "play"],
   },
   {
     src: "/photos/portfolio/p16.webp",
+    lowRes: true,
     alt: "Wide paver patio bordered by a low stone retaining wall",
     caption: "Paver patio with low retaining wall",
     tags: ["pavers", "retaining-wall", "hardscape"],
@@ -471,7 +505,7 @@ export const extraPhotos: Photo[] = [
 const allPhotos: Photo[] = [
   ...photos,
   ...extraPhotos,
-  ...portfolioProjects.map(({ src, alt, caption, tags }) => ({ src, alt, caption, tags })),
+  ...portfolioProjects.map(({ src, alt, caption, tags, lowRes }) => ({ src, alt, caption, tags, lowRes })),
 ];
 
 /** Which tags speak for each service, most representative first. */
@@ -510,7 +544,20 @@ export function photosForService(slug: string, count = 6): Photo[] {
 
 /** The single strongest image for a service, used as its page hero. */
 export function heroForService(slug: string): Photo {
-  return photosForService(slug, 1)[0];
+  // A hero has to be about the service's lead tag (a fence page leads with a
+  // fence) and sharp enough to fill the screen; low-res photos are a fallback.
+  const lead = serviceTags[slug]?.[0];
+  const ranked = photosForService(slug, allPhotos.length);
+  return (
+    ranked.find((p) => !p.lowRes && lead !== undefined && p.tags.includes(lead)) ??
+    ranked.find((p) => lead !== undefined && p.tags.includes(lead)) ??
+    ranked[0]
+  );
+}
+
+/** The tags that speak for a service, for filtering other shared sections. */
+export function tagsForService(slug: string): PhotoTag[] {
+  return serviceTags[slug] ?? [];
 }
 
 /**

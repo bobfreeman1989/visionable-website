@@ -49,8 +49,7 @@ export default function Footer() {
           <div className="max-w-md">
             <Image src="/logo-white.png" alt="Visionable Landscaping" width={520} height={116} className="h-9 w-auto mb-4" />
             <p className="text-sm leading-relaxed">
-              Shaping visions into extraordinary landscapes across the South Bay and Peninsula.
-              Landscape design-build for South Bay and Peninsula homeowners.
+              Landscape design-build for Bay Area homeowners.
             </p>
           </div>
           <div className="space-y-2 text-sm shrink-0">

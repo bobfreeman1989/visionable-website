@@ -22,9 +22,9 @@ export default function Home() {
       <Nav />
       <main id="main-content">
         <Hero />
+        <BeforeAfter />
         <Services />
         <Portfolio />
-        <BeforeAfter />
         <CTABanner
           title="100+ Bay Area Projects. Each One Started as a Vision."
           subtitle="No pressure, just a conversation about what your yard could become."

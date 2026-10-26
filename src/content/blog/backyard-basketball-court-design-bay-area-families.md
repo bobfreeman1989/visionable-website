@@ -113,9 +113,9 @@ Yes. Raised beds and defined planting areas can work well beside a court when tr
 
 Not always. A retaining wall may be needed when the yard has grade changes or when the design requires a stable edge. Site conditions should be reviewed before deciding.
 
-## Call to Action
+## Start your own project
 
-Thinking about turning your backyard into a home court, garden, and family gathering space? **Request a Free Estimate** from Visionable Landscaping to discuss a backyard basketball court design tailored to your home.
+Thinking about turning your backyard into a home court, garden, and family gathering space? [Book a free design consultation](/contact#contact) with Visionable Landscaping to discuss a backyard basketball court design tailored to your home.
 
 ## Project Photo Gallery
 

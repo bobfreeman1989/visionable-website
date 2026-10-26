@@ -9,7 +9,7 @@ export type FaqItem = {
 export const homepageFaqs: FaqItem[] = [
   {
     q: "How much does an outdoor living project cost?",
-    a: "Most complete backyard projects fall in the range that lets us design, build and finish the space properly; we give you a fixed price after the design phase.",
+    a: "Cost depends on scope, materials, site access and site conditions. We talk through your budget at the free design consultation, design to that number, and confirm a fixed construction price after the design phase.",
   },
   {
     q: "How long until I can actually use my new yard?",
@@ -29,7 +29,7 @@ export const homepageFaqs: FaqItem[] = [
   },
   {
     q: "What areas do you serve?",
-    a: "The South Bay and Peninsula: San Jose, Santa Clara, Sunnyvale, Cupertino, Mountain View, Los Altos, Palo Alto, Saratoga, Los Gatos, San Carlos, San Mateo, Atherton, and our home base of Fremont.",
+    a: "The Bay Area: San Jose, Santa Clara, Sunnyvale, Cupertino, Mountain View, Los Altos, Palo Alto, Saratoga, Los Gatos, San Carlos, San Mateo, Atherton, and our home base of Fremont.",
   },
   {
     q: "Do you offer warranties?",

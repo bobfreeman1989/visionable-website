@@ -292,7 +292,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         {mentionedServices.length > 0 && (
           <RelatedCards
             title="The services behind this article"
-            intro="Everything in this piece is work our own crew builds, across the South Bay and Peninsula."
+            intro="Everything in this piece is work our own crew builds across the Bay Area."
             className="bg-surface mt-16"
             cards={mentionedServices.map((s) => {
               const photo = heroForService(s.slug);

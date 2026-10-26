@@ -129,11 +129,11 @@ A herringbone pattern places rectangular pavers in a zigzag arrangement. It adds
 
 Yes, when budget and scope allow. A finished side yard can improve access, nighttime visibility, drainage planning, and the overall look of the landscape.
 
-## Request a Free Estimate
+## Start your own project
 
 Planning a family-friendly backyard remodel in the Bay Area, Fremont, San Jose, or nearby communities? Visionable Landscaping can help you design and build an outdoor space that looks beautiful and works for daily life.
 
-[Request a Free Estimate](https://visionablelandscaping.com/contact)
+[Book a free design consultation](/contact#contact)
 
 ## Project Photo Gallery
 

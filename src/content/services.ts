@@ -1,10 +1,10 @@
 import {
   Droplets,
   Fence,
+  Home,
   Layers,
   Lightbulb,
   PenTool,
-  TreePine,
   type LucideIcon,
 } from "lucide-react";
 
@@ -20,6 +20,14 @@ export type ServiceItem = {
 
 export const featuredServices: ServiceItem[] = [
   {
+    Icon: Home,
+    title: "Complete Backyard Remodel",
+    desc: "The whole yard, designed once and built by one crew: patio, lawn, shade, lighting, planting and drainage working together, on one fixed-price contract.",
+    link: "/services/complete-backyard-remodel",
+    photo: "/photos/services/pergola05.webp",
+    tag: "Design + Build",
+  },
+  {
     Icon: PenTool,
     title: "Outdoor Living Design",
     desc: "Walk through your future backyard in 3D before we break ground. We design around how you live — where you'll cook, where the kids will play, where you'll unwind after work.",
@@ -27,23 +35,15 @@ export const featuredServices: ServiceItem[] = [
     photo: "/photos/services/design01.webp",
     tag: "Where Every Vision Starts",
   },
+];
+
+export const secondaryServices: ServiceItem[] = [
   {
     Icon: Layers,
     title: "Patios & Outdoor Rooms",
     desc: "The foundation of every great outdoor space. Premium stone and pavers that turn bare dirt into your favorite room — no walls required.",
     link: "/services/paver-installation",
     photo: "/photos/services/patios06.webp",
-    tag: "Most Requested",
-  },
-];
-
-export const secondaryServices: ServiceItem[] = [
-  {
-    Icon: TreePine,
-    title: "Lawns & Play Areas",
-    desc: "Soft, green, year-round turf where kids and dogs go barefoot.",
-    link: "/services/artificial-turf",
-    photo: "/photos/services/turf05.webp",
   },
   {
     Icon: Lightbulb,
@@ -64,6 +64,6 @@ export const secondaryServices: ServiceItem[] = [
     title: "Fences, Pergolas & Shade",
     desc: "Privacy, shade, and structure that frame your outdoor room.",
     link: "/services/pergola-installation",
-    photo: "/photos/services/pergola06.webp",
+    photo: "/photos/services/pergola03.webp",
   },
 ];
