@@ -113,7 +113,7 @@ A good contractor should not just say, “We can do it.” They should help you 
 
 ## 7. Do Not Ignore Drainage in Bay Area Yards
 
-Contractor selection matters, but for landscaping projects in Fremont, San Jose, Milpitas, Sunnyvale, Palo Alto, Cupertino, and nearby Bay Area communities, drainage deserves special attention.
+Contractor selection matters, but for landscaping projects in Fremont, San Jose, Sunnyvale, Palo Alto, Cupertino, and nearby Bay Area communities, drainage deserves special attention.
 
 Before installing pavers, turf, retaining walls, concrete, or planting areas, ask:
 

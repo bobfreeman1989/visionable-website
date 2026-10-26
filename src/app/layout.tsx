@@ -12,12 +12,13 @@ const dmSerif = DM_Serif_Display({ weight: "400", subsets: ["latin"], variable: 
 
 const BASE_URL = "https://visionablelandscaping.com";
 
-// LocalBusiness + FAQPage structured data
+// The one business entity on the site. City, service and blog schema point at
+// it by @id instead of describing the business again, so Google sees a single
+// company rather than a dozen near-duplicates.
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["HomeAndConstructionBusiness", "GeneralContractor"],
   "@id": `${BASE_URL}/#business`,
-  additionalType: "https://schema.org/HomeAndConstructionBusiness",
   name: "Visionable Landscaping",
   description:
     "Premium landscape design-build services across the Bay Area. Hardscaping, artificial turf, outdoor lighting, pergolas, fencing, irrigation, drainage, and complete yard transformations.",
@@ -71,6 +72,17 @@ const localBusinessSchema = {
   hasCredential: [
     {
       "@type": "EducationalOccupationalCredential",
+      name: "California C-27 Landscaping Contractor License #1101860",
+      credentialCategory: "license",
+      recognizedBy: {
+        "@type": "Organization",
+        name: "Contractors State License Board",
+        url: "https://www.cslb.ca.gov",
+      },
+      url: "https://www.cslb.ca.gov/1101860",
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
       name: "Techo-Pro Certified Contractor",
       credentialCategory: "certification",
       recognizedBy: { "@type": "Organization", name: "Techo-Bloc", url: "https://www.techo-bloc.com" },
@@ -93,6 +105,8 @@ const localBusinessSchema = {
     closes: "17:00",
   },
   image: `${BASE_URL}/og-image.jpg`,
+  // Blog posts name this entity as publisher, and Article markup expects a logo.
+  logo: `${BASE_URL}/logo.png`,
   sameAs: [
     "https://www.yelp.com/biz/visionable-landscaping-fremont",
     "https://www.facebook.com/p/Visionable-Landscaping-100089900322769",
