@@ -11,7 +11,7 @@ featured: false
 
 A successful backyard renovation is not just about replacing dirt with hardscape. The best outdoor spaces feel intentional: easy to walk through, visually calm, practical to maintain, and connected to the way the homeowner wants to live.
 
-This Visionable Landscaping project started as a bare, undeveloped yard area. The design direction was modern, open, and resort-like without creating a high-maintenance landscape. For Bay Area homeowners in [Fremont](/areas/fremont), San Jose, and nearby communities, the project offers a useful lesson: a clean backyard can still feel warm, natural, and comfortable when the layout, materials, and planting are planned together.
+This Visionable Landscaping project started as a bare, undeveloped yard area. The design direction was modern, open, and relaxed without creating a high-maintenance landscape. For Bay Area homeowners in [Fremont](/areas/fremont), San Jose, and nearby communities, the project offers a useful lesson: a clean backyard can still feel warm, natural, and comfortable when the layout, materials, and planting are planned together.
 
 ## Project Lesson: Start With the Lifestyle, Not Just the Surface
 
@@ -23,7 +23,7 @@ That is an important starting point for any [backyard remodel](/services/complet
 - Should the yard feel open and minimal or lush and enclosed?
 - How much routine maintenance are you realistically willing to handle?
 - Are there utility areas, side yards, or equipment zones that need screening?
-- Do you want a resort-like atmosphere, a family-friendly layout, or both?
+- Do you want a quiet retreat, a family-friendly layout, or both?
 
 When the design begins with lifestyle, the material choices become more purposeful.
 
@@ -57,7 +57,7 @@ Homeowner takeaway: do not treat utility screening as an afterthought. Integrati
 
 The planting palette includes olive trees and bird of paradise. These choices support a relaxed California atmosphere while keeping the design simple and sculptural.
 
-For modern landscapes, planting does not need to be crowded. A few strong plant forms can do more than many small, unrelated plants. Olive trees can add silvery foliage and an established Mediterranean feeling, while bird of paradise can introduce bold leaves and a resort-like accent.
+For modern landscapes, planting does not need to be crowded. A few strong plant forms can do more than many small, unrelated plants. Olive trees can add silvery foliage and an established Mediterranean feeling, while bird of paradise can introduce bold leaves and a tropical accent.
 
 For homeowners, the larger lesson is to choose plants that match the design style and maintenance expectations. Planting should complement the hardscape, not fight it.
 

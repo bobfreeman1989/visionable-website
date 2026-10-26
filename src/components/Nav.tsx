@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import PhoneLink from "@/components/PhoneLink";
 import { ChevronDown, Menu, Phone, X } from "lucide-react";
 
 const areaLinks = [
@@ -155,13 +156,13 @@ export default function Nav() {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <a
-              href="tel:510-755-5616"
+            <PhoneLink
+              location="nav_desktop"
               className="flex items-center gap-2 text-sm font-medium text-stone-700 hover:text-primary transition-colors"
             >
               <Phone className="w-4 h-4" strokeWidth={1.5} />
               (510) 755-5616
-            </a>
+            </PhoneLink>
             <a
               href="/contact"
               className="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-colors"
@@ -172,9 +173,9 @@ export default function Nav() {
 
           {/* Mobile */}
           <div className="flex lg:hidden items-center gap-2">
-            <a href="tel:510-755-5616" className="p-2 text-primary" aria-label="Call us">
+            <PhoneLink location="nav_mobile" className="p-2 text-primary" aria-label="Call us">
               <Phone className="w-6 h-6" strokeWidth={1.5} />
-            </a>
+            </PhoneLink>
             <button className="p-2" onClick={() => setOpen(!open)} aria-label="Toggle menu" aria-expanded={open}>
               {open ? (
                 <X className="w-6 h-6" strokeWidth={1.5} />
@@ -240,9 +241,9 @@ export default function Nav() {
             ))}
           </div>
           <div className="pt-3 border-t border-stone-100 space-y-3">
-            <a href="tel:510-755-5616" className="block text-sm font-medium text-stone-700">
+            <PhoneLink location="nav_menu" className="block text-sm font-medium text-stone-700">
               (510) 755-5616
-            </a>
+            </PhoneLink>
             <a
               href="/contact"
               className="block bg-primary text-white text-center px-5 py-2.5 rounded-lg text-sm font-semibold"

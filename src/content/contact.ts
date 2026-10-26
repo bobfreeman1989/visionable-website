@@ -21,16 +21,16 @@ export const contactInfo: ContactInfoItem[] = [
 ];
 
 export const whyChooseItems = [
-  "See your yard in 3D before we build",
-  "One in-house crew, start to finish",
+  "See your yard in 3D in the design phase, before we build",
+  "Our own crew, start to finish",
   "Licensed & insured · CSLB #1101860",
   "Techo-Bloc certified Techo-Pro contractor",
   "NDS certified professional drainage contractor",
 ] as const;
 
 export const serviceAreas: Record<string, string[]> = {
-  "South Bay": ["San Jose", "West San Jose", "Saratoga", "Los Gatos", "Cupertino", "Sunnyvale", "Mountain View", "Los Altos", "Milpitas", "Santa Clara", "Campbell", "Monte Sereno"],
-  "Peninsula": ["Palo Alto", "San Carlos", "Menlo Park", "Atherton", "Redwood City", "Belmont", "San Mateo", "Woodside"],
+  "South Bay": ["San Jose", "Santa Clara", "Sunnyvale", "Cupertino", "Mountain View", "Los Altos", "Saratoga", "Los Gatos"],
+  "Peninsula": ["Palo Alto", "Atherton", "San Carlos", "San Mateo"],
   "Home base": ["Fremont"],
 };
 
@@ -46,10 +46,22 @@ export const contactServiceOptions = [
   "Not sure yet",
 ] as const;
 
+export const contactSourceOptions = [
+  "Google Maps",
+  "Google Search",
+  "Houzz",
+  "Yelp",
+  "Nextdoor",
+  "ChatGPT or other AI",
+  "Referral",
+  "Techo-Bloc",
+  "Other",
+] as const;
+
 export const contactBudgetOptions = [
-  "Under $10,000",
-  "$10,000 - $25,000",
-  "$25,000 - $50,000",
-  "$50,000+",
+  "Under $30,000",
+  "$30,000–$60,000",
+  "$60,000–$100,000",
+  "$100,000+",
   "Not sure yet",
 ] as const;

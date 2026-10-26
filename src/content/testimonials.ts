@@ -10,9 +10,10 @@ export type TestimonialReview = {
   source: string;
 };
 
-/** Google reviews are quoted verbatim from the Visionable Landscaping Google
- *  Business Profile (5.0, 26 reviews as of 2026-10-02); "…" marks a trimmed
- *  passage. Names are shortened to first name + initial. */
+/** Reviews are quoted verbatim from the Visionable Landscaping Google Business
+ *  Profile (5.0, 26 reviews) and Yelp page (5.0, 6 reviews), both re-read on
+ *  2026-10-23; "…" marks a trimmed passage. Names are shortened to first name +
+ *  initial. `source` must name the platform the quote was copied from. */
 export const testimonialReviews: TestimonialReview[] = [
   {
     name: "Ning L.",
@@ -87,24 +88,21 @@ export const testimonialReviews: TestimonialReview[] = [
     source: "Google review",
   },
   {
-    name: "Chang C.",
-    source: "Verified review",
-    project: "Artificial Grass & Pavers",
-    text: "We are very satisfied with Visionable Landscaping, and I highly recommend them to my friends. Even though it is yard work, every detail is pretty good. From artificial grass to pavers, everything was done very well!",
-    image: "/photos/testimonials/t01.webp",
+    name: "Way G.",
+    project: "Landscaping Project",
+    text: "This landscaping company demonstrated exceptional control across all key areas: cost management, project scheduling, work quality, post-completion service, and communication. They are highly recommended.",
+    source: "Google review",
   },
   {
-    name: "Ken D.",
-    source: "Verified review",
-    project: "Fence & Gate Repair",
-    text: "They were working on a job nearby. My project was small, repairing a side fence and gate. They did the work promptly and professionally. It was great working with them. Would use again.",
-    image: "/photos/testimonials/t02.webp",
+    name: "Jing M.",
+    project: "Backyard with Curved Paver Path",
+    text: "I went back and forth with the design several times, and Bob was patient with me throughout the whole process. … his team was punctual, paid attention to details, and completed the project in no time. There is a curved paved path in my design, which is quite time-consuming and difficult to make smooth, but Bob's team did it very well, and several of my neighbors praised it highly.",
+    source: "Yelp review",
   },
   {
-    name: "Jessica Z.",
-    source: "Verified review",
-    project: "Front Yard Design & Turf",
-    text: "They helped design my front yard, installed artificial grass, and added mulch. The entire job was completed in just one day, and the turnaround was incredibly quick. It has been a year now and the results are great.",
-    image: "/photos/testimonials/t03.webp",
+    name: "Zijiang Y.",
+    project: "Paver Backyard",
+    text: "Bob and his team were awesome--professional, efficient, and really paid attention to the details. They listened to what I wanted, gave great advice, and the final result came out even better than I expected. The pavers look amazing, and my neighbors have already complimented the new look!",
+    source: "Yelp review",
   },
 ];

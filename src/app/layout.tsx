@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { areas } from "@/lib/areas";
 import { services } from "@/lib/services";
+import FirstTouch from "@/components/FirstTouch";
 
 const sourceSans = Source_Sans_3({ subsets: ["latin"], variable: "--font-body" });
 const dmSerif = DM_Serif_Display({ weight: "400", subsets: ["latin"], variable: "--font-heading" });
@@ -114,11 +115,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: "South Bay Outdoor Living Design & Build | Visionable",
   description:
-    "Transform your backyard into an outdoor living space your family uses. Pavers, turf, lighting & more. 5.0★ rated, 200+ projects. Free 3D consultation.",
+    "Transform your backyard into an outdoor living space your family uses. Pavers, turf, lighting & more. 5.0★ rated, 100+ projects. Free design consultation.",
   openGraph: {
     title: "South Bay Outdoor Living Design & Build | Visionable",
     description:
-      "Transform your backyard into an outdoor living space. Hardscaping, pavers, artificial turf, lighting & landscape design. 5.0★ rated. Free 3D consultation.",
+      "Transform your backyard into an outdoor living space. Hardscaping, pavers, artificial turf, lighting & landscape design. 5.0★ rated. Free design consultation.",
     url: BASE_URL,
     siteName: "Visionable Landscaping",
     images: [
@@ -136,7 +137,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Visionable Landscaping | Bay Area Outdoor Living",
     description:
-      "Bay Area outdoor living design & build. 5.0★ rated, 200+ visions built. Free 3D design consultation.",
+      "South Bay & Peninsula outdoor living design & build. 5.0★ rated, 100+ projects. Free design consultation.",
     images: ["/og-image.jpg"],
   },
   alternates: {
@@ -156,15 +157,15 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.google-analytics.com" />
         <script
           dangerouslySetInnerHTML={{ __html: `
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function(){dataLayer.push(arguments);};
+            gtag('js', new Date());
+            gtag('config', 'G-Q3XCGS8C4X');
             window.addEventListener('load', function() {
               var s = document.createElement('script');
               s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Q3XCGS8C4X';
               s.async = true;
               document.head.appendChild(s);
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-Q3XCGS8C4X');
             });
           `}}
         />
@@ -184,6 +185,7 @@ export default function RootLayout({
       <body className={`${sourceSans.variable} ${dmSerif.variable} antialiased`}>
         <a href="#main-content" className="skip-to-content">Skip to content</a>
         {children}
+        <FirstTouch />
         <Analytics />
         <SpeedInsights />
       </body>

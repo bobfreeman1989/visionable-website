@@ -46,7 +46,7 @@ Silicon Valley's mild climate is actually ideal for most paver types, but there 
 > Always choose pavers rated for freeze-thaw resistance if your property is in the hills above 1,000 ft elevation.
 
 1. **Sun exposure**: Dark pavers absorb more heat — consider lighter colors for barefoot-friendly pool areas
-2. **Drainage**: Permeable pavers help with water management and may qualify for rebates
+2. **Drainage**: Permeable pavers let water soak through instead of running off
 3. **Soil type**: Bay Area's expansive clay soils require proper base preparation
 
 ## Our Recommendation

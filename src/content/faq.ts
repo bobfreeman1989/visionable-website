@@ -9,35 +9,35 @@ export type FaqItem = {
 export const homepageFaqs: FaqItem[] = [
   {
     q: "How much does an outdoor living project cost?",
-    a: "It depends on the vision. A patio and turf setup starts around $5K, while a complete outdoor living space with cooking area, lighting, and seating runs $20K-$60K+. We give you a detailed, transparent estimate after seeing your space. No hidden fees.",
+    a: "Most complete backyard projects fall in the range that lets us design, build and finish the space properly; we give you a fixed price after the design phase.",
   },
   {
     q: "How long until I can actually use my new yard?",
-    a: "Most projects finish in 2-6 weeks. Turf installs can be done in days; a full outdoor transformation typically takes 3-4 weeks. We lock in a timeline upfront and send daily updates.",
+    a: "Most projects finish in 2–6 weeks. Turf installs can be done in days; a full outdoor transformation typically takes 3–4 weeks. We set a timeline upfront and send daily updates.",
   },
   {
     q: "What if I don't have a clear vision yet?",
-    a: "Most clients don't — they just know they want to use their backyard more. That's exactly what the design consultation is for. We help you figure out what you want through 3D renderings you can explore and adjust. The vision gets clearer together.",
+    a: "Most clients don't — they just know they want to use their backyard more. That's what the free design consultation is for. We help you figure out what you want, and in the paid design phase 3D renderings let you explore and adjust it before anything is built.",
   },
   {
     q: "Is the consultation really free?",
-    a: "100% free. We visit your property, talk about how you want to live outdoors, take measurements, and follow up with a proposal and 3D renderings. You only pay if you decide to build.",
+    a: "Yes. The site visit is free: we visit your property, talk about how you want to live outdoors, and take measurements. 3D renderings are part of the paid design phase, so you see the yard before anything is built.",
   },
   {
     q: "Are you licensed and insured?",
-    a: "Yes. Fully licensed with the California Contractors State License Board, with comprehensive liability and workers' comp insurance.",
+    a: "Yes. Fully licensed with the California Contractors State License Board, and insured, with workers' comp coverage.",
   },
   {
     q: "What areas do you serve?",
-    a: "The South Bay and Peninsula: San Jose (especially West San Jose), Saratoga, Los Gatos, Cupertino, Sunnyvale, Mountain View, Los Altos, Palo Alto, San Carlos, Milpitas, and our home base of Fremont.",
+    a: "The South Bay and Peninsula: San Jose, Santa Clara, Sunnyvale, Cupertino, Mountain View, Los Altos, Palo Alto, Saratoga, Los Gatos, San Carlos, San Mateo, Atherton, and our home base of Fremont.",
   },
   {
     q: "Do you offer warranties?",
-    a: "Yes. Materials and workmanship, clearly documented in your contract. We stand behind every vision we build.",
+    a: "Yes. Every project comes with a written workmanship warranty, documented in your contract.",
   },
   {
     q: "Can I see examples of your work?",
-    a: "Yes! Check our portfolio or visit our Yelp page with 200+ project photos. We're happy to share examples during your free consultation.",
+    a: "Yes. Check our portfolio or our Yelp page for project photos. We're happy to share examples during your free design consultation.",
   },
 ];
 

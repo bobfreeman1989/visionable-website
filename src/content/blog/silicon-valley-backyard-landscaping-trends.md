@@ -27,13 +27,13 @@ The line between indoor and outdoor is blurring. Full kitchens, fire features, a
 
 High-quality artificial turf has come a long way. Today's options look and feel natural while eliminating water bills and weekend mowing.
 
-- **Water savings**: Up to 70% reduction in outdoor water use
+- **Water savings**: Cuts irrigation water use
 - **Maintenance**: No mowing, no fertilizing, no reseeding
 - **Durability**: 15-20 year lifespan with proper installation
 
 ## 4. Smart Irrigation
 
-Wi-Fi connected [irrigation](/services/irrigation-drainage) systems that adjust based on weather data can cut water usage by 30-50% while keeping your landscape healthier.
+Wi-Fi connected [irrigation](/services/irrigation-drainage) systems that adjust based on weather data can cut irrigation water use while keeping your landscape healthier.
 
 ## 5. Low-Maintenance Hardscaping
 

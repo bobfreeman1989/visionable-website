@@ -1,3 +1,5 @@
+> Superseded by PRODUCT.md (2026-10). Do not use.
+
 # Visionable Website — Copy Rewrite v2
 
 > 双线贯穿：**Vision（你的想象）** + **Outdoor Living（生活方式）**

@@ -4,13 +4,26 @@ import { AlertCircle, ArrowRight, Check, Loader2 } from "lucide-react";
 import {
   contactBudgetOptions,
   contactServiceOptions,
+  contactSourceOptions,
+  serviceAreas,
 } from "@/content/contact";
 import type { ContactRequest } from "@/lib/contact";
+import { getFirstTouch, trackEvent } from "@/lib/analytics";
 import { ContactSuccessState } from "@/components/contact/ContactSuccessState";
 
 // "sent" is a brief beat where the button itself confirms the send before the
 // form gives way to the success message.
 type Status = "idle" | "sending" | "sent" | "success" | "error";
+
+/** Only the city name goes to analytics, never the street address. The street
+ *  part (before the first comma) is skipped so "123 Palo Alto Ave, Fremont"
+ *  reads as Fremont, and the longest name wins so "San Jose" beats "San". */
+function cityFromAddress(address: string) {
+  const parts = address.split(",");
+  const rest = (parts.length > 1 ? parts.slice(1).join(",") : address).toLowerCase();
+  const cities = Object.values(serviceAreas).flat().sort((a, b) => b.length - a.length);
+  return cities.find((city) => rest.includes(city.toLowerCase())) ?? "";
+}
 
 interface ContactFormProps {
   /** Preselects the service dropdown so a visitor arriving from a service page
@@ -23,6 +36,7 @@ export function ContactForm({ defaultService = "", detailsPlaceholder }: Contact
   const [status, setStatus] = useState<Status>("idle");
   const [serviceChosen, setServiceChosen] = useState(Boolean(defaultService));
   const [budgetChosen, setBudgetChosen] = useState(false);
+  const [sourceChosen, setSourceChosen] = useState(false);
   // Bumped on every failure so the error row re-mounts and shakes again.
   const [errorCount, setErrorCount] = useState(0);
 
@@ -40,6 +54,8 @@ export function ContactForm({ defaultService = "", detailsPlaceholder }: Contact
       service: String(formData.get("contact-service") ?? "").trim(),
       budget: String(formData.get("contact-budget") ?? "").trim(),
       details: String(formData.get("contact-message") ?? "").trim(),
+      source: String(formData.get("contact-source") ?? "").trim(),
+      ...getFirstTouch(),
     };
 
     try {
@@ -53,10 +69,16 @@ export function ContactForm({ defaultService = "", detailsPlaceholder }: Contact
         throw new Error("Failed to send contact request");
       }
 
+      trackEvent("generate_lead", {
+        form: "contact",
+        service: payload.service ?? "",
+        city: cityFromAddress(payload.address ?? ""),
+      });
       setStatus("sent");
       form.reset();
       setServiceChosen(Boolean(defaultService));
       setBudgetChosen(false);
+      setSourceChosen(false);
       window.setTimeout(() => setStatus("success"), 900);
     } catch {
       setStatus("error");
@@ -67,7 +89,7 @@ export function ContactForm({ defaultService = "", detailsPlaceholder }: Contact
   return (
     <div className="bg-surface rounded-2xl p-8 border border-stone-200">
       <h3 className="text-xl text-stone-900 mb-2">
-        Book Your Free Consultation
+        Book Your Free Design Consultation
       </h3>
       <p className="text-sm text-stone-500 mb-6">
         We&apos;ll reach out within 24 hours to schedule your design visit.
@@ -114,6 +136,15 @@ export function ContactForm({ defaultService = "", detailsPlaceholder }: Contact
                 ))}
               </select>
             </div>
+          </div>
+          <div>
+            <label htmlFor="contact-source" className="block text-sm font-medium text-stone-700 mb-1">How did you find us? <span className="text-stone-600 font-normal">(optional)</span></label>
+            <select id="contact-source" name="contact-source" defaultValue="" onChange={(e) => setSourceChosen(e.currentTarget.value !== "")} className={`w-full border border-stone-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white ${sourceChosen ? "text-stone-900" : "text-stone-500"}`}>
+              <option value="">Select one</option>
+              {contactSourceOptions.map((option) => (
+                <option key={option} value={option}>{option}</option>
+              ))}
+            </select>
           </div>
           <div>
             <label htmlFor="contact-message" className="block text-sm font-medium text-stone-700 mb-1">Tell us about your project</label>

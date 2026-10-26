@@ -61,12 +61,12 @@ export default function AreasIndexPage() {
         <PageHero
           eyebrow="Local landscaping service areas"
           title="Landscaping across the South Bay and Peninsula"
-          lede="From West San Jose and the West Valley to Silicon Valley and the Peninsula. One in-house crew and the same standard, wherever your yard is."
+          lede="From West San Jose and the West Valley to Silicon Valley and the Peninsula. Our own crew and the same standard, wherever your yard is."
           image={{ src: heroPhoto.src, alt: heroPhoto.alt }}
           facts={[
             { label: "Cities served", value: `${areas.length} and nearby` },
             { label: "Home base", value: "Fremont, CA" },
-            { label: "Projects built", value: "200+" },
+            { label: "Projects built", value: "100+" },
             { label: "Rated", value: "5.0 on Google & Yelp" },
           ]}
         />
@@ -131,7 +131,7 @@ export default function AreasIndexPage() {
 
         <CTABanner
           title="Ready to talk about your yard?"
-          subtitle="Free consultation anywhere in the South Bay and Peninsula. No pressure, just a conversation."
+          subtitle="Free design consultation anywhere in the South Bay and Peninsula. No pressure, just a conversation."
           primaryText="Share Your Vision"
           secondaryText="Browse Services"
           secondaryHref="/services"

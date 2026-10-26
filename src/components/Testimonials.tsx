@@ -27,7 +27,7 @@ export default function Testimonials() {
               Bay Area families who stopped imagining and started living outdoors.
             </p>
             <p className="mt-3 text-xs uppercase tracking-[0.2em] text-stone-600">
-              5.0 on Google · {testimonialReviews.length} review excerpts
+              5.0 on Google and Yelp · {testimonialReviews.length} review excerpts
             </p>
           </div>
           <div className="flex gap-2">

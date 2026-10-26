@@ -66,13 +66,13 @@ export default function ServicesIndexPage() {
         <PageHero
           eyebrow="South Bay & Peninsula landscaping services"
           title="Design-build landscaping for outdoor living spaces that last"
-          lede="One in-house team handles pavers, turf, pergolas, fencing, irrigation, drainage, design, lighting, retaining walls, and complete backyard remodels across the South Bay and Peninsula."
+          lede="Our own crew handles pavers, turf, pergolas, fencing, irrigation, drainage, design, lighting, retaining walls, and complete backyard remodels across the South Bay and Peninsula."
           image={{ src: heroPhoto.src, alt: heroPhoto.alt }}
           facts={[
-            { label: "Projects built", value: "200+" },
+            { label: "Projects built", value: "100+" },
             { label: "Rated", value: "5.0 on Google & Yelp" },
             { label: "Licensed", value: "CSLB #1101860" },
-            { label: "Consultation", value: "Free, with 3D renderings" },
+            { label: "Design consultation", value: "Free site visit" },
           ]}
         />
 
@@ -211,7 +211,7 @@ export default function ServicesIndexPage() {
 
         <CTABanner
           title="Not sure which service fits your yard?"
-          subtitle="Start with a free consultation. We will help you choose the right scope before you build."
+          subtitle="Start with a free design consultation. We will help you choose the right scope before you build."
           primaryText="Share Your Vision"
           secondaryText="See Our Work"
           secondaryHref="/portfolio"

@@ -13,7 +13,7 @@ author: "Visionable Team"
 ## The Pros
 
 ### Water Savings
-A 1,000 sq ft natural lawn uses approximately 44,000 gallons of water per year in the Bay Area. Artificial turf uses zero.
+A natural lawn is usually the thirstiest part of a Bay Area yard. Artificial turf needs no regular irrigation.
 
 ### Zero Maintenance
 No mowing, no fertilizing, no aerating, no reseeding. Your weekends are yours again.
@@ -50,11 +50,11 @@ Turf works best for lawns, play areas, and pet runs. For garden beds and slopes,
 5. **Add infill** (sand or organic) for weight and natural feel
 6. **Brush and groom** for a finished look
 
-> We only use turf with a 15+ year warranty and UV protection rated for California sun.
+> We only use turf with UV protection rated for California sun.
 
 ## Bottom Line
 
-If you're spending $200+/month on lawn care and water, artificial turf pays for itself in 3-5 years. It's the single best investment for busy Bay Area homeowners who want a beautiful yard without the work.
+If lawn care and water are a steady monthly cost for you, artificial turf removes most of it. For busy Bay Area homeowners who want a green yard without the upkeep, it is worth pricing out.
 
 ---
 

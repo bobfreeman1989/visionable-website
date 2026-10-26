@@ -227,7 +227,7 @@ export default function ServicePage({ params }: { params: { service: string } })
 
         <ContactCTA
           title={`Start your ${service.title.toLowerCase()} project`}
-          subtitle="Tell us about the space. We'll visit, measure, and follow up with 3D renderings before anything is built."
+          subtitle="Tell us about the space. The design consultation is free, and in the paid design phase you see the yard in 3D before anything is built."
           defaultService={contactOptionForService(service.slug)}
           detailsPlaceholder={`What are you picturing for your ${service.title.toLowerCase()}? Rough size, current condition, anything you already know you want.`}
         />

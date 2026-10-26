@@ -28,7 +28,7 @@ export default function Hero() {
               <span key={index} className="text-accent-light text-sm">★</span>
             ))}
           </div>
-          <span className="text-white/90 text-sm font-medium">5.0 on Google & Yelp</span>
+          <span className="text-white/90 text-sm font-medium">5.0 on Google (26 reviews) and Yelp (6 reviews)</span>
         </FadeUp>
 
         <FadeUp delay={0.2}>
@@ -63,7 +63,7 @@ export default function Hero() {
               href="#portfolio"
               className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-lg text-lg font-semibold transition-colors text-center"
             >
-              See 200+ Visions Built
+              See 100+ Projects
             </a>
           </div>
         </FadeUp>

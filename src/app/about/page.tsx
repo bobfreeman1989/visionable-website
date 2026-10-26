@@ -1,6 +1,6 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import { Flag, Rocket, MapPin, Trophy, Star } from "lucide-react";
+import { Flag, BadgeCheck, Award } from "lucide-react";
 import type { Metadata } from "next";
 import PageHero from "@/components/sections/PageHero";
 import AlternatingFeatures from "@/components/sections/AlternatingFeatures";
@@ -12,7 +12,7 @@ import { photos, extraPhotos } from "@/content/gallery";
 export const metadata: Metadata = {
   title: "About Visionable Landscaping | Bay Area's Trusted Landscape Team",
   description:
-    "Meet the team behind 200+ Bay Area landscape projects. Licensed, insured, and committed to turning your outdoor vision into reality. Serving San Jose, Silicon Valley & the Peninsula.",
+    "Meet the team behind 100+ South Bay and Peninsula landscape projects. Licensed, insured, and committed to turning your outdoor vision into reality. Serving San Jose, Silicon Valley & the Peninsula.",
   alternates: {
     canonical: "/about",
   },
@@ -21,9 +21,8 @@ export const metadata: Metadata = {
 const pillars = [
   {
     title: "One team, from first sketch to final stone",
-    body: "Design, hardscaping, planting, lighting, and irrigation are handled by our own crew, never a rotating cast of subcontractors. We choose premium materials and sweat the finishing details most builders skip, because those are the details you live with every day.",
+    body: "Design, hardscaping, planting, lighting, and irrigation are handled by our own crew. We choose premium materials and sweat the finishing details most builders skip, because those are the details you live with every day.",
     bullets: [
-      "No subcontractors passing work between them",
       "One point of contact from estimate to walkthrough",
       "Premium materials from trusted Bay Area suppliers",
     ],
@@ -47,11 +46,11 @@ const pillars = [
   },
   {
     title: "Honest from estimate to the day you move outside",
-    body: "Clear timelines, locked-in pricing, and proactive updates from the first walk-through to the last. We are fully licensed by the CSLB and insured, and your vision drives every decision, so the finished space feels unmistakably yours.",
+    body: "Clear timelines and proactive updates from the first walk-through to the last. You sign a fixed-price contract. If the site reveals something we could not see, such as buried concrete, we show you and you approve any change in writing before we do it. We are fully licensed by the CSLB and insured, and your vision drives every decision, so the finished space feels unmistakably yours.",
     bullets: [
-      "Locked-in pricing with no hidden line items",
+      "A fixed-price contract, with changes approved in writing",
       "Daily photo updates while the crew is on site",
-      "Materials and workmanship warranty in writing",
+      "Written workmanship warranty",
     ],
     image: {
       src: "/photos/before-after/case-3-after-1280.webp",
@@ -61,11 +60,9 @@ const pillars = [
 ];
 
 const milestones = [
-  { year: "2009", label: "Founded in Fremont, CA", Icon: Flag },
-  { year: "2015", label: "100th project completed", Icon: Rocket },
-  { year: "2019", label: "Expanded to full Bay Area coverage", Icon: MapPin },
-  { year: "2022", label: "200+ projects milestone", Icon: Trophy },
-  { year: "2024", label: "5.0 stars across Google & Yelp", Icon: Star },
+  { year: "2022", label: "Visionable Landscaping LLC formed", Icon: Flag },
+  { year: "2023", label: "CSLB C-27 license issued (#1101860)", Icon: BadgeCheck },
+  { year: "2026", label: "Techo-Bloc Techo-Pro and NDS certified", Icon: Award },
 ];
 
 export default function AboutPage() {
@@ -84,15 +81,15 @@ export default function AboutPage() {
               outdoor reality
             </>
           }
-          lede="Founded in Fremont and grown from a small local crew into a design-build team with 200+ yards built and a 5.0 rating on Google. We take what you envision and make it real."
+          lede="A Fremont-based design-build team with 100+ projects built and a 5.0 rating on Google (26 reviews) and Yelp (6 reviews). We take what you envision and make it real."
           image={{
             src: "/photos/services/lighting01.webp",
             alt: "Backyard at dusk with a lit built-in seat wall beside an artificial turf lawn",
           }}
           facts={[
-            { label: "Building since", value: "2009" },
-            { label: "Projects completed", value: "200+" },
-            { label: "Rated", value: "5.0 on Google & Yelp" },
+            { label: "Projects completed", value: "100+" },
+            { label: "Rated", value: "5.0 on Google (26) and Yelp (6)" },
+            { label: "Certified", value: "Techo-Pro · NDS" },
             { label: "Licensed & insured", value: "CSLB #1101860" },
           ]}
         />
@@ -114,10 +111,10 @@ export default function AboutPage() {
                   the craft.
                 </p>
                 <p>
-                  We&apos;ve completed more than 200 projects across the San Francisco Bay Area,
-                  from intimate courtyard gardens in Fremont to expansive backyard transformations
-                  in San Jose, Pleasanton, and beyond. Each project taught us something new, and
-                  every satisfied client reinforced our commitment to quality.
+                  We&apos;ve completed more than 100 projects across the South Bay and Peninsula,
+                  from intimate courtyard gardens in Fremont to complete backyard remodels in San
+                  Jose. Our crews bring 15+ years of hands-on experience building Bay
+                  Area landscapes.
                 </p>
                 <p>
                   We are a Techo-Bloc certified Techo-Pro contractor and an NDS certified
@@ -130,8 +127,12 @@ export default function AboutPage() {
                 </p>
                 <p>
                   Our approach is straightforward: listen to your vision, design something
-                  extraordinary, build it with precision, and stand behind our work. No shortcuts.
-                  No subcontractors. Just honest craftsmanship from people who love what they do.
+                  extraordinary, build it with precision, and stand behind our work. Our own crew
+                  builds every project, and you deal with the same people from first visit to final
+                  walkthrough.
+                </p>
+                <p className="text-base text-stone-500">
+                  Kun Huang, founder and C-27 qualifying individual
                 </p>
               </div>
             </div>
@@ -161,7 +162,7 @@ export default function AboutPage() {
               <div className="absolute left-6 top-0 bottom-0 w-px bg-stone-200" aria-hidden="true" />
               <ol className="space-y-10">
                 {milestones.map((m) => (
-                  <li key={m.year} className="relative flex items-start gap-6 pl-2">
+                  <li key={m.label} className="relative flex items-start gap-6 pl-2">
                     <div className="relative z-10 flex-shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center">
                       <m.Icon className="w-4 h-4" strokeWidth={1.5} />
                     </div>
@@ -180,7 +181,7 @@ export default function AboutPage() {
 
         <CTABanner
           title="Ready to share your vision?"
-          subtitle="Free consultation. No pressure. Just a conversation about what's possible."
+          subtitle="Free design consultation. No pressure. Just a conversation about what's possible."
           primaryText="Share Your Vision"
           secondaryText="See Our Work"
           secondaryHref="/portfolio"
