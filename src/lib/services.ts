@@ -16,11 +16,11 @@ export interface ServiceData {
 export const services: ServiceData[] = [
   {
     slug: "paver-installation",
-    updatedAt: "2026-10-25",
+    updatedAt: "2026-10-26",
     title: "Paver Installation",
     shortDesc: "Premium interlocking pavers for patios, driveways, and walkways.",
-    metaTitle: "Paver Installation Bay Area | Visionable Landscaping",
-    metaDescription: "Professional paver installation in the Bay Area. Patios, driveways, walkways with premium interlocking pavers. 5.0-star rated. Free design consultation. (510) 755-5616.",
+    metaTitle: "Paver Patio Installation Bay Area | Walkways & Driveways",
+    metaDescription: "Paver patio installation in the Bay Area, plus walkways, driveways and pool decks. Techo-Bloc certified installers, designed in 3D first. (510) 755-5616.",
     heroText: "Paver patios, walkways and driveways designed with the rest of the yard, set on a compacted base and built by our own crew.",
     content: [
       "Most of the paving we build is part of a larger backyard: the patio you eat on, the path to the side gate, the landing outside the slider. We lay it out together with the planting, lighting and drainage around it, so the paving reads as part of the yard rather than a slab dropped into it. Patios, walkways, driveways and pool decks all start the same way, with the base.",
