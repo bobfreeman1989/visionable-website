@@ -54,6 +54,14 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        // www served the same pages with a 200, and Search Console showed the
+        // home page indexed under both hosts. One permanent hop to the apex.
+        source: "/:path*",
+        has: [{ type: "host", value: "www.visionablelandscaping.com" }],
+        destination: "https://visionablelandscaping.com/:path*",
+        permanent: true,
+      },
+      {
         // The post was retitled to drop the year stamp; the old URL is indexed.
         source: "/blog/5-landscaping-trends-2024",
         destination: "/blog/silicon-valley-backyard-landscaping-trends",

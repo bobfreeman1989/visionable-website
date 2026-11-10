@@ -47,7 +47,22 @@ export default function Accordion({ items, idPrefix = "faq" }: AccordionProps) {
               }`}
             >
               <div className="overflow-hidden">
-                <div className="px-6 pb-5 text-stone-600 leading-relaxed">{item.a}</div>
+                <div className="px-6 pb-5 text-stone-600 leading-relaxed">
+                  {item.a}
+                  {item.source && (
+                    <p className="mt-3 text-sm">
+                      Source:{" "}
+                      <a
+                        href={item.source.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary underline underline-offset-2 hover:no-underline"
+                      >
+                        {item.source.label}
+                      </a>
+                    </p>
+                  )}
+                </div>
               </div>
             </div>
           </div>

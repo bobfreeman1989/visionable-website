@@ -324,9 +324,11 @@ export const photos: Photo[] = [
  * captioned under each photo, so they describe the photo itself rather than a
  * service we would like to sell against it.
  *
- * Order is deliberate: phones show the first six, so they lead with six
- * different yards and cities. The Los Altos yard (p01, p02) and the projects
- * already shown in Before & After (p09, p10) sit further back.
+ * Order is deliberate. The first three are Saratoga, Palo Alto and Los Altos,
+ * the cities we most want work in, and they are what a phone shows before
+ * "see all". The next three are different yards in other cities. The second
+ * Los Altos photo (p01) and the projects already shown in Before & After
+ * (p09, p10) sit further back.
  */
 export type PortfolioProject = Photo & {
   id: string;
@@ -346,28 +348,6 @@ export const portfolioProjects: PortfolioProject[] = [
     alt: "Covered outdoor kitchen with a built-in grill and a seated bar counter on a light paver patio",
     caption: "Outdoor kitchen with bar seating",
     tags: ["outdoor-kitchen", "pergola", "full-remodel"],
-  },
-  {
-    id: "8",
-    title: "Lit Stucco Planter, Bench & Turf",
-    category: "Outdoor Living",
-    location: "San Jose",
-    src: "/photos/portfolio/p08.webp",
-    lowRes: true,
-    alt: "Smooth stucco planter walls with a built-in bench and integrated lighting beside artificial turf",
-    caption: "Lit stucco planter and bench",
-    tags: ["hardscape", "lighting", "turf"],
-  },
-  {
-    id: "3",
-    title: "Retaining Wall & Paver Patio",
-    category: "Hardscaping",
-    location: "San Carlos",
-    src: "/photos/portfolio/p03.webp",
-    lowRes: true,
-    alt: "Curved block retaining wall wrapping a large paver patio with a contrasting border band",
-    caption: "Curved retaining wall and paver patio",
-    tags: ["retaining-wall", "pavers", "hardscape"],
   },
   {
     id: "12",
@@ -390,6 +370,28 @@ export const portfolioProjects: PortfolioProject[] = [
     alt: "White aluminum pergola over an outdoor sectional, reached by stepping pavers through an artificial turf lawn",
     caption: "Pergola lounge with pavers and turf",
     tags: ["pergola", "pavers", "turf", "full-remodel"],
+  },
+  {
+    id: "8",
+    title: "Lit Stucco Planter, Bench & Turf",
+    category: "Outdoor Living",
+    location: "San Jose",
+    src: "/photos/portfolio/p08.webp",
+    lowRes: true,
+    alt: "Smooth stucco planter walls with a built-in bench and integrated lighting beside artificial turf",
+    caption: "Lit stucco planter and bench",
+    tags: ["hardscape", "lighting", "turf"],
+  },
+  {
+    id: "3",
+    title: "Retaining Wall & Paver Patio",
+    category: "Hardscaping",
+    location: "San Carlos",
+    src: "/photos/portfolio/p03.webp",
+    lowRes: true,
+    alt: "Curved block retaining wall wrapping a large paver patio with a contrasting border band",
+    caption: "Curved retaining wall and paver patio",
+    tags: ["retaining-wall", "pavers", "hardscape"],
   },
   {
     id: "7",

@@ -1,3 +1,4 @@
+import { areas } from "@/lib/areas";
 import Image from "next/image";
 import Link from "next/link";
 import PhoneLink from "@/components/PhoneLink";
@@ -26,18 +27,8 @@ const companyLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
-const areaLinks = [
-  { name: "San Jose", slug: "san-jose" },
-  { name: "Saratoga", slug: "saratoga" },
-  { name: "Los Gatos", slug: "los-gatos" },
-  { name: "Cupertino", slug: "cupertino" },
-  { name: "Sunnyvale", slug: "sunnyvale" },
-  { name: "Mountain View", slug: "mountain-view" },
-  { name: "Los Altos", slug: "los-altos" },
-  { name: "Palo Alto", slug: "palo-alto" },
-  { name: "San Carlos", slug: "san-carlos" },
-  { name: "Fremont", slug: "fremont" },
-];
+// Same order as the areas data, which leads with the cities we most want work in.
+const areaLinks = areas.map(({ name, slug }) => ({ name, slug }));
 
 export default function Footer() {
   return (
