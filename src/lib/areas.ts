@@ -30,7 +30,7 @@ export const areas: CityData[] = [
       "San Jose homeowners mostly call us for three things: front yards converted from thirsty lawn to artificial turf and planting, paver patios and walkways that finally make the backyard usable, and neglected side yards turned into clean, usable paths. Recent San Jose builds include a large porcelain paver patio, a lit stucco planter with a built-in bench, a backyard sports court and a paver patio with a play area.",
       `Every San Jose project is designed, demolished, graded and built by our own crew. You see the yard in 3D in the design phase before construction starts, sign a fixed-price contract, and hear from us daily while we are on site. We are CSLB licensed (#1101860), insured, and rated ${ratingLong}.`,
     ],
-    nearbyAreas: ["saratoga", "los-gatos", "cupertino", "milpitas"],
+    nearbyAreas: ["saratoga", "los-gatos", "cupertino", "sunnyvale"],
   },
   {
     slug: "saratoga",
@@ -161,22 +161,6 @@ export const areas: CityData[] = [
     nearbyAreas: ["palo-alto", "los-altos"],
   },
   {
-    slug: "milpitas",
-    updatedAt: "2026-10-01",
-    name: "Milpitas",
-    county: "Santa Clara",
-    region: "South Bay",
-    metaTitle: "Milpitas CA Landscaping | Artificial Turf & Paver Patios",
-    metaDescription: "Expert landscaping in Milpitas, CA. Artificial turf, pavers, hardscaping & outdoor lighting. 5.0-star rated, CSLB licensed. Free design consultation. (510) 755-5616.",
-    heroText: "Professional landscaping for Milpitas homeowners at the northern edge of Silicon Valley. Design-build from a team based in nearby Fremont.",
-    content: [
-      "Milpitas sits at the crossroads of Silicon Valley and the East Bay, and its landscaping needs reflect that unique position. We work across Milpitas, from the hillside properties near Ed Levin County Park to the family neighborhoods around Calaveras Boulevard. We understand the specific challenges Milpitas homeowners face, including varied terrain, strict water conservation requirements, and HOA guidelines.",
-      "Artificial turf is especially popular among Milpitas residents looking to cut water bills without sacrificing curb appeal. Our premium turf installations include proper drainage and realistic blade profiles. For homeowners wanting a more comprehensive transformation, our complete backyard remodels combine pavers, lighting, turf, and custom plantings into a cohesive outdoor living space.",
-      `As a locally owned company just up the road in Fremont, we offer Milpitas homeowners the rare combination of premium quality and local accountability. We are rated ${ratingLong}. Book a free design consultation and see why your neighbors trust Visionable.`,
-    ],
-    nearbyAreas: ["san-jose", "fremont", "sunnyvale"],
-  },
-  {
     slug: "fremont",
     updatedAt: "2026-10-22",
     name: "Fremont",
@@ -190,7 +174,7 @@ export const areas: CityData[] = [
       "Fremont homeowners consistently choose us for paver patios, artificial turf installations, and complete backyard remodels. Being based here means we are close by for site visits and follow-up. Whether you're looking to replace a water-hungry lawn with drought-resistant turf or create an outdoor living space with pavers and lighting, we design it and our own crew builds it.",
       `With 100+ projects completed and a rating of ${ratingLong}, Visionable Landscaping builds for Fremont residents who want quality craftsmanship without the hassle. Every project starts with a free design consultation. 3D renderings in the paid design phase let you see your vision before we break ground.`,
     ],
-    nearbyAreas: ["milpitas", "san-jose", "sunnyvale"],
+    nearbyAreas: ["san-jose", "sunnyvale"],
   },
 ];
 

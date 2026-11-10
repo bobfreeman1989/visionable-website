@@ -13,7 +13,7 @@ A great landscape remodel does not have to look complicated. In fact, some of th
 
 This Visionable Landscaping project focused on upgrading both the front yard and backyard at the same time. The design direction was simple and practical, but the execution depended on many small details: how paver joints line up, where lighting is hidden, how edges are finished, and how each corner is allowed to breathe.
 
-For Bay Area homeowners in communities such as [Fremont](/areas/fremont), San Jose, Milpitas, Cupertino, Sunnyvale, and nearby cities, this type of remodel offers a useful lesson: a modern yard is not just about choosing attractive materials. It is about building an outdoor space that makes daily life smoother, easier to maintain, and more enjoyable.
+For Bay Area homeowners in communities such as [Fremont](/areas/fremont), San Jose, Cupertino, Sunnyvale, and nearby cities, this type of remodel offers a useful lesson: a modern yard is not just about choosing attractive materials. It is about building an outdoor space that makes daily life smoother, easier to maintain, and more enjoyable.
 
 ## Project Snapshot
 

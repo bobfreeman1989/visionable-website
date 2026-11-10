@@ -36,7 +36,6 @@ const areaLinks = [
   { name: "Los Altos", slug: "los-altos" },
   { name: "Palo Alto", slug: "palo-alto" },
   { name: "San Carlos", slug: "san-carlos" },
-  { name: "Milpitas", slug: "milpitas" },
   { name: "Fremont", slug: "fremont" },
 ];
 

@@ -6,7 +6,7 @@ brand
 
 ## Users
 
-Established and premium homeowners in the Bay Area: San Jose (especially West San Jose: Willow Glen, Cambrian, Almaden, Rose Garden), Saratoga, Los Gatos, Cupertino, Sunnyvale, Mountain View, Los Altos, Palo Alto and San Carlos, plus Milpitas and our Fremont home base. East Bay I-680 cities were retired as SEO targets in October 2026; their old city pages redirect to /areas. Typically professionals and empty-nesters with the means to invest $20K to $60K+ in a complete outdoor living space, not just a small turf install.
+Established and premium homeowners in the Bay Area: San Jose (especially West San Jose: Willow Glen, Cambrian, Almaden, Rose Garden), Saratoga, Los Gatos, Cupertino, Sunnyvale, Mountain View, Los Altos, Palo Alto and San Carlos, plus our Fremont home base. East Bay I-680 cities were retired as SEO targets in October 2026; their old city pages redirect to /areas. Typically professionals and empty-nesters with the means to invest $20K to $60K+ in a complete outdoor living space, not just a small turf install.
 
 Their context: they are researching a significant home investment, often comparing several design-build firms, and they are skeptical. They want proof of taste and craft before they will trust someone in their backyard. The job to be done is to find a design-build partner they believe will get the details right, then book a free design consultation as a low-risk first step.
 

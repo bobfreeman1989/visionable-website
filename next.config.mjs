@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-// East Bay city pages retired when the site refocused on the South Bay and
-// Peninsula (2026-10). Permanent redirects pass their link equity to /areas
+// City pages retired when the service area was narrowed (2026-10). Permanent redirects pass their link equity to /areas
 // instead of leaving 404s in Google's index.
 const retiredCities = [
   "newark",
@@ -13,6 +12,9 @@ const retiredCities = [
   "danville",
   "walnut-creek",
   "concord",
+  // Dropped from the service area 2026-10-22. No Search Console impressions
+  // in 16 months, but the page was live, so it still gets a permanent redirect.
+  "milpitas",
 ];
 
 const nextConfig = {

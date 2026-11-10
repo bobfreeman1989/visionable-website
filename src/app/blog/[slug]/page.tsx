@@ -79,19 +79,19 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
     // Only claim a revision when the body actually changed; a dateModified that
     // just mirrors publication tells Google nothing and hides real refreshes.
     dateModified: post.updated || post.date,
-    author: {
-      "@type": "Organization",
-      name: "Visionable Landscaping",
-      url: "https://visionablelandscaping.com",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Visionable Landscaping",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://visionablelandscaping.com/logo.png",
-      },
-    },
+    // A post signed by Kun Huang credits him as a Person; team posts credit
+    // the business entity from the root layout.
+    author:
+      post.author === "Kun Huang"
+        ? {
+            "@type": "Person",
+            name: "Kun Huang",
+            jobTitle: "Founder",
+            url: "https://visionablelandscaping.com/about",
+            worksFor: { "@id": "https://visionablelandscaping.com/#business" },
+          }
+        : { "@id": "https://visionablelandscaping.com/#business" },
+    publisher: { "@id": "https://visionablelandscaping.com/#business" },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": url,
