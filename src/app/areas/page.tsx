@@ -15,7 +15,7 @@ const BASE_URL = "https://visionablelandscaping.com";
 export const metadata: Metadata = {
   title: "Bay Area Landscaping Service Areas | Visionable",
   description:
-    "Landscape design-build across the Bay Area: San Jose, Saratoga, Los Gatos, Cupertino, Sunnyvale, Mountain View, Los Altos, Palo Alto, San Carlos and more.",
+    "Landscape design-build in Los Altos, Los Altos Hills, Palo Alto, Saratoga, Los Gatos, Cupertino, Mountain View, Sunnyvale, San Jose and nearby Bay Area cities.",
   openGraph: {
     title: "Bay Area Landscaping Service Areas | Visionable",
     description:
@@ -41,15 +41,8 @@ const areasItemListSchema = {
 
 export default function AreasIndexPage() {
   const allSlugs = areas.map((a) => a.slug);
-  const heroPhoto = photosForArea("san-jose", allSlugs, 1)[0];
+  const heroPhoto = photosForArea("saratoga", allSlugs, 1)[0];
 
-  // Sorted so neighbouring cities sit together and each card names its region,
-  // rather than split into per-region sections: three of the six regions hold a
-  // single city, which leaves a three-column grid mostly empty.
-  const regionOrder = Array.from(new Set(areas.map((a) => a.region)));
-  const sorted = [...areas].sort(
-    (a, b) => regionOrder.indexOf(a.region) - regionOrder.indexOf(b.region)
-  );
 
   return (
     <>
@@ -62,7 +55,7 @@ export default function AreasIndexPage() {
         <PageHero
           eyebrow="Local landscaping service areas"
           title="Landscaping across the Bay Area"
-          lede="From San Jose to Palo Alto and San Mateo. Our own crew and the same standard, wherever your yard is."
+          lede="Los Altos, Palo Alto, Saratoga and the cities around them. Our own crew and the same standard, wherever your yard is."
           image={{ src: heroPhoto.src, alt: heroPhoto.alt }}
           facts={[
             { label: "Cities served", value: `${areas.length} and nearby` },
@@ -79,7 +72,7 @@ export default function AreasIndexPage() {
             </div>
 
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {sorted.map((area) => {
+              {areas.map((area) => {
                 const photo = photosForArea(area.slug, allSlugs, 1)[0];
                 return (
                   <Link

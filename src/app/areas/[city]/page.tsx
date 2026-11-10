@@ -130,12 +130,12 @@ export default function CityPage({ params }: { params: { city: string } }) {
       <div className="pt-16">
         <PageHero
           eyebrow={`${city.county} County · Bay Area`}
-          title={`Landscaping in ${city.name}, CA`}
+          title={city.h1 ?? `Landscaping in ${city.name}, CA`}
           lede={city.heroText}
           image={{ src: heroPhoto.src, alt: heroPhoto.alt }}
           ctaHref="#contact"
           facts={[
-            { label: "Based in", value: "Fremont, CA" },
+            { label: "Built by", value: "Our own crew" },
             { label: "Projects built", value: "100+" },
             { label: "Rated", value: ratingShort },
             { label: "Licensed", value: "CSLB #1101860" },

@@ -30,7 +30,7 @@ export default function Portfolio() {
           <div>
             <h2 className="text-3xl md:text-4xl text-stone-900 mb-4">Our Recent Projects</h2>
             <p className="text-stone-500 max-w-2xl">
-              Browse our work across the Bay Area, from San Jose and Sunnyvale to Fremont and beyond.
+              Recent builds in Saratoga, Palo Alto, Los Altos and across the Bay Area.
             </p>
           </div>
           <div className="flex flex-wrap gap-2">

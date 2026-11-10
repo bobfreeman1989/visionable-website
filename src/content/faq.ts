@@ -1,6 +1,9 @@
 export type FaqItem = {
   q: string;
   a: string;
+  /** The official page an answer about a local rule was checked against.
+      Shown as a link under the answer. */
+  source?: { label: string; url: string };
 };
 
 // Single source of truth for the homepage FAQ: the accordion renders these and

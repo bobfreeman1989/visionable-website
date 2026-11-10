@@ -29,7 +29,7 @@ export const whyChooseItems = [
 ] as const;
 
 export const serviceAreas: Record<string, string[]> = {
-  "Bay Area": ["San Jose", "Santa Clara", "Sunnyvale", "Cupertino", "Mountain View", "Los Altos", "Saratoga", "Los Gatos", "Palo Alto", "Atherton", "San Carlos", "San Mateo"],
+  "Bay Area": ["Los Altos", "Los Altos Hills", "Palo Alto", "Saratoga", "Los Gatos", "Monte Sereno", "Cupertino", "Mountain View", "Sunnyvale", "San Jose", "Santa Clara", "Menlo Park", "Atherton", "San Carlos", "San Mateo"],
   "Home base": ["Fremont"],
 };
 

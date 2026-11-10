@@ -49,8 +49,8 @@ export default function Hero() {
 
         <FadeUp delay={0.25}>
           <p className="hidden sm:block text-white/85 text-lg leading-relaxed max-w-2xl mb-8">
-            We design your yard, then our own crew builds it on a fixed-price contract. Based
-            in Fremont.
+            We design your yard, then our own crew builds it on a fixed-price contract.
+            Building in Los Altos, Palo Alto, Saratoga and nearby cities.
           </p>
         </FadeUp>
 
