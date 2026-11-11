@@ -6,20 +6,26 @@ export interface ServiceData {
   title: string;
   shortDesc: string;
   metaTitle: string;
+  /** Page heading when it should say more than the short name used in menus. */
+  h1?: string;
   metaDescription: string;
   heroText: string;
   content: string[];
   benefits: string[];
   faqs: { q: string; a: string }[];
+  /** Slugs for the "Pairs well with" cards, chosen by which work is really
+      built together. */
+  related: string[];
 }
 
 export const services: ServiceData[] = [
   {
     slug: "paver-installation",
-    updatedAt: "2026-10-25",
+    updatedAt: "2026-11-10",
     title: "Paver Installation",
     shortDesc: "Premium interlocking pavers for patios, driveways, and walkways.",
     metaTitle: "Paver Installation Bay Area | Visionable Landscaping",
+    h1: "Paver Patios & Driveways in the Bay Area",
     metaDescription: "Professional paver installation in the Bay Area. Patios, driveways, walkways with premium interlocking pavers. 5.0-star rated. Free design consultation. (510) 755-5616.",
     heroText: "Paver patios, walkways and driveways designed with the rest of the yard, set on a compacted base and built by our own crew.",
     content: [
@@ -41,13 +47,15 @@ export const services: ServiceData[] = [
       { q: "How is a paver project priced?", a: "Price depends on the paver type, pattern complexity, base preparation and site access. After the design phase you get a fixed-price contract for the work." },
       { q: "Do pavers require maintenance?", a: "Pavers are very low-maintenance. Occasional sweeping and rinsing keep them looking great. We recommend resealing every 2–3 years to maintain color and prevent weed growth between joints." },
     ],
+    related: ["outdoor-lighting", "irrigation-drainage", "retaining-walls"],
   },
   {
     slug: "artificial-turf",
-    updatedAt: "2026-10-25",
+    updatedAt: "2026-11-10",
     title: "Artificial Turf",
     shortDesc: "Low-maintenance, water-saving synthetic turf that looks and feels natural.",
     metaTitle: "Artificial Turf Installation Bay Area | Visionable Landscaping",
+    h1: "Artificial Turf Installation in the Bay Area",
     metaDescription: "Professional artificial turf installation in the Bay Area. Water-saving, low-maintenance synthetic grass. Free design consultation. (510) 755-5616.",
     heroText: "Save water, eliminate mowing, and enjoy a green lawn year-round with premium artificial turf installed by Visionable Landscaping.",
     content: [
@@ -67,13 +75,15 @@ export const services: ServiceData[] = [
       { q: "Is artificial turf safe for pets?", a: "Absolutely. Our turf products are non-toxic and designed for pet use. We install proper drainage and antimicrobial infill to keep the surface clean and odor-free." },
       { q: "Does artificial turf get hot?", a: "Turf can warm up on hot days, but our premium products include heat-reducing technology. A quick rinse with water cools the surface immediately." },
     ],
+    related: ["irrigation-drainage", "outdoor-lighting", "paver-installation"],
   },
   {
     slug: "landscape-design",
-    updatedAt: "2026-10-25",
+    updatedAt: "2026-11-10",
     title: "Landscape Design",
     shortDesc: "Custom 3D landscape designs tailored to your property and lifestyle.",
     metaTitle: "Landscape Design Bay Area | Visionable Landscaping",
+    h1: "Landscape Design in the Bay Area",
     metaDescription: "Custom landscape design in the Bay Area. 3D renderings, drought-tolerant plans & complete design-build services. 5.0-star rated. Free design consultation. (510) 755-5616.",
     heroText: "We design the whole yard around how you will use it, then our own crew builds what we drew. 3D renderings in the paid design phase let you see it before anything is built.",
     content: [
@@ -94,13 +104,15 @@ export const services: ServiceData[] = [
       { q: "How long does the design process take?", a: "Typically 1–2 weeks from initial consultation to final design presentation. We refine the design based on your feedback until it is right." },
       { q: "Can I see what my yard will look like first?", a: "Yes. In the paid design phase we create 3D renderings that show your yard from multiple angles, including plant maturity projections, so you see the yard before anything is built. The site visit before that is free." },
     ],
+    related: ["complete-backyard-remodel", "paver-installation", "outdoor-lighting"],
   },
   {
     slug: "hardscaping",
-    updatedAt: "2026-10-22",
+    updatedAt: "2026-11-10",
     title: "Hardscaping",
-    shortDesc: "Retaining walls, fire pits, outdoor kitchens, and stone features.",
+    shortDesc: "Fire pits, seat walls, stone veneer and decorative borders.",
     metaTitle: "Hardscaping Services Bay Area | Visionable Landscaping",
+    h1: "Hardscaping & Stonework in the Bay Area",
     metaDescription: "Professional hardscaping in the Bay Area. Fire pits, outdoor kitchens, stone features & decorative walls. 5.0-star rated. Free design consultation. (510) 755-5616.",
     heroText: "Add structure, function, and beauty to your yard with custom hardscaping. Fire pits, outdoor kitchens, stone walls, and more, built to last.",
     content: [
@@ -121,13 +133,15 @@ export const services: ServiceData[] = [
       { q: "How is a hardscaping project priced?", a: "Cost depends on scope, materials and site conditions. After the design phase you get a fixed-price contract, and any change is approved by you in writing before we do it." },
       { q: "Do hardscape features need permits?", a: "Some features like outdoor kitchens with gas lines or large retaining walls may require permits. We coordinate permits as needed." },
     ],
+    related: ["retaining-walls", "outdoor-kitchens", "paver-installation"],
   },
   {
     slug: "pergola-installation",
-    updatedAt: "2026-10-22",
+    updatedAt: "2026-11-10",
     title: "Pergola Installation",
     shortDesc: "Custom pergolas and shade structures for comfortable Bay Area outdoor living.",
     metaTitle: "Pergola Installation Bay Area | Custom & Louvered Pergolas",
+    h1: "Custom Pergolas in the Bay Area",
     metaDescription: "Custom pergola installation in the Bay Area: aluminum, wood-look & motorized louvered pergolas, designed in 3D first. Free design consultation. (510) 755-5616.",
     heroText: "Create shade, structure, and a true outdoor room with a custom pergola designed around how your family uses the backyard.",
     content: [
@@ -148,17 +162,19 @@ export const services: ServiceData[] = [
       { q: "Can you add a pergola to an existing patio?", a: "Yes. We can evaluate your existing patio or deck and design a pergola that fits the structure, drainage, and traffic flow. If the base needs upgrades, we will explain that before quoting." },
       { q: "What can be included with a pergola project?", a: "Common add-ons include paver patios, composite decking, lighting, privacy screens, outdoor kitchens, turf, seat walls, planting beds, and drainage improvements." },
     ],
+    related: ["outdoor-lighting", "paver-installation", "outdoor-kitchens"],
   },
   {
     slug: "fence-and-gate",
-    updatedAt: "2026-10-25",
+    updatedAt: "2026-11-10",
     title: "Fence & Gate Installation",
     shortDesc: "Privacy fences, side gates and custom entry details, built to match the rest of the yard.",
     metaTitle: "Fence & Gate Installation Bay Area | Visionable Landscaping",
+    h1: "Fences & Gates in the Bay Area",
     metaDescription: "Fence and gate installation in the Bay Area. Privacy fencing, side gates, custom outdoor entries & landscape integration. Free design consultation. (510) 755-5616.",
     heroText: "Add privacy, security, and a clean finished edge to your yard with fences and gates built to match the rest of the landscape.",
     content: [
-      "Fences and gates are not just boundaries. They shape privacy, curb appeal, access, and the way a yard feels from the first step inside. Visionable Landscaping installs and repairs side gates, privacy fences, custom wood gates, fence panels, and outdoor entry details as part of broader front yard and backyard projects.",
+      "Fences and gates are not just boundaries. They shape privacy, curb appeal, access, and the way a yard feels from the first step inside. Visionable Landscaping builds and repairs side gates, privacy fences, custom wood gates, fence panels, and outdoor entry details as part of broader front yard and backyard projects.",
       "Because we approach fencing as part of the whole landscape, we pay attention to details that standalone fence crews often miss: how the gate aligns with walkways, how drainage affects posts, whether the fence blocks or frames a view, and how the material works with pavers, turf, planting beds, stucco, and lighting. The result is a fence or gate that feels integrated, not bolted on afterward.",
       "We build new fences, side-yard gates and full fence upgrades, usually as part of a wider yard project, throughout San Jose, Sunnyvale, Cupertino, Palo Alto, Fremont, and the wider Bay Area. Every project starts with a practical site review so we can identify post conditions, grade changes, access constraints, and any neighbor or HOA considerations before pricing.",
     ],
@@ -173,17 +189,19 @@ export const services: ServiceData[] = [
       { q: "Can a new gate match my existing fence?", a: "Usually. We review the existing material, height, posts, hardware, and finish during the site visit and recommend the cleanest match or upgrade." },
       { q: "Do fence projects need neighbor approval?", a: "Shared fence lines often require neighbor coordination, and some HOAs have material or height rules. We flag those items before work begins." },
     ],
+    related: ["paver-installation", "retaining-walls", "outdoor-lighting"],
   },
   {
     slug: "irrigation-drainage",
-    updatedAt: "2026-10-02",
+    updatedAt: "2026-11-10",
     title: "Irrigation & Drainage",
     shortDesc: "Smart water management for turf, planting beds, patios, and problem areas.",
     metaTitle: "Irrigation & Drainage Bay Area | Visionable Landscaping",
+    h1: "Yard Drainage & Irrigation in the Bay Area",
     metaDescription: "Irrigation and drainage services in the Bay Area. Drip irrigation, yard drainage, grading, French drains, and water-smart landscape upgrades. (510) 755-5616.",
     heroText: "Keep water where it belongs. We design irrigation and drainage systems that protect your yard, plants, patios, and home.",
     content: [
-      "A beautiful yard fails fast if water is handled poorly. Visionable Landscaping designs and installs irrigation and drainage improvements for Bay Area homeowners who want landscapes that stay healthy without wasting water or creating puddles, erosion, or foundation risk.",
+      "A beautiful yard fails fast if water is handled poorly. Visionable Landscaping designs and builds irrigation and drainage improvements for Bay Area homeowners who want landscapes that stay healthy without wasting water or creating puddles, erosion, or foundation risk.",
       "Our irrigation work focuses on efficient, practical systems: drip irrigation for planting beds, smart controller coordination, low-water landscape layouts, and zone planning that matches plant needs. For drainage, we look at the entire property, slope, soil, downspouts, hardscape edges, and low spots, before recommending French drains, catch basins, grading adjustments, permeable surfaces, or discharge routes. We are an NDS certified professional drainage contractor.",
       "Irrigation and drainage are often built into larger projects like paver patios, artificial turf, retaining walls, and complete backyard remodels. Handling them during the design-build phase prevents expensive fixes later and gives every surface, plant, and structure a better chance of lasting.",
     ],
@@ -201,17 +219,19 @@ export const services: ServiceData[] = [
       { q: "Can drainage be fixed during a paver or turf project?", a: "Yes, and that is usually the best time. We can correct grading, add drains, and route water properly before the final pavers or turf are installed." },
       { q: "Do you install water-saving irrigation?", a: "Yes. We commonly use drip irrigation, zone planning, and controller coordination to keep planting beds healthy while reducing water waste." },
     ],
+    related: ["artificial-turf", "paver-installation", "retaining-walls"],
   },
   {
     slug: "outdoor-lighting",
-    updatedAt: "2026-10-22",
+    updatedAt: "2026-11-10",
     title: "Outdoor Lighting",
     shortDesc: "Accent, pathway, and security lighting that transforms your yard at night.",
     metaTitle: "Outdoor Lighting Installation Bay Area | Visionable Landscaping",
+    h1: "Landscape Lighting in the Bay Area",
     metaDescription: "Professional outdoor lighting in the Bay Area. LED landscape lighting for pathways, accents & security. Energy-efficient. Free design consultation. (510) 755-5616.",
     heroText: "Extend your outdoor living into the evening with professional landscape lighting. Accent, pathway, and security lighting designed and installed by Visionable.",
     content: [
-      "Outdoor lighting transforms your landscape from a daytime-only space into an evening destination. Visionable Landscaping designs and installs professional LED landscape lighting systems that highlight architectural features, illuminate pathways, create ambiance around entertaining areas, and enhance security, all while keeping energy costs low.",
+      "Outdoor lighting transforms your landscape from a daytime-only space into an evening destination. Visionable Landscaping designs and builds professional LED landscape lighting systems that highlight architectural features, illuminate pathways, create ambiance around entertaining areas, and enhance security, all while keeping energy costs low.",
       "Our lighting designs are carefully planned to create layers of light: uplighting for trees and architectural features, downlighting for natural moonlight effects, pathway lights for safety, and accent lighting for focal points like water features and garden beds. We use commercial-grade LED fixtures that are energy-efficient, long-lasting, and designed to withstand outdoor conditions.",
       "Every lighting installation includes a low-voltage transformer, weather-rated wiring, and professional-grade fixtures with a manufacturer warranty. We program timers and smart controls so your lighting operates automatically. Our design consultation helps you see lighting placement options before installation, ensuring the finished result matches your vision.",
     ],
@@ -228,13 +248,15 @@ export const services: ServiceData[] = [
       { q: "Can I control the lights from my phone?", a: "Yes. We offer smart lighting controls that let you adjust brightness, set schedules, and control zones from your smartphone." },
       { q: "How long does lighting installation take?", a: "Most landscape lighting projects take 1–2 days. Larger properties or complex designs may take 3–4 days." },
     ],
+    related: ["pergola-installation", "paver-installation", "outdoor-kitchens"],
   },
   {
     slug: "retaining-walls",
-    updatedAt: "2026-10-22",
+    updatedAt: "2026-11-10",
     title: "Retaining Walls",
     shortDesc: "Structural and decorative walls for slopes, terraces, and garden beds.",
     metaTitle: "Retaining Wall Installation Bay Area | Visionable Landscaping",
+    h1: "Retaining Wall Design & Build in the Bay Area",
     metaDescription: "Professional retaining wall installation in the Bay Area. Structural & decorative walls for slopes and terraces. CSLB licensed. Free design consultation. (510) 755-5616.",
     heroText: "Solve slope challenges and create usable outdoor space with professionally engineered retaining walls from Visionable Landscaping.",
     content: [
@@ -254,13 +276,45 @@ export const services: ServiceData[] = [
       { q: "What materials do you use for retaining walls?", a: "We use segmental concrete block, natural stone, poured concrete, and timber depending on the application. We will recommend the best option during your free design consultation." },
       { q: "How long do retaining walls last?", a: "A properly built retaining wall with good drainage lasts for decades. Drainage is the key, and we build every wall with proper backfill and drainage systems." },
     ],
+    related: ["irrigation-drainage", "paver-installation", "outdoor-lighting"],
+  },
+  {
+    slug: "outdoor-kitchens",
+    updatedAt: "2026-11-10",
+    title: "Outdoor Kitchen",
+    shortDesc: "Built-in grills, counters and bar seating, planned with the patio and shade around them.",
+    metaTitle: "Outdoor Kitchen Design & Build Bay Area | Visionable",
+    h1: "Outdoor Kitchens in the Bay Area",
+    metaDescription: "Outdoor kitchen design and build in the Bay Area. Built-in grills, counters and bar seating, built by our own crew. Free design consultation. (510) 755-5616.",
+    heroText: "A cooking area designed with the rest of the yard, with a built-in grill, counters and seating, built by our own crew.",
+    content: [
+      "An outdoor kitchen works when it is close enough to the house to use on a weeknight and far enough from the seating to keep smoke off the table. We plan the cooking area together with the patio, shade, lighting and drainage around it, so it reads as part of the yard. One recent build in Saratoga pairs a built-in grill with a seated bar counter under a covered structure.",
+      "Each kitchen starts with its base and structure. The island sits on proper footings, with block and a stone veneer or porcelain finish chosen to match the patio and the house. Gas, water and electrical runs are laid out in the design phase, before any paving goes down, and we coordinate permits as needed.",
+      "The design consultation is free. In the paid design phase, 3D renderings show the island, the counters and the shade in place, so you can change the layout before anything is built. You sign a fixed-price contract, and our own crew builds the kitchen, usually as part of a wider backyard project. If the site reveals something we could not see, we show you and you approve any change in writing before we do it.",
+    ],
+    benefits: [
+      "Planned with the patio, shade and lighting as one layout",
+      "Built-in grills, counters and bar seating",
+      "Block construction with stone veneer or porcelain finishes",
+      "3D renderings in the design phase, before construction begins",
+      "Fixed-price contract, with changes approved in writing",
+      "Built by our own crew",
+    ],
+    faqs: [
+      { q: "Do outdoor kitchens need permits?", a: "Some do, usually when the work adds gas lines or electrical. It depends on the city and the scope. We review this during consultation and coordinate permits as needed." },
+      { q: "Can you build an outdoor kitchen under a pergola?", a: "Yes. We have built outdoor kitchens under louvered pergolas and other covered structures. The shade and the grill placement are worked out together in the design phase." },
+      { q: "Can you add an outdoor kitchen to an existing patio?", a: "Often, yes. We check the existing base and the route for utilities at the site visit. If the patio needs work first, we explain that before quoting." },
+      { q: "How is an outdoor kitchen priced?", a: "Cost depends on size, finishes and site conditions. After the design phase you get a fixed-price contract, and any change is approved by you in writing before we do it." },
+    ],
+    related: ["pergola-installation", "paver-installation", "outdoor-lighting"],
   },
   {
     slug: "complete-backyard-remodel",
-    updatedAt: "2026-10-22",
+    updatedAt: "2026-11-10",
     title: "Complete Backyard Remodel",
     shortDesc: "Full yard transformations from design to build by our own crew.",
     metaTitle: "Complete Backyard Remodel Bay Area | Visionable Landscaping",
+    h1: "Backyard Remodels in the Bay Area",
     metaDescription: "Full backyard remodels in the Bay Area. Design-build transformations with pavers, turf, lighting & more. 5.0-star rated. Free design consultation. (510) 755-5616.",
     heroText: "Transform your entire backyard from concept to completion. Our own crew builds every project, and you deal with the same people from first visit to final walkthrough.",
     content: [
@@ -281,6 +335,7 @@ export const services: ServiceData[] = [
       { q: "How long does a full remodel take?", a: "Most complete backyard remodels take 3–6 weeks from start to finish. We set a clear timeline upfront and keep you updated daily." },
       { q: "Do I need to move out during construction?", a: "No. Our crew works during business hours and keeps the work area clean and contained. You can continue living comfortably in your home throughout the project." },
     ],
+    related: ["landscape-design", "outdoor-kitchens", "pergola-installation"],
   },
 ];
 
@@ -304,6 +359,7 @@ const contactOptionBySlug: Record<string, string> = {
   "irrigation-drainage": "Irrigation / Drainage",
   "outdoor-lighting": "Outdoor Lighting",
   "complete-backyard-remodel": "Complete Backyard Redesign",
+  "outdoor-kitchens": "Outdoor Kitchen",
 };
 
 export function contactOptionForService(slug: string): string {

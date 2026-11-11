@@ -38,6 +38,7 @@ export const contactServiceOptions = [
   "Hardscaping / Pavers",
   "Artificial Turf",
   "Pergola / Shade Structures",
+  "Outdoor Kitchen",
   "Fencing & Gates",
   "Outdoor Lighting",
   "Irrigation / Drainage",

@@ -63,6 +63,12 @@ export const serviceFacts: Record<string, HeroFact[]> = {
     { label: "Materials", value: "Block, stone, concrete, timber" },
     { label: "Engineering", value: "Licensed engineer over 4 ft" },
   ],
+  "outdoor-kitchens": [
+    { label: "Pricing", value: "Fixed-price contract" },
+    { label: "Permits", value: "Coordinated as needed" },
+    { label: "Common add-ons", value: "Pergolas, pavers, lighting" },
+    { label: "Consultation", value: "Free" },
+  ],
   "complete-backyard-remodel": [
     { label: "Typical timeline", value: "3–6 weeks" },
     { label: "Pricing", value: "Fixed-price contract" },
