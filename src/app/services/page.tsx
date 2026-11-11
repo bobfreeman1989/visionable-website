@@ -18,7 +18,7 @@ const BASE_URL = "https://visionablelandscaping.com";
 export const metadata: Metadata = {
   title: "Landscaping Services Bay Area | Visionable Landscaping",
   description:
-    "Landscape design-build services for Bay Area homes: pavers, turf, pergolas, fencing, drainage, lighting, retaining walls and full remodels.",
+    "Landscape design-build services for Bay Area homes: pavers, turf, pergolas, outdoor kitchens, fencing, drainage, lighting, retaining walls and full remodels.",
   openGraph: {
     title: "Landscaping Services Bay Area | Visionable Landscaping",
     description:
@@ -67,7 +67,7 @@ export default function ServicesIndexPage() {
         <PageHero
           eyebrow="Bay Area landscaping services"
           title="Design-build landscaping for outdoor living spaces that last"
-          lede="Our own crew handles pavers, turf, pergolas, fencing, irrigation, drainage, design, lighting, retaining walls, and complete backyard remodels across the Bay Area."
+          lede="Our own crew handles pavers, turf, pergolas, outdoor kitchens, fencing, irrigation, drainage, design, lighting, retaining walls, and complete backyard remodels across the Bay Area."
           image={{ src: heroPhoto.src, alt: heroPhoto.alt }}
           facts={[
             { label: "Projects built", value: "100+" },

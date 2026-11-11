@@ -52,14 +52,17 @@ export default function ServicePage({ params }: { params: { service: string } })
   if (!service) notFound();
 
   const facts = serviceFacts[service.slug];
-  const related = services.filter((s) => s.slug !== service.slug).slice(0, 3);
+  const related = service.related.flatMap((slug) => getServiceBySlug(slug) ?? []);
 
   // One ranked pull, partitioned so the hero, the feature rows and the gallery
   // never show the same photograph twice on a page.
   const ranked = photosForService(service.slug, 9);
   const hero = ranked[0];
   const featurePhotos = ranked.slice(1, 4);
-  const gallery = ranked.slice(4, 9);
+  // The gallery heading says each build includes this service, so photos that
+  // only filled out the ranking stay out of it.
+  const leadTag = tagsForService(service.slug)[0];
+  const gallery = ranked.slice(4, 9).filter((p) => p.tags.includes(leadTag));
 
   // Pair each body paragraph with a photo so the explanation sits beside
   // evidence of it rather than running as a column of prose.
@@ -125,8 +128,8 @@ export default function ServicePage({ params }: { params: { service: string } })
 
       <div className="pt-16">
         <PageHero
-          eyebrow="Bay Area design-build"
-          title={service.title}
+          eyebrow="Design and build, by our own crew"
+          title={service.h1 ?? service.title}
           lede={service.heroText}
           image={{ src: hero.src, alt: hero.alt }}
           facts={facts}
@@ -151,19 +154,21 @@ export default function ServicePage({ params }: { params: { service: string } })
 
         <AlternatingFeatures features={features} />
 
-        <PhotoGallery
-          photos={gallery}
-          title={`Recent ${service.title.toLowerCase()} projects`}
-          intro={`Builds from across the Bay Area where ${service.title.toLowerCase()} is part of the work.`}
-          action={
-            <Link
-              href="/portfolio"
-              className="text-primary font-semibold inline-flex items-center gap-1.5 hover:underline shrink-0"
-            >
-              See the full portfolio <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
-            </Link>
-          }
-        />
+        {gallery.length > 0 && (
+          <PhotoGallery
+            photos={gallery}
+            title={`Recent ${service.title.toLowerCase()} projects`}
+            intro={`Builds from across the Bay Area where ${service.title.toLowerCase()} is part of the work.`}
+            action={
+              <Link
+                href="/portfolio"
+                className="text-primary font-semibold inline-flex items-center gap-1.5 hover:underline shrink-0"
+              >
+                See the full portfolio <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
+              </Link>
+            }
+          />
+        )}
 
         <BeforeAfter tags={tagsForService(service.slug)} />
 

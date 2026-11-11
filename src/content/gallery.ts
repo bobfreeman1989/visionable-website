@@ -521,6 +521,7 @@ const serviceTags: Record<string, PhotoTag[]> = {
   "irrigation-drainage": ["drainage", "design"],
   "outdoor-lighting": ["lighting"],
   "retaining-walls": ["retaining-wall", "hardscape"],
+  "outdoor-kitchens": ["outdoor-kitchen", "full-remodel", "pergola"],
   "complete-backyard-remodel": ["full-remodel", "outdoor-kitchen", "play"],
 };
 
