@@ -61,7 +61,7 @@ A strong paver design considers:
 - How people walk through the yard
 - Where furniture may sit
 - Which direction water should move
-- How the pavers meet lawn, artificial turf, gravel, planting beds, or walls
+- How the pavers meet lawn, artificial turf, gravel, [planting beds](/blog/backyard-garden-curved-concrete-walkway-raised-beds-bay-area), or walls
 - Whether the pattern fits the home’s architecture
 
 The clean finished look came from slow, careful workmanship. That is a good reminder: paver installation quality is often most visible in the places homeowners do not think about first, such as corners, borders, cuts, and transitions.
@@ -99,7 +99,7 @@ Not always. A simple design may use fewer visual elements, but it can require ve
 
 ### Are pavers a good choice for Bay Area yards?
 
-Pavers can be a strong option for patios, walkways, and front yard upgrades when installed with proper base preparation, edging, and [drainage](/services/irrigation-drainage) planning.
+Pavers can be a strong option for patios, walkways, and front yard upgrades when installed with proper base preparation, edging, and [drainage](/services/irrigation-drainage) planning. Our guide to [choosing pavers for Bay Area patios](/blog/how-to-choose-pavers) compares concrete, natural stone, and porcelain.
 
 ### Should I remodel my front yard and backyard together?
 

@@ -11,7 +11,7 @@ featured: true
 
 For families who love basketball, the best court may not be across town. It can be right outside the back door.
 
-This Visionable Landscaping project transformed a backyard area into a private basketball-focused outdoor space. The brief was a custom court for a basketball-loving family, with Warriors-inspired colors, modular sport flooring, safety netting, a sturdy retaining wall, softer ground surfaces, raised planting beds, light gray pavers, [artificial turf](/services/artificial-turf), and pebble edging.
+This Visionable Landscaping project transformed a backyard area into a private basketball-focused outdoor space. The brief was a custom court for a basketball-loving family, with Warriors-inspired colors, modular sport flooring, safety netting, a sturdy retaining wall, softer ground surfaces, [raised planting beds](/blog/backyard-garden-curved-concrete-walkway-raised-beds-bay-area), light gray pavers, [artificial turf](/services/artificial-turf), and pebble edging.
 
 The result is more than a place to shoot hoops. It is a backyard that supports kids playing, parents joining in, gardening, and friends gathering. For Bay Area and Silicon Valley homeowners, it is a useful example of how an active family yard can combine recreation, structure, and clean [landscape design](/services/landscape-design).
 

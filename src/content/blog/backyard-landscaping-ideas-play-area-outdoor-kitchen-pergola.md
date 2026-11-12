@@ -9,7 +9,7 @@ author: "Visionable Team"
 featured: false
 ---
 
-A great backyard should do more than look beautiful in photos. For many Bay Area families, the best outdoor space is one that supports everyday life: children playing safely, adults cooking and entertaining, shaded seating, low-maintenance walkways, and hardscape materials that feel polished instead of generic.
+A great backyard should do more than look beautiful in photos. For many Bay Area families, the best outdoor space is one that supports everyday life: children playing safely, adults cooking and entertaining, shaded seating, [low-maintenance walkways](/blog/backyard-garden-curved-concrete-walkway-raised-beds-bay-area), and hardscape materials that feel polished instead of generic.
 
 This Visionable Landscaping project brings those goals together with a dedicated children’s play area, [artificial turf](/services/artificial-turf), a pour-in-place concrete outdoor kitchen, premium Techo-Bloc pavers, a detailed side yard, and a custom pergola.
 
@@ -51,7 +51,7 @@ The main backyard area uses Techo-Bloc pavers, laid in a classic herringbone pat
 
 The herringbone pattern adds movement and structure while still feeling timeless. It works especially well when homeowners want a patio that feels designed, not simply paved.
 
-When choosing pavers, consider:
+When [choosing pavers](/blog/how-to-choose-pavers), consider:
 
 - Color and texture variation
 - Paver size and scale

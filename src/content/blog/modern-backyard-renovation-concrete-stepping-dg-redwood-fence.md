@@ -17,7 +17,7 @@ This Visionable Landscaping project started as a bare, undeveloped yard area. Th
 
 The yard needed more than a cosmetic upgrade. The goal was a modern, transparent-feeling, low-maintenance outdoor space with a relaxed California mood.
 
-That is an important starting point for any [backyard remodel](/services/complete-backyard-remodel). Before choosing pavers, concrete, gravel, fencing, or plants, homeowners should clarify the lifestyle they want the yard to support:
+That is an important starting point for any [backyard remodel](/services/complete-backyard-remodel). Before [choosing pavers](/blog/how-to-choose-pavers), concrete, gravel, fencing, or plants, homeowners should clarify the lifestyle they want the yard to support:
 
 - Do you want a quiet lounge space, a dining area, or a simple walking path?
 - Should the yard feel open and minimal or lush and enclosed?
@@ -94,7 +94,7 @@ A modern backyard renovation uses clean lines, simple material combinations, org
 
 ### Are concrete stepping pads good for Bay Area backyards?
 
-Concrete stepping pads can work well for modern Bay Area landscapes when they are planned with proper spacing, base preparation, grading, and drainage. They are especially useful for clean walkways, side yards, and minimalist outdoor rooms.
+Concrete stepping pads can work well for modern Bay Area landscapes when they are planned with proper spacing, base preparation, grading, and drainage. They are especially useful for [clean walkways](/blog/backyard-garden-curved-concrete-walkway-raised-beds-bay-area), side yards, and minimalist outdoor rooms.
 
 ### What is DG in landscaping?
 

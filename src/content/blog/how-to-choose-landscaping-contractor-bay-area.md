@@ -62,7 +62,7 @@ For a Bay Area landscape project, look for experience with projects similar to y
 - Drainage issues or standing water
 - Artificial turf and low-maintenance yards
 - Outdoor kitchens, BBQ islands, pergolas, and lighting
-- Front yard curb appeal and privacy improvements
+- [Front yard curb appeal](/blog/front-and-back-yard-paver-landscape-design-bay-area) and privacy improvements
 
 When reviewing photos, look beyond the “after” image. Notice edges, transitions, grading, wall alignment, drainage solutions, and how the design fits the house. A strong contractor should be able to explain what they built and why.
 

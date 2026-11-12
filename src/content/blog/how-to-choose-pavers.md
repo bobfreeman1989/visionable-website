@@ -51,7 +51,7 @@ Silicon Valley's mild climate is actually ideal for most paver types, but there 
 
 ## Our Recommendation
 
-For most Bay Area homeowners, **concrete pavers** offer the best value. For a premium look, pair concrete with **natural stone accents** at entry points and focal areas.
+For most Bay Area homeowners, **concrete pavers** offer the best value. For a premium look, pair concrete with **natural stone accents** at entry points and focal areas. For a finished example, see this [front and backyard paver remodel](/blog/front-and-back-yard-paver-landscape-design-bay-area).
 
 ---
 
