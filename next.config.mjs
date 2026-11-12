@@ -62,6 +62,17 @@ const nextConfig = {
         permanent: true,
       },
       {
+        // Vercel's default project hostname served the whole site with a 200.
+        // AI engines cited the old project's vercel.app address as a source
+        // (2026-11), so this one gets a permanent hop too. The value is an
+        // anchored match on the exact host, so PR preview hosts
+        // (visionable-clean-git-<branch>-<team>.vercel.app) are not redirected.
+        source: "/:path*",
+        has: [{ type: "host", value: "visionable-clean\\.vercel\\.app" }],
+        destination: "https://visionablelandscaping.com/:path*",
+        permanent: true,
+      },
+      {
         // The post was retitled to drop the year stamp; the old URL is indexed.
         source: "/blog/5-landscaping-trends-2024",
         destination: "/blog/silicon-valley-backyard-landscaping-trends",
