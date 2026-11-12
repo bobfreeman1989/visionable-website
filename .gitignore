@@ -20,3 +20,6 @@ build
 
 # typescript incremental build cache
 *.tsbuildinfo
+
+# local-only business context (this repo is public)
+site-context.md
