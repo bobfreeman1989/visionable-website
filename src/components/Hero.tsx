@@ -13,8 +13,8 @@ export default function Hero() {
             src="/hero-mobile.webp"
             alt="Dark aluminum pergola over an outdoor lounge on a low deck, with artificial turf and stepping stones"
             className="h-full w-full object-cover object-[50%_40%]"
-            width={900}
-            height={1200}
+            width={750}
+            height={1000}
             fetchPriority="high"
             decoding="async"
           />
